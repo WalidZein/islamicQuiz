@@ -3,6 +3,8 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import JSConfetti from 'js-confetti';
 import { Quiz } from '../../types/quiz';
 import { useQuizStatus } from '../../hooks/useQuizStatus';
 import { ProgressBar } from './ProgressBar';
@@ -15,6 +17,30 @@ interface QuizPageClientProps {
 export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const router = useRouter();
     const { state, dispatch } = useQuizStatus(quiz);
+    const [confetti, setConfetti] = useState<JSConfetti | null>(null);
+
+    // Initialize confetti on client side
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setConfetti(new JSConfetti());
+        }
+    }, []);
+
+    // Trigger confetti when quiz is completed with perfect score
+    useEffect(() => {
+        if (state.quizCompleted && state.score === quiz.questions.length && confetti) {
+            confetti.addConfetti({
+                confettiColors: [
+                    '#22c55e', // green-500
+                    '#3b82f6', // blue-500
+                    '#f59e0b', // amber-500
+                    '#ef4444', // red-500
+                    '#8b5cf6', // violet-500
+                ],
+                confettiNumber: 100,
+            });
+        }
+    }, [state.quizCompleted, state.score, quiz.questions.length, confetti]);
 
     const handleBackClick = () => {
         router.push('/');
@@ -62,6 +88,11 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
                         Your score: <span className="font-semibold">{state.score}</span> out of{' '}
                         <span className="font-semibold">{quiz.questions.length}</span>
+                        {state.score === quiz.questions.length && (
+                            <span className="block mt-2 text-green-500">
+                                🎉 Perfect Score! Congratulations! 🎉
+                            </span>
+                        )}
                     </p>
                     {quiz.questions.map((q, index) => {
                         const userSelection = state.selections[index];
