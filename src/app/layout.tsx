@@ -37,7 +37,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className="bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-700 dark:to-indigo-800 text-white"
+        className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 text-white"
       >
         <GoogleAnalytics />
         {/* Header (Optional) */}
