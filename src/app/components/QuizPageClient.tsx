@@ -118,7 +118,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                                     <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
                                         Explanation:
                                     </h3>
-                                    <p className="text-gray-800 dark:text-gray-100">{q.explanation}</p>
+                                    <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
                                 </div>
                             </div>
                         );
@@ -188,7 +188,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
                             Explanation:
                         </h3>
-                        <p className="text-gray-800 dark:text-gray-100">
+                        <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">
                             {currentQuestion.explanation}
                         </p>
                     </div>
