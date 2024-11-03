@@ -1,6 +1,6 @@
 export interface Quiz {
   id: number;
-  title: string;
+  title?: string;
   questions: Question[];
 }
 

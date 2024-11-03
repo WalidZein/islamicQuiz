@@ -1,7 +1,7 @@
 // app/quiz/[id]/page.tsx
 
 import { Metadata } from 'next';
-import quizzes, { Quiz } from '../../../data/quizzes';
+import quizzes from '../../../data/quizzes';
 import QuizPageClient from '../../components/QuizPageClient';
 
 interface QuizPageProps {

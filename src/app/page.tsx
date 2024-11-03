@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import quizzes, { Quiz } from '../data/quizzes';
+import quizzes from '../data/quizzes';
+import { Quiz } from '@/types/quiz';
 
 interface QuizStatus {
   completed: boolean;
