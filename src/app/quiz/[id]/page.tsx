@@ -5,9 +5,9 @@ import quizzes from '../../../data/quizzes';
 import QuizPageClient from '../../components/QuizPageClient';
 
 interface QuizPageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
 // Generate metadata for SEO

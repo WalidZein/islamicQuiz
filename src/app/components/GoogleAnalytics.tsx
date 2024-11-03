@@ -9,10 +9,10 @@ export default function GoogleAnalytics() {
 
     useEffect(() => {
         const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
+        //@ts-expect-error
         window.gtag('event', 'page_view', {
             page_path: url,
         });
     }, [pathname, searchParams]);
-
     return null;
 }

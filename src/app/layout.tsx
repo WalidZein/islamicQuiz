@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 
 export const metadata: Metadata = {
   title: 'Islamic Quiz',
@@ -39,7 +40,9 @@ export default function RootLayout({
       <body
         className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 text-white"
       >
-        <GoogleAnalytics />
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
         {/* Header (Optional) */}
         <header className="container mx-auto px-4 py-4">
           <Link href="/" className="flex items-center">

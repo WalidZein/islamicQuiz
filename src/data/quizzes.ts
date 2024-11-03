@@ -1,13 +1,10 @@
+import { Quiz } from "@/types/quiz";
+
 export interface Question {
   question: string;
   options: string[];
   correctAnswerIndex: number;
   explanation: string;
-}
-
-export interface Quiz {
-  id: number;
-  questions: Question[];
 }
 
 const quizzes: Quiz[] = [
