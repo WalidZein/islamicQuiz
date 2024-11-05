@@ -8,6 +8,7 @@ interface QuizState {
   score: number;
   quizCompleted: boolean;
   selections: number[];
+  finalQuestion: boolean;
 }
 
 type QuizAction =
@@ -16,7 +17,8 @@ type QuizAction =
   | { type: "NEXT_QUESTION" }
   | { type: "COMPLETE_QUIZ" }
   | { type: "LOAD_SAVED_STATUS"; payload: QuizStatus }
-  | { type: "INCREMENT_SCORE" };
+  | { type: "INCREMENT_SCORE" }
+  | { type: "FINAL_QUESTION" };
 
 const initialState: QuizState = {
   currentQuestionIndex: 0,
@@ -25,6 +27,7 @@ const initialState: QuizState = {
   score: 0,
   quizCompleted: false,
   selections: [],
+  finalQuestion: false,
 };
 
 function quizReducer(state: QuizState, action: QuizAction): QuizState {
@@ -42,6 +45,11 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         currentQuestionIndex: state.currentQuestionIndex + 1,
         selectedOptionIndex: null,
         showExplanation: false,
+      };
+    case "FINAL_QUESTION":
+      return {
+        ...state,
+        finalQuestion: true,
       };
     case "COMPLETE_QUIZ":
       return {

@@ -56,10 +56,16 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     };
 
     const handleNextClick = () => {
+        if (state.finalQuestion) {
+            dispatch({ type: 'COMPLETE_QUIZ' });
+            return;
+        }
+        if (state.currentQuestionIndex == quiz.questions.length - 1
+            || state.currentQuestionIndex == quiz.questions.length - 2) {
+            dispatch({ type: 'FINAL_QUESTION' })
+        }
         if (state.currentQuestionIndex + 1 < quiz.questions.length) {
             dispatch({ type: 'NEXT_QUESTION' });
-        } else {
-            dispatch({ type: 'COMPLETE_QUIZ' });
         }
 
     };
@@ -176,7 +182,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
                         onClick={handleNextClick}
                     >
-                        Next Question
+                        {!state.finalQuestion ? "Next Question" : "Submit Quiz"}
                     </button>
                 )}
 
