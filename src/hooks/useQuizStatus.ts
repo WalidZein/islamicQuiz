@@ -34,10 +34,6 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         ...state,
         selectedOptionIndex: action.payload,
         selections: [...state.selections, action.payload],
-      };
-    case "SHOW_EXPLANATION":
-      return {
-        ...state,
         showExplanation: true,
       };
     case "NEXT_QUESTION":

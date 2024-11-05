@@ -56,15 +56,12 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     };
 
     const handleNextClick = () => {
-        if (!state.showExplanation) {
-            dispatch({ type: 'SHOW_EXPLANATION' });
+        if (state.currentQuestionIndex + 1 < quiz.questions.length) {
+            dispatch({ type: 'NEXT_QUESTION' });
         } else {
-            if (state.currentQuestionIndex + 1 < quiz.questions.length) {
-                dispatch({ type: 'NEXT_QUESTION' });
-            } else {
-                dispatch({ type: 'COMPLETE_QUIZ' });
-            }
+            dispatch({ type: 'COMPLETE_QUIZ' });
         }
+
     };
 
     const progressPercentage = ((state.currentQuestionIndex + 1) / quiz.questions.length) * 100;
@@ -179,7 +176,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
                         onClick={handleNextClick}
                     >
-                        {state.showExplanation ? 'Next Question' : 'Show Explanation'}
+                        Next Question
                     </button>
                 )}
 

@@ -18,7 +18,7 @@ export function QuizOption({
     onSelect,
 }: QuizOptionProps) {
     let optionClasses =
-        'w-full p-4 text-left rounded-md transition-colors duration-300';
+        'w-full p-4 text-left rounded-md transition-colors duration-300 whitespace-pre-line';
 
     if (!showResult) {
         optionClasses +=
