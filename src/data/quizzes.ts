@@ -85,6 +85,39 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 3,
+    questions: [
+      {
+        question: "Who was the teenager who learned Hebrew in two weeks and became the Prophet’s translator?",
+        options: ["Zayd ibn Thabit", "Mus`ab ibn `Umair", "Usamah ibn Zaid", "Al-Arqam ibn Abi Al-Arqam"],
+        correctAnswerIndex: 0,
+        explanation:
+          "After seeing the talent and intelligence of this young companion, the Prophet (ﷺ) said to Zayd, “O Zayd! Learn the Hebrew language because I do not trust the Jewish translators in what they convey from me to others.” So Zayd stood up to the task and learned the Hebrew language in two weeks! After that, he began to write letters for the Prophet to the Jews whenever the need arose and would read and translate their letters to him.\n\n The young Zayd became the translator of the prophet (ﷺ).",
+      },
+      {
+        question: "Who was the youngest military leader in Islam?",
+        options: ["Zayd ibn Thabit", "Mus`ab ibn `Umair", "Usamah ibn Zaid", "Al-Arqam ibn Abi Al-Arqam"],
+        correctAnswerIndex: 2,
+        explanation:
+          "After the Farewell Pilgrimage, a large army was organized and deployed to Syria. Abu Bakr and `Umar were involved in this campaign, but the Prophet appointed the young Usamah ibn Zayd to lead the army. Usamah was then a young man of hardly twenty years of age.",
+      },
+      {
+        question: "In the early days of Islam, when it was kept secret, whose house did the Muslims gather in?",
+        options: ["Zayd ibn Thabit", "Mus`ab ibn `Umair", "Usamah ibn Zaid", "Al-Arqam ibn Abi Al-Arqam"],
+        correctAnswerIndex: 3,
+        explanation:
+          "In the early days of Islam, the Prophet (ﷺ) used to meet the Companions at Al-Arqam's house until they were forty in number with the conversion of ‘Umar ibn Al-Khattaab. When there were forty Muslims, they came out to declare their faith openly.\n\nThough very young, Al-Arqam ibn Abi Al-Arqam turned his home into the Prophet’s headquarters for 13 consecutive years. In doing so, he helped raise the first Muslim generation.",
+      },
+      {
+        question: "Who was the first ambassador of Islam?",
+        options: ["Zayd ibn Thabit", "Mus`ab ibn `Umair", "Usamah ibn Zaid", "Al-Arqam ibn Abi Al-Arqam"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet selected Mus`ab to carry out the task of teaching Islam to the people of Yathrib (Madinah), while many older and more experienced companions were present—the likes of Abu Bakr, Umar, Uthman, Ali, and others. He knew Mus`ab was fully capable and thus empowered him through this honorable post.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
