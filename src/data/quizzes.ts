@@ -118,6 +118,55 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 4,
+    questions: [
+      {
+        question: "Which Islamic month did the Prophet ﷺ receive the first revelation of the Quran?",
+        options: ["Muharram", "Rabi al-Awwal", "Ramadan", "Rajab"],
+        correctAnswerIndex: 2,
+        explanation: "Allah says: {Indeed, We sent the Quran down during the Night of Decree} [al-Qadr 97:1]. The first revelation of the Qur'an was sent down during the month of Ramadan.",
+      },
+      {
+        question: "Which prophet is mentioned the most in the Quran?",
+        options: ["Prophet Isa (Jesus)", "Prophet Musa (Moses)", "Prophet Ibrahim (Abraham)", "Prophet Yusuf (Joseph)"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Prophet Musa (Moses) is mentioned 136 times in the Quran.\n\n He received the book Tawraat (Torah) and was sent to the tyrant Pharaoh, who considered himself a god and expected his people to worship him along with other statues. Prophet Musa's story and the lessons within it transcend time, holding significant value in Islamic history.",
+      },
+      {
+        question: "Who is considered both grateful and patient in the sight of Allah?",
+        options: [
+          "Someone who aspires to gain more in both religious and worldly matters by following those more successful than him",
+          "Someone who feels content with his level of faith and strives to increase his worldly achievements by observing those above him",
+          "Someone who looks up to those who surpass him in faith and appreciates his blessings by comparing his worldly state with those who have less",
+          "Someone who compares himself with others only in religious matters, not concerning himself with worldly gains or losses",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Messenger of Allah (ﷺ) said:\n “There are two traits, whoever has them in him, Allah writes him down as grateful and patient. And whoever does not have them, Allah does not write him down as grateful, nor patient. Whoever looks to one above him for his religion, and follows him in it, and whoever looks to one who is below him in worldly matters, and praises Allah for the blessings He has favored the one who is above him with, then Allah writes him down as grateful and patient. And whoever looks to one who is below him for his religion, and looks to one who is above him for worldly matters, and grieves over what missed him of it, Allah does not write him down as grateful nor as patient.",
+      },
+      {
+        question: "Which action can extinguish sins as water extinguishes fire?",
+        options: ["Giving charity", "Fasting", "Reciting the Quran", "Performing Wudu (ablution)"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said:\n 'Shall I not tell you of the means of goodness? Fasting is a shield, and charity extinguishes sin as water extinguishes fire, and a man’s prayer in the middle of the night.'",
+      },
+      {
+        question: "What is the recommended supplication to say when entering a mosque?",
+        options: [
+          "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ جَنَّتِكَ\nO Allah, open to me the gates of Your Paradise",
+          "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nO Allah, open to me the gates of Your mercy",
+          "اللَّهُمَّ أَعُوذُ بِكَ مِنَ الشَّيْطَانِ الرَّجِيمِ\nO Allah, I seek refuge with You from the accursed devil",
+          "اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ\nO Allah, protect me from the Fire",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          " Arabic: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nTransliteration: Allahumma iftah li abwab rahmatika\nTranslation: O Allah, open to me the gates of Your mercy\n\n The Messenger of Allah (ﷺ) said: “When any one of you enters the mosque, let him say: Allahumma iftah li abwab rahmatika (O Allah, open to me the gates of Your mercy), and when he leaves let him say, Allahumma inni as’aluka min fadlika (O Allah, I ask You of Your bounty).”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
