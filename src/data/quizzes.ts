@@ -167,6 +167,46 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 5,
+    questions: [
+      {
+        question: "Why do we need to know and understand Allah’s beautiful names and attributes? (please don't skip the explanation)",
+        options: ["To truly know Him", "To pray to Him by His names", "To gain the reward of Jannah", "All of the above"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Calling upon Allah by His names is a powerful way to fulfill our purpose of worshiping and knowing Him, as He says, 'I did not create jinn and humans except to worship Me' (51:56).\n\nEach name reflects an attribute that guides our connection to Him. The Quran urges us, 'Allah has the Most Beautiful Names. So call upon Him by them' (7:180), meaning we should use the name that fits our need. Imagine the power of seeking forgiveness from *Al-Ghaffar* (The Forgiving), or finding comfort in times of difficulty by calling upon *Al-Wadud* (The Loving).\n\nThe Prophet ﷺ also taught, 'Allah has ninety-nine names. Whoever memorizes them will enter Paradise,' inspiring us to know, understand, and live by these names. This deepens our connection to Allah, inviting His mercy, guidance, and blessings into our lives.",
+      },
+      {
+        question: "Which name of Allah means The Most or Entirely Merciful?",
+        options: ["Ar-Rahmaan", "Al-Malik", "Al-Mutakabbir", "Al-Khaaliq"],
+        correctAnswerIndex: 0,
+        explanation:
+          "This name emphasizes Allah's mercy and kindness towards His creation. It signifies that Allah is full of love, compassion, and grace, and He bestows His blessings and forgiveness upon His believers.",
+      },
+      {
+        question: "What attribute of Allah does the name As-Salaam represent?",
+        options: ["The Majestic", "The Creator", "The Source of Peace", "The Great Forgiver"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The name As-Salaam represents the attribute of Allah (SWT) as the Source of Peace. This means that Allah is the ultimate provider of peace and tranquility. He is the source from which all peace originates and He grants peace to His creation. This attribute highlights Allah's ability to bring about inner peace, harmony, and serenity in the lives of believers. It signifies His role as the ultimate source of all peace and the one who can grant peace to those who seek it.",
+      },
+      {
+        question: "What attribute of Allah does the name Al-Fattaah represent?",
+        options: ["The Expander", "The Opener", "The All-Hearing", "The Most Appreciative"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The name 'Al-Fattaah' represents the attribute of Allah as 'The Opener.' This name signifies that Allah is the one who opens doors, grants success, and brings forth solutions to problems. It highlights Allah's ability to remove obstacles and provide opportunities. By understanding Allah as 'The Opener,' believers can seek His guidance and rely on His power to open paths for them in life. This name emphasizes the belief in Allah's ability to bring about positive change and blessings.",
+      },
+      {
+        question: "What attribute of Allah does the name Al-Lateef represent?",
+        options: ["The Most Gentle", "The Kind", "The Mighty", "The Most Merciful"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The name Al-Lateef of Allah represents the attribute of 'The Subtle One' or 'The Most Gentle.' This name embodies Allah's gentle, kind, and subtle dealings with His creation. Al-Lateef is aware of and attentive to the delicate matters, fine details, and hidden intricacies of the affairs of all creatures, guiding and aiding them in ways they often do not perceive. This name also conveys His graciousness and kindness in managing the affairs of His servants, providing for them in the gentlest way, which may go unnoticed but is most effective and beneficent.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
