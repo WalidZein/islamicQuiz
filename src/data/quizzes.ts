@@ -207,6 +207,46 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 6,
+    questions: [
+      {
+        question: "What attribute of Allah does the name Ar-Razzaaq represent?",
+        options: ["The Knowledgeable", "The Provider", "The Expander", "The All-Knowing"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Allah is Ar-Razzaq (ٱلرَّزَّاقُ), The Ultimate Provider, the Source of all nourishment and sustenance. He doesn’t just supply what we need—He knows and delivers exactly what’s best for us, down to the smallest detail, fulfilling our physical, mental, and spiritual needs.\n\nAs Ar-Razzaq, Allah opens doors we never imagined and brings forth provisions from places we least expect. He nurtures and supports every part of our existence, guiding our growth, and enriching our souls. Through His divine provision, we find not only sustenance but purpose, strength, and fulfillment.",
+      },
+      {
+        question: "Which name of Allah (SWT) means Ash-Shakoor?",
+        options: ["The Most High", "The Grateful and The Appreciative", "The Preserver and The Protector", "The Feeder"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Allah (SWT) is described as Ash-Shakoor to emphasize His gratitude and appreciation towards His creation. This name highlights Allah's attribute of recognizing and rewarding even the smallest acts of goodness and gratitude shown by His servants. It reminds believers to be grateful to Allah for His countless blessings and to express gratitude in their actions and words.",
+      },
+      {
+        question: "What attribute of Allah does the name Al-Jabbaar represent?",
+        options: ["The Just", "The Reliever", "The Judge", "The Compeller"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The name Al-Jabbaar refers to the attribute of Allah as 'The Compeller.' This means that Allah has the power and authority to compel and enforce His will upon creation. It signifies His ability to overcome any resistance or opposition and to establish His dominance and control over all things. This attribute highlights Allah's strength, authority, and ability to enforce justice and righteousness in the universe.",
+      },
+      {
+        question: "What attribute of Allah does the name Al-Mujeeb represent?",
+        options: ["The All Just", "The Most Appreciative", "The Responsive One", "The Absolute Truth"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Allah, Al-Mujeeb, is the One who responds to every call and fulfills the needs of those who turn to Him, even knowing their needs before they are expressed. He reassures us in the Qur’an of His nearness: “When My servants ask you concerning Me, then surely I am very near; I answer the prayer of the supplicant when he calls on Me.”(Qur’an, 2:186).\n\n Unlike human relationships, Allah’s generosity is boundless; He loves to be asked and never tires of our pleas. In times of ease or hardship, whether we whisper our needs or cry out in desperation, Al-Mujeeb is close, answering in the best way and at the best time. Through His responses, we find a profound, comforting connection, knowing that each plea strengthens our bond with Him and draws us nearer.",
+      },
+      {
+        question: "Which name of Allah means The Hidden One?",
+        options: ["Al-Baasit", "Al-Baatin", "Al-Baari’", "Al-Muhsin"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Allah is Al-Baatin (Arabic: ٱلْبَاطِنُ), meaning 'The Hidden One' or 'The Concealed.' This name reflects Allah's unseen nature; while we cannot see Him directly, we recognize His presence through the signs around us. Al-Baatin also signifies that Allah is intimately close, present within all of creation, acting as a hidden companion in our innermost selves.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
