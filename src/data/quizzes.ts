@@ -247,6 +247,50 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 7,
+    questions: [
+      {
+        question: "The Prophet ﷺ said “the best of you is he who ___”",
+        options: ["gives the most charity", "is best to his family", "is the strongest", "is the most humble"],
+        correctAnswerIndex: 1,
+        explanation: "Aisha reported:\n The Messenger of Allah, peace and blessings be upon him, said, “The best of you are the best to their families, and I am the best to my family.”",
+      },
+      {
+        question: "What is the reward for a Muslim who recites Ayat al-Kursi after every obligatory prayer?",
+        options: ["Protection from poverty", "Ten good deeds", "Entrance to Paradise", "Forgiveness of sins"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Abu Umamah reported: The Messenger of Allah, peace and blessings be upon him, said, “Whoever recites the ‘verse of the Throne’ after every prescribed prayer, there will be nothing standing between him and entry into Paradise but his death.”",
+      },
+      {
+        question: "What attribute of Allah does the name Al-Mujeeb represent?",
+        options: ["The All Just", "The Most Appreciative", "The Responsive One", "The Absolute Truth"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Allah, Al-Mujeeb, is the One who responds to every call and fulfills the needs of those who turn to Him, even knowing their needs before they are expressed. He reassures us in the Qur’an of His nearness: “When My servants ask you concerning Me, then surely I am very near; I answer the prayer of the supplicant when he calls on Me.”(Qur’an, 2:186).\n\n Unlike human relationships, Allah’s generosity is boundless; He loves to be asked and never tires of our pleas. In times of ease or hardship, whether we whisper our needs or cry out in desperation, Al-Mujeeb is close, answering in the best way and at the best time. Through His responses, we find a profound, comforting connection, knowing that each plea strengthens our bond with Him and draws us nearer.",
+      },
+      {
+        question: "Which action can extinguish sins as water extinguishes fire?",
+        options: ["Giving charity", "Fasting", "Reciting the Quran", "Performing Wudu (ablution)"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said:\n 'Shall I not tell you of the means of goodness? Fasting is a shield, and charity extinguishes sin as water extinguishes fire, and a man’s prayer in the middle of the night.'",
+      },
+      {
+        question: "What is the recommended supplication to say when entering a mosque?",
+        options: [
+          "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ جَنَّتِكَ\nO Allah, open to me the gates of Your Paradise",
+          "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nO Allah, open to me the gates of Your mercy",
+          "اللَّهُمَّ أَعُوذُ بِكَ مِنَ الشَّيْطَانِ الرَّجِيمِ\nO Allah, I seek refuge with You from the accursed devil",
+          "اللَّهُمَّ أَجِرْنِي مِنَ النَّارِ\nO Allah, protect me from the Fire",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          " Arabic: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nTransliteration: Allahumma iftah li abwab rahmatika\nTranslation: O Allah, open to me the gates of Your mercy\n\n The Messenger of Allah (ﷺ) said: “When any one of you enters the mosque, let him say: Allahumma iftah li abwab rahmatika (O Allah, open to me the gates of Your mercy), and when he leaves let him say, Allahumma inni as’aluka min fadlika (O Allah, I ask You of Your bounty).”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
