@@ -9,6 +9,7 @@ import { Quiz } from '../../types/quiz';
 import { useQuizStatus } from '../../hooks/useQuizStatus';
 import { ProgressBar } from './ProgressBar';
 import { QuizOption } from './QuizOption';
+import { getUserSettings } from '@/utils/userManager';
 
 interface QuizPageClientProps {
     quiz: Quiz;
@@ -39,6 +40,23 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 ],
                 confettiNumber: 100,
             });
+        }
+        // Inside the QuizPageClient component, add this effect to update the leaderboard when quiz is completed
+
+        if (state.quizCompleted) {
+            const userSettings = getUserSettings();
+            if (userSettings.optIn && userSettings.name) {
+                fetch('/api/leaderboard/update', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        uuid: userSettings.uuid,
+                        name: userSettings.name,
+                        score: state.score,
+                        optIn: userSettings.optIn
+                    })
+                }).catch(console.error);
+            }
         }
     }, [state.quizCompleted, state.score, quiz.questions.length, confetti]);
 
