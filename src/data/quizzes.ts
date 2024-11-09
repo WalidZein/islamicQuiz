@@ -10,6 +10,8 @@ export interface Question {
 const quizzes: Quiz[] = [
   {
     id: 1,
+    released: true,
+    timeOfRelease: "2024-03-21T00:00:00Z",
     questions: [
       {
         question: "What is the first pillar of Islam?",
@@ -48,6 +50,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 2,
+    released: true,
+    timeOfRelease: "2024-03-21T00:00:00Z",
     questions: [
       {
         question: "Who ordered the first complete compilation of the Qur'an?",
@@ -87,6 +91,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 3,
+    released: true,
+    timeOfRelease: "2024-03-22T00:00:00Z",
     questions: [
       {
         question: "Who was the teenager who learned Hebrew in two weeks and became the Prophet’s translator?",
@@ -120,6 +126,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 4,
+    released: true,
+    timeOfRelease: "2024-03-23T00:00:00Z",
     questions: [
       {
         question: "Which Islamic month did the Prophet ﷺ receive the first revelation of the Quran?",
@@ -169,6 +177,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 5,
+    released: true,
+    timeOfRelease: "2024-03-24T00:00:00Z",
     questions: [
       {
         question: "Why do we need to know and understand Allah’s beautiful names and attributes? (please don't skip the explanation)",
@@ -209,6 +219,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 6,
+    released: true,
+    timeOfRelease: "2024-03-25T00:00:00Z",
     questions: [
       {
         question: "What attribute of Allah does the name Ar-Razzaaq represent?",
@@ -249,6 +261,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 7,
+    released: true,
+    timeOfRelease: "2024-03-26T00:00:00Z",
     questions: [
       {
         question: "The Prophet ﷺ said “the best of you is he who ___”",

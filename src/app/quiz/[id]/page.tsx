@@ -3,6 +3,8 @@
 import { Metadata } from 'next';
 import quizzes from '../../../data/quizzes';
 import QuizPageClient from '../../components/QuizPageClient';
+import { isQuizAvailable } from '@/utils/quizUtils';
+import { notFound } from 'next/navigation';
 
 interface QuizPageProps {
     params: Promise<{
@@ -28,6 +30,12 @@ export async function generateMetadata({ params }: QuizPageProps): Promise<Metad
 
 export default async function QuizPage({ params }: QuizPageProps) {
     const quizId = parseInt((await params).id, 10);
+
+    // Check if quiz is available
+    if (!isQuizAvailable(quizId)) {
+        notFound();
+    }
+
     const quiz = quizzes.find((q) => q.id === quizId);
 
     if (!quiz) {
