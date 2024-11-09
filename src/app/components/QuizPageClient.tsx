@@ -9,6 +9,7 @@ import { Quiz } from '../../types/quiz';
 import { useQuizStatus } from '../../hooks/useQuizStatus';
 import { ProgressBar } from './ProgressBar';
 import { QuizOption } from './QuizOption';
+import { ClapAnimation } from './ClapAnimation';
 import { getUserSettings } from '@/utils/userManager';
 
 interface QuizPageClientProps {
@@ -19,6 +20,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const router = useRouter();
     const { state, dispatch } = useQuizStatus(quiz);
     const [confetti, setConfetti] = useState<JSConfetti | null>(null);
+    const [showClaps, setShowClaps] = useState(false);
 
     // Initialize confetti on client side
     useEffect(() => {
@@ -69,7 +71,15 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
         dispatch({ type: 'SELECT_OPTION', payload: index });
 
         if (index === quiz.questions[state.currentQuestionIndex].correctAnswerIndex) {
+            // Show claps animation
+            setShowClaps(true);
+
+            setTimeout(() => {
+                console.log("turn offshowClaps", showClaps)
+                setShowClaps(false)
+            }, 2000);
             dispatch({ type: 'INCREMENT_SCORE' });
+
         }
     };
 
@@ -159,6 +169,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
     return (
         <div className="flex flex-col items-center py-10">
+            {showClaps && <ClapAnimation />}
             <div className="w-full max-w-2xl mb-4">
                 <button
                     className="flex items-center text-white hover:text-gray-200 font-medium"
