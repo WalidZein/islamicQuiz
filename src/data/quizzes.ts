@@ -305,6 +305,50 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 8,
+    released: true,
+    timeOfRelease: "2024-11-10T13:00:00Z",
+    questions: [
+      {
+        question: "How much more rewardable is a prayer offered in congregation compared to one offered individually?",
+        options: ["7 times", "10 times", "27 times", "30 times"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Narrated 'Abdullah bin 'Umar (RA): Allah's Messenger (ﷺ) said: 'The prayer offered in congregation is twenty-seven degrees more rewardable than a prayer offered by a single person.'",
+      },
+      {
+        question: "What are you not allowed to do in Sujood?",
+        options: ["Make dua in Arabic", "Make dua in another language", "Recite Quran", "Recite adhkar"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'I have been forbidden to recite the Quran in the state of bowing and prostration. So whilst bowing, extol the Lord in it, and while you are in prostration strive your hardest supplicating, as it is most likely that you will be responded to.' [Muslim]",
+      },
+
+      {
+        question: "Who is considered the most noble in the sight of Allah?",
+        options: ["The most knowledgeable among people", "The most generous among people", "The most God conscious (fearing) among people", "The people who pray the most"],
+        correctAnswerIndex: 2,
+        explanation: "Allah says: 'Surely the most noble of you in the sight of Allah is the most righteous among you. Allah is truly All-Knowing, All-Aware.' (Quran 49:13)",
+      },
+
+      {
+        question: "Who is the Prophet who is famous for his patience? \n(By: Musaab)",
+        options: ["Prophet Nuh", "Prophet Muhammad", "Prophet Ibrahim", "Prophet Ayub"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Prophet Ayub was a great prophet and servant of God who became the epitome of patience. Everything that he had was taken away from him in order for him to be tested by God. He passed the test, and God gave back all that was taken away from him, including his property, children, and wealth. Prophet Ayub is indeed a very good example for us to follow in terms of his patience.",
+      },
+
+      {
+        question: "For which group of people are bad deeds not recorded?",
+        options: ["Children who have not reached puberty", "Adults who have reached puberty", "A sick person", "Non-Muslims"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah ﷺ said, 'The pen is lifted from three people: a sleeping person until he awakens, a child until he becomes an adult, and an insane person until he regains his sanity.'\n\nIn another narration, the Prophet ﷺ said, 'A young boy until he reaches puberty.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
