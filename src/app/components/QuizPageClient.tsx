@@ -101,7 +101,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         const userSelection = state.selections[index];
                         return (
                             <div key={index} className="mb-6">
-                                <p className="text-lg mb-2 text-gray-800 dark:text-gray-100">
+                                <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
                                     <strong>Question {index + 1}:</strong> {q.question}
                                 </p>
                                 <ul className="space-y-2">
@@ -159,7 +159,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
                 <ProgressBar progress={progressPercentage} />
 
-                <p className="text-lg mb-6 text-gray-800 dark:text-gray-100">
+                <p className="text-lg mb-6 text-gray-800 dark:text-gray-100 whitespace-pre-line">
                     {currentQuestion.question}
                 </p>
 
