@@ -349,6 +349,51 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 9,
+    released: true,
+    timeOfRelease: "2024-11-11T13:00:00Z",
+    questions: [
+      {
+        question: "In sujood, which body part should not be touching the ground?",
+        options: ["Forearms", "Nose", "Feet", "Hands"],
+        correctAnswerIndex: 0,
+        explanation: "The Prophet, peace and blessings be upon him, said, 'Be straight in prostration and let none of you put his forearms on the ground like a dog.'",
+      },
+      {
+        question: "Which side did Prophet Muhammad ﷺ encourage us not to sleep on?",
+        options: ["Back side", "Left side", "Stomach side", "Right side"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Ya’eesh ibn Tihfah al-Ghifaari reported that his father said:\n\n“I stayed as a guest with the Messenger of Allah (ﷺ) with those of the poor whom he hosted. The Messenger of Allah (ﷺ) came out in the night to check up on his guests, and saw me lying on my stomach.\n\nHe prodded me with his foot and said, ‘Do not lie in this manner, for it is a way of lying that Allah hates.’”\n\nAccording to another report, the Prophet (ﷺ) prodded him with his foot and woke him up, and said, “Do not lie like this, for this is how the people of Hell lie.”",
+      },
+      {
+        question: "What is the hidden Shirk?",
+        options: ["Drinking alcohol & gambling", "Gossiping & lying", "Showing off your good deeds", "Keeping your good deeds secret"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'Shall I not tell you about that which I fear more for you than the Dajjaal?' We said: 'Yes.' He said: 'Hidden Shirk; which is when a man stands to pray and makes it look good because he sees a man looking at him.'",
+      },
+      {
+        question: "What should you do if you forget to say Bismillah before eating?",
+        options: [
+          "Say “أَسْتَغْفِرُ اللهَ”\n- “I seek forgiveness from Allah”",
+          "Say “بِسْمِ اللهِ”\n- “In the name of Allah”",
+          "Say “بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ”\n- “In the name of Allah, at the beginning and at the end”",
+          "It’s ok, keep eating",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+      {
+        question: "Who narrated the most number of ahadeeth?",
+        options: ["Abu Hurayrah (r)", "Abdullah ibn Umar (r)", "Anas ibn Maalik (r)", "Aisha bint Abu Bakr (r)"],
+        correctAnswerIndex: 0,
+        explanation: "Abu Hurayrah (Abdur-Rahman) narrated 5,374 Ahadith. He passed away in 59 AH at the age of 78. The number of his students reaches 800.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
