@@ -394,6 +394,47 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 10,
+    released: true,
+    timeOfRelease: "2024-11-12T13:00:00Z",
+    questions: [
+      {
+        question: "In which of these places is it not allowed to pray?",
+        options: ["On grass", "At the graveyard", "At home", "On snow"],
+        correctAnswerIndex: 1,
+        explanation: "It was narrated that Abu Sa'eed Khudri said:\n'The Messenger of Allah said: All the earth is a mosque, except for graveyards and bathrooms '",
+      },
+      {
+        question: "What is the reward for reciting Surah Ikhlas 10 times?",
+        options: ["A palace in Paradise", "A huge tree in Paradise", "A special river in Paradise", "A delicious meal in Paradise"],
+        correctAnswerIndex: 0,
+        explanation:
+          " The Prophet (ﷺ) said:\n 'Whoever recites ten times, ‘Say: He is Allah, the One,’(Surah Ikhlas) a palace will be built for him in Paradise. Whoever recites it twenty times, two palaces will be built for him. Whoever recites it thirty times, three palaces will be built for him.'",
+      },
+      {
+        question: "How many verses (ayat) are there in the shortest Surah of the Quran?",
+        options: ["3", "4", "5", "6"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The shortest Surah in the Quran is Surah Al-Kawthar (Chapter 108), which has 3 verses (ayat):\n\n108:1\nإِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ ١\nIndeed, We have granted you ˹O Prophet˺ abundant goodness.\n\n108:2\nفَصَلِّ لِرَبِّكَ وَٱنْحَرْ ٢\nSo pray and sacrifice to your Lord ˹alone˺.\n\n108:3\nإِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ ٣\nOnly the one who hates you is truly cut off ˹from any goodness˺.",
+      },
+      {
+        question: "Which is the only Surah in the Quran that does not start with 'Bismillah'?\n (By: Rachid Uncle)",
+        options: ["Surah Al-Baqarah", "Surah At-Tawbah", "Surah Al-Anfal", "Surah Al-Fatiha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Surah At-Tawbah does not start with 'Bismillah' because the Companions, following the example of Caliph Uthman, did not include it. This was due to uncertainty about whether At-Tawbah was a continuation of the previous Surah, Al-Anfal, as their content was similar, and the Prophet Muhammad (peace be upon him) did not clarify this before his passing. Therefore, they placed At-Tawbah directly after Al-Anfal without the Basmalah to indicate a possible connection while keeping them separate.",
+      },
+      {
+        question: "How many Takbeers (Allahu Akbar) are in Salat al-Janazah (Prayer for the dead)?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3,
+        explanation:
+          "- You say the first Takbir ('Allahu Akbar'), then you seek [refuge with Allah from the accursed Shaytan]. Then you say Bismillah ir-Rahman ir-Rahim and [recite Al-Fatihah].\n- Then you say the second Takbir and send blessings upon the Prophet (peace and blessings of Allah be upon him) as one does at the end of the prayer.\n- Then you say the third Takbir and make du’a for the deceased.\n- Then you say the fourth Takbir, pause for a little while, and then say one Taslim to the right, saying 'Assalamu ‘alaykum wa rahmatullah.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
