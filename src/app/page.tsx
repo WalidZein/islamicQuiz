@@ -96,12 +96,12 @@ export default function Home() {
 
           if (isCompleted) {
             if (gotAllRight) {
-              cardClasses += 'bg-green-600 text-white cursor-pointer hover:shadow-lg';
+              cardClasses += 'bg-green-500 text-white cursor-pointer hover:shadow-lg';
             }
             else if (morethan50per) {
-              cardClasses += 'bg-orange-600 text-white cursor-pointer hover:shadow-lg';
+              cardClasses += 'bg-yellow-500 text-white cursor-pointer hover:shadow-lg';
             }
-            else { cardClasses += 'bg-red-600 text-white cursor-pointer hover:shadow-lg'; }
+            else { cardClasses += 'bg-red-500 text-white cursor-pointer hover:shadow-lg'; }
           }
           else {
             cardClasses +=
