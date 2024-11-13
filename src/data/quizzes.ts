@@ -435,6 +435,62 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 11,
+    released: true,
+    timeOfRelease: "2024-11-13T13:00:00Z",
+    questions: [
+      {
+        question: "What practice is recommended immediately after a child is born?",
+        options: [
+          "Reciting Surah Al-Fatiha over the baby",
+          "Saying the Adhan in the baby's right ear",
+          "Performing a full prayer (Salat) with the baby",
+          "Sacrificing an animal as a form of gratitude",
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.",
+      },
+      {
+        question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
+        options: ["Sacrificing a sheep", "Communal feast", "Special prayer", "Donating gold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+      {
+        question: "On the day of the 'Aqiqah, what charitable act is recommended after shaving a newborn's head?",
+        options: [
+          "Donating gold equal to the weight of the child's hair",
+          "Donating silver equal to the weight of the child's hair",
+          "Donating dates equal to the weight of the child's hair",
+          "Donating money equal to the child's birth weight",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) performed the ‘Aqiqah for Al-Hasan with a sheep and said: 'O Fatimah, shave his head and give in charity the equivalent of its weight in silver.' So she weighed it, and its weight was a dirham or part of a dirham.",
+      },
+      {
+        question: "What is the practice of Tahneek?",
+        options: [
+          "Reciting the Adhan in the newborn's ears",
+          "Chewing a date and rubbing it on the baby's palate",
+          "Shaving the baby's head on the seventh day after birth",
+          "Performing a prayer (Salat) with the newborn",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "Tahneek is the Sunnah of chewing a date and applying a portion of it to a newborn baby's palate.\n\nAnas said, 'On the day he was born, I took 'Abdullah ibn Abi Talha to the Prophet, may Allah bless him and grant him peace. I found him wearing a woollen robe while he was marking one of his camels with tar. The Prophet said, 'Do you have any dates with you?' 'Yes,' I replied. I gave him some dates. He chewed the dates and opened the child's mouth and put some chewed dates into the child's mouth. The child licked his lips. The Prophet, may Allah bless him and grant him peace, said, 'The Ansar love dates,' and gave him the name 'Abdullah.'",
+      },
+      {
+        question: "It’s Sunnah that the child should be given a name by the __ day after birth?",
+        options: ["5th", "6th", "7th", "8th"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
