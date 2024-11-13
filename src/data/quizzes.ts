@@ -27,7 +27,7 @@ const quizzes: Quiz[] = [
           "Khadijah (may Allah be pleased with her) was the first woman to believe in the Prophet (peace be upon him). She was also the first person to hear revealed verses from the mouth of the Messenger of Allah.",
       },
       {
-        question: "Which surah will intercede for it's companion on the day of judgement?",
+        question: "Which surah will intercede for it's companion on the day of judgement?(Correction: Surah Baqarah is one of them. What is the other one?)",
         options: ["Surah Yasin", "Surah Mulk", "Surah Baqarah", "Surah Fajr"],
         correctAnswerIndex: 1,
         explanation:
