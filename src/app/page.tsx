@@ -5,6 +5,7 @@ import Link from 'next/link';
 import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
 import { getUserSettings } from '@/utils/userManager';
+import QuizCard from '@/app/components/QuizCard';
 
 interface QuizStatus {
   completed: boolean;
@@ -114,45 +115,41 @@ export default function Home() {
           <p className="text-xl font-semibold">
             🔥 {userStreak}
           </p>
-          {/* <Link
-            href="/leaderboard"
-            className="inline-block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
-          >
-            View Leaderboard
-          </Link> */}
         </div>
       </div>
 
+      {/* Latest Quiz - only show if not completed */}
+      {availableQuizzes.length > 0 && (
+        <>
+          {!completedQuizzes[availableQuizzes[availableQuizzes.length - 1].id]?.completed && (
+            <div className="mb-8">
+              <QuizCard
+                quiz={availableQuizzes[availableQuizzes.length - 1]}
+                status={completedQuizzes[availableQuizzes[availableQuizzes.length - 1].id]}
+                className="w-32 h-32 md:w-40 md:h-40 !text-3xl"
+              />
+            </div>
+          )}
+        </>
+      )}
+
+      {/* All Quizzes Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {availableQuizzes.map((quiz: Quiz) => {
-          const quizStatus = completedQuizzes[quiz.id];
-          const isCompleted = quizStatus?.completed;
-          const gotAllRight = quizStatus?.score === quiz.questions.length;
-          const morethan50per = (quizStatus?.score / quiz.questions.length) > 0.5;
-
-          let cardClasses =
-            'w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-lg transition-shadow duration-300 ';
-
-          if (isCompleted) {
-            if (gotAllRight) {
-              cardClasses += 'bg-green-500 text-white cursor-pointer hover:shadow-lg';
-            }
-            else if (morethan50per) {
-              cardClasses += 'bg-yellow-500 text-white cursor-pointer hover:shadow-lg';
-            }
-            else { cardClasses += 'bg-red-500 text-white cursor-pointer hover:shadow-lg'; }
-          }
-          else {
-            cardClasses +=
-              'bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 cursor-pointer hover:shadow-lg';
+        {availableQuizzes.map((quiz: Quiz, index: number) => {
+          // Skip the latest quiz if it's not completed (since it's shown above)
+          if (
+            index === availableQuizzes.length - 1 &&
+            !completedQuizzes[quiz.id]?.completed
+          ) {
+            return null;
           }
 
           return (
-            <Link href={`/quiz/${quiz.id}`} key={quiz.id}>
-              <div className={cardClasses}>
-                <span className="text-2xl font-semibold">Quiz {quiz.id}</span>
-              </div>
-            </Link>
+            <QuizCard
+              key={quiz.id}
+              quiz={quiz}
+              status={completedQuizzes[quiz.id]}
+            />
           );
         })}
       </div>
