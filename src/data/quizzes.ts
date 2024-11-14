@@ -495,7 +495,7 @@ const quizzes: Quiz[] = [
   {
     id: 12,
     released: true,
-    timeOfRelease: "2024-11-13T13:00:00Z",
+    timeOfRelease: "2024-11-14T13:00:00Z",
     questions: [
       {
         question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
