@@ -491,6 +491,61 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 12,
+    released: true,
+    timeOfRelease: "2024-11-14T13:00:00Z",
+    questions: [
+      {
+        question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran: 'I said (to them): Ask forgiveness from your Lord; Verily, He is Oft-Forgiving; He will send rain to you in abundance; And give you increase in wealth and children, and bestow on you gardens and bestow on you rivers.' [Nuh 71:10-12]",
+      },
+      {
+        question: "Does Sadaqah (Charity) decrease wealth?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "When viewed through the narrow lens of worldly rules, giving in charity might seem like it reduces your wealth. But as Muslims, we are given the full perspective of how the world works.\n\nThe Prophet ﷺ said: 'The wealth of a man will not diminish by Sadaqah (charity).’\n\nAllah reminds us: 'Say: Truly, my Lord enlarges the provision for whom He wills of His slaves, and (also) restricts (it) for him. And whatsoever you spend of anything (in Allah’s Cause), He will replace it. And He is the Best of providers.'\n\n*[Saba’ 34:39]",
+      },
+      {
+        question: "Does Sila Al-Rahim (maintaining ties of kinship) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah (blessings and peace of Allah be upon him) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship.'",
+      },
+      {
+        question: "Does the Rizk prayer increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation: "Trick question! There is nothing known as Salat al-Rizk. In the authentic Sunnah, there is no known prayer specifically for asking for increased provision.",
+      },
+      {
+        question: "Does Hajj and Umrah increase rizk? (Avg. cost of Hajj from the US is $9000)",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet of Allah ﷺ said: 'Continuously perform Hajj and 'Umrah, as they both eradicate poverty and sins, just as a furnace removes impurities from iron, gold, and silver. And a Hajj that is accepted has a reward no less than Paradise.'",
+      },
+      {
+        question: "Does marriage increase rizk (provision)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Qur'an: 'And marry the unmarried among you and the righteous among your male slaves and female slaves. If they should be poor, Allah will enrich them from His bounty, and Allah is all-Encompassing and Knowing.'[Qur’an 24:32]\n\nIn this verse from Surah An-Nur, Allah SWT encourages unmarried individuals not to allow fear of poverty to be a reason why they don’t try to get married, reassuring them that He will enrich them from His abundant blessings and provisions.",
+      },
+      {
+        question: "Does supporting a student of knowledge increase rizk?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "There were two brothers in the time of the Prophet ﷺ, one of whom would attend the lessons of the Prophet ﷺ and the other would engage in business. The businessman complained to the Prophet ﷺ about his brother, and the Prophet said, 'Perhaps you are granted provision because of him.' [Tirmidhi]",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
