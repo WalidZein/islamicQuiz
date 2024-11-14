@@ -449,7 +449,8 @@ const quizzes: Quiz[] = [
           "Sacrificing an animal as a form of gratitude",
         ],
         correctAnswerIndex: 1,
-        explanation: "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.",
+        explanation:
+          "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.\n\n 'There is a scholarly difference of opinion regarding the authenticity of this hadith, with some classifying it as ḥasan (sound) and others as ḍaʻīf (weak). However, the righteous predecessors (Salaf al-Ṣāliḥ) were known to act upon it.'",
       },
       {
         question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
@@ -494,7 +495,7 @@ const quizzes: Quiz[] = [
   {
     id: 12,
     released: true,
-    timeOfRelease: "2024-11-14T13:00:00Z",
+    timeOfRelease: "2024-11-13T13:00:00Z",
     questions: [
       {
         question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
@@ -518,7 +519,7 @@ const quizzes: Quiz[] = [
           "The Messenger of Allah (blessings and peace of Allah be upon him) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship.'",
       },
       {
-        question: "Does the Rizk prayer increase rizk (provisions)?",
+        question: "Does the Rizk prayer (Salat al Rizk) increase rizk (provisions)?",
         options: ["Yes", "No"],
         correctAnswerIndex: 1,
         explanation: "Trick question! There is nothing known as Salat al-Rizk. In the authentic Sunnah, there is no known prayer specifically for asking for increased provision.",
