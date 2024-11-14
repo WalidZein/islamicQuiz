@@ -107,21 +107,19 @@ export default function Home() {
     <div className="flex flex-col items-center py-10">
       <div className="w-full max-w-2xl text-center mb-8">
         <h1 className="text-4xl font-extrabold">Islamic Quiz</h1>
-        <p className="mt-2 text-lg">
+        <p className="mt-2 text-lg sm:text-sm">
           Test your knowledge with our daily quizzes on Islam.
         </p>
         <div className="mt-4 flex flex-col items-center gap-2">
-          {userStreak > 0 && (
-            <p className="text-lg font-semibold">
-              🔥 {userStreak}
-            </p>
-          )}
-          <Link
+          <p className="text-xl font-semibold">
+            🔥 {userStreak}
+          </p>
+          {/* <Link
             href="/leaderboard"
             className="inline-block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
           >
             View Leaderboard
-          </Link>
+          </Link> */}
         </div>
       </div>
 
