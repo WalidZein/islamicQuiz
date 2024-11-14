@@ -10,6 +10,8 @@ export interface Question {
 const quizzes: Quiz[] = [
   {
     id: 1,
+    released: true,
+    timeOfRelease: "2024-03-21T00:00:00Z",
     questions: [
       {
         question: "What is the first pillar of Islam?",
@@ -25,7 +27,7 @@ const quizzes: Quiz[] = [
           "Khadijah (may Allah be pleased with her) was the first woman to believe in the Prophet (peace be upon him). She was also the first person to hear revealed verses from the mouth of the Messenger of Allah.",
       },
       {
-        question: "Which surah will intercede for it's companion on the day of judgement?",
+        question: "Which surah will intercede for it's companion on the day of judgement?(Correction: Surah Baqarah is one of them. What is the other one?)",
         options: ["Surah Yasin", "Surah Mulk", "Surah Baqarah", "Surah Fajr"],
         correctAnswerIndex: 1,
         explanation:
@@ -48,6 +50,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 2,
+    released: true,
+    timeOfRelease: "2024-03-21T00:00:00Z",
     questions: [
       {
         question: "Who ordered the first complete compilation of the Qur'an?",
@@ -87,6 +91,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 3,
+    released: true,
+    timeOfRelease: "2024-03-22T00:00:00Z",
     questions: [
       {
         question: "Who was the teenager who learned Hebrew in two weeks and became the Prophet’s translator?",
@@ -120,6 +126,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 4,
+    released: true,
+    timeOfRelease: "2024-03-23T00:00:00Z",
     questions: [
       {
         question: "Which Islamic month did the Prophet ﷺ receive the first revelation of the Quran?",
@@ -169,6 +177,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 5,
+    released: true,
+    timeOfRelease: "2024-03-24T00:00:00Z",
     questions: [
       {
         question: "Why do we need to know and understand Allah’s beautiful names and attributes? (please don't skip the explanation)",
@@ -209,6 +219,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 6,
+    released: true,
+    timeOfRelease: "2024-03-25T00:00:00Z",
     questions: [
       {
         question: "What attribute of Allah does the name Ar-Razzaaq represent?",
@@ -249,6 +261,8 @@ const quizzes: Quiz[] = [
   },
   {
     id: 7,
+    released: true,
+    timeOfRelease: "2024-03-26T00:00:00Z",
     questions: [
       {
         question: "The Prophet ﷺ said “the best of you is he who ___”",
@@ -288,6 +302,192 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 1,
         explanation:
           " Arabic: اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ\nTransliteration: Allahumma iftah li abwab rahmatika\nTranslation: O Allah, open to me the gates of Your mercy\n\n The Messenger of Allah (ﷺ) said: “When any one of you enters the mosque, let him say: Allahumma iftah li abwab rahmatika (O Allah, open to me the gates of Your mercy), and when he leaves let him say, Allahumma inni as’aluka min fadlika (O Allah, I ask You of Your bounty).”",
+      },
+    ],
+  },
+  {
+    id: 8,
+    released: true,
+    timeOfRelease: "2024-11-10T13:00:00Z",
+    questions: [
+      {
+        question: "How much more rewardable is a prayer offered in congregation compared to one offered individually?",
+        options: ["7 times", "10 times", "27 times", "30 times"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Narrated 'Abdullah bin 'Umar (RA): Allah's Messenger (ﷺ) said: 'The prayer offered in congregation is twenty-seven degrees more rewardable than a prayer offered by a single person.'",
+      },
+      {
+        question: "What are you not allowed to do in Sujood?",
+        options: ["Make dua in Arabic", "Make dua in another language", "Recite Quran", "Recite adhkar"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'I have been forbidden to recite the Quran in the state of bowing and prostration. So whilst bowing, extol the Lord in it, and while you are in prostration strive your hardest supplicating, as it is most likely that you will be responded to.' [Muslim]",
+      },
+
+      {
+        question: "Who is considered the most noble in the sight of Allah?",
+        options: ["The most knowledgeable among people", "The most generous among people", "The most God conscious (fearing) among people", "The people who pray the most"],
+        correctAnswerIndex: 2,
+        explanation: "Allah says: 'Surely the most noble of you in the sight of Allah is the most righteous among you. Allah is truly All-Knowing, All-Aware.' (Quran 49:13)",
+      },
+
+      {
+        question: "Who is the Prophet who is famous for his patience? \n(By: Musaab)",
+        options: ["Prophet Nuh", "Prophet Muhammad", "Prophet Ibrahim", "Prophet Ayub"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Prophet Ayub was a great prophet and servant of God who became the epitome of patience. Everything that he had was taken away from him in order for him to be tested by God. He passed the test, and God gave back all that was taken away from him, including his property, children, and wealth. Prophet Ayub is indeed a very good example for us to follow in terms of his patience.",
+      },
+
+      {
+        question: "For which group of people are bad deeds not recorded?",
+        options: ["Children who have not reached puberty", "Adults who have reached puberty", "A sick person", "Non-Muslims"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah ﷺ said, 'The pen is lifted from three people: a sleeping person until he awakens, a child until he becomes an adult, and an insane person until he regains his sanity.'\n\nIn another narration, the Prophet ﷺ said, 'A young boy until he reaches puberty.'",
+      },
+    ],
+  },
+  {
+    id: 9,
+    released: true,
+    timeOfRelease: "2024-11-11T13:00:00Z",
+    questions: [
+      {
+        question: "In sujood, which body part should not be touching the ground?",
+        options: ["Forearms", "Nose", "Feet", "Hands"],
+        correctAnswerIndex: 0,
+        explanation: "The Prophet, peace and blessings be upon him, said, 'Be straight in prostration and let none of you put his forearms on the ground like a dog.'",
+      },
+      {
+        question: "Which side did Prophet Muhammad ﷺ encourage us not to sleep on?",
+        options: ["Back side", "Left side", "Stomach side", "Right side"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Ya’eesh ibn Tihfah al-Ghifaari reported that his father said:\n\n“I stayed as a guest with the Messenger of Allah (ﷺ) with those of the poor whom he hosted. The Messenger of Allah (ﷺ) came out in the night to check up on his guests, and saw me lying on my stomach.\n\nHe prodded me with his foot and said, ‘Do not lie in this manner, for it is a way of lying that Allah hates.’”\n\nAccording to another report, the Prophet (ﷺ) prodded him with his foot and woke him up, and said, “Do not lie like this, for this is how the people of Hell lie.”",
+      },
+      {
+        question: "What is the hidden Shirk?",
+        options: ["Drinking alcohol & gambling", "Gossiping & lying", "Showing off your good deeds", "Keeping your good deeds secret"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'Shall I not tell you about that which I fear more for you than the Dajjaal?' We said: 'Yes.' He said: 'Hidden Shirk; which is when a man stands to pray and makes it look good because he sees a man looking at him.'",
+      },
+      {
+        question: "What should you do if you forget to say Bismillah before eating?",
+        options: [
+          "Say “أَسْتَغْفِرُ اللهَ”\n- “I seek forgiveness from Allah”",
+          "Say “بِسْمِ اللهِ”\n- “In the name of Allah”",
+          "Say “بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ”\n- “In the name of Allah, at the beginning and at the end”",
+          "It’s ok, keep eating",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+      {
+        question: "Who narrated the most number of ahadeeth?",
+        options: ["Abu Hurayrah (r)", "Abdullah ibn Umar (r)", "Anas ibn Maalik (r)", "Aisha bint Abu Bakr (r)"],
+        correctAnswerIndex: 0,
+        explanation: "Abu Hurayrah (Abdur-Rahman) narrated 5,374 Ahadith. He passed away in 59 AH at the age of 78. The number of his students reaches 800.",
+      },
+    ],
+  },
+  {
+    id: 10,
+    released: true,
+    timeOfRelease: "2024-11-12T13:00:00Z",
+    questions: [
+      {
+        question: "In which of these places is it not allowed to pray?",
+        options: ["On grass", "At the graveyard", "At home", "On snow"],
+        correctAnswerIndex: 1,
+        explanation: "It was narrated that Abu Sa'eed Khudri said:\n'The Messenger of Allah said: All the earth is a mosque, except for graveyards and bathrooms '",
+      },
+      {
+        question: "What is the reward for reciting Surah Ikhlas 10 times?",
+        options: ["A palace in Paradise", "A huge tree in Paradise", "A special river in Paradise", "A delicious meal in Paradise"],
+        correctAnswerIndex: 0,
+        explanation:
+          " The Prophet (ﷺ) said:\n 'Whoever recites ten times, ‘Say: He is Allah, the One,’(Surah Ikhlas) a palace will be built for him in Paradise. Whoever recites it twenty times, two palaces will be built for him. Whoever recites it thirty times, three palaces will be built for him.'",
+      },
+      {
+        question: "How many verses (ayat) are there in the shortest Surah of the Quran?",
+        options: ["3", "4", "5", "6"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The shortest Surah in the Quran is Surah Al-Kawthar (Chapter 108), which has 3 verses (ayat):\n\n108:1\nإِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ ١\nIndeed, We have granted you ˹O Prophet˺ abundant goodness.\n\n108:2\nفَصَلِّ لِرَبِّكَ وَٱنْحَرْ ٢\nSo pray and sacrifice to your Lord ˹alone˺.\n\n108:3\nإِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ ٣\nOnly the one who hates you is truly cut off ˹from any goodness˺.",
+      },
+      {
+        question: "Which is the only Surah in the Quran that does not start with 'Bismillah'?\n (By: Rachid Uncle)",
+        options: ["Surah Al-Baqarah", "Surah At-Tawbah", "Surah Al-Anfal", "Surah Al-Fatiha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Surah At-Tawbah does not start with 'Bismillah' because the Companions, following the example of Caliph Uthman, did not include it. This was due to uncertainty about whether At-Tawbah was a continuation of the previous Surah, Al-Anfal, as their content was similar, and the Prophet Muhammad (peace be upon him) did not clarify this before his passing. Therefore, they placed At-Tawbah directly after Al-Anfal without the Basmalah to indicate a possible connection while keeping them separate.",
+      },
+      {
+        question: "How many Takbeers (Allahu Akbar) are in Salat al-Janazah (Prayer for the dead)?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3,
+        explanation:
+          "- You say the first Takbir ('Allahu Akbar'), then you seek [refuge with Allah from the accursed Shaytan]. Then you say Bismillah ir-Rahman ir-Rahim and [recite Al-Fatihah].\n- Then you say the second Takbir and send blessings upon the Prophet (peace and blessings of Allah be upon him) as one does at the end of the prayer.\n- Then you say the third Takbir and make du’a for the deceased.\n- Then you say the fourth Takbirand make duaa for all muslims,\n - Then say one Taslim to the right, saying 'Assalamu ‘alaykum wa rahmatullah.' (or two taslims depending on the mazhab)",
+      },
+    ],
+  },
+  {
+    id: 11,
+    released: true,
+    timeOfRelease: "2024-11-13T13:00:00Z",
+    questions: [
+      {
+        question: "What practice is recommended immediately after a child is born?",
+        options: [
+          "Reciting Surah Al-Fatiha over the baby",
+          "Saying the Adhan in the baby's right ear",
+          "Performing a full prayer (Salat) with the baby",
+          "Sacrificing an animal as a form of gratitude",
+        ],
+        correctAnswerIndex: 1,
+        explanation: "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.",
+      },
+      {
+        question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
+        options: ["Sacrificing a sheep", "Communal feast", "Special prayer", "Donating gold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+      {
+        question: "On the day of the 'Aqiqah, what charitable act is recommended after shaving a newborn's head?",
+        options: [
+          "Donating gold equal to the weight of the child's hair",
+          "Donating silver equal to the weight of the child's hair",
+          "Donating dates equal to the weight of the child's hair",
+          "Donating money equal to the child's birth weight",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) performed the ‘Aqiqah for Al-Hasan with a sheep and said: 'O Fatimah, shave his head and give in charity the equivalent of its weight in silver.' So she weighed it, and its weight was a dirham or part of a dirham.",
+      },
+      {
+        question: "What is the practice of Tahneek?",
+        options: [
+          "Reciting the Adhan in the newborn's ears",
+          "Chewing a date and rubbing it on the baby's palate",
+          "Shaving the baby's head on the seventh day after birth",
+          "Performing a prayer (Salat) with the newborn",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "Tahneek is the Sunnah of chewing a date and applying a portion of it to a newborn baby's palate.\n\nAnas said, 'On the day he was born, I took 'Abdullah ibn Abi Talha to the Prophet, may Allah bless him and grant him peace. I found him wearing a woollen robe while he was marking one of his camels with tar. The Prophet said, 'Do you have any dates with you?' 'Yes,' I replied. I gave him some dates. He chewed the dates and opened the child's mouth and put some chewed dates into the child's mouth. The child licked his lips. The Prophet, may Allah bless him and grant him peace, said, 'The Ansar love dates,' and gave him the name 'Abdullah.'",
+      },
+      {
+        question: "It’s Sunnah that the child should be given a name by the __ day after birth?",
+        options: ["5th", "6th", "7th", "8th"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
       },
     ],
   },
