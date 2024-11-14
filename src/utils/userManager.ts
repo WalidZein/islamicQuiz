@@ -4,7 +4,9 @@ import { UserSettings } from "@/types/leaderboard";
 const USER_SETTINGS_KEY = "userSettings";
 
 export function getUserSettings(): UserSettings {
-  if (typeof window === "undefined") return { uuid: "", name: null, optIn: false };
+  if (typeof window === "undefined") {
+    return createNewSettings();
+  }
 
   const stored = localStorage.getItem(USER_SETTINGS_KEY);
   if (stored) {
@@ -12,14 +14,17 @@ export function getUserSettings(): UserSettings {
   }
 
   // Create new user settings
-  const newSettings: UserSettings = {
+  const newSettings = createNewSettings();
+  localStorage.setItem(USER_SETTINGS_KEY, JSON.stringify(newSettings));
+  return newSettings;
+}
+
+function createNewSettings(): UserSettings {
+  return {
     uuid: uuidv4(),
     name: null,
     optIn: false,
   };
-
-  localStorage.setItem(USER_SETTINGS_KEY, JSON.stringify(newSettings));
-  return newSettings;
 }
 
 export function updateUserSettings(settings: Partial<UserSettings>): UserSettings {

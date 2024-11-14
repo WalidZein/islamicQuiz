@@ -47,7 +47,7 @@ export default function Leaderboard() {
                 uuid: updated.uuid,
                 name: newName,
                 optIn: true,
-                score: 0 // Initial score for new users
+                score: 0
             })
         });
 
@@ -121,7 +121,7 @@ export default function Leaderboard() {
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold p-6 border-b dark:border-gray-700">
-                    Leaderboard
+                    🏆 Leaderboard
                 </h2>
                 <div className="divide-y dark:divide-gray-700">
                     {leaderboard.map((entry, index) => (
@@ -134,7 +134,12 @@ export default function Leaderboard() {
                                 <span className="text-lg font-semibold w-8">{index + 1}</span>
                                 <span className="font-medium">{entry.name}</span>
                             </div>
-                            <span className="font-semibold">{entry.totalScore} points</span>
+                            <div className="flex items-center gap-4">
+                                <span className="font-semibold">🔥 {entry.currentStreak} </span>
+                                <span className="text-sm text-gray-500">
+                                    (Best: {entry.highestStreak})
+                                </span>
+                            </div>
                         </div>
                     ))}
                     {leaderboard.length === 0 && (

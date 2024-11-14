@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
+import { getUserSettings } from '@/utils/userManager';
 
 interface QuizStatus {
   completed: boolean;
@@ -14,11 +15,24 @@ interface QuizStatus {
 export default function Home() {
   const [completedQuizzes, setCompletedQuizzes] = useState<{ [key: number]: QuizStatus }>({});
   const [isClient, setIsClient] = useState(false);
+  const [userStreak, setUserStreak] = useState(0);
 
   useEffect(() => {
     setIsClient(true);
     const storedData = JSON.parse(localStorage.getItem('quizStatus') || '{}');
     setCompletedQuizzes(storedData);
+  }, []);
+
+  useEffect(() => {
+    const userSettings = getUserSettings();
+    fetch(`/api/leaderboard/update?uuid=${userSettings.uuid}`)
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.currentStreak) {
+          setUserStreak(data.currentStreak);
+        }
+      })
+      .catch(console.error);
   }, []);
 
   // Don't render quiz status until client-side hydration is complete
@@ -45,6 +59,8 @@ export default function Home() {
     );
   }
 
+  const userSettings = getUserSettings();
+
   return (
     <div className="flex flex-col items-center py-10">
       <div className="w-full max-w-2xl text-center mb-8">
@@ -52,9 +68,19 @@ export default function Home() {
         <p className="mt-2 text-lg">
           Test your knowledge with our daily quizzes on Islam.
         </p>
-        <Link href="/leaderboard" className="inline-block mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300">
-          View Leaderboard
-        </Link>
+        <div className="mt-4 flex flex-col items-center gap-2">
+          {userStreak > 0 && (
+            <p className="text-lg font-semibold">
+              🔥 {userStreak}
+            </p>
+          )}
+          <Link
+            href="/leaderboard"
+            className="inline-block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+          >
+            View Leaderboard
+          </Link>
+        </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
