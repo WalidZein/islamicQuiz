@@ -557,7 +557,7 @@ const quizzes: Quiz[] = [
         options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
         correctAnswerIndex: 0,
         explanation:
-          "Uthman bin Affan narrated that:\nAllah's Messenger (ﷺ) said: 'Whoever attends Isha (prayer) in congregation, then he has (the reward as if he had) stood half of the night. And whoever prays Isha and Fajr in congregation, then he has (the reward as if he had) spent the entire night standing (in prayer).'",
+          "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
       },
       {
         question: "Which two rak'ah (unit of prayer) are better than the whole world?",
@@ -584,7 +584,7 @@ const quizzes: Quiz[] = [
         options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
         correctAnswerIndex: 4,
         explanation:
-          'Uthman bin Affan narrated that:\nAllah\'s Messenger (ﷺ) said: "Whoever attends Isha (prayer) in congregation, then he has (the reward as if he had) stood half of the night. And whoever prays Isha and Fajr in congregation, then he has (the reward as if he had) spent the entire night standing (in prayer)."',
+           "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
       },
     ],
   },
