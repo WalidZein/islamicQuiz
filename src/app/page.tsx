@@ -110,17 +110,6 @@ export default function Home() {
         <p className="mt-2 text-lg sm:text-sm">
           Test your knowledge with our daily quizzes on Islam.
         </p>
-        <div className="mt-4 flex flex-col items-center gap-2">
-          <p className="text-xl font-semibold">
-            🔥 {userStreak}
-          </p>
-          {/* <Link
-            href="/leaderboard"
-            className="inline-block px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
-          >
-            View Leaderboard
-          </Link> */}
-        </div>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
