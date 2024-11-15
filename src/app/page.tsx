@@ -137,13 +137,6 @@ export default function Home() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {availableQuizzes.map((quiz: Quiz, index: number) => {
           // Skip the latest quiz if it's not completed (since it's shown above)
-          if (
-            index === availableQuizzes.length - 1 &&
-            !completedQuizzes[quiz.id]?.completed
-          ) {
-            return null;
-          }
-
           return (
             <QuizCard
               key={quiz.id}
