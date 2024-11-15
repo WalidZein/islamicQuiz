@@ -495,7 +495,7 @@ const quizzes: Quiz[] = [
   {
     id: 12,
     released: true,
-    timeOfRelease: "2024-11-13T13:00:00Z",
+    timeOfRelease: "2024-11-14T13:00:00Z",
     questions: [
       {
         question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
@@ -550,7 +550,7 @@ const quizzes: Quiz[] = [
   {
     id: 13,
     released: true,
-    timeOfRelease: "2024-11-14T13:00:00Z",
+    timeOfRelease: "2024-11-15T13:00:00Z",
     questions: [
       {
         question: "Which prayer if prayed in the masjid earns you the reward of praying the whole night?",
