@@ -495,7 +495,7 @@ const quizzes: Quiz[] = [
   {
     id: 12,
     released: true,
-    timeOfRelease: "2024-11-14T13:00:00Z",
+    timeOfRelease: "2024-11-13T13:00:00Z",
     questions: [
       {
         question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
@@ -544,6 +544,47 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 0,
         explanation:
           "There were two brothers in the time of the Prophet ﷺ, one of whom would attend the lessons of the Prophet ﷺ and the other would engage in business. The businessman complained to the Prophet ﷺ about his brother, and the Prophet said, 'Perhaps you are granted provision because of him.' [Tirmidhi]",
+      },
+    ],
+  },
+  {
+    id: 13,
+    released: true,
+    timeOfRelease: "2024-11-14T13:00:00Z",
+    questions: [
+      {
+        question: "Which prayer if prayed in the masjid earns you the reward of praying the whole night?",
+        options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Uthman bin Affan narrated that:\nAllah's Messenger (ﷺ) said: 'Whoever attends Isha (prayer) in congregation, then he has (the reward as if he had) stood half of the night. And whoever prays Isha and Fajr in congregation, then he has (the reward as if he had) spent the entire night standing (in prayer).'",
+      },
+      {
+        question: "Which two rak'ah (unit of prayer) are better than the whole world?",
+        options: ["Two rak’ah before Fajr", "Two rak’ah after Duhr", "Two rak’ah after Maghrib", "Two rak’ah after Isha"],
+        correctAnswerIndex: 0,
+        explanation: "Aishah (rA) reported:\nThe Prophet (ﷺ) said, 'The two Rak'ah before the dawn (Fajr) prayer are better than this world and all it contains.'",
+      },
+      {
+        question: "In the morning every single joint of yours must pay a sadaqah (charity). What 2 rak’ah will pay that off?",
+        options: ["Fajr Prayer", "Duha Prayer", "Sunnah of Fajr", "Sunnah of Isha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Duha prayer is a simple 2 rak'ahs that’s prayed any time after the sun rises until just before Dhuhr prayer. It’s highly rewarding and a great habit to incorporate into your daily life.\n\nThe Prophet (ﷺ) said: 'In the morning every single joint of yours must pay a sadaqah (charity). Every SubhanAllah is a sadaqah, every Alhamdulillah is a sadaqah, every La Ilaha Illa Allah is a sadaqah, every Allahu Akbar is a sadaqah, every commanding good is a sadaqah, and every forbidding evil is a sadaqah, and all this is accomplished through two rak’ahs one can pray in Duha.' [Muslim]\n\nAbu Hurayrah (RA) reported that the Messenger of Allah (ﷺ) said: 'No one persists in offering Duha prayer except one who often turns to Allah, for it is the prayer of those who often turn to Allah (SWT).'",
+      },
+      {
+        question: "Which Sunnah prayer did the Prophet never abandon even when traveling?",
+        options: ["Duha Prayer", "Sunnah of Duhr", "Sunnah of Isha", "Witr Prayer"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Ibn al-Qayyim said:\n'It was the practice of the Prophet (ﷺ) when travelling to pray only the obligatory prayers, and it was not narrated that he used to pray the regular Sunnah prayers either before or after the fard prayers, apart from Witr and the Sunnah of Fajr, which he never omitted whether he was travelling or not.'",
+      },
+      {
+        question: "Which prayer if prayed in the masjid earns you the reward of praying half the night?",
+        options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
+        correctAnswerIndex: 4,
+        explanation:
+          'Uthman bin Affan narrated that:\nAllah\'s Messenger (ﷺ) said: "Whoever attends Isha (prayer) in congregation, then he has (the reward as if he had) stood half of the night. And whoever prays Isha and Fajr in congregation, then he has (the reward as if he had) spent the entire night standing (in prayer)."',
       },
     ],
   },
