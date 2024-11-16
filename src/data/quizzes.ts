@@ -588,6 +588,67 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 14,
+    released: true,
+    timeOfRelease: "2024-11-16T13:00:00Z",
+    questions: [
+      {
+        question: "What are you not allowed to do in Sujood?",
+        options: ["Make dua in Arabic", "Make dua in another language", "Recite Quran", "Recite adhkar"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'I have been forbidden to recite the Quran in the state of bowing and prostration. So whilst bowing, extol the Lord in it, and while you are in prostration strive your hardest supplicating, as it is most likely that you will be responded to.' [Muslim]",
+      },
+      {
+        question: "What is the hidden Shirk?",
+        options: ["Drinking alcohol & gambling", "Gossiping & lying", "Showing off your good deeds", "Keeping your good deeds secret"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'Shall I not tell you about that which I fear more for you than the Dajjaal?' We said: 'Yes.' He said: 'Hidden Shirk; which is when a man stands to pray and makes it look good because he sees a man looking at him.'",
+      },
+      {
+        question: "How many Takbeers (Allahu Akbar) are in Salat al-Janazah (Prayer for the dead)?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3,
+        explanation:
+          "- You say the first Takbir ('Allahu Akbar'), then you seek [refuge with Allah from the accursed Shaytan]. Then you say Bismillah ir-Rahman ir-Rahim and [recite Al-Fatihah].\n- Then you say the second Takbir and send blessings upon the Prophet (peace and blessings of Allah be upon him) as one does at the end of the prayer.\n- Then you say the third Takbir and make du’a for the deceased.\n- Then you say the fourth Takbirand make duaa for all muslims,\n - Then say one Taslim to the right, saying 'Assalamu ‘alaykum wa rahmatullah.' (or two taslims depending on the mazhab)",
+      },
+      {
+        question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
+        options: ["Sacrificing a sheep", "Communal feast", "Special prayer", "Donating gold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+      {
+        question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran: 'I said (to them): Ask forgiveness from your Lord; Verily, He is Oft-Forgiving; He will send rain to you in abundance; And give you increase in wealth and children, and bestow on you gardens and bestow on you rivers.' [Nuh 71:10-12]",
+      },
+      {
+        question: "Which Sunnah prayer did the Prophet never abandon even when traveling?",
+        options: ["Duha Prayer", "Sunnah of Duhr", "Sunnah of Isha", "Witr Prayer"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Ibn al-Qayyim said:\n'It was the practice of the Prophet (ﷺ) when travelling to pray only the obligatory prayers, and it was not narrated that he used to pray the regular Sunnah prayers either before or after the fard prayers, apart from Witr and the Sunnah of Fajr, which he never omitted whether he was travelling or not.'",
+      },
+      {
+        question: "What should you do if you forget to say Bismillah before eating?",
+        options: [
+          "Say “أَسْتَغْفِرُ اللهَ”\n- “I seek forgiveness from Allah”",
+          "Say “بِسْمِ اللهِ”\n- “In the name of Allah”",
+          "Say “بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ”\n- “In the name of Allah, at the beginning and at the end”",
+          "It’s ok, keep eating",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
