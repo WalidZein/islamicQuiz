@@ -91,12 +91,12 @@ export default function Leaderboard() {
                             value={newName}
                             onChange={(e) => setNewName(e.target.value)}
                             placeholder="Enter your name"
-                            className="flex-1 px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600"
+                            className="flex-1 px-4 py-2 border rounded-md bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
                             required
                         />
                         <button
                             type="submit"
-                            className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+                            className="px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 text-xs md:text-lg"
                         >
                             Set Name
                         </button>
@@ -105,50 +105,57 @@ export default function Leaderboard() {
             ) : (
                 <div className="mb-8 flex items-center justify-between">
                     <div>
-                        <h3 className="text-xl font-semibold">Welcome, {userSettings.name}!</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
-                            {userSettings.optIn ? 'You are visible on the leaderboard' : 'You are hidden from the leaderboard'}
+                        <h3 className="text-xl font-semibold">Assalamualaikum, {userSettings.name}!</h3>
+                        <p className="text-gray-800 dark:text-gray-300">
+                            {//userSettings.optIn ? 'You are visible on the leaderboard' : 'You are hidden from the leaderboard '
+                            }
+
                         </p>
+
                     </div>
-                    <button
+                    {/* <button
                         onClick={toggleOptIn}
                         className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
                     >
                         {userSettings.optIn ? 'Hide from Leaderboard' : 'Show on Leaderboard'}
-                    </button>
+                    </button> */}
                 </div>
             )}
 
-            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md">
-                <h2 className="text-2xl font-bold p-6 border-b dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col">
+                <h2 className="text-2xl font-bold p-6 border-b border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 sticky top-0 bg-white dark:bg-gray-800 rounded-t-lg">
                     🏆 Leaderboard
                 </h2>
-                <div className="divide-y dark:divide-gray-700">
+                <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto max-h-[400px]">
                     {leaderboard.map((entry, index) => (
                         <div
                             key={entry.uuid}
-                            className={`p-4 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                            className={`p-4 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-50 dark:bg-blue-900/20' : ''
                                 }`}
                         >
-                            <div className="flex items-center gap-4">
-                                <span className="text-lg font-semibold w-8">{index + 1}</span>
-                                <span className="font-medium">{entry.name}</span>
+                            <div className="flex items-center gap-4 min-w-0 flex-1">
+                                <span className="text-lg font-semibold w-8 flex-shrink-0 text-gray-900 dark:text-gray-100">{index + 1}</span>
+                                <span className="font-medium text-gray-900 dark:text-gray-100 truncate">{entry.name}</span>
                             </div>
-                            <div className="flex items-center gap-4">
-                                <span className="font-semibold">🔥 {entry.currentStreak} </span>
-                                <span className="text-sm text-gray-500">
+                            <div className="flex items-center gap-4 flex-shrink-0">
+                                <span className="font-semibold text-gray-900 dark:text-gray-100">🔥 {entry.currentStreak} </span>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">
                                     (Best: {entry.highestStreak})
                                 </span>
                             </div>
                         </div>
                     ))}
                     {leaderboard.length === 0 && (
-                        <div className="p-6 text-center text-gray-500">
+                        <div className="p-6 text-center text-gray-500 dark:text-gray-400">
                             No entries yet. Be the first to join!
                         </div>
                     )}
                 </div>
             </div>
+            <div className="text-center mt-8">
+                <p className="text-2xl font-arabic mb-2">وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ</p>
+                <p className="text-lg text-gray-800 dark:text-gray-400 italic">"So for this let the competitors compete."</p>
+            </div>
         </div>
     );
-} 
+}

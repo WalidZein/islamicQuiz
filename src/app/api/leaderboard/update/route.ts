@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
-import { LeaderboardEntry } from "@/types/leaderboard";
+import { LeaderboardEntry } from "../../../../types/leaderboard";
 import { setTimeout } from "timers/promises";
 
 const LEADERBOARD_PATH = path.join(process.cwd(), "src/data/leaderboard.json");
@@ -92,7 +92,7 @@ async function safeWriteFile(data: LeaderboardEntry[]) {
  */
 export async function POST(request: Request) {
   try {
-    const { uuid, name, score, optIn, isQuizSubmission } = await request.json();
+    const { uuid, name, score, optIn, isQuizSubmission, syncingCachedScores } = await request.json();
 
     await ensureLeaderboardFile();
 
@@ -113,15 +113,19 @@ export async function POST(request: Request) {
       // Only update streak and lastQuizDate if this is a quiz submission
       const streakInfo = isQuizSubmission ? updateStreak(existingEntry) : { currentStreak: existingEntry.currentStreak, highestStreak: existingEntry.highestStreak };
 
+      // If syncing cached scores, replace totalScore instead of adding to it
+      const newTotalScore = syncingCachedScores ? score : existingEntry.totalScore + (score || 0);
+
       leaderboard[existingEntryIndex] = {
         ...existingEntry,
         name: name || existingEntry.name,
-        totalScore: existingEntry.totalScore + (score || 0),
+        totalScore: newTotalScore,
         currentStreak: streakInfo.currentStreak,
         highestStreak: streakInfo.highestStreak,
         optIn,
         ...(isQuizSubmission && { lastQuizDate: now.split("T")[0] }),
         lastUpdated: now,
+        hasSyncedCachedScores: syncingCachedScores ? syncingCachedScores : existingEntry.hasSyncedCachedScores,
       };
     } else {
       leaderboard.push({

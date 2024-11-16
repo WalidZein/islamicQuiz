@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
-import { getUserSettings } from '@/utils/userManager';
+import { getUserSettings, syncCachedScores } from '@/utils/userManager';
 
 interface QuizStatus {
   completed: boolean;
@@ -67,16 +67,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const userSettings = getUserSettings();
-    fetch(`/api/leaderboard/update?uuid=${userSettings.uuid}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.currentStreak) {
-          setUserStreak(data.currentStreak);
-        }
-      })
-      .catch(console.error);
-  }, []);
+    syncCachedScores();
+  }, []); // Run once when component mounts
 
   // Don't render quiz status until client-side hydration is complete
   if (!isClient || !serverTime) {

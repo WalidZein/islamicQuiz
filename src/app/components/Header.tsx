@@ -38,6 +38,8 @@ export default function Header() {
                     <div className="relative">
                         <button
                             onClick={() => setShowStreakExplanation(!showStreakExplanation)}
+                            onMouseEnter={() => setShowStreakExplanation(true)}
+                            onMouseLeave={() => setShowStreakExplanation(false)}
                             className="flex items-center bg-blue-700 rounded-full px-3 py-1.5 hover:bg-blue-600 transition-colors"
                         >
                             <Flame className="w-5 h-5 text-yellow-500 mr-1" />

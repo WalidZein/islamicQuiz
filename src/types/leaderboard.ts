@@ -7,10 +7,12 @@ export interface LeaderboardEntry {
   optIn: boolean;
   lastQuizDate?: string;
   lastUpdated: string;
+  hasSyncedCachedScores?: boolean;
 }
 
 export interface UserSettings {
   uuid: string;
   name: string | null;
   optIn: boolean;
+  hasSyncedCachedScores?: boolean;
 }
