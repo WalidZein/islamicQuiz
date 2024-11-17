@@ -81,7 +81,11 @@ export default function Leaderboard() {
     }
 
     return (
-        <div className="w-full max-w-2xl mx-auto p-6">
+        <div className="w-full max-w-2xl mx-auto p-6 pb-0">
+            <div className="text-center mb-8">
+                <p className="text-xl md:text-2xl font-arabic mb-1">وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ</p>
+                <p className="text-sm md:text-lg text-gray-800 dark:text-gray-400 italic">"So for this let the competitors compete."</p>
+            </div>
             {!userSettings?.name ? (
                 <form onSubmit={handleNameSubmit} className="mb-8">
                     <h3 className="text-xl font-semibold mb-4">Join the Leaderboard</h3>
@@ -103,7 +107,7 @@ export default function Leaderboard() {
                     </div>
                 </form>
             ) : (
-                <div className="mb-8 flex items-center justify-between">
+                <div className="mb-4 flex items-center justify-between">
                     <div>
                         <h3 className="text-xl font-semibold">Assalamualaikum, {userSettings.name}!</h3>
                         <p className="text-gray-800 dark:text-gray-300">
@@ -123,14 +127,14 @@ export default function Leaderboard() {
             )}
 
             <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md flex flex-col">
-                <h2 className="text-2xl font-bold p-6 border-b border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 sticky top-0 bg-white dark:bg-gray-800 rounded-t-lg">
+                <h2 className="text-2xl font-bold p-4 border-b border-gray-200 dark:border-gray-700 text-gray-900 dark:text-gray-100 sticky top-0 bg-white dark:bg-gray-800 rounded-t-lg">
                     🏆 Leaderboard
                 </h2>
-                <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto max-h-[400px]">
+                <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto max-h-[350px]">
                     {leaderboard.map((entry, index) => (
                         <div
                             key={entry.uuid}
-                            className={`p-4 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-50 dark:bg-blue-900/20' : ''
+                            className={`p-3 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
                                 }`}
                         >
                             <div className="flex items-center gap-4 min-w-0 flex-1">
@@ -152,10 +156,7 @@ export default function Leaderboard() {
                     )}
                 </div>
             </div>
-            <div className="text-center mt-8">
-                <p className="text-2xl font-arabic mb-2">وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ</p>
-                <p className="text-lg text-gray-800 dark:text-gray-400 italic">"So for this let the competitors compete."</p>
-            </div>
+
         </div>
     );
 }

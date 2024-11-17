@@ -44,7 +44,7 @@ export default function RootLayout({
         </Suspense>
         <Header />
         <main className="container mx-auto px-4">{children}</main>
-        <footer className="container mx-auto px-4 py-6 text-center mt-10">
+        <footer className="container mx-auto px-4 py-6 text-center mt-8 text-xs">
           © {new Date().getFullYear()} Islamic Quiz. All rights reserved.
         </footer>
       </body>
