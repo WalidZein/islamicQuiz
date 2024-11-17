@@ -449,7 +449,8 @@ const quizzes: Quiz[] = [
           "Sacrificing an animal as a form of gratitude",
         ],
         correctAnswerIndex: 1,
-        explanation: "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.",
+        explanation:
+          "Narrated Abu Rafi':\n\nI saw the Messenger of Allah (ﷺ) uttering the call to prayer (Adhan) in the ear of al-Hasan ibn Ali when Fatimah gave birth to him.\n\n 'There is a scholarly difference of opinion regarding the authenticity of this hadith, with some classifying it as ḥasan (sound) and others as ḍaʻīf (weak). However, the righteous predecessors (Salaf al-Ṣāliḥ) were known to act upon it.'",
       },
       {
         question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
@@ -488,6 +489,209 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 2,
         explanation:
           "The Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+    ],
+  },
+  {
+    id: 12,
+    released: true,
+    timeOfRelease: "2024-11-14T13:00:00Z",
+    questions: [
+      {
+        question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran: 'I said (to them): Ask forgiveness from your Lord; Verily, He is Oft-Forgiving; He will send rain to you in abundance; And give you increase in wealth and children, and bestow on you gardens and bestow on you rivers.' [Nuh 71:10-12]",
+      },
+      {
+        question: "Does Sadaqah (Charity) decrease wealth?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "When viewed through the narrow lens of worldly rules, giving in charity might seem like it reduces your wealth. But as Muslims, we are given the full perspective of how the world works.\n\nThe Prophet ﷺ said: 'The wealth of a man will not diminish by Sadaqah (charity).’\n\nAllah reminds us: 'Say: Truly, my Lord enlarges the provision for whom He wills of His slaves, and (also) restricts (it) for him. And whatsoever you spend of anything (in Allah’s Cause), He will replace it. And He is the Best of providers.'\n\n*[Saba’ 34:39]",
+      },
+      {
+        question: "Does Sila Al-Rahim (maintaining ties of kinship) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah (blessings and peace of Allah be upon him) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship.'",
+      },
+      {
+        question: "Does the Rizk prayer (Salat al Rizk) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation: "Trick question! There is nothing known as Salat al-Rizk. In the authentic Sunnah, there is no known prayer specifically for asking for increased provision.",
+      },
+      {
+        question: "Does Hajj and Umrah increase rizk? (Avg. cost of Hajj from the US is $9000)",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet of Allah ﷺ said: 'Continuously perform Hajj and 'Umrah, as they both eradicate poverty and sins, just as a furnace removes impurities from iron, gold, and silver. And a Hajj that is accepted has a reward no less than Paradise.'",
+      },
+      {
+        question: "Does marriage increase rizk (provision)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Qur'an: 'And marry the unmarried among you and the righteous among your male slaves and female slaves. If they should be poor, Allah will enrich them from His bounty, and Allah is all-Encompassing and Knowing.'[Qur’an 24:32]\n\nIn this verse from Surah An-Nur, Allah SWT encourages unmarried individuals not to allow fear of poverty to be a reason why they don’t try to get married, reassuring them that He will enrich them from His abundant blessings and provisions.",
+      },
+      {
+        question: "Does supporting a student of knowledge increase rizk?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "There were two brothers in the time of the Prophet ﷺ, one of whom would attend the lessons of the Prophet ﷺ and the other would engage in business. The businessman complained to the Prophet ﷺ about his brother, and the Prophet said, 'Perhaps you are granted provision because of him.' [Tirmidhi]",
+      },
+    ],
+  },
+  {
+    id: 13,
+    released: true,
+    timeOfRelease: "2024-11-15T13:00:00Z",
+    questions: [
+      {
+        question: "Which prayer if prayed in the masjid earns you the reward of praying the whole night?",
+        options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
+      },
+      {
+        question: "Which two rak'ah (unit of prayer) are better than the whole world?",
+        options: ["Two rak’ah before Fajr", "Two rak’ah after Duhr", "Two rak’ah after Maghrib", "Two rak’ah after Isha"],
+        correctAnswerIndex: 0,
+        explanation: "Aishah (rA) reported:\nThe Prophet (ﷺ) said, 'The two Rak'ah before the dawn (Fajr) prayer are better than this world and all it contains.'",
+      },
+      {
+        question: "In the morning every single joint of yours must pay a sadaqah (charity). What 2 rak’ah will pay that off?",
+        options: ["Fajr Prayer", "Duha Prayer", "Sunnah of Fajr", "Sunnah of Isha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Duha prayer is a simple 2 rak'ahs that’s prayed any time after the sun rises until just before Dhuhr prayer. It’s highly rewarding and a great habit to incorporate into your daily life.\n\nThe Prophet (ﷺ) said: 'In the morning every single joint of yours must pay a sadaqah (charity). Every SubhanAllah is a sadaqah, every Alhamdulillah is a sadaqah, every La Ilaha Illa Allah is a sadaqah, every Allahu Akbar is a sadaqah, every commanding good is a sadaqah, and every forbidding evil is a sadaqah, and all this is accomplished through two rak’ahs one can pray in Duha.' [Muslim]\n\nAbu Hurayrah (RA) reported that the Messenger of Allah (ﷺ) said: 'No one persists in offering Duha prayer except one who often turns to Allah, for it is the prayer of those who often turn to Allah (SWT).'",
+      },
+      {
+        question: "Which Sunnah prayer did the Prophet never abandon even when traveling?",
+        options: ["Duha Prayer", "Sunnah of Duhr", "Sunnah of Isha", "Witr Prayer"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Ibn al-Qayyim said:\n'It was the practice of the Prophet (ﷺ) when travelling to pray only the obligatory prayers, and it was not narrated that he used to pray the regular Sunnah prayers either before or after the fard prayers, apart from Witr and the Sunnah of Fajr, which he never omitted whether he was travelling or not.'",
+      },
+      {
+        question: "Which prayer if prayed in the masjid earns you the reward of praying half the night?",
+        options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
+        correctAnswerIndex: 4,
+        explanation:
+          "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
+      },
+    ],
+  },
+  {
+    id: 14,
+    released: true,
+    timeOfRelease: "2024-11-16T13:00:00Z",
+    questions: [
+      {
+        question: "What are you not allowed to do in Sujood?",
+        options: ["Make dua in Arabic", "Make dua in another language", "Recite Quran", "Recite adhkar"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'I have been forbidden to recite the Quran in the state of bowing and prostration. So whilst bowing, extol the Lord in it, and while you are in prostration strive your hardest supplicating, as it is most likely that you will be responded to.' [Muslim]",
+      },
+      {
+        question: "What is the hidden Shirk?",
+        options: ["Drinking alcohol & gambling", "Gossiping & lying", "Showing off your good deeds", "Keeping your good deeds secret"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'Shall I not tell you about that which I fear more for you than the Dajjaal?' We said: 'Yes.' He said: 'Hidden Shirk; which is when a man stands to pray and makes it look good because he sees a man looking at him.'",
+      },
+      {
+        question: "How many Takbeers (Allahu Akbar) are in Salat al-Janazah (Prayer for the dead)?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3,
+        explanation:
+          "- You say the first Takbir ('Allahu Akbar'), then you seek [refuge with Allah from the accursed Shaytan]. Then you say Bismillah ir-Rahman ir-Rahim and [recite Al-Fatihah].\n- Then you say the second Takbir and send blessings upon the Prophet (peace and blessings of Allah be upon him) as one does at the end of the prayer.\n- Then you say the third Takbir and make du’a for the deceased.\n- Then you say the fourth Takbirand make duaa for all muslims,\n - Then say one Taslim to the right, saying 'Assalamu ‘alaykum wa rahmatullah.' (or two taslims depending on the mazhab)",
+      },
+      {
+        question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
+        options: ["Sacrificing a sheep", "Communal feast", "Special prayer", "Donating gold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+      {
+        question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran: 'I said (to them): Ask forgiveness from your Lord; Verily, He is Oft-Forgiving; He will send rain to you in abundance; And give you increase in wealth and children, and bestow on you gardens and bestow on you rivers.' [Nuh 71:10-12]",
+      },
+      {
+        question: "Which Sunnah prayer did the Prophet never abandon even when traveling?",
+        options: ["Duha Prayer", "Sunnah of Duhr", "Sunnah of Isha", "Witr Prayer"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Ibn al-Qayyim said:\n'It was the practice of the Prophet (ﷺ) when travelling to pray only the obligatory prayers, and it was not narrated that he used to pray the regular Sunnah prayers either before or after the fard prayers, apart from Witr and the Sunnah of Fajr, which he never omitted whether he was travelling or not.'",
+      },
+      {
+        question: "What should you do if you forget to say Bismillah before eating?",
+        options: [
+          "Say “أَسْتَغْفِرُ اللهَ”\n- “I seek forgiveness from Allah”",
+          "Say “بِسْمِ اللهِ”\n- “In the name of Allah”",
+          "Say “بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ”\n- “In the name of Allah, at the beginning and at the end”",
+          "It’s ok, keep eating",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+    ],
+  },
+  {
+    id: 15,
+    released: true,
+    timeOfRelease: "2024-11-17T13:00:00Z",
+    questions: [
+      {
+        question: "Can you make duaa for anything? (By: Mohib)",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "You can make du’a for anything permissible, but not for what is sinful, impossible, or inappropriate. Allah says: 'Call upon your Lord in humility and privately; indeed, He does not like transgressors.'[Surah Al-A'raf: 55]\n\nThis means avoiding excessive, disrespectful, or impermissible requests. Du’a should reflect humility and align with Allah’s laws.",
+      },
+      {
+        question: "Which part of the night is duaa not rejected?",
+        options: ["The first third of the night", "The second third of the night", "The last third of the night", "None of the above"],
+        correctAnswerIndex: 2,
+        explanation:
+          "According to the hadith of Abu Umamah: It was said, 'O Messenger of Allah, which du`a is heard?' He said: 'In the last third of the night, and following the prescribed prayers.'\n\nThe Messenger of Allah (blessings and peace of Allah be upon him) said: 'Our Lord, may He be blessed and exalted, comes down to the lowest heaven every night when the last third of the night is left, and He says: ‘Who will call upon Me, that I may answer him? Who will ask of Me, that I may give him? Who will ask Me for forgiveness, that I may forgive him?’'",
+      },
+      {
+        question: "Duaa is not rejected during which time?",
+        options: ["Before Athan", "During Athan", "Between Athan and Iqama", "After Iqama"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (ﷺ) said: “A du`a offered between the adhan and iqamah is not rejected.”",
+      },
+      {
+        question: "What are the possible responses from Allah to a person's Duaa (supplication) according to Islamic teachings?",
+        options: [
+          "Allah will immediately fulfill the person's desire.",
+          "Allah will ward off some evil from the person because of the Du'a.",
+          "Allah will provide something better than what was asked for.",
+          "Allah will save the reward for the person for the Day of Resurrection.",
+          "All of the above",
+        ],
+        correctAnswerIndex: 4,
+        explanation:
+          "The response to the Du`a may take different forms:\n\n- Allah may respond and fulfill the desire of the person who made the Du`a.\n- He may ward off some evil from the person because of the Du`a.\n- He may facilitate something better than what was asked for.\n- He may save it with Him for the person on the Day of Resurrection** when they will be most in need of it.",
+      },
+      {
+        question: "Which day has an hour when duaa is not rejected?",
+        options: ["Friday", "Eid al-Adha", "Eid al-Fitr", "16th of Shawwal"],
+        correctAnswerIndex: 0,
+        explanation: 'Messenger of Allah (ﷺ) said: "On Friday, there is an hour when, if a Muslim happens to pray at that time and ask Allah for something good, He will give it to him."',
       },
     ],
   },
