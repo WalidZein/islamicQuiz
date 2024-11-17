@@ -41,23 +41,6 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 confettiNumber: 100,
             });
         }
-        // Inside the QuizPageClient component, add this effect to update the leaderboard when quiz is completed
-
-        if (state.quizCompleted) {
-            const userSettings = getUserSettings();
-
-            fetch('/api/leaderboard/update', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    uuid: userSettings.uuid,
-                    name: userSettings.name,
-                    score: state.score,
-                    optIn: userSettings.optIn,
-                    isQuizSubmission: true,
-                })
-            }).catch(console.error);
-        }
     }, [state.quizCompleted, state.score, quiz.questions.length, confetti]);
 
     const handleBackClick = () => {
@@ -76,6 +59,19 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const handleNextClick = () => {
         if (state.finalQuestion) {
             dispatch({ type: 'COMPLETE_QUIZ' });
+            const userSettings = getUserSettings();
+
+            fetch('/api/leaderboard/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    uuid: userSettings.uuid,
+                    name: userSettings.name,
+                    score: state.score,
+                    optIn: userSettings.optIn,
+                    isQuizSubmission: true,
+                })
+            }).catch(console.error);
             return;
         }
         if (state.currentQuestionIndex == quiz.questions.length - 1
