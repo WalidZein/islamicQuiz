@@ -1,9 +1,9 @@
 import './globals.css';
-import Link from 'next/link';
 import Script from 'next/script';
 import GoogleAnalytics from './components/GoogleAnalytics';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
+import Header from './components/Header';
 
 export const metadata: Metadata = {
   title: 'Islamic Quiz',
@@ -22,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-S3WE9N5R25"
           strategy="afterInteractive"
@@ -43,26 +42,12 @@ export default function RootLayout({
         <Suspense>
           <GoogleAnalytics />
         </Suspense>
-        {/* Header (Optional) */}
-        <header className="container mx-auto px-4 py-4">
-          <Link href="/" className="flex items-center">
-            {/* Logo or Icon */}
-            <img
-              src="/icon.png"
-              alt="Islamic Quiz Logo"
-              className="h-8 w-8 mr-2"
-            />
-
-            <span className="text-2xl font-bold">The Muslim Box</span>
-          </Link>
-        </header>
-        {/* Main Content */}
+        <Header />
         <main className="container mx-auto px-4">{children}</main>
-        {/* Footer */}
         <footer className="container mx-auto px-4 py-6 text-center mt-10">
           © {new Date().getFullYear()} Islamic Quiz. All rights reserved.
         </footer>
       </body>
-    </html >
+    </html>
   );
 }

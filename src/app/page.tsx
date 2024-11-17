@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
-import { getUserSettings } from '@/utils/userManager';
+import { getUserSettings, syncCachedScores } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
+
 
 interface QuizStatus {
   completed: boolean;
@@ -68,16 +69,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const userSettings = getUserSettings();
-    fetch(`/api/leaderboard/update?uuid=${userSettings.uuid}`)
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.currentStreak) {
-          setUserStreak(data.currentStreak);
-        }
-      })
-      .catch(console.error);
-  }, []);
+    syncCachedScores();
+  }, []); // Run once when component mounts
 
   // Don't render quiz status until client-side hydration is complete
   if (!isClient || !serverTime) {
@@ -111,11 +104,6 @@ export default function Home() {
         <p className="mt-2 text-lg sm:text-sm">
           Test your knowledge with our daily quizzes on Islam.
         </p>
-        <div className="mt-4 flex flex-col items-center gap-2">
-          <p className="text-xl font-semibold">
-            🔥 {userStreak}
-          </p>
-        </div>
       </div>
 
       {/* Latest Quiz - only show if not completed */}
