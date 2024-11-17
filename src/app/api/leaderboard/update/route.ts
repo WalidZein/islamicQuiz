@@ -5,8 +5,10 @@ import { LeaderboardEntry } from "../../../../types/leaderboard";
 import { setTimeout } from "timers/promises";
 
 const LEADERBOARD_PATH = path.join(process.cwd(), "src/data/leaderboard.json");
-// Create a simple lock mechanism
+// Create lock mechanisms
 let isWriting = false;
+let readCount = 0;
+
 /**
  * Ensures the leaderboard.json file exists, creates it if it doesn't
  * @returns {Promise<void>}
@@ -71,10 +73,11 @@ function updateStreak(entry: LeaderboardEntry): { currentStreak: number; highest
   return { currentStreak, highestStreak };
 }
 
-// Create a helper function for safe file writing
+// Helper function for safe file writing
 async function safeWriteFile(data: LeaderboardEntry[]) {
-  while (isWriting) {
-    await setTimeout(100); // Wait 100ms if another write is in progress
+  // Wait for any reads to complete
+  while (isWriting || readCount > 0) {
+    await setTimeout(100);
   }
 
   isWriting = true;
@@ -82,6 +85,22 @@ async function safeWriteFile(data: LeaderboardEntry[]) {
     await fs.writeFile(LEADERBOARD_PATH, JSON.stringify(data, null, 2));
   } finally {
     isWriting = false;
+  }
+}
+
+// Helper function for safe file reading
+async function safeReadFile(): Promise<LeaderboardEntry[]> {
+  // Wait for any writes to complete
+  while (isWriting) {
+    await setTimeout(100);
+  }
+
+  readCount++;
+  try {
+    const fileContent = await fs.readFile(LEADERBOARD_PATH, "utf-8");
+    return JSON.parse(fileContent);
+  } finally {
+    readCount--;
   }
 }
 
@@ -98,8 +117,7 @@ export async function POST(request: Request) {
 
     let leaderboard: LeaderboardEntry[] = [];
     try {
-      const fileContent = await fs.readFile(LEADERBOARD_PATH, "utf-8");
-      leaderboard = JSON.parse(fileContent);
+      leaderboard = await safeReadFile();
     } catch (error) {
       console.error("Error reading leaderboard:", error);
     }
@@ -170,8 +188,7 @@ export async function GET(request: Request) {
     const uuid = url.searchParams.get("uuid");
 
     await ensureLeaderboardFile();
-    const fileContent = await fs.readFile(LEADERBOARD_PATH, "utf-8");
-    let leaderboard: LeaderboardEntry[] = JSON.parse(fileContent);
+    let leaderboard: LeaderboardEntry[] = await safeReadFile();
 
     // Check and update streaks for all entries
     let needsUpdate = false;
