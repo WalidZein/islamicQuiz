@@ -584,7 +584,7 @@ const quizzes: Quiz[] = [
         options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
         correctAnswerIndex: 4,
         explanation:
-           "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
+          "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
       },
     ],
   },
@@ -646,6 +646,52 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 2,
         explanation:
           "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+    ],
+  },
+  {
+    id: 15,
+    released: true,
+    timeOfRelease: "2024-11-17T13:00:00Z",
+    questions: [
+      {
+        question: "Can you make duaa for anything? (By: Mohib)",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "You can make du’a for anything permissible, but not for what is sinful, impossible, or inappropriate. Allah says: 'Call upon your Lord in humility and privately; indeed, He does not like transgressors.'[Surah Al-A'raf: 55]\n\nThis means avoiding excessive, disrespectful, or impermissible requests. Du’a should reflect humility and align with Allah’s laws.",
+      },
+      {
+        question: "Which part of the night is duaa not rejected?",
+        options: ["The first third of the night", "The second third of the night", "The last third of the night", "None of the above"],
+        correctAnswerIndex: 2,
+        explanation:
+          "According to the hadith of Abu Umamah: It was said, 'O Messenger of Allah, which du`a is heard?' He said: 'In the last third of the night, and following the prescribed prayers.'\n\nThe Messenger of Allah (blessings and peace of Allah be upon him) said: 'Our Lord, may He be blessed and exalted, comes down to the lowest heaven every night when the last third of the night is left, and He says: ‘Who will call upon Me, that I may answer him? Who will ask of Me, that I may give him? Who will ask Me for forgiveness, that I may forgive him?’'",
+      },
+      {
+        question: "Duaa is not rejected during which time?",
+        options: ["Before Athan", "During Athan", "Between Athan and Iqama", "After Iqama"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (ﷺ) said: “A du`a offered between the adhan and iqamah is not rejected.”",
+      },
+      {
+        question: "What are the possible responses from Allah to a person's Duaa (supplication) according to Islamic teachings?",
+        options: [
+          "Allah will immediately fulfill the person's desire.",
+          "Allah will ward off some evil from the person because of the Du'a.",
+          "Allah will provide something better than what was asked for.",
+          "Allah will save the reward for the person for the Day of Resurrection.",
+          "All of the above",
+        ],
+        correctAnswerIndex: 4,
+        explanation:
+          "The response to the Du`a may take different forms:\n\n- Allah may respond and fulfill the desire of the person who made the Du`a.\n- He may ward off some evil from the person because of the Du`a.\n- He may facilitate something better than what was asked for.\n- He may save it with Him for the person on the Day of Resurrection** when they will be most in need of it.",
+      },
+      {
+        question: "Which day has an hour when duaa is not rejected?",
+        options: ["Friday", "Eid al-Adha", "Eid al-Fitr", "16th of Shawwal"],
+        correctAnswerIndex: 0,
+        explanation: 'Messenger of Allah (ﷺ) said: "On Friday, there is an hour when, if a Muslim happens to pray at that time and ask Allah for something good, He will give it to him."',
       },
     ],
   },
