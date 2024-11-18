@@ -695,6 +695,53 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 16,
+    released: true,
+    timeOfRelease: "2024-11-18T13:00:00Z",
+    questions: [
+      {
+        question: "Who was the most beloved person to Prophet Muhammad?",
+        options: ["Aminah (his mom)", "Aisha (his wife)", "Abu Bakr (his closest friend)", "Khadijah (his first wife)"],
+        correctAnswerIndex: 1,
+        explanation:
+          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father.” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
+      },
+      {
+        question: "Who was the most beloved man to Prophet Muhammad?",
+        options: ["Abu Bakr (RA)", "Umar (RA)", "Uthman (RA)", "Ali (RA)"],
+        correctAnswerIndex: 0,
+        explanation:
+          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father.” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
+      },
+      {
+        question: "Which three surahs, if recited three times in the morning and the evening, will suffice you for everything? (By: Teacher Hashim)",
+        options: ["Surah Ikhlas, Surah Falaq, Surah Nas", "Surah Kahf, Surah Falaq, Surah Nas", "Surah Kahf, Surah Baqara, Surah Yasin", "None of the above"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (peace and blessings be upon him) said: 'Recite Sūrah al-Ikhlās and al-Mu’awwidhatayn (Sūrah al-Falaq and Sūrah al-Nās) three times in the morning and the evening. It will suffice you in all respects.' (Tirmidhī 3575)",
+      },
+      {
+        question: "Which duaa, if said after eating, will lead to all your past sins being forgiven?",
+        options: [
+          "اَلْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ\n- “All praise is due to Allah Who has given me food to eat and provided it without any endeavour on my part or any power.”",
+          "الْحَمْدُ لِلَّهِ\n- “All praise is due to Allah”",
+          "سُبْـحَانَ اللهِ وَبِحَمْدِهِ سُبْـحَانَ اللهِ العَظِيمِ\n- “Glorified is Allah and praised is He. Glorified is Allah the most great.”",
+          "الحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا عَلَى مَا رَزَقَنِي مِنْ طَعَامٍ وَشَرَابٍ\n- “All praise is due to Allah - an abundant, pure and blessed praise, for the food and drinks he has given me”",
+        ],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: 'He who has taken food and says at the end: (Al-hamdu lillahi-llazi at'amani haza, wa razaqaniihi min ghairi haulin minni wa la quwwah), all his past sins will be forgiven.'",
+      },
+      {
+        question: "‘Aqiqah is performed on the 7th day after birth. What is 'Aqiqah?",
+        options: ["Sacrificing a sheep", "Communal feast", "Special prayer", "Donating gold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
