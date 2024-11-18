@@ -7,7 +7,6 @@ import { Quiz } from '@/types/quiz';
 import { getUserSettings, syncCachedScores } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
 
-
 interface QuizStatus {
   completed: boolean;
   score: number;
@@ -104,6 +103,27 @@ export default function Home() {
         <p className="mt-2 text-lg sm:text-sm">
           Test your knowledge with our daily quizzes on Islam.
         </p>
+
+        {/* New Survey Links */}
+        <div className="mt-2 flex justify-center gap-2 text-sm">
+          <a
+            href="https://locrian-gate-d75.notion.site/141a930e096c80dea710f6ac60ae6487?pvs=105"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-gray-400 "
+          >
+            🔗 Feedback & Ideas
+          </a>
+          <span className="text-gray-400">•</span>
+          <a
+            href="https://locrian-gate-d75.notion.site/141a930e096c80b1aa9ad1c466f4d4a5?pvs=105"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 hover:text-gray-400"
+          >
+            🔗 Submit Questions
+          </a>
+        </div>
       </div>
 
       {/* Latest Quiz - only show if not completed */}
