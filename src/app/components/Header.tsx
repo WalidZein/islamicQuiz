@@ -5,10 +5,12 @@ import Link from 'next/link';
 import { Flame, Trophy } from 'lucide-react';
 import { getUserSettings } from '@/utils/userManager';
 import StreakTooltip from './StreakTooltip';
+import LeaderboardTooltip from './LeaderboardTooltip';
 
 export default function Header() {
     const [userStreak, setUserStreak] = useState(0);
     const [showStreakExplanation, setShowStreakExplanation] = useState(false);
+    const [showLeaderboardTooltip, setShowLeaderboardTooltip] = useState(false);
 
     useEffect(() => {
         const userSettings = getUserSettings();
@@ -20,6 +22,11 @@ export default function Header() {
                 }
             })
             .catch(console.error);
+
+        const hasSeenTooltip = localStorage.getItem('hasSeenLeaderboardTooltip');
+        if (!hasSeenTooltip) {
+            setShowLeaderboardTooltip(true);
+        }
     }, []);
 
     return (
@@ -48,13 +55,20 @@ export default function Header() {
 
                         <StreakTooltip show={showStreakExplanation} />
                     </div>
-                    <Link
-                        href="/leaderboard"
-                        className="bg-white text-blue-600 hover:bg-blue-100 rounded-full shadow-md flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all hover:scale-105"
-                    >
-                        <Trophy className="w-4 h-4" />
-                        <span className="hidden sm:inline">Leaderboard</span>
-                    </Link>
+                    <div className="relative">
+                        <Link
+                            href="/leaderboard"
+                            onClick={() => {
+                                localStorage.setItem('hasSeenLeaderboardTooltip', 'true');
+                                setShowLeaderboardTooltip(false);
+                            }}
+                            className="bg-white text-blue-600 hover:bg-blue-100 rounded-full shadow-md flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all hover:scale-105"
+                        >
+                            <Trophy className="w-4 h-4" />
+                            <span className="hidden sm:inline">Leaderboard</span>
+                        </Link>
+                        <LeaderboardTooltip show={showLeaderboardTooltip} />
+                    </div>
                 </div>
             </div>
         </header>
