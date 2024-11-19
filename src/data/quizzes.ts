@@ -698,7 +698,7 @@ const quizzes: Quiz[] = [
   {
     id: 16,
     released: true,
-    timeOfRelease: "2024-11-17T13:00:00Z",
+    timeOfRelease: "2024-11-18T13:00:00Z",
     questions: [
       {
         question: "Who was the most beloved person to Prophet Muhammad?",
@@ -745,7 +745,7 @@ const quizzes: Quiz[] = [
   {
     id: 17,
     released: true,
-    timeOfRelease: "2024-11-18T13:00:00Z",
+    timeOfRelease: "2024-11-19T13:00:00Z",
     questions: [
       {
         question: "What did the Prophet Muhammad ﷺ say about removing something harmful from the road?",
