@@ -685,7 +685,7 @@ const quizzes: Quiz[] = [
         ],
         correctAnswerIndex: 4,
         explanation:
-          "The response to the Du`a may take different forms:\n\n- Allah may respond and fulfill the desire of the person who made the Du`a.\n- He may ward off some evil from the person because of the Du`a.\n- He may facilitate something better than what was asked for.\n- He may save it with Him for the person on the Day of Resurrection** when they will be most in need of it.",
+          "The response to the Du`a may take different forms:\n\n- Allah may respond and fulfill the desire of the person who made the Du`a.\n- He may ward off some evil from the person because of the Du`a.\n- He may facilitate something better than what was asked for.\n- He may save it with Him for the person on the Day of Resurrection when they will be most in need of it.",
       },
       {
         question: "Which day has an hour when duaa is not rejected?",
@@ -698,21 +698,21 @@ const quizzes: Quiz[] = [
   {
     id: 16,
     released: true,
-    timeOfRelease: "2024-11-18T13:00:00Z",
+    timeOfRelease: "2024-11-17T13:00:00Z",
     questions: [
       {
         question: "Who was the most beloved person to Prophet Muhammad?",
         options: ["Aminah (his mom)", "Aisha (his wife)", "Abu Bakr (his closest friend)", "Khadijah (his first wife)"],
         correctAnswerIndex: 1,
         explanation:
-          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father.” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
+          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father (Abu Bakr)” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
       },
       {
         question: "Who was the most beloved man to Prophet Muhammad?",
         options: ["Abu Bakr (RA)", "Umar (RA)", "Uthman (RA)", "Ali (RA)"],
         correctAnswerIndex: 0,
         explanation:
-          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father.” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
+          "‘Amr ibn al-‘As reported: I said, “Which person is most beloved to you?” The Prophet, peace and blessings be upon him, said, “Aisha.” I said, “I mean among men.” The Prophet said, “Her father (Abu Bakr)” I said, “Then who?” The Prophet said, “Umar ibn al-Khattab,” and the Prophet mentioned other men.\n\nSource: Ṣaḥīḥ al-Bukhārī 3662, Ṣaḥīḥ Muslim 2384",
       },
       {
         question: "Which three surahs, if recited three times in the morning and the evening, will suffice you for everything? (By: Teacher Hashim)",
@@ -739,6 +739,47 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 0,
         explanation:
           "'Aqiqah refers to the sacrifice that is offered on behalf of the newborn on the seventh day after birth.\n\nThe Prophet (ﷺ) said: 'Every child is held in pledge for their 'Aqiqah (sacrifice), which is to be slaughtered on their seventh day, their head is to be shaved, and they are to be named.'",
+      },
+    ],
+  },
+  {
+    id: 17,
+    released: true,
+    timeOfRelease: "2024-11-17T13:00:00Z",
+    questions: [
+      {
+        question: "What did the Prophet Muhammad ﷺ say about removing something harmful from the road?",
+        options: ["It counts as a form of charity", "It is a minor sin", "It is obligatory for all Muslims", "It guarantees Jannah"],
+        correctAnswerIndex: 0,
+        explanation: "The Prophet Muhammad ﷺ said: 'Removing harmful objects from a path is a form of charity.'",
+      },
+      {
+        question: "Which charity has the greatest reward? The charity you give ___",
+        options: ["During the day", "After completing Salah", "While you are healthy and fearing poverty", "Before starting a business venture"],
+        correctAnswerIndex: 2,
+        explanation:
+          "A man came to the Prophet, peace and blessings be upon him, and he said, “O Messenger of Allah, which charity has the greatest reward?” The Prophet said, 'That you give charity while you are healthy, stingy, fearing poverty, and hoping to be rich. Do not delay giving until you are on your deathbed, then say it is for such a person. It already belongs to that person.'",
+      },
+
+      {
+        question: "How should Muslims give charity according to the Quran to maximize their rewards?",
+        options: ["Openly, so others are encouraged to do the same", "Secretly, without seeking recognition", "With conditions attached", "Only during Ramadan"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Allah says in the Quran: 'If you disclose your charitable donations, they are good; but if you conceal them and give them to the poor, it is better for you, and it will remove some of your misdeeds. And Allah is [fully] Acquainted with what you do.' (Surah Al-Baqarah, 2:271)",
+      },
+      {
+        question: "Which action can extinguish sins as water extinguishes fire?",
+        options: ["Giving charity", "Fasting", "Reciting the Quran", "Performing Wudu (ablution)"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said:\n 'Shall I not tell you of the means of goodness? Fasting is a shield, and charity extinguishes sin as water extinguishes fire, and a man’s prayer in the middle of the night.'",
+      },
+      {
+        question: "You will never achieve righteousness until you donate some of what you cherish.",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation: "Allah says: 'You will never achieve righteousness until you donate some of what you cherish. And whatever you give is certainly well known to Allah.'(Surah Aal-e-Imran, 3:92)",
       },
     ],
   },
