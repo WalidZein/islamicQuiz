@@ -783,6 +783,47 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 18,
+    released: true,
+    timeOfRelease: "2024-11-20T13:00:00Z",
+    questions: [
+      {
+        question: "Which sin will Allah (SWT) not forgive?\n (By Teacher Hashim)",
+        options: ["Drinking Alcohol", "Lying", "Zina (Adultery)", "Shirk (associating with Allah)"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Allah says in the Quran: 'Indeed, Allah does not forgive associating others with Him ˹in worship˺, but forgives anything else of whoever He wills. And whoever associates others with Allah has indeed committed a grave sin.' (Surah An-Nisa, 4:48)",
+      },
+      {
+        question: "Which sin, if committed, will cause Allah to declare war on the sinner?",
+        options: ["Riba (Usury | Dealing with interest)", "Zina (Adultery)", "Consistent lying", "Drinking alcohol"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran:\n\n[2:278] O believers! Fear Allah, and give up outstanding interest if you are ˹true˺ believers.\n\n[2:279] If you do not, then beware of a war with Allah and His Messenger! But if you repent, you may retain your principal—neither inflicting nor suffering harm.",
+      },
+      {
+        question: "The struggles you go through remove from your sins.",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          'The Prophet (ﷺ) said, "No fatigue, nor disease, nor sorrow, nor sadness, nor hurt, nor distress befalls a Muslim, even if it were the prick he receives from a thorn, but that Allah expiates some of his sins for that."',
+      },
+      {
+        question: "Who were described as brothers to the devils?\n (By Mohib)",
+        options: ["Liars", "Cheaters", "Wasteful people", "Killers"],
+        correctAnswerIndex: 2,
+        explanation: "[17:27] 'Surely the wasteful are ˹like˺ brothers to the devils. And the Devil is ever ungrateful to his Lord.'",
+      },
+      {
+        question: "Which Duaa (supplication) if said in the morning and the evening with firm belief will guarantee Jannah (Paradise)? \n (By Mohib)",
+        options: ["Duaa after prayer", "Duaa al Haja (prayer of need)", "Duaa al Istekhara (prayer of guidance)", "Duaa Sayed al Istekhfar (The Master of Seeking Forgiveness)"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Prophet (ﷺ) said, \"The best supplication for seeking forgiveness (Sayed-ul-Istighfar) is to say:\n\n'Allahumma Anta Rabbi, la ilaha illa Anta, khalaqtani wa ana 'abduka, wa ana 'ala 'ahdika wa wa'dika mastata'tu, a'udhu bika min sharri ma sana'tu, abu'u laka bini'matika 'alayya, wa abu'u bidhanbi faghfir li, fa innahu la yaghfirudh-dhunuba illa Anta.'\n\n(O Allah! You are my Lord. There is no true god except You. You have created me, and I am Your slave, and I hold to Your Covenant as far as I can. I seek refuge in You from the evil of what I have done. I acknowledge the favors that You have bestowed upon me, and I confess my sins. Pardon me, for none but You has the power to pardon.)\n\nHe who supplicates in these terms during the day with firm belief in it and dies on the same day (before the evening), he will be one of the dwellers of Jannah; and if anyone supplicates in these terms during the night with firm belief in it and dies before the morning, he will be one of the dwellers of Jannah.\"",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
