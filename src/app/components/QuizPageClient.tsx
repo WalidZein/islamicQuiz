@@ -120,7 +120,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         <span className="font-semibold">{quiz.questions.length}</span>
                         {state.score === quiz.questions.length ? (
                             <span className="block mt-2 text-green-500">
-                                🎉 Perfect Score! MahshAllah! 🎉
+                                🎉 Perfect Score! MashAllah! 🎉
                             </span>
                         ) : (<span className="block mt-2 text-lg">
                             🎉 Alhamdulillah! You learned something new today!
