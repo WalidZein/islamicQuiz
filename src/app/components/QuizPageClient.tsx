@@ -19,6 +19,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const router = useRouter();
     const { state, dispatch } = useQuizStatus(quiz);
     const [confetti, setConfetti] = useState<JSConfetti | null>(null);
+    const [visibleExplanations, setVisibleExplanations] = useState<Set<number>>(new Set());
 
     // Initialize confetti on client side
     useEffect(() => {
@@ -86,6 +87,18 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
     const progressPercentage = ((state.currentQuestionIndex + 1) / quiz.questions.length) * 100;
 
+    const toggleExplanation = (questionIndex: number) => {
+        setVisibleExplanations(prev => {
+            const newSet = new Set(prev);
+            if (newSet.has(questionIndex)) {
+                newSet.delete(questionIndex);
+            } else {
+                newSet.add(questionIndex);
+            }
+            return newSet;
+        });
+    };
+
     if (state.quizCompleted && state.selections.length === quiz.questions.length) {
         return (
             <div className="flex flex-col items-center py-10">
@@ -105,14 +118,18 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
                         Your score: <span className="font-semibold">{state.score}</span> out of{' '}
                         <span className="font-semibold">{quiz.questions.length}</span>
-                        {state.score === quiz.questions.length && (
+                        {state.score === quiz.questions.length ? (
                             <span className="block mt-2 text-green-500">
-                                🎉 Perfect Score! Congratulations! 🎉
+                                🎉 Perfect Score! MahshAllah! 🎉
                             </span>
-                        )}
+                        ) : (<span className="block mt-2 text-lg">
+                            🎉 Alhamdulillah! You learned something new today!
+                        </span>)}
                     </p>
                     {quiz.questions.map((q, index) => {
                         const userSelection = state.selections[index];
+                        const isExplanationVisible = visibleExplanations.has(index);
+
                         return (
                             <div key={index} className="mb-6">
                                 <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
@@ -131,12 +148,20 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                                         />
                                     ))}
                                 </ul>
-                                <div className="mt-2">
-                                    <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
-                                        Explanation:
-                                    </h3>
-                                    <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
-                                </div>
+                                <button
+                                    onClick={() => toggleExplanation(index)}
+                                    className="mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                                >
+                                    {isExplanationVisible ? 'Hide Explanation' : 'Show Explanation'}
+                                </button>
+                                {isExplanationVisible && (
+                                    <div className="mt-2">
+                                        <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
+                                            Explanation:
+                                        </h3>
+                                        <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
+                                    </div>
+                                )}
                             </div>
                         );
                     })}
