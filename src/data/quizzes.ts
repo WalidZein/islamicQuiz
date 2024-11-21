@@ -824,6 +824,51 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 19,
+    released: true,
+    timeOfRelease: "2024-11-21T13:00:00Z",
+    questions: [
+      {
+        question: "Which day of the week will the Day of Judgment happen?",
+        options: ["Friday", "Saturday", "Sunday", "Monday"],
+        correctAnswerIndex: 0,
+        explanation:
+          'The Prophet ﷺ said: "The sun has not shone in a day better than Friday. It is the day in which Adam, may Allah exalt his mention, was created, descended (to earth), was forgiven, and died. It is the day in which The Hour (Day of Judgment) will take place."',
+      },
+      {
+        question: "Which one of these is NOT considered a martyr after they die?",
+        options: [
+          "The one who passes away due to drowning",
+          "The one who passes away due to being crushed under something",
+          "The one who passes away due to plague",
+          "The one who dies while reading quran",
+        ],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Prophet ﷺ mentioned that martyrs include those who die due to drowning, being crushed, or from a plague. However, those who die while committing a major sin are not considered martyrs.",
+      },
+      {
+        question: "Memorizing the first 10 verses of which Surah will protect you from the false Al-Masih Al-Dajjal (the false Messiah)?",
+        options: ["Surah Baqara", "Surah Kahf", "Surah Ikhlas", "Surah Kawthar"],
+        correctAnswerIndex: 1,
+        explanation: 'The Prophet, peace and blessings be upon him, said, "Whoever memorizes ten verses from the beginning of Surat al-Kahf will be immune to the False Messiah."',
+      },
+      {
+        question: "How many Surahs are in the Quran?",
+        options: ["114", "113", "120", "50"],
+        correctAnswerIndex: 0,
+        explanation: "Locate the nearest Quran",
+      },
+      {
+        question: "What does Allah build for the person who helps build a Masjid?",
+        options: ["A tree in Jannah", "A car in Jannah", "A house in Jannah", "A masjid in Jannah"],
+        correctAnswerIndex: 2,
+        explanation:
+          "It was narrated from Jabir bin 'Abdullah that:\nThe Messenger of Allah said: \"Whoever builds a mosque for the sake of Allah, like a sparrow's nest for Allah or even smaller, Allah will build for him a house in Paradise.\"\n\nThis hadith emphasizes the immense reward for building a mosque, no matter how small the contribution might be. Even if a person contribution is as small as a sparrow’s nest, or even smaller, with the sincere intention of seeking Allah's pleasure, Allah will reward them by building a house for them in Paradise.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
