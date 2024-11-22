@@ -869,6 +869,49 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 20,
+    released: true,
+    timeOfRelease: "2024-11-22T13:00:00Z",
+    questions: [
+      {
+        question: "What is the reward for reciting Surah Al-Kahf on Friday?",
+        options: ["Protection from the Hellfire", "Guidance for the entire week", "Illumination with light between two Fridays", "Forgiveness of all past sins"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet Muhammad ﷺ said: 'Whoever reads Surat al-Kahf on Friday, he will be illuminated with light between the two Fridays.'",
+      },
+      {
+        question: "Which prayer is one of the best prayers before Allah?",
+        options: ["Isha prayer on Thursday in congregation", "Fajr prayer on Friday in congregation", "Maghrib prayer on Friday individually", "Isha prayer on Friday in congregation"],
+        correctAnswerIndex: 1,
+        explanation: "The Prophet Muhammad ﷺ said: 'The best prayer before Allah is Fajr prayer on Friday in congregation.'",
+      },
+      {
+        question: "What is the reward for bathing on Friday, walking to the masjid, sitting near the Imam, and listening attentively without engaging in idle talk?",
+        options: [
+          "Forgiveness of sins for a year",
+          "The reward of fasting and praying at night for a year for every step taken to the masjid",
+          "Double the reward of a regular prayer",
+          "Entrance into Paradise directly",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad ﷺ said: 'Whoever takes a bath on Friday, bathes completely, goes early, arrives early, walks and does not ride (to the mosque), sits close to the Imam, and listens to him, and does not engage in idle talk; for every step he takes, he will have the reward of one year, the reward of a year’s fasting and praying (at night).'",
+      },
+      {
+        question: "Which day has an hour when duaa is not rejected? (By Mohib)",
+        options: ["Friday", "Eid al-Adha", "Eid al-Fitr", "16th of Shawwal"],
+        correctAnswerIndex: 0,
+        explanation: 'Messenger of Allah (ﷺ) said: "On Friday, there is an hour when, if a Muslim happens to pray at that time and ask Allah for something good, He will give it to him."',
+      },
+      {
+        question: "What is the special blessing for a Muslim who passes away on Friday or the night of Friday?",
+        options: ["Immediate entrance into Paradise", "Protection from the trial of the grave", "Forgiveness of all sins", "Reward of performing Hajj"],
+        correctAnswerIndex: 1,
+        explanation: "The Prophet Muhammad ﷺ said: 'There is no Muslim who dies during the day of Friday or the night of Friday but Allah will protect him from the trial of the grave.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
