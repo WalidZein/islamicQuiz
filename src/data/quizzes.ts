@@ -912,6 +912,52 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 21,
+    released: true,
+    timeOfRelease: "2024-11-23T13:00:00Z",
+    questions: [
+      {
+        question: "Which sin, if committed, will cause Allah to declare war on the sinner?",
+        options: ["Riba (Usury | Dealing with interest)", "Zina (Adultery)", "Consistent lying", "Drinking alcohol"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran:\n\n[2:278] O believers! Fear Allah, and give up outstanding interest if you are ˹true˺ believers.\n\n[2:279] If you do not, then beware of a war with Allah and His Messenger! But if you repent, you may retain your principal—neither inflicting nor suffering harm.",
+      },
+      {
+        question: "Which charity has the greatest reward? The charity you give ___",
+        options: ["During the day", "After completing Salah", "While you are healthy and fearing poverty", "Before starting a business venture"],
+        correctAnswerIndex: 2,
+        explanation:
+          "A man came to the Prophet, peace and blessings be upon him, and he said, “O Messenger of Allah, which charity has the greatest reward?” The Prophet said, 'That you give charity while you are healthy, stingy, fearing poverty, and hoping to be rich. Do not delay giving until you are on your deathbed, then say it is for such a person. It already belongs to that person.'",
+      },
+      {
+        question: "Which duaa, if said after eating, will lead to all your past sins being forgiven?",
+        options: [
+          "اَلْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ\n- “All praise is due to Allah Who has given me food to eat and provided it without any endeavour on my part or any power.”",
+          "الْحَمْدُ لِلَّهِ\n- “All praise is due to Allah”",
+          "سُبْـحَانَ اللهِ وَبِحَمْدِهِ سُبْـحَانَ اللهِ العَظِيمِ\n- “Glorified is Allah and praised is He. Glorified is Allah the most great.”",
+          "الحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا عَلَى مَا رَزَقَنِي مِنْ طَعَامٍ وَشَرَابٍ\n- “All praise is due to Allah - an abundant, pure and blessed praise, for the food and drinks he has given me”",
+        ],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: 'He who has taken food and says at the end: (Al-hamdu lillahi-llazi at'amani haza, wa razaqaniihi min ghairi haulin minni wa la quwwah), all his past sins will be forgiven.'",
+      },
+      {
+        question: "Which three surahs, if recited three times in the morning and the evening, will suffice you for everything? (By: Teacher Hashim)",
+        options: ["Surah Ikhlas, Surah Falaq, Surah Nas", "Surah Kahf, Surah Falaq, Surah Nas", "Surah Kahf, Surah Baqara, Surah Yasin", "None of the above"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (peace and blessings be upon him) said: 'Recite Sūrah al-Ikhlās and al-Mu’awwidhatayn (Sūrah al-Falaq and Sūrah al-Nās) three times in the morning and the evening. It will suffice you in all respects.' (Tirmidhī 3575)",
+      },
+      {
+        question: "Duaa is not rejected during which time?",
+        options: ["Before Athan", "During Athan", "Between Athan and Iqama", "After Iqama"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (ﷺ) said: “A du`a offered between the adhan and iqamah is not rejected.”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
