@@ -185,7 +185,7 @@ const quizzes: Quiz[] = [
         options: ["To truly know Him", "To pray to Him by His names", "To gain the reward of Jannah", "All of the above"],
         correctAnswerIndex: 3,
         explanation:
-          "Calling upon Allah by His names is a powerful way to fulfill our purpose of worshiping and knowing Him, as He says, 'I did not create jinn and humans except to worship Me' (51:56).\n\nEach name reflects an attribute that guides our connection to Him. The Quran urges us, 'Allah has the Most Beautiful Names. So call upon Him by them' (7:180), meaning we should use the name that fits our need. Imagine the power of seeking forgiveness from *Al-Ghaffar* (The Forgiving), or finding comfort in times of difficulty by calling upon *Al-Wadud* (The Loving).\n\nThe Prophet ﷺ also taught, 'Allah has ninety-nine names. Whoever memorizes them will enter Paradise,' inspiring us to know, understand, and live by these names. This deepens our connection to Allah, inviting His mercy, guidance, and blessings into our lives.",
+          "Calling upon Allah by His names is a powerful way to fulfill our purpose of worshiping and knowing Him, as He says, 'I did not create jinn and humans except to worship Me' (51:56).\n\nEach name reflects an attribute that guides our connection to Him. The Quran urges us, 'Allah has the Most Beautiful Names. So call upon Him by them' (7:180), meaning we should use the name that fits our need. Imagine the power of seeking forgiveness from Al-Ghaffar (The Forgiving), or finding comfort in times of difficulty by calling upon Al-Wadud (The Loving).\n\nThe Prophet ﷺ also taught, 'Allah has ninety-nine names. Whoever memorizes them will enter Paradise,' inspiring us to know, understand, and live by these names. This deepens our connection to Allah, inviting His mercy, guidance, and blessings into our lives.",
       },
       {
         question: "Which name of Allah means The Most or Entirely Merciful?",
@@ -509,7 +509,7 @@ const quizzes: Quiz[] = [
         options: ["Yes", "No"],
         correctAnswerIndex: 1,
         explanation:
-          "When viewed through the narrow lens of worldly rules, giving in charity might seem like it reduces your wealth. But as Muslims, we are given the full perspective of how the world works.\n\nThe Prophet ﷺ said: 'The wealth of a man will not diminish by Sadaqah (charity).’\n\nAllah reminds us: 'Say: Truly, my Lord enlarges the provision for whom He wills of His slaves, and (also) restricts (it) for him. And whatsoever you spend of anything (in Allah’s Cause), He will replace it. And He is the Best of providers.'\n\n*[Saba’ 34:39]",
+          "When viewed through the narrow lens of worldly rules, giving in charity might seem like it reduces your wealth. But as Muslims, we are given the full perspective of how the world works.\n\nThe Prophet ﷺ said: 'The wealth of a man will not diminish by Sadaqah (charity).’\n\nAllah reminds us: 'Say: Truly, my Lord enlarges the provision for whom He wills of His slaves, and (also) restricts (it) for him. And whatsoever you spend of anything (in Allah’s Cause), He will replace it. And He is the Best of providers.'\n\n[Saba’ 34:39]",
       },
       {
         question: "Does Sila Al-Rahim (maintaining ties of kinship) increase rizk (provisions)?",
@@ -955,6 +955,134 @@ const quizzes: Quiz[] = [
         options: ["Before Athan", "During Athan", "Between Athan and Iqama", "After Iqama"],
         correctAnswerIndex: 2,
         explanation: "The Prophet (ﷺ) said: “A du`a offered between the adhan and iqamah is not rejected.”",
+      },
+    ],
+  },
+  {
+    id: 22,
+    released: true,
+    timeOfRelease: "2024-11-24T13:00:00Z",
+    questions: [
+      {
+        question: "Who did the Prophet Muhammad (ﷺ) say is most deserving of a your kindness? (By Yousuf)",
+        options: ["Your father", "Your wife", "Your mother", "Your children"],
+        correctAnswerIndex: 2,
+        explanation:
+          "A person came to Messenger of Allah (ﷺ) and asked, 'Who among people is most deserving of my fine treatment?' He (ﷺ) said, 'Your mother.' He again asked, 'Who next?' 'Your mother,' the Prophet (ﷺ) replied again. He asked, 'Who next?' He (the Prophet (ﷺ)) said again, 'Your mother.' He again asked, 'Then who?' Thereupon he (ﷺ) said, 'Then your father.'",
+      },
+      {
+        question: "Who of these will be guaranteed  Paradise? (By Yousuf)",
+        options: [
+          "Someone who provides financial support to their daughters",
+          "Someone who provides for their daughters, and treats them with mercy",
+          "Someone who prays regularly for their daughters",
+          "Someone who has two daughters",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "“Whoever has three daughters, shelters them, shows them mercy, and provides for them, Paradise will surely be guaranteed for him.” It was said, “O Messenger of Allah, what if they are only two?” He said, “Even if they are two.” Some of them thought, “If we had asked about one, he would have said, ‘Even one.’”",
+      },
+      {
+        question: "When comparing spending the same amount of money, which of the following brings the greatest reward? (By Yousuf)",
+        options: ["Spending on your family", "Spending to free a slave", "Spending in charity to the poor", "Spending in the path of Allah"],
+        correctAnswerIndex: 0,
+        explanation:
+          "God’s Messenger (ﷺ) as saying: 'Of a dinar you spend as a contribution in God’s path, or to set free a slave, or as sadaqa given to a poor man, or in support of your family, the one spent in support of your family produces the greatest reward.'",
+      },
+      {
+        question: "One of the best way to be good to your dad after he dies is?",
+        options: ["Visiting his grave", "Telling your kids about him", "Maintaining relationships with his friends", "All of the above"],
+        correctAnswerIndex: 2,
+        explanation: "the Prophet said: 'Among the most dutiful of deeds is that a man nurture relations with the people his father was friends with.'",
+      },
+      {
+        question: "The Prophet Muhammad (ﷺ) made duaa against the person who doesn't enter Jannah (Paradise) even though ___ . (By Yousuf)",
+        options: ["He had wealth to give to continuously charity", "He had parents of old age to be good to", "He had wealth to go to Umrah", "All the above"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said: 'May he be disgraced! May he be disgraced! May he be disgraced! The person whose parents, one or both of them, reach old age during his lifetime, yet he does not enter Paradise (by serving them).'\n\nIf your parents have lived to old age and you’ve had countless opportunities to be good to them, entering Jannah should be easy for you. If you fail to achieve that, it means you’ve truly missed out on an incredible chance to earn Allah's pleasure and have seriously messed up. ",
+      },
+    ],
+  },
+  {
+    id: 23,
+    released: true,
+    timeOfRelease: "2024-11-25T13:00:00Z",
+    questions: [
+      {
+        question: "Which prophet has been mentioned in the Quran as a friend of Allah?",
+        options: ["Prophet Muhammad", "Prophet Musa (Moses)", "Prophet Isa (Jesus)", "Prophet Ibrahim (Abraham)"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Allah (SWT) says: 'And who is better in faith than those who ˹fully˺ submit themselves to Allah, do good, and follow the Way of Abraham, the upright? Allah chose Abraham as a close friend.' (Quran 4:125)",
+      },
+      {
+        question: "To which prophet did Allah order to build an ark?",
+        options: ["Prophet Dawood (David)", "Prophet Musa (Moses)", "Prophet Nooh (Noah)", "Prophet Ibrahim (Abraham)"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Allah says in the Quran: 'And construct the ship under Our Eyes and with Our Inspiration and address Me not on behalf of those who did wrong; they are surely to be drowned.' (Quran 11:37)\n\nProphet Noah chose a place outside the city, far from the sea, to build his ark. The disbelievers mocked him for building a ship on a hill, far from water, not understanding Allah's wisdom and power. Once the ark was complete, Allah commanded Noah to load the ark with pairs of animals and the believers. Allah says: 'Until when Our Command came and the lowlands gushed forth, overflowing, We said: Load it with two of each kind of animal (male and female), and embark your family, except against whom the Word has already gone forth, and those who believe. And none believed him except a few.' (Quran 11:40)",
+      },
+      {
+        question: "Who was the father of Prophet Yusuf?",
+        options: ["Iliyas (Elijah)", "Ayub (Job)", "Yakub (Jacob)", "Benjamin"],
+        correctAnswerIndex: 2,
+        explanation:
+          "[12:4] When Joseph said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'\n\n[12:5] He said, 'O my son, do not relate your vision to your brothers or they will contrive against you a plan. Indeed Satan, to man, is a manifest enemy.'\n\n[12:6] And thus will your Lord choose you and teach you the interpretation of narratives and complete His favor upon you and upon the family of Jacob, as He completed it upon your fathers, Abraham and Isaac. Indeed, your Lord is Knowing and Wise.",
+      },
+      {
+        question: "Which Prophet was gifted with the ability to communicate with animals?",
+        options: ["Al-Khidr", "Suleiman (Solomon)", "Musa (Moses)", "Uzair"],
+        correctAnswerIndex: 1,
+        explanation:
+          "[27:16] And David was succeeded by Solomon, who said, 'O people! We have been taught the language of birds, and been given everything ˹we need˺. This is indeed a great privilege.'\n\n[27:17] Solomon’s forces of jinn, humans, and birds were rallied for him, perfectly organized.",
+      },
+      {
+        question: "Which prophet's father, grandfather, and great-grandfather were also prophets?",
+        options: ["Prophet Isa (Jesus)", "Prophet Ibrahim (Abraham)", "Prophet Yusuf (Joseph)", "Prophet Muhammad (ﷺ)"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Allah says in the Quran: 'And so will your Lord choose you ˹O Joseph˺, and teach you the interpretation of dreams, and perfect His favour upon you and the descendants of Jacob—˹just˺ as He once perfected it upon your forefathers, Abraham and Isaac. Surely your Lord is All-Knowing, All-Wise.' (Quran 12:6)\n\nProphet Yusuf (Joseph) was the son of Prophet Yakub (Jacob), who was the son of Prophet Ishaq (Isaac), who was the son of Prophet Ibrahim (Abraham).",
+      },
+    ],
+  },
+  {
+    id: 24,
+    released: true,
+    timeOfRelease: "2024-11-26T13:00:00Z",
+    questions: [
+      {
+        question: "Who will be thrown into the lowest depth of hellfire?",
+        options: ["Liars", "Hypocrites", "Cheaters", "Tyrants"],
+        correctAnswerIndex: 1,
+        explanation: "Allah says in the Quran: 'Surely the hypocrites will be in the lowest depths of the Fire—and you will never find for them any helper.' (Quran 4:145)",
+      },
+      {
+        question: "How many names of hell are mentioned in the Quran?",
+        options: ["1", "6", "7", "8"],
+        correctAnswerIndex: 2,
+        explanation: "The Quran mentions seven names of Hell: Jahim, Jahannam, Laza, al-Sa’ir, Saqar, al-Hutamah, and al-Hawiyah.",
+      },
+      {
+        question: "Who are the first three to enter hellfire?",
+        options: ["A Martyr (Shaheed), A Scholar, A wealthy man", "A Liar, A Thief, A Tyrant", "A Liar, An Adulterer (Zany), A Killer", "A Gambler, A Slanderer, An Unjust Judge"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Messenger of Allah (ﷺ) said:\n\n\"The first to be judged on the Day of Resurrection will be a man who had died as a martyr. He will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nThen He will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I fought for Your Cause till I was martyred.'\n\nAllah will say: 'You have lied. You fought so that people might call you courageous; and they have done so.'\n\nCommand will then be issued about him and he will be dragged on his face and thrown into Hell.\n\nNext a man who had acquired and imparted knowledge and read the Qur'an will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nThen He will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I acquired knowledge and taught it, and read the Qur'an for Your sake.'\n\nAllah will say to him: 'You have lied. You acquired knowledge so that people might call you a learned (man), and you read the Qur'an so that they might call you a reciter, and they have done so.'\n\nCommand will then be issued about him, and he will be dragged on his face and thrown into Hell.\n\nNext a man whom Allah had made affluent and to whom Allah had given plenty of wealth will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nHe will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I did not neglect any of the ways You liked wealth to be spent liberally for Your sake.'\n\nAllah will say to him: 'You have lied. You did it so that people might call you generous, and they have done so.'\n\nCommand will then be issued about him and he will be dragged on his face and thrown into Hell.\"\n\n(Source: Sahih Muslim)",
+      },
+      {
+        question: "Which Angel is Hellfire’s gatekeeper?",
+        options: ["Malik", "Mikaeel", "Jibraeel", "Israfeel"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: 'Last night I saw (in a dream) two men coming to me. One of them said, \"The person who kindles the fire is Malik, the gate-keeper of the (Hell) Fire, and I am Gabriel, and this is Michael.\"'",
+      },
+      {
+        question: "All Muslims who enter Jahanam (Hellfire) will be there forever.",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) said: 'When the inhabitants of Paradise enter Paradise and the inhabitants of Hell enter Hell, God Most High will say, \"Bring forth those in whose hearts there is as much faith as a grain of mustard-seed.\" They will then be brought forth, burned and turned to charcoal, and be cast into the river of life, and they will sprout as does a seed in the rubbish carried away by a flood. Have you not seen that it comes out yellow and twisted?'",
       },
     ],
   },
