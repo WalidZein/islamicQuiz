@@ -1086,6 +1086,46 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 25,
+    released: true,
+    timeOfRelease: "2024-11-27T13:00:00Z",
+    questions: [
+      {
+        question: "Is it okay to lie when reconciling between people?",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation: "The Prophet (ﷺ) said: 'He is not a liar who reconciles between people, conveying good messages and saying good things.'",
+      },
+      {
+        question: "There are certain situations where lying is okay. Is joking one of them?",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation: "The Messenger of Allah (ﷺ) said: 'Woe to the one who speaks and tells lies in order to make the people laugh; woe to him, woe to him.'",
+      },
+      {
+        question: "What is promised to a person who refrains from lying even when they are joking?",
+        options: ["A palace on the outskirts of Paradise", "A house in the middle of Paradise", "A house in the highest part of Paradise", "Forgiveness of all past sins"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said: 'I guarantee a palace on the outskirts of Paradise for one who refrains from arguing even if he is in the right, a house in the middle of Paradise for one who refrains from lying even when joking, and a house in the highest part of Paradise for one who makes his character excellent.'",
+      },
+      {
+        question: "The Prophet Muhammad (ﷺ) described four characteristics; whoever possesses them all is a pure hypocrite. Which of the following is NOT one of these characteristics?",
+        options: ["When entrusted with something, he betrays that trust", "When he speaks, he speaks a lot", "When he argues, he resorts to foul speech", "When he speaks, he lies"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (ﷺ) said: 'There are four characteristics, whoever has them all is a pure hypocrite, and whoever has one of them has one of the characteristics of hypocrisy, until he gives it up: \n\n1. When he is entrusted with something, he betrays that trust.\n2. When he speaks, he lies.\n3. When he makes a covenant, he breaks it.\n4. When he disputes, he resorts to foul speech.'",
+      },
+      {
+        question: "Does truthfulness lead to Paradise?",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet Muhammad (ﷺ) said: 'Truthfulness leads to righteousness, and righteousness leads to Paradise. A man may continue to speak the truth until he is recorded with Allah as a speaker of truth. Lying leads to wickedness and wickedness leads to Hell. A man may continue to tell lies until he is recorded with Allah as a liar.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
