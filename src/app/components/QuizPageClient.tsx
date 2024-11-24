@@ -10,6 +10,7 @@ import { useQuizStatus } from '../../hooks/useQuizStatus';
 import { ProgressBar } from './ProgressBar';
 import { QuizOption } from './QuizOption';
 import { getUserSettings } from '@/utils/userManager';
+import { ShareQuiz } from './ShareQuiz';
 
 interface QuizPageClientProps {
     quiz: Quiz;
@@ -112,9 +113,17 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 </div>
 
                 <div className="w-full max-w-2xl bg-white dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
-                    <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
-                        Quiz Completed!
-                    </h2>
+                    <div className="flex items-center justify-between mb-6">
+                        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                            Quiz Completed!
+                        </h2>
+                        <ShareQuiz
+                            quiz={quiz}
+                            selections={state.selections}
+                            score={state.score}
+                            uuid={getUserSettings().uuid}
+                        />
+                    </div>
                     <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
                         Your score: <span className="font-semibold">{state.score}</span> out of{' '}
                         <span className="font-semibold">{quiz.questions.length}</span>
@@ -122,9 +131,11 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                             <span className="block mt-2 text-green-500">
                                 🎉 Perfect Score! MashAllah! 🎉
                             </span>
-                        ) : (<span className="block mt-2 text-lg">
-                            🎉 Alhamdulillah! You learned something new today!
-                        </span>)}
+                        ) : (
+                            <span className="block mt-2 text-lg">
+                                🎉 Alhamdulillah! You learned something new today!
+                            </span>
+                        )}
                     </p>
                     {quiz.questions.map((q, index) => {
                         const userSelection = state.selections[index];
