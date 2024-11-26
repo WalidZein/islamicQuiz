@@ -1058,10 +1058,10 @@ const quizzes: Quiz[] = [
         explanation: "Allah says in the Quran: 'Surely the hypocrites will be in the lowest depths of the Fire—and you will never find for them any helper.' (Quran 4:145)",
       },
       {
-        question: "How many names of hell are mentioned in the Quran?",
+        question: "How many gates does Jahanam (hellfire) have?",
         options: ["1", "6", "7", "8"],
         correctAnswerIndex: 2,
-        explanation: "The Quran mentions seven names of Hell: Jahim, Jahannam, Laza, al-Sa’ir, Saqar, al-Hutamah, and al-Hawiyah.",
+        explanation: "[15:43] and surely Hell is their destined place, all together.\n [15:44] It has seven gates, to each a group of them is designated.",
       },
       {
         question: "Who are the first three to enter hellfire?",
