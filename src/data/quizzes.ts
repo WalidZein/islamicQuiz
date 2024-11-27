@@ -1093,13 +1093,13 @@ const quizzes: Quiz[] = [
     questions: [
       {
         question: "Is it okay to lie when reconciling between people?",
-        options: ["True", "False"],
+        options: ["Yes", "No"],
         correctAnswerIndex: 0,
         explanation: "The Prophet (ﷺ) said: 'He is not a liar who reconciles between people, conveying good messages and saying good things.'",
       },
       {
         question: "There are certain situations where lying is okay. Is joking one of them?",
-        options: ["True", "False"],
+        options: ["Yes", "No"],
         correctAnswerIndex: 1,
         explanation: "The Messenger of Allah (ﷺ) said: 'Woe to the one who speaks and tells lies in order to make the people laugh; woe to him, woe to him.'",
       },
@@ -1119,7 +1119,7 @@ const quizzes: Quiz[] = [
       },
       {
         question: "Does truthfulness lead to Paradise?",
-        options: ["True", "False"],
+        options: ["Yes", "No"],
         correctAnswerIndex: 0,
         explanation:
           "The Prophet Muhammad (ﷺ) said: 'Truthfulness leads to righteousness, and righteousness leads to Paradise. A man may continue to speak the truth until he is recorded with Allah as a speaker of truth. Lying leads to wickedness and wickedness leads to Hell. A man may continue to tell lies until he is recorded with Allah as a liar.'",
