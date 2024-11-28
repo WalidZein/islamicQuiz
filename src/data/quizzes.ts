@@ -1126,6 +1126,48 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 26,
+    released: true,
+    timeOfRelease: "2024-11-28T13:00:00Z",
+    questions: [
+      {
+        question: "What attribute of Allah does the name Al-Aleem represent?",
+        options: ["The All-knowing", "The All-Seeing", "The All-Hearing", "The Humiliator"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The name 'Al-Aleem' represents the attribute of Allah being All-knowing. This means that Allah has complete knowledge and understanding of everything, including the past, present, and future. He is aware of all things, both seen and unseen, and possesses infinite wisdom and knowledge. This attribute highlights Allah's omniscience and His ability to comprehend and perceive all things.",
+      },
+      {
+        question: "Which name of Allah means The All-Hearing?",
+        options: ["Al-Baseer", "As-Samee", "Al-Hakam", "Al-Raheem"],
+        correctAnswerIndex: 1,
+        explanation:
+          "As-Samee means 'The All-Hearing' in Arabic. This beautiful name of Allah reminds us that He hears every sound, every whisper, and every prayer—no matter how soft or far away it may seem. Allah’s hearing is perfect and limitless; nothing escapes His awareness.\n\nThis name is a powerful reminder for us to turn to Allah with our hopes, fears, and dreams, knowing He is always listening. It encourages us to speak to Him from our hearts, no matter where we are or what we’re going through. It also teaches us to trust in His attentiveness and seek His mercy and guidance in every moment.\n\nRemember: even when you feel unheard by the world, Allah hears you completely.",
+      },
+      {
+        question: "Which name of Allah means Al-Ghaffaar?",
+        options: ["The All-Hearing", "The Giver of Gifts", "The Absolutely Pure", "The Forgiver"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Al-Ghaffaar means 'The Forgiver' in Arabic. This name of Allah signifies His attribute of constantly forgiving and pardoning His creation. It emphasizes His mercy and compassion towards those who seek His forgiveness for their sins and shortcomings. By forgiving His servants, Allah demonstrates His infinite love and kindness, allowing them to repent and seek redemption. This name reminds believers of Allah's willingness to forgive and encourages them to seek His forgiveness and strive for spiritual growth.",
+      },
+      {
+        question: "Some attributes of Allah can apply to humans.",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Some attributes and names of Allah can apply to humans in a limited and appropriate way, while others cannot. Attributes like 'The Creator' (Al-Khaliq), 'The Provider' (Ar-Razzaq), and 'The God' (Al-Ilah) are unique to Allah and cannot be shared or claimed by humans, as they pertain to Allah's essence and actions that are beyond human capacity.\n\nHowever, there are attributes that Allah loves for His servants to embody in a way suitable for them. For example:\n\n- Knowledge: Allah is All-Knowing, and He loves those who seek and apply knowledge.\n- Generosity: Allah is the Most Generous and loves those who are generous.\n- Mercy: Allah is the Most Merciful and loves those who show mercy to others.\n- Forgiveness: Allah is the Most Forgiving and loves those who forgive within the limits of justice.\n\nWhile humans can reflect these qualities, their application is finite and subject to limitations. For instance, excessive mercy could lead to neglecting justice, and excessive generosity could result in wastefulness.\n\nAllah’s attributes are perfect and incomparable, and He encourages believers to adopt these characteristics in a balanced manner that aligns with Islamic teachings.",
+      },
+      {
+        question: "Which name of Allah(SWT) means The Loving?",
+        options: ["Ar-Raqeeb", "Al-Mujeeb", "Allah", "Al-Wadood"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Al-Wadood means 'The Most Loving' in Arabic. This beautiful name of Allah (SWT) shows His endless love and care for all of His creation. It reminds us that Allah’s love is unconditional, always present, and unmatched. Knowing this, we are encouraged to turn to Him in every moment, seeking His love and mercy in our lives.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
