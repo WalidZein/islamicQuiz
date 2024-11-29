@@ -1168,6 +1168,65 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 27,
+    released: true,
+    timeOfRelease: "2024-11-29T13:00:00Z",
+    questions: [
+      {
+        question: "Who will be thrown into the lowest depth of hellfire?",
+        options: ["Liars", "Hypocrites", "Cheaters", "Tyrants"],
+        correctAnswerIndex: 1,
+        explanation: "Allah says in the Quran: 'Surely the hypocrites will be in the lowest depths of the Fire—and you will never find for them any helper.' (Quran 4:145)",
+      },
+      {
+        question: "The Prophet Muhammad (ﷺ) described four characteristics; whoever possesses them all is a pure hypocrite. Which of the following is NOT one of these characteristics?",
+        options: ["When entrusted with something, he betrays that trust", "When he speaks, he speaks a lot", "When he argues, he resorts to foul speech", "When he speaks, he lies"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (ﷺ) said: 'There are four characteristics, whoever has them all is a pure hypocrite, and whoever has one of them has one of the characteristics of hypocrisy, until he gives it up: \n\n1. When he is entrusted with something, he betrays that trust.\n2. When he speaks, he lies.\n3. When he makes a covenant, he breaks it.\n4. When he disputes, he resorts to foul speech.'",
+      },
+      {
+        question: "To which prophet did Allah order to build an ark?",
+        options: ["Prophet Dawood (David)", "Prophet Musa (Moses)", "Prophet Nooh (Noah)", "Prophet Ibrahim (Abraham)"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Allah says in the Quran: 'And construct the ship under Our Eyes and with Our Inspiration and address Me not on behalf of those who did wrong; they are surely to be drowned.' (Quran 11:37)\n\nProphet Noah chose a place outside the city, far from the sea, to build his ark. The disbelievers mocked him for building a ship on a hill, far from water, not understanding Allah's wisdom and power. Once the ark was complete, Allah commanded Noah to load the ark with pairs of animals and the believers. Allah says: 'Until when Our Command came and the lowlands gushed forth, overflowing, We said: Load it with two of each kind of animal (male and female), and embark your family, except against whom the Word has already gone forth, and those who believe. And none believed him except a few.' (Quran 11:40)",
+      },
+      {
+        question: "When comparing spending the same amount of money, which of the following brings the greatest reward? (By Yousuf)",
+        options: ["Spending on your family", "Spending to free a slave", "Spending in charity to the poor", "Spending in the path of Allah"],
+        correctAnswerIndex: 0,
+        explanation:
+          "God’s Messenger (ﷺ) as saying: 'Of a dinar you spend as a contribution in God’s path, or to set free a slave, or as sadaqa given to a poor man, or in support of your family, the one spent in support of your family produces the greatest reward.'",
+      },
+      {
+        question: "Duaa is not rejected during which time?",
+        options: ["Before Athan", "During Athan", "Between Athan and Iqama", "After Iqama"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (ﷺ) said: “A du`a offered between the adhan and iqamah is not rejected.”",
+      },
+      {
+        question: "What is the reward for bathing on Friday, walking to the masjid, sitting near the Imam, and listening attentively without engaging in idle talk?",
+        options: [
+          "Forgiveness of sins for a year",
+          "The reward of fasting and praying at night for a year for every step taken to the masjid",
+          "Double the reward of a regular prayer",
+          "Entrance into Paradise directly",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad ﷺ said: 'Whoever takes a bath on Friday, bathes completely, goes early, arrives early, walks and does not ride (to the mosque), sits close to the Imam, and listens to him, and does not engage in idle talk; for every step he takes, he will have the reward of one year, the reward of a year’s fasting and praying (at night).'",
+      },
+      {
+        question: "Which name of Allah(SWT) means The Loving?",
+        options: ["Ar-Raqeeb", "Al-Mujeeb", "Allah", "Al-Wadood"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Al-Wadood means 'The Most Loving' in Arabic. This beautiful name of Allah (SWT) shows His endless love and care for all of His creation. It reminds us that Allah’s love is unconditional, always present, and unmatched. Knowing this, we are encouraged to turn to Him in every moment, seeking His love and mercy in our lives.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
