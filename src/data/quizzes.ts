@@ -1174,6 +1174,46 @@ const quizzes: Quiz[] = [
     timeOfRelease: "2024-11-29T13:00:00Z",
     questions: [
       {
+        question: "Which of these fruits is mentioned in the Quran?",
+        options: ["Grapes", "Apples", "Mangoes", "Oranges"],
+        correctAnswerIndex: 0,
+        explanation: "Allah says in the Quran: 'By means of it We produce gardens of dates and grapes for you, in which there are many fruits for you and from which you eat.' (Quran 23:19)",
+      },
+      {
+        question: "How many times did the Prophet perform Umrah?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Qatadah narrated that Anas (may Allah be pleased with him) told him that the Messenger of Allah (ﷺ) performed ‘Umrah four times, all of them in Dhu’l-Qi’dah apart from the ‘Umrah which he performed with his Hajj.",
+      },
+      {
+        question: "When a person dies all their good deeds come to an end except?",
+        options: ["Ongoing charity", "Righteous child who will pray for him", "Beneficial knowledge", "All the above"],
+        correctAnswerIndex: 3,
+        explanation: "The Prophet (ﷺ) said: 'When a person dies, all his good deeds come to an end except three: ongoing charity, beneficial knowledge, or a righteous child who will pray for him.'",
+      },
+      {
+        question: "On which of these days is fasting NOT prohibited?",
+        options: ["The day of Eid al-Fitr", "The day after Eid al-Fitr", "The day of Eid al-Adha", "The day after Eid al-Adha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (ﷺ) forbade fasting on the day of Al-Fitr and An-Nahr (Eid al-Adha). He also said: 'The days of al-Tashreeq are days of eating, drinking and remembering Allah.' The days of al-Tashreeq are the three days after Eid al-Adha, during which fasting is prohibited. However, fasting is not prohibited on the day after Eid al-Fitr.",
+      },
+      {
+        question: "How many times did the Prophet (ﷺ) perform Hajj?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Qatadah narrated that Anas (may Allah be pleased with him) told him that the Messenger of Allah (ﷺ) performed ‘Umrah four times, all of them in Dhu’l-Qi’dah apart from the ‘Umrah which he performed with his Hajj. The Prophet (peace be upon him) performed Hajj only once, which was his Farewell Pilgrimage.",
+      },
+    ],
+  },
+  {
+    id: 28,
+    released: true,
+    timeOfRelease: "2024-11-30T13:00:00Z",
+    questions: [
+      {
         question: "Who will be thrown into the lowest depth of hellfire?",
         options: ["Liars", "Hypocrites", "Cheaters", "Tyrants"],
         correctAnswerIndex: 1,
