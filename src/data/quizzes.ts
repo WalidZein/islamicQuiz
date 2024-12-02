@@ -1280,7 +1280,7 @@ const quizzes: Quiz[] = [
           "[12:4] When Joseph said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'\n[12:5] He said, 'O my son, do not relate your vision to your brothers or they will contrive against you a plan. Indeed Satan, to man, is a manifest enemy.'\n[12:6] And thus will your Lord choose you and teach you the interpretation of narratives and complete His favor upon you and upon the family of Jacob, as He completed it upon your fathers, Abraham and Isaac. Indeed, your Lord is Knowing and Wise.",
       },
       {
-        question: "What did Prophet Yusuf (PBUH) see in his dream as a child?",
+        question: "What did Prophet Yusuf (AS) see in his dream as a child?",
         options: ["Seven thin cows eating seven big cows", "Eleven planets, the sun, and the moon prostrating to him", "A wolf attacking him", "A bright light shining over his house"],
         correctAnswerIndex: 1,
         explanation:
@@ -1301,14 +1301,14 @@ const quizzes: Quiz[] = [
           "The brothers of Yusuf aimed to take him away from their father and get rid of him. They knew Prophet Yaqub (PBUH) wouldn’t let him leave easily. They claimed they wanted to take him for a trip in the desert where they would take care of him. However, they threw him into a deep well and left him behind, claiming to their father that a wolf ate him.\n[12:17] They cried, 'Our father! We went racing and left Joseph with our belongings, and a wolf devoured him! But you will not believe us, no matter how truthful we are.'",
       },
       {
-        question: "Why was Prophet Yusuf (PBUH) imprisoned?",
+        question: "Why was Prophet Yusuf (AS) imprisoned?",
         options: ["For stealing", "For disobeying the governor", "Due to a false accusation by the chief minister’s wife", "For refusing to interpret dreams"],
         correctAnswerIndex: 2,
         explanation:
           "After being sold as a slave to Egypt’s chief minister, Yusuf (PBUH) grew up in his household. When Yusuf matured, the chief minister’s wife attempted to seduce him, but Yusuf refused and tried to escape. When her husband appeared at the door, she falsely accused Yusuf of wrongdoing. A family member suggested examining Yusuf’s clothes, and it was found that his shirt was torn from the back, proving his innocence. Despite this, Yusuf was imprisoned unjustly due to the false accusation and societal pressure.\n\nThis story highlights Yusuf’s righteousness and patience in the face of false accusations and injustice.",
       },
       {
-        question: "When news of the chief minister’s wife’s actions spread, how did she attempt to justify her actions regarding Prophet Yusuf (PBUH)?",
+        question: "When news of the chief minister’s wife’s actions spread, how did she attempt to justify her actions regarding Prophet Yusuf (AS)?",
         options: [
           "She confessed her mistake and apologized publicly",
           "She invited women to her residence to demonstrate Yusuf’s extraordinary beauty",
@@ -1320,7 +1320,8 @@ const quizzes: Quiz[] = [
           "When the story of the chief minister’s wife’s pursuit of Yusuf (PBUH) spread, other women began ridiculing her character. To defend herself, she invited these women to a banquet at her residence and gave them fruit along with knives. As they were slicing fruits, she summoned Yusuf (PBUH). When the women saw him, they were so astonished by his extraordinary beauty that they cut their hands without realizing it. She seized this moment to announce that this was the man for whom she was being criticized.\n\n[12:30] Some women of the city gossiped, 'The Chief Minister’s wife is trying to seduce her slave-boy. Love for him has plagued her heart. Indeed, we see that she is clearly mistaken.'\n[12:31] When she heard about their gossip, she invited them and set a banquet for them. She gave each one a knife, then said ˹to Joseph˺, 'Come out before them.' When they saw him, they were so stunned ˹by his beauty˺ that they cut their hands, and exclaimed, 'Good God! This cannot be human; this must be a noble angel!'\n [12:32] She said, 'This is the one for whose love you criticized me! I did try to seduce him but he ˹firmly˺ refused. And if he does not do what I order him to, he will certainly be imprisoned and ˹fully˺ disgraced.'",
       },
       {
-        question: "The king of Egypt dreamt of seven thin cows eating seven big cows and seven green wheat stalks as well as seven dry ones. What was Prophet Yusuf’s interpretation of the dream?",
+        question:
+          "The king of Egypt dreamt of seven thin cows eating seven big cows and seven green wheat stalks as well as seven dry ones. What was Prophet Yusuf’s (AS) interpretation of the dream?",
         options: ["A plague would spread in Egypt", "There would be years of abundance followed by years of famine", "The kingdom would be destroyed", "The king would lose his throne"],
         correctAnswerIndex: 1,
         explanation:
