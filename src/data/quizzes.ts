@@ -1267,6 +1267,67 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 29,
+    released: true,
+    timeOfRelease: "2024-12-01T13:00:00Z",
+    questions: [
+      {
+        question: "Who was the father of Prophet Yusuf?",
+        options: ["Iliyas (Elijah)", "Ayub (Job)", "Yakub (Jacob)", "Benjamin"],
+        correctAnswerIndex: 2,
+        explanation:
+          "[12:4] When Joseph said to his father, 'O my father, indeed I have seen [in a dream] eleven stars and the sun and the moon; I saw them prostrating to me.'\n[12:5] He said, 'O my son, do not relate your vision to your brothers or they will contrive against you a plan. Indeed Satan, to man, is a manifest enemy.'\n[12:6] And thus will your Lord choose you and teach you the interpretation of narratives and complete His favor upon you and upon the family of Jacob, as He completed it upon your fathers, Abraham and Isaac. Indeed, your Lord is Knowing and Wise.",
+      },
+      {
+        question: "What did Prophet Yusuf (PBUH) see in his dream as a child?",
+        options: ["Seven thin cows eating seven big cows", "Eleven planets, the sun, and the moon prostrating to him", "A wolf attacking him", "A bright light shining over his house"],
+        correctAnswerIndex: 1,
+        explanation:
+          "[12:4] ˹Remember˺ when Joseph said to his father, 'O my dear father! Indeed I dreamt of eleven stars, and the sun, and the moon—I saw them prostrating to me!'\n[12:5] He replied, 'O my dear son! Do not relate your vision to your brothers, or they will devise a plot against you. Surely Satan is a sworn enemy to humankind.'",
+      },
+      {
+        question: "Which of these was one of the miracles of Prophet Yusuf (AS)?",
+        options: ["Speak to animals", "Interpret dreams", "Interpret data", "All the above"],
+        correctAnswerIndex: 1,
+        explanation:
+          "[12:21] The man from Egypt who bought him said to his wife, 'Take good care of him, perhaps he may be useful to us or we may adopt him as a son.' This is how We established Joseph in the land, so that We might teach him the interpretation of dreams. Allah’s Will always prevails, but most people do not know.",
+      },
+      {
+        question: "What did Prophet Yusuf’s brothers claim to their father after throwing him in the well?",
+        options: ["They found Yusuf injured in the desert", "A wolf ate him", "Yusuf ran away", "Yusuf was captured by travelers"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The brothers of Yusuf aimed to take him away from their father and get rid of him. They knew Prophet Yaqub (PBUH) wouldn’t let him leave easily. They claimed they wanted to take him for a trip in the desert where they would take care of him. However, they threw him into a deep well and left him behind, claiming to their father that a wolf ate him.\n[12:17] They cried, 'Our father! We went racing and left Joseph with our belongings, and a wolf devoured him! But you will not believe us, no matter how truthful we are.'",
+      },
+      {
+        question: "Why was Prophet Yusuf (PBUH) imprisoned?",
+        options: ["For stealing", "For disobeying the governor", "Due to a false accusation by the chief minister’s wife", "For refusing to interpret dreams"],
+        correctAnswerIndex: 2,
+        explanation:
+          "After being sold as a slave to Egypt’s chief minister, Yusuf (PBUH) grew up in his household. When Yusuf matured, the chief minister’s wife attempted to seduce him, but Yusuf refused and tried to escape. When her husband appeared at the door, she falsely accused Yusuf of wrongdoing. A family member suggested examining Yusuf’s clothes, and it was found that his shirt was torn from the back, proving his innocence. Despite this, Yusuf was imprisoned unjustly due to the false accusation and societal pressure.\n\nThis story highlights Yusuf’s righteousness and patience in the face of false accusations and injustice.",
+      },
+      {
+        question: "When news of the chief minister’s wife’s actions spread, how did she attempt to justify her actions regarding Prophet Yusuf (PBUH)?",
+        options: [
+          "She confessed her mistake and apologized publicly",
+          "She invited women to her residence to demonstrate Yusuf’s extraordinary beauty",
+          "She accused Yusuf of misleading her",
+          "She denied the accusations made against her",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "When the story of the chief minister’s wife’s pursuit of Yusuf (PBUH) spread, other women began ridiculing her character. To defend herself, she invited these women to a banquet at her residence and gave them fruit along with knives. As they were slicing fruits, she summoned Yusuf (PBUH). When the women saw him, they were so astonished by his extraordinary beauty that they cut their hands without realizing it. She seized this moment to announce that this was the man for whom she was being criticized.\n\n[12:30] Some women of the city gossiped, 'The Chief Minister’s wife is trying to seduce her slave-boy. Love for him has plagued her heart. Indeed, we see that she is clearly mistaken.'\n[12:31] When she heard about their gossip, she invited them and set a banquet for them. She gave each one a knife, then said ˹to Joseph˺, 'Come out before them.' When they saw him, they were so stunned ˹by his beauty˺ that they cut their hands, and exclaimed, 'Good God! This cannot be human; this must be a noble angel!'\n [12:32] She said, 'This is the one for whose love you criticized me! I did try to seduce him but he ˹firmly˺ refused. And if he does not do what I order him to, he will certainly be imprisoned and ˹fully˺ disgraced.'",
+      },
+      {
+        question: "The king of Egypt dreamt of seven thin cows eating seven big cows and seven green wheat stalks as well as seven dry ones. What was Prophet Yusuf’s interpretation of the dream?",
+        options: ["A plague would spread in Egypt", "There would be years of abundance followed by years of famine", "The kingdom would be destroyed", "The king would lose his throne"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The king of Egypt had a strange dream: seven skinny cows eating seven fat cows, and seven dry stalks of wheat and seven green ones. None of his advisors could interpret it. Yusuf (PBUH) was brought from prison, and he explained the dream.\n\nYusuf said there would be seven years of plenty, where crops would grow abundantly, and advised saving most of the harvest during these years. This would be followed by seven years of famine, during which the stored grain would be used. Finally, there would be a year of relief with abundant rain and prosperity.\n\n[12:47] Joseph replied, 'You will plant ˹grain˺ for seven consecutive years, leaving in the ear whatever you will harvest, except for the little you will eat.'\n[12:48] 'Then after that will come seven years of great hardship which will consume whatever you have saved, except the little you will store ˹for seed˺.'\n\n[12:49]'Then after that will come a year in which people will receive abundant rain and they will press ˹oil and wine˺.'",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
