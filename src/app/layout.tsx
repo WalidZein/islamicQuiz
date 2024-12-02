@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* <Script
+        <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-S3WE9N5R25"
           strategy="afterInteractive"
-        /> */}
-        {/* <Script id="google-analytics" strategy="afterInteractive">
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -34,13 +34,13 @@ export default function RootLayout({
   
             gtag('config', 'G-S3WE9N5R25');
           `}
-        </Script> */}
+        </Script>
       </head>
       <body
         className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 text-white"
       >
         <Suspense>
-          {/* <GoogleAnalytics /> */}
+          <GoogleAnalytics />
         </Suspense>
         <Header />
         <main className="container mx-auto px-4">{children}</main>
