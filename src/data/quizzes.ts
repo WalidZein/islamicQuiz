@@ -1329,6 +1329,81 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 30,
+    released: true,
+    timeOfRelease: "2024-12-02T13:00:00Z",
+    questions: [
+      {
+        question: "What is the reward for a Muslim who recites Ayat al-Kursi after every obligatory prayer?",
+        options: ["Protection from poverty", "Ten good deeds", "Entrance to Paradise", "Forgiveness of sins"],
+        correctAnswerIndex: 2,
+        explanation:
+          "Abu Umamah reported: The Messenger of Allah, peace and blessings be upon him, said, “Whoever recites the ‘verse of the Throne’ after every prescribed prayer, there will be nothing standing between him and entry into Paradise but his death.”",
+      },
+      {
+        question: "Which prayer if prayed in the masjid earns you the reward of praying the whole night?",
+        options: ["Fajr", "Duhr", "Asr", "Maghrib", "Isha"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah's Messenger (ﷺ) said: 'Whoever prays the Isha prayer in congregation, it is as if they have stood in prayer for half the night. And whoever prays the Fajr prayer in congregation, it is as if they have stood in prayer for the entire night.'",
+      },
+      {
+        question: "In the morning every single joint of yours must pay a sadaqah (charity). What 2 rak’ah will pay that off?",
+        options: ["Fajr Prayer", "Duha Prayer", "Sunnah of Fajr", "Sunnah of Isha"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Duha prayer is a simple 2 rak'ahs that’s prayed any time after the sun rises until just before Dhuhr prayer. It’s highly rewarding and a great habit to incorporate into your daily life.\n\nThe Prophet (ﷺ) said: 'In the morning every single joint of yours must pay a sadaqah (charity). Every SubhanAllah is a sadaqah, every Alhamdulillah is a sadaqah, every La Ilaha Illa Allah is a sadaqah, every Allahu Akbar is a sadaqah, every commanding good is a sadaqah, and every forbidding evil is a sadaqah, and all this is accomplished through two rak’ahs one can pray in Duha.' [Muslim]\n\nAbu Hurayrah (RA) reported that the Messenger of Allah (ﷺ) said: 'No one persists in offering Duha prayer except one who often turns to Allah, for it is the prayer of those who often turn to Allah (SWT).'",
+      },
+      {
+        question: "Which Sunnah prayer did the Prophet never abandon even when traveling?",
+        options: ["Duha Prayer", "Sunnah of Duhr", "Sunnah of Isha", "Witr Prayer"],
+        correctAnswerIndex: 3,
+        explanation:
+          "Ibn al-Qayyim said:\n'It was the practice of the Prophet (ﷺ) when travelling to pray only the obligatory prayers, and it was not narrated that he used to pray the regular Sunnah prayers either before or after the fard prayers, apart from Witr and the Sunnah of Fajr, which he never omitted whether he was travelling or not.'",
+      },
+      {
+        question: "Which duaa, if said after eating, will lead to all your past sins being forgiven?",
+        options: [
+          "اَلْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا، وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ\n- “All praise is due to Allah Who has given me food to eat and provided it without any endeavour on my part or any power.”",
+          "الْحَمْدُ لِلَّهِ\n- “All praise is due to Allah”",
+          "سُبْـحَانَ اللهِ وَبِحَمْدِهِ سُبْـحَانَ اللهِ العَظِيمِ\n- “Glorified is Allah and praised is He. Glorified is Allah the most great.”",
+          "الحَمْدُ لِلَّهِ حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا عَلَى مَا رَزَقَنِي مِنْ طَعَامٍ وَشَرَابٍ\n- “All praise is due to Allah - an abundant, pure and blessed praise, for the food and drinks he has given me”",
+        ],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: 'He who has taken food and says at the end: (Al-hamdu lillahi-llazi at'amani haza, wa razaqaniihi min ghairi haulin minni wa la quwwah), all his past sins will be forgiven.'",
+      },
+      {
+        question: "Which charity has the greatest reward? The charity you give ___",
+        options: ["During the day", "After completing Salah", "While you are healthy and fearing poverty", "Before starting a business venture"],
+        correctAnswerIndex: 2,
+        explanation:
+          "A man came to the Prophet, peace and blessings be upon him, and he said, “O Messenger of Allah, which charity has the greatest reward?” The Prophet said, 'That you give charity while you are healthy, stingy, fearing poverty, and hoping to be rich. Do not delay giving until you are on your deathbed, then say it is for such a person. It already belongs to that person.'",
+      },
+      {
+        question: "When comparing spending the same amount of money, which of the following brings the greatest reward? (By Yousuf)",
+        options: ["Spending on your family", "Spending to free a slave", "Spending in charity to the poor", "Spending in the path of Allah"],
+        correctAnswerIndex: 0,
+        explanation:
+          "God’s Messenger (ﷺ) as saying: 'Of a dinar you spend as a contribution in God’s path, or to set free a slave, or as sadaqa given to a poor man, or in support of your family, the one spent in support of your family produces the greatest reward.'",
+      },
+      {
+        question: "The Prophet Muhammad (ﷺ) described four characteristics; whoever possesses them all is a pure hypocrite. Which of the following is NOT one of these characteristics?",
+        options: ["When entrusted with something, he betrays that trust", "When he speaks, he speaks a lot", "When he argues, he resorts to foul speech", "When he speaks, he lies"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (ﷺ) said: 'There are four characteristics, whoever has them all is a pure hypocrite, and whoever has one of them has one of the characteristics of hypocrisy, until he gives it up: \n\n1. When he is entrusted with something, he betrays that trust.\n2. When he speaks, he lies.\n3. When he makes a covenant, he breaks it.\n4. When he disputes, he resorts to foul speech.'",
+      },
+      {
+        question: "What are you not allowed to do in Sujood?",
+        options: ["Make dua in Arabic", "Make dua in another language", "Recite Quran", "Recite adhkar"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said: 'I have been forbidden to recite the Quran in the state of bowing and prostration. So whilst bowing, extol the Lord in it, and while you are in prostration strive your hardest supplicating, as it is most likely that you will be responded to.' [Muslim]",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
