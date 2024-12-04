@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { LeaderboardEntry, UserSettings } from '@/types/leaderboard';
 import { getUserSettings, updateUserSettings } from '@/utils/userManager';
 
+const leaderboardOn = false;
 export default function Leaderboard() {
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [userSettings, setUserSettings] = useState<UserSettings | null>(null);
@@ -131,7 +132,7 @@ export default function Leaderboard() {
                     🏆 Leaderboard
                 </h2>
                 <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-y-auto max-h-[350px]">
-                    {leaderboard.map((entry, index) => (
+                    {leaderboardOn && leaderboard.map((entry, index) => (
                         <div
                             key={entry.uuid}
                             className={`p-3 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
@@ -149,9 +150,9 @@ export default function Leaderboard() {
                             </div>
                         </div>
                     ))}
-                    {leaderboard.length === 0 && (
+                    {leaderboard.length === 0 || !leaderboardOn && (
                         <div className="p-6 text-center text-gray-500 dark:text-gray-400">
-                            No entries yet. Be the first to join!
+                            {leaderboardOn ? "No entries yet. Be the first to join!" : <div className=' flex-row justify-between'><p>Leaderboard will be available with the start of the new season inshAllah!</p> <a className=" text-blue-600 hover:text-blue-800" href='https://chat.whatsapp.com/EzuGKEk8JFYCttCttg1YtG'>Join our whatsapp community for updates</a></div>}
                         </div>
                     )}
                 </div>
