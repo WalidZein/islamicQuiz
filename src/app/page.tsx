@@ -7,6 +7,8 @@ import { Quiz } from '@/types/quiz';
 import { getUserSettings } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
 import AnnouncementPopup from '@/app/components/AnnouncementPopup';
+import { isQuizLocked } from '@/utils/quizUtils';
+import { UserStats } from "@/utils/userDataStore";
 
 interface QuizStatus {
   completed: boolean;
@@ -22,6 +24,7 @@ export default function Home() {
   const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
   const [userStreak, setUserStreak] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [userData, setUserData] = useState<UserStats | null>(null);
 
   useEffect(() => {
     const initializePage = async () => {
@@ -87,6 +90,21 @@ export default function Home() {
   const handleCtaClick = () => {
     window.open('https://chat.whatsapp.com/EzuGKEk8JFYCttCttg1YtG', '_blank');
   };
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const userSettings = getUserSettings();
+      try {
+        const response = await fetch(`/api/user-data?userId=${userSettings.uuid}`);
+        const data = await response.json();
+        setUserData(data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
 
   // Don't render quiz status until client-side hydration is complete
   if (!isClient || !serverTime) {
@@ -172,6 +190,7 @@ export default function Home() {
                 quiz={availableQuizzes[availableQuizzes.length - 1]}
                 status={completedQuizzes[availableQuizzes[availableQuizzes.length - 1].id]}
                 className="w-32 h-32 md:w-40 md:h-40 !text-3xl"
+                locked={false}
               />
             </div>
           )}
@@ -185,6 +204,12 @@ export default function Home() {
             key={quiz.id}
             quiz={quiz}
             status={completedQuizzes[quiz.id]}
+            locked={isQuizLocked(
+              quiz,
+              completedQuizzes[quiz.id]?.completed,
+              userData,
+              !userData // Force lock if userData hasn't loaded yet
+            )}
           />
         ))}
       </div>
