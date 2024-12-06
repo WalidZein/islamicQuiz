@@ -125,7 +125,7 @@ export default function Home() {
           <div className="space-y-4">
             <p>
               We're excited to announce that Season 2 of Islamic Quiz is currently in development!
-              Get ready for new questions, improved features, and an even better learning experience.
+              Get ready for new questions, improved features, and an even better learning experience. Quizzes will resume in a week!
             </p>
             <p>
               Join our WhatsApp community to stay updated on the latest developments, provide feedback,
