@@ -19,7 +19,7 @@ export default function LockOverlay({ onClose, isOpen }: LockOverlayProps) {
 
         const success = await shareContent({
             title: 'Islamic Quiz',
-            text: 'Join me in testing your Islamic knowledge with daily quizzes!',
+            text: 'Test your Islamic knowledge with daily quizzes!',
             url: window.location.origin,
         });
 

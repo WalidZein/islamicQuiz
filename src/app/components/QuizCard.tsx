@@ -49,11 +49,11 @@ export default function QuizCard({ quiz, status, className = '', locked }: QuizC
             onClick={handleClick}
             className={`${cardClasses} ${className}`}
         >
-            <span className="text-2xl font-semibold">Quiz {quiz.id}</span>
+            <span className="md:text-2xl text-xl font-semibold">Quiz {quiz.id}</span>
 
             {locked && (
                 <div className="absolute bottom-2 left-2">
-                    <LockClosedIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                    <LockClosedIcon className=" w-3 h-3 md:w-5 md:h-5 text-gray-600 dark:text-gray-400" />
                 </div>
             )}
         </div>
