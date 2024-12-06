@@ -6,6 +6,7 @@ import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
 import { getUserSettings, syncCachedScores } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
+import AnnouncementPopup from '@/app/components/AnnouncementPopup';
 
 interface QuizStatus {
   completed: boolean;
@@ -19,6 +20,7 @@ export default function Home() {
   const [serverTime, setServerTime] = useState<string | null>(null);
   const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
   const [userStreak, setUserStreak] = useState(0);
+  const [showAnnouncement, setShowAnnouncement] = useState(true);
 
   useEffect(() => {
     const initializePage = async () => {
@@ -41,6 +43,12 @@ export default function Home() {
         return serverDate >= releaseTime;
       });
       setAvailableQuizzes(filtered);
+
+      // Check if announcement has been dismissed
+      const announcementDismissed = localStorage.getItem('season2AnnouncementDismissed');
+      if (announcementDismissed) {
+        setShowAnnouncement(false);
+      }
     };
 
     initializePage();
@@ -71,6 +79,15 @@ export default function Home() {
     syncCachedScores();
   }, []); // Run once when component mounts
 
+  const handleCloseAnnouncement = () => {
+    setShowAnnouncement(false);
+    localStorage.setItem('season2AnnouncementDismissed', 'true');
+  };
+
+  const handleCtaClick = () => {
+    window.open('https://chat.whatsapp.com/EzuGKEk8JFYCttCttg1YtG', '_blank');
+  };
+
   // Don't render quiz status until client-side hydration is complete
   if (!isClient || !serverTime) {
     return (
@@ -98,6 +115,26 @@ export default function Home() {
 
   return (
     <div className="flex flex-col items-center py-10">
+      {showAnnouncement && (
+        <AnnouncementPopup
+          title="Season 2 in Development"
+          onClose={handleCloseAnnouncement}
+          ctaText="Join WhatsApp Community"
+          onCtaClick={handleCtaClick}
+        >
+          <div className="space-y-4">
+            <p>
+              We're excited to announce that Season 2 of Islamic Quiz is currently in development!
+              Get ready for new questions, improved features, and an even better learning experience.
+            </p>
+            <p>
+              Join our WhatsApp community to stay updated on the latest developments, provide feedback,
+              and connect with fellow learners.
+            </p>
+          </div>
+        </AnnouncementPopup>
+      )}
+
       <div className="w-full max-w-2xl text-center mb-8">
         <h1 className="text-4xl font-extrabold">Islamic Quiz</h1>
         <p className="mt-2 text-lg sm:text-sm">
