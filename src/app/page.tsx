@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import quizzes from '../data/quizzes';
 import { Quiz } from '@/types/quiz';
-import { getUserSettings, syncCachedScores } from '@/utils/userManager';
+import { getUserSettings } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
 import AnnouncementPopup from '@/app/components/AnnouncementPopup';
 
@@ -12,6 +12,7 @@ interface QuizStatus {
   completed: boolean;
   score: number;
   selections: number[];
+  submissionDate: string;
 }
 
 export default function Home() {
@@ -24,16 +25,18 @@ export default function Home() {
 
   useEffect(() => {
     const initializePage = async () => {
-      setIsClient(true);
+
 
       // Get server time
       const timeResponse = await fetch('/api/time');
       const { currentTime } = await timeResponse.json();
       setServerTime(currentTime);
 
-      // Load completed quizzes from localStorage
-      const storedData = JSON.parse(localStorage.getItem('quizStatus') || '{}');
-      setCompletedQuizzes(storedData);
+      // Load completed quizzes from API
+      const userSettings = getUserSettings();
+      const quizStatusResponse = await fetch(`/api/quizStatus?uuid=${userSettings.uuid}`);
+      const quizStatuses = await quizStatusResponse.json();
+      setCompletedQuizzes(quizStatuses);
 
       // Filter available quizzes based on server time
       const serverDate = new Date(currentTime);
@@ -49,6 +52,7 @@ export default function Home() {
       if (announcementDismissed) {
         setShowAnnouncement(false);
       }
+      setIsClient(true);
     };
 
     initializePage();
@@ -65,7 +69,7 @@ export default function Home() {
 
   useEffect(() => {
     const userSettings = getUserSettings();
-    fetch(`/api/leaderboard/update?uuid=${userSettings.uuid}`)
+    fetch(`/api/leaderboard?uuid=${userSettings.uuid}`)
       .then(res => res.json())
       .then(data => {
         if (data && data.currentStreak) {
@@ -74,10 +78,6 @@ export default function Home() {
       })
       .catch(console.error);
   }, []);
-
-  useEffect(() => {
-    syncCachedScores();
-  }, []); // Run once when component mounts
 
   const handleCloseAnnouncement = () => {
     setShowAnnouncement(false);
@@ -180,16 +180,13 @@ export default function Home() {
 
       {/* All Quizzes Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {availableQuizzes.map((quiz: Quiz, index: number) => {
-          // Skip the latest quiz if it's not completed (since it's shown above)
-          return (
-            <QuizCard
-              key={quiz.id}
-              quiz={quiz}
-              status={completedQuizzes[quiz.id]}
-            />
-          );
-        })}
+        {availableQuizzes.map((quiz: Quiz) => (
+          <QuizCard
+            key={quiz.id}
+            quiz={quiz}
+            status={completedQuizzes[quiz.id]}
+          />
+        ))}
       </div>
     </div>
   );

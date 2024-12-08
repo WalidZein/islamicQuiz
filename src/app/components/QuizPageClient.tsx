@@ -11,9 +11,17 @@ import { ProgressBar } from './ProgressBar';
 import { QuizOption } from './QuizOption';
 import { getUserSettings } from '@/utils/userManager';
 import { ShareQuiz } from './ShareQuiz';
+import QuizLoadingSkeleton from './QuizLoadingSkeleton';
 
 interface QuizPageClientProps {
     quiz: Quiz;
+}
+
+interface QuizSubmission {
+    completed: boolean;
+    score: number;
+    selections: number[];
+    submissionDate: string;
 }
 
 export default function QuizPageClient({ quiz }: QuizPageClientProps) {
@@ -21,6 +29,32 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const { state, dispatch } = useQuizStatus(quiz);
     const [confetti, setConfetti] = useState<JSConfetti | null>(null);
     const [visibleExplanations, setVisibleExplanations] = useState<Set<number>>(new Set());
+    const [existingSubmission, setExistingSubmission] = useState<QuizSubmission | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Check for existing submission
+    useEffect(() => {
+        const checkExistingSubmission = async () => {
+            try {
+                const userSettings = getUserSettings();
+                const response = await fetch(`/api/quizStatus?uuid=${userSettings.uuid}&quizId=${quiz.id}`);
+                const data = await response.json();
+
+                if (data[quiz.id]) {
+                    setExistingSubmission(data[quiz.id]);
+                    // Initialize state with existing submission
+                    dispatch({ type: 'LOAD_SUBMISSION', payload: data[quiz.id] });
+                }
+            } catch (error) {
+                console.error('Error checking quiz submission:', error);
+            } finally {
+                // Add a 3 second delay before showing content
+                setIsLoading(false);
+            }
+        };
+
+        checkExistingSubmission();
+    }, [quiz.id]);
 
     // Initialize confetti on client side
     useEffect(() => {
@@ -58,22 +92,30 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
         }
     };
 
-    const handleNextClick = () => {
+    const handleNextClick = async () => {
         if (state.finalQuestion) {
             dispatch({ type: 'COMPLETE_QUIZ' });
             const userSettings = getUserSettings();
 
-            fetch('/api/leaderboard/update', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    uuid: userSettings.uuid,
-                    name: userSettings.name,
-                    score: state.score,
-                    optIn: userSettings.optIn,
-                    isQuizSubmission: true,
-                })
-            }).catch(console.error);
+            try {
+                const response = await fetch('/api/quizSubmit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        uuid: userSettings.uuid,
+                        quizId: quiz.id,
+                        score: state.score,
+                        selectedOptions: state.selections
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to submit quiz');
+                }
+            } catch (error) {
+                console.error('Error submitting quiz:', error);
+                // You might want to show an error message to the user here
+            }
             return;
         }
         if (state.currentQuestionIndex == quiz.questions.length - 1
@@ -83,8 +125,12 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
         if (state.currentQuestionIndex + 1 < quiz.questions.length) {
             dispatch({ type: 'NEXT_QUESTION' });
         }
-
     };
+
+    // Show loading state
+    if (isLoading) {
+        return <QuizLoadingSkeleton />;
+    }
 
     const progressPercentage = ((state.currentQuestionIndex + 1) / quiz.questions.length) * 100;
 

@@ -16,7 +16,7 @@ type QuizAction =
   | { type: "SHOW_EXPLANATION" }
   | { type: "NEXT_QUESTION" }
   | { type: "COMPLETE_QUIZ" }
-  | { type: "LOAD_SAVED_STATUS"; payload: QuizStatus }
+  | { type: "LOAD_SUBMISSION"; payload: QuizStatus }
   | { type: "INCREMENT_SCORE" }
   | { type: "FINAL_QUESTION" };
 
@@ -56,12 +56,13 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
         ...state,
         quizCompleted: true,
       };
-    case "LOAD_SAVED_STATUS":
+    case "LOAD_SUBMISSION":
       return {
         ...state,
         score: action.payload.score,
         selections: action.payload.selections,
         quizCompleted: action.payload.completed,
+        currentQuestionIndex: action.payload.selections.length - 1,
       };
     case "INCREMENT_SCORE":
       return {
@@ -75,31 +76,5 @@ function quizReducer(state: QuizState, action: QuizAction): QuizState {
 
 export function useQuizStatus(quiz: Quiz) {
   const [state, dispatch] = useReducer(quizReducer, initialState);
-
-  useEffect(() => {
-    const storedData = JSON.parse(localStorage.getItem("quizStatus") || "{}") as {
-      [key: number]: QuizStatus;
-    };
-    const quizStatus = storedData[quiz.id];
-
-    if (quizStatus?.completed) {
-      dispatch({ type: "LOAD_SAVED_STATUS", payload: quizStatus });
-    }
-  }, [quiz.id]);
-
-  useEffect(() => {
-    if (state.quizCompleted) {
-      const storedData = JSON.parse(localStorage.getItem("quizStatus") || "{}") as {
-        [key: number]: QuizStatus;
-      };
-      storedData[quiz.id] = {
-        completed: true,
-        score: state.score,
-        selections: state.selections,
-      };
-      localStorage.setItem("quizStatus", JSON.stringify(storedData));
-    }
-  }, [state.quizCompleted, quiz.id, state.score, state.selections]);
-
   return { state, dispatch };
 }
