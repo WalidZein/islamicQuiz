@@ -1,5 +1,8 @@
 import Link from 'next/link';
 import { Quiz } from '@/types/quiz';
+import { useState } from 'react';
+import LockOverlay from './LockOverlay';
+import { LockClosedIcon } from '@heroicons/react/24/solid';
 
 interface QuizCardProps {
     quiz: Quiz;
@@ -8,15 +11,18 @@ interface QuizCardProps {
         score: number;
     };
     className?: string;
+    locked: boolean;
 }
 
-export default function QuizCard({ quiz, status, className = '' }: QuizCardProps) {
+export default function QuizCard({ quiz, status, className = '', locked }: QuizCardProps) {
+    const [showLockOverlay, setShowLockOverlay] = useState(false);
+
     const isCompleted = status?.completed;
     const gotAllRight = status?.score === quiz.questions.length;
     const morethan50per = (status?.score || 0) / quiz.questions.length > 0.5;
 
     let cardClasses =
-        'w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-lg transition-shadow duration-300 ';
+        'relative w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-lg transition-shadow duration-300 ';
 
     if (isCompleted) {
         if (gotAllRight) {
@@ -31,11 +37,42 @@ export default function QuizCard({ quiz, status, className = '' }: QuizCardProps
             'bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 cursor-pointer hover:shadow-lg';
     }
 
+    const handleClick = (e: React.MouseEvent) => {
+        if (locked) {
+            e.preventDefault();
+            setShowLockOverlay(true);
+        }
+    };
+
+    const CardContent = () => (
+        <div
+            onClick={handleClick}
+            className={`${cardClasses} ${className}`}
+        >
+            <span className="md:text-2xl text-xl font-semibold">Quiz {quiz.id}</span>
+
+            {locked && (
+                <div className="absolute bottom-2 left-2">
+                    <LockClosedIcon className=" w-3 h-3 md:w-5 md:h-5 text-gray-600 dark:text-gray-400" />
+                </div>
+            )}
+        </div>
+    );
+
     return (
-        <Link href={`/quiz/${quiz.id}`}>
-            <div className={`${cardClasses} ${className}`}>
-                <span className="text-2xl font-semibold">Quiz {quiz.id}</span>
-            </div>
-        </Link>
+        <>
+            {locked ? (
+                <CardContent />
+            ) : (
+                <Link href={`/quiz/${quiz.id}`}>
+                    <CardContent />
+                </Link>
+            )}
+
+            <LockOverlay
+                isOpen={showLockOverlay}
+                onClose={() => setShowLockOverlay(false)}
+            />
+        </>
     );
 } 

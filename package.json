@@ -10,6 +10,7 @@
     "migrate": "ts-node --project tsconfig.migrate.json src/scripts/migrate-to-sqlite.ts"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "js-confetti": "^0.12.0",
     "lucide-react": "^0.456.0",
     "next": "15.0.1",

@@ -3,7 +3,7 @@ import { getOrCreateUser, updateUser } from "@/db/database";
 
 export async function POST(request: Request) {
   try {
-    const { uuid, name, optIn } = await request.json();
+    const { uuid, name, optIn, inviteCount, shareClicks } = await request.json();
 
     if (!uuid) {
       return NextResponse.json({ error: "UUID is required" }, { status: 400 });
@@ -16,6 +16,8 @@ export async function POST(request: Request) {
     await updateUser(uuid, {
       ...(name && { name: name }),
       ...(optIn !== undefined && { optIn }),
+      ...(shareClicks && { shareClicks: (user?.shareClicks || 0) + 1 }),
+      ...(inviteCount && { inviteCount: (user?.inviteCount || 0) + 1 }),
     });
 
     // Return updated user data

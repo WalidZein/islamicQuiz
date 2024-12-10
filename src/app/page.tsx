@@ -7,6 +7,9 @@ import { Quiz } from '@/types/quiz';
 import { getUserSettings } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
 import AnnouncementPopup from '@/app/components/AnnouncementPopup';
+import { isQuizLocked } from '@/utils/quizUtils';
+import { User } from '@/types/leaderboard';
+import { seasons } from '@/data/seasons';
 
 interface QuizStatus {
   completed: boolean;
@@ -22,6 +25,7 @@ export default function Home() {
   const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
   const [userStreak, setUserStreak] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
+  const [userData, setUserData] = useState<User | null>(null);
 
   useEffect(() => {
     const initializePage = async () => {
@@ -72,8 +76,8 @@ export default function Home() {
     fetch(`/api/leaderboard?uuid=${userSettings.uuid}`)
       .then(res => res.json())
       .then(data => {
-        if (data && data.currentStreak) {
-          setUserStreak(data.currentStreak);
+        if (data && data.uuid) {
+          setUserData(data);
         }
       })
       .catch(console.error);
@@ -172,6 +176,7 @@ export default function Home() {
                 quiz={availableQuizzes[availableQuizzes.length - 1]}
                 status={completedQuizzes[availableQuizzes[availableQuizzes.length - 1].id]}
                 className="w-32 h-32 md:w-40 md:h-40 !text-3xl"
+                locked={false}
               />
             </div>
           )}
@@ -185,6 +190,12 @@ export default function Home() {
             key={quiz.id}
             quiz={quiz}
             status={completedQuizzes[quiz.id]}
+            locked={isQuizLocked(
+              quiz,
+              completedQuizzes[quiz.id]?.completed,
+              userData,
+              !userData // Force lock if userData hasn't loaded yet
+            )}
           />
         ))}
       </div>
