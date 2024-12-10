@@ -10,6 +10,9 @@ import AnnouncementPopup from '@/app/components/AnnouncementPopup';
 import { isQuizLocked } from '@/utils/quizUtils';
 import { User } from '@/types/leaderboard';
 import { seasons } from '@/data/seasons';
+import SeasonBanner from '@/app/components/SeasonBanner';
+import { Card } from './components/ui/card';
+import { getCurrentSeason, getQuizzesBySeason } from '@/utils/seasonUtils';
 
 interface QuizStatus {
   completed: boolean;
@@ -23,7 +26,6 @@ export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const [serverTime, setServerTime] = useState<string | null>(null);
   const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
-  const [userStreak, setUserStreak] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [userData, setUserData] = useState<User | null>(null);
 
@@ -42,9 +44,11 @@ export default function Home() {
       const quizStatuses = await quizStatusResponse.json();
       setCompletedQuizzes(quizStatuses);
 
+
+      const seasonQuizzes = getQuizzesBySeason(quizzes, getCurrentSeason(seasons, serverTime || "")?.id || -1);
       // Filter available quizzes based on server time
       const serverDate = new Date(currentTime);
-      const filtered = quizzes.filter(quiz => {
+      const filtered = seasonQuizzes.filter((quiz: Quiz) => {
         if (!quiz.released) return false;
         const releaseTime = new Date(quiz.timeOfRelease);
         return serverDate >= releaseTime;
@@ -98,9 +102,41 @@ export default function Home() {
       <div className="flex flex-col items-center py-10">
         <div className="w-full max-w-2xl text-center mb-8">
           <h1 className="text-4xl font-extrabold">Islamic Quiz</h1>
-          <p className="mt-2 text-lg">
+          <p className="mt-2 text-sm md:text-lg text-gray-300">
             Test your knowledge with our daily quizzes on Islam.
           </p>
+
+          {/* New Survey Links */}
+          <div className="mt-2 flex justify-center gap-2 text-xs md:text-sm text-gray-300">
+            <Card className="bg-opacity-20 backdrop-blur-sm bg-white/5 border-0 shadow-lg">
+              <a
+                href="https://locrian-gate-d75.notion.site/141a930e096c80dea710f6ac60ae6487?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-gray-100 p-3 "
+              >
+                📝 Feedback & Ideas
+              </a>
+            </Card>
+            <Card className="bg-opacity-20 backdrop-blur-sm bg-white/5 border-0 shadow-lg">
+              <a
+                href="https://locrian-gate-d75.notion.site/141a930e096c80b1aa9ad1c466f4d4a5?pvs=105"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 hover:text-gray-100 p-3"
+              >
+                ✍️  Submit Questions
+              </a>
+            </Card>
+          </div>
+          <div className=' pt-8'>
+            <SeasonBanner
+              seasons={seasons}
+              currentQuizNumber={31}
+              totalQuizzes={60}
+              time={serverTime || ""}
+            />
+          </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {/* Loading state */}
@@ -141,29 +177,40 @@ export default function Home() {
 
       <div className="w-full max-w-2xl text-center mb-8">
         <h1 className="text-4xl font-extrabold">Islamic Quiz</h1>
-        <p className="mt-2 text-lg sm:text-sm">
+        <p className="mt-2 text-sm md:text-lg text-gray-200">
           Test your knowledge with our daily quizzes on Islam.
         </p>
 
         {/* New Survey Links */}
-        <div className="mt-2 flex justify-center gap-2 text-sm">
-          <a
-            href="https://locrian-gate-d75.notion.site/141a930e096c80dea710f6ac60ae6487?pvs=105"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 hover:text-gray-400 "
-          >
-            🔗 Feedback & Ideas
-          </a>
-          <span className="text-gray-400">•</span>
-          <a
-            href="https://locrian-gate-d75.notion.site/141a930e096c80b1aa9ad1c466f4d4a5?pvs=105"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 hover:text-gray-400"
-          >
-            🔗 Submit Questions
-          </a>
+        <div className="mt-2 flex justify-center gap-2 text-xs md:text-sm text-gray-300">
+          <Card className="bg-opacity-20 backdrop-blur-sm bg-white/5 border-0 shadow-lg">
+            <a
+              href="https://locrian-gate-d75.notion.site/141a930e096c80dea710f6ac60ae6487?pvs=105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-gray-100 p-3 "
+            >
+              📝 Feedback & Ideas
+            </a>
+          </Card>
+          <Card className="bg-opacity-20 backdrop-blur-sm bg-white/5 border-0 shadow-lg">
+            <a
+              href="https://locrian-gate-d75.notion.site/141a930e096c80b1aa9ad1c466f4d4a5?pvs=105"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-gray-100 p-3"
+            >
+              ✍️  Submit Questions
+            </a>
+          </Card>
+        </div>
+        <div className=' pt-8'>
+          <SeasonBanner
+            seasons={seasons}
+            currentQuizNumber={31}
+            totalQuizzes={60}
+            time={serverTime}
+          />
         </div>
       </div>
 
@@ -194,7 +241,7 @@ export default function Home() {
               quiz,
               completedQuizzes[quiz.id]?.completed,
               userData,
-              !userData // Force lock if userData hasn't loaded yet
+              false
             )}
           />
         ))}
