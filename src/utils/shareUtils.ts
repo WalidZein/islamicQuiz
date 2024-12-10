@@ -38,13 +38,11 @@ export const trackShare = async (userId: string, type: "quiz" | "invite"): Promi
       stats.inviteCount = 1;
     }
 
-    await fetch("/api/user-data/update", {
+    await fetch("/api/user/update", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId,
+        uuid: userId,
         ...stats,
       }),
     });

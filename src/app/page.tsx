@@ -8,7 +8,8 @@ import { getUserSettings } from '@/utils/userManager';
 import QuizCard from '@/app/components/QuizCard';
 import AnnouncementPopup from '@/app/components/AnnouncementPopup';
 import { isQuizLocked } from '@/utils/quizUtils';
-import { UserStats } from "@/utils/userDataStore";
+import { User } from '@/types/leaderboard';
+import { seasons } from '@/data/seasons';
 
 interface QuizStatus {
   completed: boolean;
@@ -24,7 +25,7 @@ export default function Home() {
   const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
   const [userStreak, setUserStreak] = useState(0);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
-  const [userData, setUserData] = useState<UserStats | null>(null);
+  const [userData, setUserData] = useState<User | null>(null);
 
   useEffect(() => {
     const initializePage = async () => {
@@ -75,8 +76,8 @@ export default function Home() {
     fetch(`/api/leaderboard?uuid=${userSettings.uuid}`)
       .then(res => res.json())
       .then(data => {
-        if (data && data.currentStreak) {
-          setUserStreak(data.currentStreak);
+        if (data && data.uuid) {
+          setUserData(data);
         }
       })
       .catch(console.error);
@@ -90,21 +91,6 @@ export default function Home() {
   const handleCtaClick = () => {
     window.open('https://chat.whatsapp.com/EzuGKEk8JFYCttCttg1YtG', '_blank');
   };
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      const userSettings = getUserSettings();
-      try {
-        const response = await fetch(`/api/user-data?userId=${userSettings.uuid}`);
-        const data = await response.json();
-        setUserData(data);
-      } catch (error) {
-        console.error('Error fetching user data:', error);
-      }
-    };
-
-    fetchUserData();
-  }, []);
 
   // Don't render quiz status until client-side hydration is complete
   if (!isClient || !serverTime) {

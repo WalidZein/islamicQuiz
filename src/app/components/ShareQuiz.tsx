@@ -1,6 +1,7 @@
 'use client';
 
 import { Quiz } from '@/types/quiz';
+import { shareContent, trackShare } from '@/utils/shareUtils';
 
 interface ShareQuizProps {
     quiz: Quiz;
@@ -19,56 +20,18 @@ export function ShareQuiz({ quiz, selections, score, uuid }: ShareQuizProps) {
             selections[index] === question.correctAnswerIndex ? '✅' : '❌'
         ).join('');
 
-        return `Quiz ${quizNumber}  - ${score}/${totalQuestions}\n\n${resultEmojis}\n\nhttps://themuslimbox.app`;
+        return `Quiz ${quizNumber}  - ${score}/${totalQuestions}\n\n${resultEmojis}`;
     };
 
-    const trackShare = async () => {
-        try {
-            await fetch('/api/user-data/update', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ uuid }),
-            });
-        } catch (error) {
-            console.error('Error tracking share:', error);
-        }
-    };
+
 
     const handleShare = async () => {
         const shareText = generateShareText();
 
+        const shareSuccess = await shareContent({ text: shareText, url: 'https://themuslimbox.app' });
 
-        let shouldLogShare = true
-        if (navigator.share && navigator.canShare({ text: shareText })) {
-
-            try {
-                await navigator.share({
-                    text: shareText,
-                });
-            } catch (error: any) {
-                if (error.toString().includes("AbortError")) {
-                    shouldLogShare = false
-                }
-                else {
-                    console.error('Error sharing:', error);
-                }
-
-            }
-
-        } else {
-            // Fallback to copying to clipboard
-            try {
-                await navigator.clipboard.writeText(shareText);
-                alert('Results copied to clipboard!');
-            } catch (error) {
-                console.error('Error copying to clipboard:', error);
-            }
-        }
-        if (shouldLogShare) {
-            // Track the share attempt regardless of success
-            await trackShare();
+        if (shareSuccess) {
+            await trackShare(uuid, "quiz");
         }
     };
 
