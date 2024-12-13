@@ -1,16 +1,16 @@
-export interface Quiz {
-  id: number;
-  title?: string;
-  questions: Question[];
-  released: boolean;
-  timeOfRelease: string; // ISO date string
-}
-
 export interface Question {
   question: string;
   options: string[];
   correctAnswerIndex: number;
   explanation: string;
+}
+
+export interface Quiz {
+  id: number;
+  seasonId: number;
+  released: boolean;
+  timeOfRelease: string;
+  questions: Question[];
 }
 
 export interface QuizStatus {

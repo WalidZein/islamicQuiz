@@ -11,7 +11,8 @@ const quizzes: Quiz[] = [
   {
     id: 1,
     released: true,
-    timeOfRelease: "2024-03-21T00:00:00Z",
+    timeOfRelease: "2024-11-03T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What is the first pillar of Islam?",
@@ -51,7 +52,8 @@ const quizzes: Quiz[] = [
   {
     id: 2,
     released: true,
-    timeOfRelease: "2024-03-21T00:00:00Z",
+    timeOfRelease: "2024-11-04T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who ordered the first complete compilation of the Qur'an?",
@@ -92,7 +94,8 @@ const quizzes: Quiz[] = [
   {
     id: 3,
     released: true,
-    timeOfRelease: "2024-03-22T00:00:00Z",
+    timeOfRelease: "2024-11-05T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who was the teenager who learned Hebrew in two weeks and became the Prophet’s translator?",
@@ -127,7 +130,8 @@ const quizzes: Quiz[] = [
   {
     id: 4,
     released: true,
-    timeOfRelease: "2024-03-23T00:00:00Z",
+    timeOfRelease: "2024-11-06T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which Islamic month did the Prophet ﷺ receive the first revelation of the Quran?",
@@ -178,7 +182,8 @@ const quizzes: Quiz[] = [
   {
     id: 5,
     released: true,
-    timeOfRelease: "2024-03-24T00:00:00Z",
+    timeOfRelease: "2024-11-07T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Why do we need to know and understand Allah’s beautiful names and attributes? (please don't skip the explanation)",
@@ -220,7 +225,8 @@ const quizzes: Quiz[] = [
   {
     id: 6,
     released: true,
-    timeOfRelease: "2024-03-25T00:00:00Z",
+    timeOfRelease: "2024-11-08T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What attribute of Allah does the name Ar-Razzaaq represent?",
@@ -262,7 +268,8 @@ const quizzes: Quiz[] = [
   {
     id: 7,
     released: true,
-    timeOfRelease: "2024-03-26T00:00:00Z",
+    timeOfRelease: "2024-11-09T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "The Prophet ﷺ said “the best of you is he who ___”",
@@ -309,6 +316,7 @@ const quizzes: Quiz[] = [
     id: 8,
     released: true,
     timeOfRelease: "2024-11-10T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "How much more rewardable is a prayer offered in congregation compared to one offered individually?",
@@ -353,6 +361,7 @@ const quizzes: Quiz[] = [
     id: 9,
     released: true,
     timeOfRelease: "2024-11-11T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "In sujood, which body part should not be touching the ground?",
@@ -398,6 +407,7 @@ const quizzes: Quiz[] = [
     id: 10,
     released: true,
     timeOfRelease: "2024-11-12T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "In which of these places is it not allowed to pray?",
@@ -439,6 +449,7 @@ const quizzes: Quiz[] = [
     id: 11,
     released: true,
     timeOfRelease: "2024-11-13T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What practice is recommended immediately after a child is born?",
@@ -496,6 +507,7 @@ const quizzes: Quiz[] = [
     id: 12,
     released: true,
     timeOfRelease: "2024-11-14T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Does Isteghfar (praying for forgiveness) increase rizk (provisions)?",
@@ -551,6 +563,7 @@ const quizzes: Quiz[] = [
     id: 13,
     released: true,
     timeOfRelease: "2024-11-15T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which prayer if prayed in the masjid earns you the reward of praying the whole night?",
@@ -592,6 +605,7 @@ const quizzes: Quiz[] = [
     id: 14,
     released: true,
     timeOfRelease: "2024-11-16T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What are you not allowed to do in Sujood?",
@@ -653,6 +667,7 @@ const quizzes: Quiz[] = [
     id: 15,
     released: true,
     timeOfRelease: "2024-11-17T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Can you make duaa for anything? (By: Mohib)",
@@ -699,6 +714,7 @@ const quizzes: Quiz[] = [
     id: 16,
     released: true,
     timeOfRelease: "2024-11-18T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who was the most beloved person to Prophet Muhammad?",
@@ -746,6 +762,7 @@ const quizzes: Quiz[] = [
     id: 17,
     released: true,
     timeOfRelease: "2024-11-19T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What did the Prophet Muhammad ﷺ say about removing something harmful from the road?",
@@ -787,6 +804,7 @@ const quizzes: Quiz[] = [
     id: 18,
     released: true,
     timeOfRelease: "2024-11-20T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which sin will Allah (SWT) not forgive?\n (By Teacher Hashim)",
@@ -828,6 +846,7 @@ const quizzes: Quiz[] = [
     id: 19,
     released: true,
     timeOfRelease: "2024-11-21T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which day of the week will the Day of Judgment happen?",
@@ -873,6 +892,7 @@ const quizzes: Quiz[] = [
     id: 20,
     released: true,
     timeOfRelease: "2024-11-22T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What is the reward for reciting Surah Al-Kahf on Friday?",
@@ -916,6 +936,7 @@ const quizzes: Quiz[] = [
     id: 21,
     released: true,
     timeOfRelease: "2024-11-23T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which sin, if committed, will cause Allah to declare war on the sinner?",
@@ -962,6 +983,7 @@ const quizzes: Quiz[] = [
     id: 22,
     released: true,
     timeOfRelease: "2024-11-24T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who did the Prophet Muhammad (ﷺ) say is most deserving of a your kindness? (By Yousuf)",
@@ -1008,6 +1030,7 @@ const quizzes: Quiz[] = [
     id: 23,
     released: true,
     timeOfRelease: "2024-11-25T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which prophet has been mentioned in the Quran as a friend of Allah?",
@@ -1050,6 +1073,7 @@ const quizzes: Quiz[] = [
     id: 24,
     released: true,
     timeOfRelease: "2024-11-26T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who will be thrown into the lowest depth of hellfire?",
@@ -1090,6 +1114,7 @@ const quizzes: Quiz[] = [
     id: 25,
     released: true,
     timeOfRelease: "2024-11-27T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Is it okay to lie when reconciling between people?",
@@ -1130,6 +1155,7 @@ const quizzes: Quiz[] = [
     id: 26,
     released: true,
     timeOfRelease: "2024-11-28T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What attribute of Allah does the name Al-Aleem represent?",
@@ -1172,6 +1198,7 @@ const quizzes: Quiz[] = [
     id: 27,
     released: true,
     timeOfRelease: "2024-11-29T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Which of these fruits is mentioned in the Quran?",
@@ -1212,6 +1239,7 @@ const quizzes: Quiz[] = [
     id: 28,
     released: true,
     timeOfRelease: "2024-11-30T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who will be thrown into the lowest depth of hellfire?",
@@ -1271,6 +1299,7 @@ const quizzes: Quiz[] = [
     id: 29,
     released: true,
     timeOfRelease: "2024-12-01T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "Who was the father of Prophet Yusuf?",
@@ -1333,6 +1362,7 @@ const quizzes: Quiz[] = [
     id: 30,
     released: true,
     timeOfRelease: "2024-12-02T13:00:00Z",
+    seasonId: 1,
     questions: [
       {
         question: "What is the reward for a Muslim who recites Ayat al-Kursi after every obligatory prayer?",
