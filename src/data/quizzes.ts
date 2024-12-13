@@ -1434,6 +1434,67 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 31,
+    released: true,
+    timeOfRelease: "2024-12-02T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Is it Haram (forbidden) to talk while eating?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "There is nothing in the Prophet’s Sunnah to indicate that it is not allowed to speak whilst eating. The popular saying among some, that there is 'no greeting and no talking over food' has no basis in sharee‘ah.\n\nIt is proven that the Prophet (blessings and peace of Allah be upon him) talked whilst eating. In Sahih al-Bukhari (3340) and Sahih Muslim (194), it is narrated that Abu Hurayrah said: One day some meat was brought to the Messenger of Allah (ﷺ) and the foreleg, which he used to like, was offered to him. He took a bite, then he said: \"I will be the leader of mankind on the Day of Resurrection. Do you know why that is?\" Then he quoted the lengthy hadeeth about intercession.",
+      },
+      {
+        question: "How much did the Prophet recommend we eat?",
+        options: ["One third for food, one third for water, and one third for air", "Enough to keep you going", "As much as you can", "As much as you can in the morning and a little at night"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet ﷺ said: 'A human being fills no worse vessel than his stomach. It is sufficient for a human being to eat a few mouthfuls to keep his spine straight. But if he must (fill it), then one third of food, one third for drink, and one third for air.'",
+      },
+      {
+        question: "Why are we commanded not to eat with our left hand?",
+        options: ["Shaytan (the devil) eats with his left hand", "Your right hand is cleaner", "Jinn (demons) eat with their left hands", "Animals eat with their left hand"],
+        correctAnswerIndex: 0,
+        explanation: "The Prophet ﷺ said: 'The Shaytaan eats with his left hand and drinks with his left hand.'",
+      },
+      {
+        question: "How can one increase the blessings of the food he eats?",
+        options: ["Eating outdoors", "Eating with people", "Eating in the Masjid", "Eating from the middle of the plate"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Some Companions came to the Prophet ﷺ and complained, 'We eat but are not satisfied.' He ﷺ said, 'Perhaps you eat separately?' The Companions replied in the affirmative. He ﷺ then advised, 'Eat together and mention the Name of Allah over your food. It will be blessed for you.'\n\nThe Prophet ﷺ also said, 'Eat together and not separately, for the blessing is associated with the company.'\n\nAdditionally, the Prophet said, 'Blessing descends in the middle of the food, so eat from the sides and do not eat from the middle.'",
+      },
+      {
+        question: "The Prophet said a non-believer eats __ times more than a believer",
+        options: ["3", "5", "7", "9"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet (peace and blessings of Allah be upon him) said: 'The believer eats in one stomach whilst the kaafir (non-believer) eats in seven.'\n\nThis means that a believer is satisfied with little food, whereas a non-believer eats a lot.",
+      },
+      {
+        question: "If you are drinking a cup of tea that is too hot, which of these is not a permissible way to cool it down?",
+        options: ["Waiting for it to cool down", "Blowing on it", "Pouring it in another cup", "Pouring cold water on it"],
+        correctAnswerIndex: 1,
+        explanation:
+          "It was narrated from Abu Qataadah (may Allah be pleased with him) that the Prophet (peace and blessings of Allah be upon him) forbade breathing into the vessel. (Narrated by al-Bukhari 5630 and Muslim 267).\n\nShaykh Ibn ‘Uthaymeen explained: 'The wisdom behind that is that breathing into the vessel is off-putting to the one who is going to drink from it after him. Some diseases from the stomach, lungs, or mouth may be expelled with the breath and stick to the vessel, or he may choke if he breathes into the vessel. Hence the Prophet (peace and blessings of Allah be upon him) forbade breathing into vessels; rather, one should take three breaths, holding the vessel away from the mouth each time.'",
+      },
+      {
+        question: "What should you do if you forget to say Bismillah before eating?",
+        options: [
+          "Say “أَسْتَغْفِرُ اللهَ”\n- “I seek forgiveness from Allah”",
+          "Say “بِسْمِ اللهِ”\n- “In the name of Allah”",
+          "Say “بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ”\n- “In the name of Allah, at the beginning and at the end”",
+          "It’s ok, keep eating",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "Arabic: بِسْمِ اللهِ أَوَّلَهُ وَآخِرَهُ\nTransliteration: Bismillah Awwalahu wa Aakhiruhu\nTranslation: In the name of Allah, at the beginning and at the end\n\nProphet Muhammad ﷺ said: “When one of you eats, let him mention the name of Allah. If he forgets to mention the name of Allah at the beginning, let him say: In the name of Allah at the beginning and at the end (Bismillahi awwalahu wa aakhirahu).”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
