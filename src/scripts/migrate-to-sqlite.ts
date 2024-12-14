@@ -38,6 +38,9 @@ async function migrateData() {
     // Migrate each user
     for (const entry of leaderboard) {
       try {
+        if (entry.name == "Anonymous") {
+          entry.name = "";
+        }
         // Try to create user, if it fails (already exists), just continue
         await createUser(entry.uuid, entry.name, entry.optIn);
       } catch (error) {

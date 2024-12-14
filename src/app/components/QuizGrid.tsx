@@ -82,7 +82,7 @@ export default function QuizGrid() {
 
     return (
         <>
-            {showAnnouncement && (
+            {/* {showAnnouncement && (
                 <AnnouncementPopup
                     title="Season 2 in Development"
                     onClose={handleCloseAnnouncement}
@@ -100,7 +100,7 @@ export default function QuizGrid() {
                         </p>
                     </div>
                 </AnnouncementPopup>
-            )}
+            )} */}
             {isLoading && (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[1, 2, 3, 4].map((placeholder) => (
