@@ -1495,6 +1495,54 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 32,
+    released: true,
+    timeOfRelease: "2024-12-15T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which of the following best describes the meaning of 'Shaytaan'?",
+        options: ["Any being created from fire", "Any creature that distances you from goodness", "A specific type of Jin that tempts humans", "Another name for Iblees"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The term 'Shaytaan' originates from the Arabic word meaning 'distant' or 'far away,' signifying a separation from God. The concept of Shaytaan can extend to rebellious beings from various realms, including humans and animals, that distance a person from goodness.",
+      },
+      {
+        question: "There are human Shayateen (devils).",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah says in the Quran: 'And thus We have made for every prophet an enemy - devils from mankind and jinn, inspiring to one another decorative speech in delusion. But if your Lord had willed, they would not have done it, so leave them and that which they invent.' (Quran 6:112)\n\nThis verse indicates that there are Shayateen (devils) among both humans and jinn who mislead others.",
+      },
+      {
+        question: "What is the name of the devil that distracts you while praying?",
+        options: ["Iblees", "Khinzab", "Shaytan", "Khinsar"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Uthman came complaining to the Prophet (peace and blessings be upon him), and said: 'The Shaytan comes between me and my prayer and causes me problems with my recitation.' So the Messenger of Allah (peace and blessings be upon him) said: 'That is a Shaytan called Khinzab. So if you feel his presence, seek refuge in Allah and blow a mist to your left three times.' He said: 'I applied this advice and Allah has rid me of him.'\n\n(Sahih Muslim, 2203)",
+      },
+      {
+        question: "How do you protect yourself from the devil that distracts you while you pray?",
+        options: [
+          "Seek refuge in Allah (أَعُوذُ بِاللَّهِ مِنَ الشَّيطَانِ الرَّجِيمِ)",
+          "Seek refuge in Allah and blow to your left three times",
+          "Read Surah Ikhlas",
+          "Try to ignore the thoughts put in your head",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "Uthman came complaining to the Prophet (peace and blessings be upon him), and said: 'The Shaytan comes between me and my prayer and causes me problems with my recitation.' So the Messenger of Allah (peace and blessings be upon him) said: 'That is a Shaytan called Khanzab. So if you feel his presence, seek refuge in Allah and blow a mist to your left three times.' He said: 'I applied this advice and Allah has rid me of him.'\n\n(Sahih Muslim, 2203)",
+      },
+      {
+        question: "At what time during the night is it recommended to keep children indoors due to the emergence of devils?",
+        options: ["The first hour", "The last hour", "The whole night", "None of the above"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Allah's Messenger (ﷺ) said: 'When night falls (or it is evening), keep your children close to you for the devils spread out at that time. But when an hour of the night elapses, you can let them free. Close the doors and mention the Name of Allah, for Satan does not open a closed door.'\n\nA Night starts at sunset",
+      },
+    ],
+  },
 ];
 
 export default quizzes;

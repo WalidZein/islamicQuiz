@@ -43,7 +43,7 @@ export default function LockOverlay({ onClose, isOpen }: LockOverlayProps) {
 
                 <h3 className="text-xl font-bold mb-4 text-gray-600 dark:text-gray-300">Quiz Locked</h3>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
-                    Share Islamic Quiz with friends to unlock more quizzes! Invite 3 friends to unlock all quizzes.
+                    Share with friends to unlock more quizzes! Invite 3 friends to unlock all quizzes.
                 </p>
 
                 <button
