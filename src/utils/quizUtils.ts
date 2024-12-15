@@ -12,7 +12,7 @@ export const isQuizAvailable = (quizId: number): boolean => {
   return currentTime >= releaseTime;
 };
 
-export function isQuizLocked(quiz: Quiz, completed?: boolean, userData?: User | null, forceLock: boolean = false): boolean {
+export function isQuizLocked(quiz: Quiz, quizzes: Quiz[], completed?: boolean, userData?: User | null, forceLock: boolean = false): boolean {
   if (forceLock) return true;
 
   const inviteCount = userData?.inviteCount || 0;

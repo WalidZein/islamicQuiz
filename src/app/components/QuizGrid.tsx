@@ -133,6 +133,7 @@ export default function QuizGrid() {
                         status={completedQuizzes[quiz.id]}
                         locked={isQuizLocked(
                             quiz,
+                            availableQuizzes,
                             completedQuizzes[quiz.id]?.completed,
                             userData,
                             false
