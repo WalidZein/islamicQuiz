@@ -1516,7 +1516,7 @@ const quizzes: Quiz[] = [
           "Allah says in the Quran: 'And thus We have made for every prophet an enemy - devils from mankind and jinn, inspiring to one another decorative speech in delusion. But if your Lord had willed, they would not have done it, so leave them and that which they invent.' (Quran 6:112)\n\nThis verse indicates that there are Shayateen (devils) among both humans and jinn who mislead others.",
       },
       {
-        question: "What is the name of the devil that distracts you while praying?",
+        question: "What is the name of the devil that distracts you while praying?(By dodo)",
         options: ["Iblees", "Khinzab", "Shaytan", "Khinsar"],
         correctAnswerIndex: 1,
         explanation:
@@ -1540,6 +1540,48 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 0,
         explanation:
           "Allah's Messenger (ﷺ) said: 'When night falls (or it is evening), keep your children close to you for the devils spread out at that time. But when an hour of the night elapses, you can let them free. Close the doors and mention the Name of Allah, for Satan does not open a closed door.'\n\nA Night starts at sunset",
+      },
+    ],
+  },
+  {
+    id: 33,
+    released: true,
+    timeOfRelease: "2024-12-16T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "If you miss a pillar of Wudu (ablution), your Wudu is valid.",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation: "Wudu's obligatory (wajib) parts are its pillars or essential parts, which may also be described as fard. They are the actions without which Wudu cannot be valid.",
+      },
+      {
+        question: "Is wiping the head a pillar of Wudu (ablution)?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          'Allah the Almighty says:\n\n(O you who have believed, when you rise to pray, wash your faces and your hands up to the elbows, and wipe your heads and wash your feet up to the ankles. And if you are in a state of impurity, then purify yourselves.) [5:6].\n\nThis verse outlines the agreed-upon obligations of wudu’ (ablution) according to scholars, which are:\n\n1. Washing the face.\n2. Washing the hands up to the elbows.\n3. Wiping the head.\n4. Washing the feet up to the ankles.\n\nDisputed Obligations:\n\nThere are additional aspects of wudu’ that scholars have debated. Some consider them sunnah, while others deem them obligatory. These include:\n\n1. Intention (Niyyah):\n- The correct opinion is that intention is obligatory, based on the Prophet’s saying:\n"Actions are judged by intentions." [Agreed upon].\n\n2. Saying Bismillah (Tasmiyah):\n\n- Imam Ahmad, the Zahiri school, and others consider it obligatory, citing the hadith:\n\n "There is no prayer for one who does not have ablution, and no ablution for one who does not mention the name of Allah upon it." \n[Narrated by Abu Dawood, Al-Tirmidhi, and Ibn Majah].\n\n- However, the authenticity of this hadith is disputed. If it were authentic, it would resolve the issue.\n\n - The majority opinion is that saying Bismillah is sunnah, based on the hadith narrated by Abu Dawood:\n"One’s prayer is not complete unless he performs ablution as Allah commanded him, washing his face, hands up to the elbows, wiping his head, and washing his feet up to the ankles."\n\n - The Prophet ﷺ referred to the Qur\'anic verse for the obligatory parts of wudu’, and the verse does not mention tasmiyah. If it were obligatory, wudu’ would be invalid without it.\n\n3. Rinsing the mouth (Madhmadah) and nose (Istinshaq):\n\n- Imam Ahmad considers them obligatory, citing the hadith of Laqit ibn Sabrah:\n "Exaggerate in rinsing your nose unless you are fasting." \n[Narrated by Abu Dawood].\n\n- The majority hold that they are sunnah, based on the aforementioned hadith of Rifa\'ah ibn Rafi’, which does not mention rinsing the mouth or nose.\n\n 4. Sequence (Tartib) of washing the parts:\n\n- Imam Shafi’i and Imam Ahmad consider maintaining the sequence obligatory, as it appears in the verse and the hadith of Uthman:\n\n"Whoever performs ablution as I have done, then prays two rak’ahs without letting his thoughts wander, all his past sins will be forgiven."\n[Agreed upon].\n\n- Imam Abu Hanifa and Imam Malik disagree, pointing to the hadith of Miqdad ibn Ma’dikarib, which shows a different order:\n\n "The Messenger of Allah was brought water for ablution. He washed his hands three times, then his face three times, then his arms three times each, then rinsed his mouth and nose three times, then wiped his head and ears, and washed his feet three times."\n[Narrated by Abu Dawood and Ahmad].\n\n- The hadith indicates that the sequence is not obligatory, as the mouth and nose were rinsed after washing the hands and face.\n\n5. Continuity (Muwalat):\n\n- Imam Ahmad and Imam Malik consider it obligatory, citing the hadith of Khalid ibn Ma’dan from one of the wives of the Prophet ﷺ:\n\n"The Prophet saw a man praying with a dry spot on his foot the size of a dirham. He ordered him to repeat his ablution and prayer." [Narrated by Ahmad and Abu Dawood].\n\n- Imam Ahmad stated that its chain of narration is sound.\n\n- Imam Shafi’i and Imam Abu Hanifa regard muwalat as sunnah, arguing that the verse does not explicitly require it.',
+      },
+      {
+        question: "While doing Wudu’, is it okay to wash the different body parts more than three times?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "\"A Bedouin came to the Prophet (peace and blessings be upon him) asking about wudu'. The Prophet showed him how to perform wudu' by washing each part three times. Then he said: This is how ablution is done. Whoever goes beyond this has done wrong, exceeded the limits, and committed an injustice.\"\n\n 1. Washing a body part more than three times is disliked (makrooh) but does not invalidate the Wudu’.The ablution remains valid, and the prayer performed with it is acceptable.\n\n 2. To count as one complete wash, water must reach the entire required area of the body part. For example, if someone is washing their feet and a specific spot remains dry until the third wash, it still counts as one wash, and they may continue washing to ensure complete coverage.",
+      },
+      {
+        question: "Which heels did the prophet describe as being from the hell fire?",
+        options: ["Heels not washed during wudu", "Heels that touch impurities", "Heels that walk to haram", "Heels that are cold"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Abdullah ibn Amr (RA) said: The Prophet (peace and blessings of Allah be upon him) stayed behind us on a journey and then caught up with us, and we were late in praying `Asr. We started doing Wudu and wiping our feet, and he called out at the top of his voice: “Woe to the heels from the fire” two or three times.\n\nAl-Bukhari (163) and Muslim (241)",
+      },
+      {
+        question: "If you have forgotten whether or not you have broken your wudu, then this does not nullify your wudu until you are certain?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "A man complained to the Prophet (blessings and peace of Allah be upon him) that he felt something while praying -- should he stop his prayer? He said: “No, not unless you hear a sound or notice a smell.” (Narrated by Al-Bukhari, 2056; Muslim, 361)",
       },
     ],
   },
