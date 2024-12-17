@@ -1585,6 +1585,48 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 34,
+    released: true,
+    timeOfRelease: "2024-12-17T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Can you pass in front of someone who is praying?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Definition of a Sutrah:\n\nA sutrah is an object placed in front of a person who is praying, serving as a visual boundary to their prayer space. This could be something like a staff, a wall, or even a drawn line.\n\nWithout a Sutrah:\n\n- Prohibition of Passing Close By:\n    It is forbidden to pass between the individual who is praying and the spot where their forehead touches the ground in prostration.\n    \n    “If the one who passes in front of a person who is praying knew what (sin) he is committing, it would be better for him to stand for forty (days, months, or years) than to pass in front of him.”\n(Narrated by Al-Bukhari, 510; Muslim, 507)\n\n- Allowable Space for Passing:\n    If you must pass, do so beyond the spot where the person prostrates. This area is not considered directly “in front” of the worshiper.\n\nWith a Sutrah:\n\n- Guidance on the Sutrah:\n    “If any one of you prays, let him face towards something (a sutrah) … then it will not matter if anyone passes in front of him (beyond that).”\n    (Ahmad, Ibn Majah, Ibn Hibban)\n\n- Height of the Sutrah:\n    “If one of you puts something in front of him that is the height of the back of a saddle, then let him pray and he need not worry about anyone who passes beyond that.”\n(Narrated by Muslim, 499)\n\n- Conclusion with a Sutrah:\n    Once a sutrah is placed, passing beyond it permissble. However, crossing between the worshiper and the sutrah remains forbidden.\n\nPassing in Front of a Congregation:\n\n- Imam’s Sutrah for Everyone: The imam’s sutrah counts for all those praying behind him. You may pass in front of the congregation as long as you do not cross the area where the imam has placed his sutrah or the space he uses for prayer.",
+      },
+      {
+        question: "What should you do if prayer starts and you are still on your way to the masjid?",
+        options: ["Run to catch as much as you can", "Walk calmly", "Either"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (peace be upon him) said: 'If salaat (prayer) is started, do not approach it running, but approach it walking, with calmness. Whatever you catch up with, pray, and what you miss, complete it.'",
+      },
+      {
+        question: "If food is ready and it’s time for prayer, which action best aligns with the sunnah?",
+        options: ["Eat", "Pray", "Eat only if you’ll have enough time to catch the prayer", "Any of the above"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (peace and blessings of Allah be upon him) said: 'You should not pray when food is ready or when resisting the urge to urinate or defecate.'\n(Narrated by Muslim)",
+      },
+      {
+        question: "During prayer, is it haram to do a movement before the imam?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah (peace and blessings of Allah be upon him) said: 'The imam is only appointed to be followed, so when he says takbeer, then say takbeer; when he bows, then bow (and do not bow until he bows); when he says Sami’a Allahu liman hamidah, then say Allahumma rabbana laka’l-hamd. If he prays standing, then pray standing.'\n(Al-Bukhari 378, Muslim 417)\n\nThe Prophet (ﷺ) also warned, saying: 'Isn't he who raises his head before the Imam afraid that Allah may transform his head into that of a donkey or his figure (face) into that of a donkey?'",
+      },
+      {
+        question: "Who are the worst of thieves?",
+        options: ["The ones that steal from their parents", "The ones that steal from the Masjid (mosque)", "The ones that steal from their prayers", "The ones who steal from the sick"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, said, 'Verily, the worst thieves among people are those who steal from their prayers.' It was said, 'O Messenger of Allah, how do they steal from their prayers?' The Prophet said, 'They do not complete its bowing or prostration properly. The most miserly of people are those who are miserly with the greeting of peace.'\n\nSahih (authentic) according to Al-Albani.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
