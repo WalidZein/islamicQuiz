@@ -2,27 +2,46 @@
 
 import { useEffect, useState } from 'react';
 import { LeaderboardEntry, UserSettings } from '@/types/leaderboard';
-import { getUserSettings, updateUserSettings } from '@/utils/userManager';
+import { getUserSettings, updateUserSettings, setCachedLeaderboardData, getNameFromLeaderboard } from '@/utils/userManager';
 
-const leaderboardOn = false;
+const leaderboardOn = true;
 export default function Leaderboard() {
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [userSettings, setUserSettings] = useState<UserSettings | null>(null);
     const [newName, setNewName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
+    const [name, setName] = useState('');
 
     useEffect(() => {
-        const settings = getUserSettings();
-        setUserSettings(settings);
-        setNewName(settings.name || '');
-        fetchLeaderboard();
+        const initializeUser = async () => {
+            const settings = getUserSettings();
+            setUserSettings(settings);
+            if (settings.uuid) {
+                const dbName = await getNameFromLeaderboard(settings.uuid);
+                if (dbName) {
+                    setName(dbName);
+                }
+            }
+            fetchLeaderboard();
+        };
+
+        initializeUser();
     }, []);
 
     const fetchLeaderboard = async () => {
         try {
-            const response = await fetch('/api/leaderboard/update');
+            const response = await fetch('/api/leaderboard');
             const data = await response.json();
+            setCachedLeaderboardData(data);
             setLeaderboard(data);
+
+            const settings = getUserSettings();
+            if (settings.uuid) {
+                const dbName = await getNameFromLeaderboard(settings.uuid);
+                if (dbName) {
+                    setName(dbName);
+                }
+            }
         } catch (error) {
             console.error('Error fetching leaderboard:', error);
         } finally {
@@ -34,43 +53,32 @@ export default function Leaderboard() {
         e.preventDefault();
         if (!newName.trim()) return;
 
-        const updated = updateUserSettings({
-            name: newName,
-            optIn: true
-        });
-        setUserSettings(updated);
+        try {
+            await fetch('/api/user/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    uuid: userSettings?.uuid,
+                    name: newName,
+                    optIn: true
+                })
+            });
 
-        // Update leaderboard entry
-        await fetch('/api/leaderboard/update', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                uuid: updated.uuid,
-                name: newName,
-                optIn: true,
-                score: 0
-            })
-        });
-
-        await fetchLeaderboard();
+            await fetchLeaderboard();
+        } catch (error) {
+            console.error('Error updating user:', error);
+        }
     };
 
     const toggleOptIn = async () => {
-        if (!userSettings?.name) return;
+        if (!newName.trim()) return;
 
-        const updated = updateUserSettings({
-            optIn: !userSettings.optIn
-        });
-        setUserSettings(updated);
-
-        await fetch('/api/leaderboard/update', {
+        await fetch('/api/user/update', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                uuid: updated.uuid,
-                name: updated.name,
-                optIn: updated.optIn,
-                score: 0
+                uuid: userSettings?.uuid,
+                optIn: false //TODO: fix me for toggle to work
             })
         });
 
@@ -87,7 +95,7 @@ export default function Leaderboard() {
                 <p className="text-xl md:text-2xl font-arabic mb-1">وَفِي ذَٰلِكَ فَلْيَتَنَافَسِ الْمُتَنَافِسُونَ</p>
                 <p className="text-sm md:text-lg text-gray-800 dark:text-gray-400 italic">"So for this let the competitors compete."</p>
             </div>
-            {!userSettings?.name ? (
+            {!name ? (
                 <form onSubmit={handleNameSubmit} className="mb-8">
                     <h3 className="text-xl font-semibold mb-4">Join the Leaderboard</h3>
                     <div className="flex gap-4">
@@ -110,7 +118,7 @@ export default function Leaderboard() {
             ) : (
                 <div className="mb-4 flex items-center justify-between">
                     <div>
-                        <h3 className="text-xl font-semibold">Assalamualaikum, {userSettings.name}!</h3>
+                        <h3 className="text-xl font-semibold">Assalamualaikum, {name}!</h3>
                         <p className="text-gray-800 dark:text-gray-300">
                             {//userSettings.optIn ? 'You are visible on the leaderboard' : 'You are hidden from the leaderboard '
                             }
@@ -150,7 +158,7 @@ export default function Leaderboard() {
                             </div>
                         </div>
                     ))}
-                    {leaderboard.length === 0 || !leaderboardOn && (
+                    {(leaderboard.length === 0 || !leaderboardOn) && (
                         <div className="p-6 text-center text-gray-500 dark:text-gray-400">
                             {leaderboardOn ? "No entries yet. Be the first to join!" : <div className=' flex-row justify-between'><p>Leaderboard will be available with the start of the new season inshAllah!</p> <a className=" text-blue-600 hover:text-blue-800" href='https://chat.whatsapp.com/EzuGKEk8JFYCttCttg1YtG'>Join our whatsapp community for updates</a></div>}
                         </div>

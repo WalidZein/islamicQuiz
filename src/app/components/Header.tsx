@@ -14,7 +14,7 @@ export default function Header() {
 
     useEffect(() => {
         const userSettings = getUserSettings();
-        fetch(`/api/leaderboard/update?uuid=${userSettings.uuid}`)
+        fetch(`/api/leaderboard?uuid=${userSettings.uuid}`)
             .then(res => res.json())
             .then(data => {
                 if (data && data.currentStreak) {

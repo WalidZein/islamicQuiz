@@ -10,9 +10,21 @@ export interface LeaderboardEntry {
   hasSyncedCachedScores?: boolean;
 }
 
-export interface UserSettings {
+export interface User {
   uuid: string;
   name: string | null;
+  totalScore: number;
+  currentStreak: number;
+  highestStreak: number;
   optIn: boolean;
+  lastQuizDate?: string;
+  lastUpdated: string;
+  shareClicks: number;
+  inviteCount: number;
+  hasSyncedCachedScores?: boolean;
+}
+
+export interface UserSettings {
+  uuid: string;
   hasSyncedCachedScores?: boolean;
 }
