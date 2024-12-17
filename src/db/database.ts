@@ -148,6 +148,20 @@ async function updateUserStats(userId: string) {
          ORDER BY submission_date DESC`,
     userId
   );
+  // Helper function to get quiz date - considering a quiz day starts at 13:00 UTC
+  const getQuizDate = (date: Date, dayOffset: number = 0) => {
+    const utcDate = new Date(date.getTime());
+
+    if (dayOffset !== 0) {
+      utcDate.setDate(utcDate.getDate() + dayOffset);
+    }
+    // If the time is before 13:00 UTC, consider it part of the previous day
+    if (utcDate.getUTCHours() < 13) {
+      utcDate.setUTCDate(utcDate.getUTCDate() - 1);
+    }
+
+    return utcDate.toISOString().split("T")[0];
+  };
 
   let currentStreak = 0;
   let highestStreak = 0;
@@ -156,11 +170,16 @@ async function updateUserStats(userId: string) {
   const today = new Date();
 
   // First pass - calculate highest streak from all submissions
+  if (submissions.length !== 0) {
+    highestStreak = 1;
+  }
   for (let i = 0; i < submissions.length - 1; i++) {
     const currentDate = new Date(submissions[i].submission_date);
     const nextDate = new Date(submissions[i + 1].submission_date);
 
-    const dayDiff = Math.floor((currentDate.getTime() - nextDate.getTime()) / (1000 * 60 * 60 * 24));
+    const currentQuizDate = getQuizDate(currentDate);
+    const nextQuizDate = getQuizDate(nextDate);
+    const dayDiff = Math.floor((new Date(currentQuizDate).getTime() - new Date(nextQuizDate).getTime()) / 86400000);
 
     if (dayDiff === 1) {
       tempStreak++;
@@ -172,20 +191,27 @@ async function updateUserStats(userId: string) {
 
   // Second pass - calculate current streak
   lastDate = null;
+  let streakStart = null;
   for (const submission of submissions) {
     const submissionDate = new Date(submission.submission_date);
 
     if (!lastDate) {
       // Check if first submission is from today or yesterday
-      const daysSinceLastQuiz = Math.floor((today.getTime() - submissionDate.getTime()) / (1000 * 60 * 60 * 24));
-      if (daysSinceLastQuiz <= 1) {
-        currentStreak = 1;
+      const todayStr = getQuizDate(today);
+      const submissionStr = getQuizDate(submissionDate);
+      if (!(todayStr === submissionStr || getQuizDate(new Date(today.getTime()), -1) === submissionStr)) {
+        break;
       }
+      currentStreak = 1;
+      streakStart = submissionDate;
       lastDate = submissionDate;
+
       continue;
     }
 
-    const dayDiff = Math.floor((lastDate.getTime() - submissionDate.getTime()) / (1000 * 60 * 60 * 24));
+    const lastDateStr = getQuizDate(lastDate);
+    const submissionStr = getQuizDate(submissionDate);
+    const dayDiff = Math.floor((new Date(lastDateStr).getTime() - new Date(submissionStr).getTime()) / 86400000);
 
     if (dayDiff === 1) {
       currentStreak++;
@@ -197,8 +223,10 @@ async function updateUserStats(userId: string) {
   }
 
   // Reset current streak if more than 1 day since last quiz
-  if (lastDate) {
-    const daysSinceLastQuiz = Math.floor((today.getTime() - lastDate.getTime()) / (1000 * 60 * 60 * 24));
+  if (streakStart) {
+    const todayStr = getQuizDate(today);
+    const lastDateStr = getQuizDate(streakStart);
+    const daysSinceLastQuiz = Math.floor((new Date(todayStr).getTime() - new Date(lastDateStr).getTime()) / 86400000);
     if (daysSinceLastQuiz > 1) {
       currentStreak = 0;
     }
