@@ -1627,6 +1627,48 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 35,
+    released: true,
+    timeOfRelease: "2024-12-18T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which shirk takes you out of the fold of Islam?",
+        options: ["Major Shirk", "Minor Shirk", "Both"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Definition:\n\n- Major Shirk: Involves directly associating partners with Allah, believing that others share Allah’s divine attributes or control aspects of the universe.\n- Minor Shirk: Involves actions or beliefs that, while not outright worship of others, still diminish the purity of one’s faith, such as attributing blessings indirectly to something other than Allah without believing it to be the true cause.\n\nEffect on Faith:\n\n- Major Shirk: Completely nullifies one’s Islam, removing a person from the fold of the religion.\n- Minor Shirk: Does not expel a person from Islam, but it weakens faith and can lead to greater wrongdoing if not rectified.",
+      },
+
+      {
+        question: "Belief that there are people who know the unseen is __",
+        options: ["Major Shirk", "Minor Shirk"],
+        correctAnswerIndex: 0,
+        explanation: "“Say: 'None in the heavens and the earth knows the Ghaib (Unseen) except Allah, nor can they perceive when they shall be resurrected'” [Al-Naml 27:65]",
+      },
+      {
+        question: "Showing off your good deeds is __",
+        options: ["Major Shirk", "Minor Shirk"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (peace and blessings of Allah be upon him) said: 'The thing that I fear most for you is minor shirk.' They said: 'O Messenger of Allah, what is minor shirk?' He said: 'Showing off, for Allah will say on the Day when people are recompensed for their actions: ‘Go to those for whom you were showing off with your deeds in the world, and see what reward you find with them.’' (Classed as sahih by al-Albani in al-Silsilah al-Sahihah, 951)",
+      },
+      {
+        question: "Swearing by other than Allah is __",
+        options: ["Major Shirk", "Minor Shirk"],
+        correctAnswerIndex: 1,
+        explanation: "The Prophet (blessings and peace of Allah be upon him) said: “Whoever swears by something other than Allah has committed an act of shirk.”",
+      },
+      {
+        question: "Wearing an Evil eye protection amulet is __",
+        options: ["Major Shirk", "Minor Shirk"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (peace and blessings of Allah be upon him) said: “Whoever wears an amulet has committed shirk.” \n\nIf amulets contain Quran, then there is a difference of scholarly opinion concerning them.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
