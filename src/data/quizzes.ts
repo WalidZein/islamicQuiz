@@ -1662,10 +1662,10 @@ const quizzes: Quiz[] = [
       },
       {
         question: "Wearing an Evil eye protection amulet is __",
-        options: ["Major Shirk", "Minor Shirk"],
-        correctAnswerIndex: 1,
+        options: ["Major Shirk", "Minor Shirk", "Depends"],
+        correctAnswerIndex: 2,
         explanation:
-          "The Prophet (peace and blessings of Allah be upon him) said: “Whoever wears an amulet has committed shirk.” \n\nIf amulets contain Quran, then there is a difference of scholarly opinion concerning them.",
+          "The Prophet (peace and blessings of Allah be upon him) said: “Whoever wears an amulet has committed shirk.” \n\n Wearing an Evil eye protection amulet can be major shirk or minor shirk depending whether the person thinks that these things protect him instead of Allah (major shirk) or if he thinks that they are a means for protection even though Allah has not declared it as such( minor shirk).\n\nIf amulets contain Quran, then there is a difference of scholarly opinion concerning them.",
       },
     ],
   },
