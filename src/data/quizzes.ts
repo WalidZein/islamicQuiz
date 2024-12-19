@@ -1669,6 +1669,49 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 36,
+    released: true,
+    timeOfRelease: "2024-12-19T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Did the Prophet (ﷺ) categorize the signs of the day of judgment into major and minor?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          'This classification is an effort made by scholars and a terminological distinction based on meaning. They observed that some signs occur long before the day of judgment and are more customary, such as the disappearance of knowledge, the spread of ignorance, and the prevalence of usury and adultery. They termed these as "minor signs."\n\nOn the other hand, there are signs that appear close to the establishment of the day of judgment and involve extraordinary events or widespread awe, such as the emergence of the Dajjal, the descent of Isa (peace be upon him), the appearance of Gog and Magog, and the rising of the sun from the west. These they termed as "major signs."',
+      },
+      {
+        question: "The Dajjal (AntiChrist) is from which signs of the day of judgment?",
+        options: ["Minor", "Major", "Neither"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (ﷺ) came out to us when we were discussing. He said: “What are you discussing?” They said: “We are talking about the Hour.” He said: “It will never begin until you see ten signs before it.” He mentioned the smoke, the Dajjal, the Beast, the rising of the sun from its place of setting, the descent of ‘Isa ibn Maryam (peace and blessings of Allah be upon him), Yajuj and Majuj, and three landslides, one in the east, one in the west and one in the Arabian Peninsula, and the last of that is a fire which will emerge from Yemen and drive the people to their place of gathering.",
+      },
+      {
+        question: "Is Loss of trust a major or minor sign of the day of judgment?",
+        options: ["Major", "Minor", "Neither"],
+        correctAnswerIndex: 1,
+        explanation:
+          'The Prophet (peace be upon him) said: "When the trust is betrayed, then await the Hour." He was asked, "How will it be betrayed?" He replied, "When authority is given to those unfit for it, then await the Hour." (Reported by Al-Bukhari).',
+      },
+      {
+        question: "The decrease in the number of men and the increase in the number of women is which sign of the day of judgment?",
+        options: ["Major", "Minor", "Neither"],
+        correctAnswerIndex: 1,
+        explanation:
+          'The Prophet (ﷺ) said, "The Hour will not be established" or said: "From among the portents of the Hour is that the religious knowledge will be taken away (by the death of religious Scholars) and general ignorance (of religion) will appear; and the drinking of alcoholic drinks will be very common, and zina will prevail, and men will decrease in number while women will increase so much so that, for fifty women there will only be one man to look after them."',
+      },
+      {
+        question: "Yajuj and Majuj (Gog and Magog) are from which signs of the day of judgment?",
+        options: ["Major", "Minor", "Neither"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) came out to us when we were discussing. He said: “What are you discussing?” They said: “We are talking about the Hour.” He said: “It will never begin until you see ten signs before it.” He mentioned the smoke, the Dajjal, the Beast, the rising of the sun from its place of setting, the descent of ‘Isa ibn Maryam (peace and blessings of Allah be upon him), Yajuj and Majuj, and three landslides, one in the east, one in the west and one in the Arabian Peninsula, and the last of that is a fire which will emerge from Yemen and drive the people to their place of gathering.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
