@@ -1712,6 +1712,54 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 37,
+    released: true,
+    timeOfRelease: "2024-12-20T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "It is sunnah to shorten the Friday khutba (sermon)",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allaah (S) said: “A man’s lengthening his prayer and shortening his khutbah is a sign of his understanding (of religion), so make your prayers lengthy and your khutbahs brief, for there is charm in eloquent speech.”\n\nNarrated by Muslim (869).",
+      },
+      {
+        question: "If you arrive late to the Friday Khutba (sermon) and there is a small spot open in the first row, you should do everything possible to take it.",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "A man came, stepping over the people’s necks [to pass through the rows] on Friday, when the Prophet (blessings and peace of Allah be upon him) was giving the Khutbah. So the Prophet (blessings and peace of Allah be upon him) said: “Sit down; you are causing annoyance.”\n\n[Narrated by Abu Dawud (1118) and An-Nasa’i (1399)]\n\nAlso, Narrated by Ibn Majah (1115), who added at the end: “and you are tardy.”\n\nIt was classed as authentic by Al-Albani in Sahih Abu Dawud.",
+      },
+      {
+        question: "You receive a specific reward depending on how early you arrive to the masjid before the Friday Khutbah (sermon). What are these rewards in order? (Earliest -> Latest)",
+        options: [
+          "The reward of donating a camel, a cow, a sheep, a chicken",
+          "The reward of donating a camel, a cow, a sheep, a chicken, an egg",
+          "The reward of donating a camel for the first to arrive and no reward for others",
+          "None of the above",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The messenger of Allah (blessings and peace of Allah be upon him) said: “Whoever does ghusl from janaabah on Friday, then comes to the mosque early, it is as if he sacrificed a camel. Whoever comes at the second hour, it is as if he sacrificed a cow. Whoever comes at the third hour, it is as if he sacrificed a horned ram. Whoever comes at the fourth hour, it is as if he sacrificed a chicken. Whoever comes at the fifth hour, it is as if he sacrificed an egg. Then when the imam comes out, the angels come in to listen to the reminder (khutbah).”\n\n(The time from sunrise until the start of the khutba is divided into five intervals the length of which varies depending on when the Imaam starts, by arriving during the first segment the person is entitled to the reward of sacrificing a camel).",
+      },
+      {
+        question: "You should try to fast on Friday whenever you can",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          'Fasting Friday is permissible in two cases.\n\nFirst, if one fasts a day before Friday or a day after it.\n\nThe Prophet (Sallallahu Alaihi wa Sallam) said: “Do not fast on Friday unless you fast on it together with the day before or the day after.” [Reported by Imam Al Bukhari]\n\nSecond, one may fast on a Friday if it coincides with his habitual fast such as when it coincides with the Aashurah day (tenth of Muharram), in this case it is permissible for him to fast.\n\nThe Prophet (Sallallahu Alaihi wa Sallam) said: "Do not exclusively choose the night of Friday as a special night for performing the night prayers. Also, do not exclusively choose Friday as a day of fasting unless it occurs on a day that you regularly fast." [Reported by Imam Muslim]',
+      },
+      {
+        question: "When you hear someone speaking during a Friday khutba (sermon), what should you do?",
+        options: ["Tell them to be quiet", "Gesture to them to be quiet", "Do nothing", "Any of the above"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet (blessings and peace of Allah be upon him) said: “If you tell your companion to be quiet and listen on Friday when the imam is delivering the khutbah, you have engaged in idle talk.”\n\nIt is soundly narrated from the Sahabah that they would gesture to one who spoke during the khutbah.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
