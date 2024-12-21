@@ -1816,6 +1816,48 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 39,
+    released: true,
+    timeOfRelease: "2024-12-22T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Part of perfecting Islam is minding your own business",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation: '"Part of the perfection of one\'s Islam is his leaving that which does not concern him."\n\n[Tirmidhi]',
+      },
+      {
+        question: "Talking negatively about a person behind their back is okay, if what you are saying isn’t true",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) said, “Do you know what is backbiting?” The Companions said: “Allah and His Messenger know better.” Thereupon he said, “Backbiting is talking about your (Muslim) brother in a manner which he dislikes.” It was said to him: “What if my (Muslim) brother is as I say.” He said, “If he is actually as you say, then that is backbiting; but if that is not in him, that is slandering.” [Muslim]",
+      },
+      {
+        question: "Talking negatively about a person behind their backs is okay, if what you are saying is true",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) said, “Do you know what is backbiting?” The Companions said: “Allah and His Messenger know better.” Thereupon he said, “Backbiting is talking about your (Muslim) brother in a manner which he dislikes.” It was said to him: “What if my (Muslim) brother is as I say.” He said, “If he is actually as you say, then that is backbiting; but if that is not in him, that is slandering.”\n\n [Muslim]",
+      },
+      {
+        question: "What happens to your good deeds when you backbite?",
+        options: ["They get completely removed", "They get halved", "Some get transferred to the person you talked about", "Nothing"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Messenger of Allah (peace and blessings of Allah be upon him) said: “Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar and no dirham, and if he has any good deeds to his credit they will be taken from him in a manner commensurate with the wrong he did, and if he has no good deeds, then some of his counterpart’s bad deeds will be taken and added to his burden.”\n\n[al-Bukhari]",
+      },
+      {
+        question: "What is the punishment for the person who searches for other’s faults and exposes them?",
+        options: ["Hell Fire", "Loss of Wealth", "Having his faults exposed in his own home", "Loss of blessing in everything he does"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet (ﷺ) said: O community of people, who believed by their tongue, and belief did not enter their hearts, do not back-bite Muslims, and do not search for their faults, for if anyone searches for their faults, Allah will search for his fault, and if Allah searches for the fault of anyone, He disgraces him in his house.\n\nHasan Sahih (Al-Albani)",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
