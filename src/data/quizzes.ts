@@ -1760,6 +1760,62 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 38,
+    released: true,
+    timeOfRelease: "2024-12-21T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "How much did the Prophet recommend we eat?",
+        options: ["One third for food, one third for water, and one third for air", "Enough to keep you going", "As much as you can", "As much as you can in the morning and a little at night"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet ﷺ said: 'A human being fills no worse vessel than his stomach. It is sufficient for a human being to eat a few mouthfuls to keep his spine straight. But if he must (fill it), then one third of food, one third for drink, and one third for air.'",
+      },
+      {
+        question: "Which of the following best describes the meaning of 'Shaytaan'?",
+        options: ["Any being created from fire", "Any creature that distances you from goodness", "A specific type of Jin that tempts humans", "Another name for Iblees"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The term 'Shaytaan' originates from the Arabic word meaning 'distant' or 'far away,' signifying a separation from God. The concept of Shaytaan can extend to rebellious beings from various realms, including humans and animals, that distance a person from goodness.",
+      },
+      {
+        question: "While doing Wudu’, is it okay to wash the different body parts more than three times?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          "\"A Bedouin came to the Prophet (peace and blessings be upon him) asking about wudu'. The Prophet showed him how to perform wudu' by washing each part three times. Then he said: This is how ablution is done. Whoever goes beyond this has done wrong, exceeded the limits, and committed an injustice.\"\n\n 1. Washing a body part more than three times is disliked (makrooh) but does not invalidate the Wudu’.The ablution remains valid, and the prayer performed with it is acceptable.\n\n 2. To count as one complete wash, water must reach the entire required area of the body part. For example, if someone is washing their feet and a specific spot remains dry until the third wash, it still counts as one wash, and they may continue washing to ensure complete coverage.",
+      },
+      {
+        question: "If food is ready and it’s time for prayer, which action best aligns with the sunnah?",
+        options: ["Eat", "Pray", "Eat only if you’ll have enough time to catch the prayer", "Any of the above"],
+        correctAnswerIndex: 2,
+        explanation: "The Prophet (peace and blessings of Allah be upon him) said: 'You should not pray when food is ready or when resisting the urge to urinate or defecate.'\n(Narrated by Muslim)",
+      },
+      {
+        question: "Wearing an Evil eye protection amulet is __",
+        options: ["Major Shirk", "Minor Shirk", "Depends"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet (peace and blessings of Allah be upon him) said: “Whoever wears an amulet has committed shirk.” \n\n Wearing an Evil eye protection amulet can be major shirk or minor shirk depending whether the person thinks that these things protect him instead of Allah (major shirk) or if he thinks that they are a means for protection even though Allah has not declared it as such( minor shirk).\n\nIf amulets contain Quran, then there is a difference of scholarly opinion concerning them.",
+      },
+      {
+        question: "Did the Prophet (ﷺ) categorize the signs of the day of judgment into major and minor?",
+        options: ["Yes", "No"],
+        correctAnswerIndex: 1,
+        explanation:
+          'This classification is an effort made by scholars and a terminological distinction based on meaning. They observed that some signs occur long before the day of judgment and are more customary, such as the disappearance of knowledge, the spread of ignorance, and the prevalence of usury and adultery. They termed these as "minor signs."\n\nOn the other hand, there are signs that appear close to the establishment of the day of judgment and involve extraordinary events or widespread awe, such as the emergence of the Dajjal, the descent of Isa (peace be upon him), the appearance of Gog and Magog, and the rising of the sun from the west. These they termed as "major signs."',
+      },
+      {
+        question: "If you arrive late to the Friday Khutba (sermon) and there is a small spot open in the first row, you should do everything possible to take it.",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "A man came, stepping over the people’s necks [to pass through the rows] on Friday, when the Prophet (blessings and peace of Allah be upon him) was giving the Khutbah. So the Prophet (blessings and peace of Allah be upon him) said: “Sit down; you are causing annoyance.”\n\n[Narrated by Abu Dawud (1118) and An-Nasa’i (1399)]\n\nAlso, Narrated by Ibn Majah (1115), who added at the end: “and you are tardy.”\n\nIt was classed as authentic by Al-Albani in Sahih Abu Dawud.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
