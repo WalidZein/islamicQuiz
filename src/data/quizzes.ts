@@ -1858,6 +1858,54 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 40,
+    released: true,
+    timeOfRelease: "2024-12-23T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Who of these will be shaded by on the day of judgement?",
+        options: ["A person who fasts every Monday", "A just Ruler", "A person who arrives to Friday prayer early", "A person who doesn’t backbite"],
+        correctAnswerIndex: 1,
+        explanation:
+          "“There are seven whom Allah will shade with His shade on the day when there will be no shade except His:\n\n1. the just ruler\n2. a young man who grows up worshipping his Lord\n3. a man whose heart is attached to the mosque\n4. two men who love one another for the sake of Allah and meet and part on that basis\n5. a man who is called by a woman of rank and beauty and says ‘I fear Allah’;\n6. a man who gives in charity and conceals it to such an extent that his left hand does not know what his right hand gives\n7. a man who remembers Allah when he is alone, and his eyes fill up.”\n\n(Agreed upon, narrated by al-Bukhari, no. 620; Muslim, no. 1712; and others).",
+      },
+      {
+        question: "What is the consequence of seeking leadership when you are not qualified?",
+        options: ["Nothing", "Not being supported by Allah", "Being supported by Allah", "Loss of trust among the people"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Messenger of Allah (ﷺ) said to me: 'Abd al-Rahman, do not ask for a position of authority, for if you are granted this position as a result of your asking for it, you will be left alone (without God's help to discharge the responsibilities attendant thereon), and it you are granted it without making any request for it, you will be helped (by God in the discharge of your duties).",
+      },
+      {
+        question: "For most leaders, leadership will be a source of ____ on the day of judgement",
+        options: ["Anger", "Regret", "Pain", "Misery"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet, peace and blessings be upon him, said, “Verily, you will crave leadership, and it will be a source of regret on the Day of Resurrection. How nice is the wet nurse, yet how evil is the weaning!” [Al-Bukhari]\n\n The Encyclopedia of Islamic Jurisprudence states:\n'The ruling on seeking leadership varies according to the seeker’s situation. If only one person is qualified for it, they must seek it, and it becomes obligatory for those in authority to appoint them. If several individuals are qualified, it is permissible for one to seek it, and one must be chosen. Otherwise, one of them must be compelled to accept it for the unity of the community. If someone more qualified exists, it is disliked for others to seek it, and if one is unqualified, it is forbidden for them to seek it.'",
+      },
+      {
+        question: "How should leaders deal with their people when they make a mistake?",
+        options: ["With gentleness", "With roughness"],
+        correctAnswerIndex: 0,
+        explanation:
+          "“So, (O Prophet) it is through mercy from Allah that you are gentle to them. Had you been rough and hard-hearted, they would have dispersed from around you. So, pardon them, and seek Forgiveness for them. Consult them in the matter and, once you have taken a decision, place your trust in Allah. Surely, Allah loves those who place their trust in Him.”\n[3:159]\n\nAfter the Battle of Uhud, some Muslims disobeyed the Prophet’s ﷺ orders, which led to a loss for the Muslims. Even though this hurt the Prophet ﷺ deeply, by the will of Allah, he didn’t blame or scold them. Instead, because of his kind and forgiving nature, he treated them gently. Allah also told him in this verse to be kind to them, comfort them, and include them in decision-making to help them regain their confidence.",
+      },
+      {
+        question: "What will happen to a person who is given authority over ten or more people on the Day of Resurrection?",
+        options: [
+          "They will be rewarded with a high rank in Paradise automatically",
+          "They will come with their hands shackled to their neck, freed by righteousness or imprisoned by sin",
+          "They will be judged equally to those they governed",
+          "They will be forgiven for any mistakes as long as they held authority",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet, peace and blessings be upon him, said, “No man is given authority over ten people or more but that he will come to Allah on the Day of Resurrection with his hands in shackles up to his neck. His freedom is his righteousness, or his imprisonment is his sin. The first of it is blame, the middle of it is regret, and the last of it is disgrace on the Day of Resurrection.”\n\nSahih li ghayrihi (authentic due to external evidence)",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
