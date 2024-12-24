@@ -1719,7 +1719,7 @@ const quizzes: Quiz[] = [
     seasonId: 2,
     questions: [
       {
-        question: "It is sunnah to shorten the Friday khutba (sermon)",
+        question: "It is sunnah to keep the Friday khutba brief (sermon)",
         options: ["True", "False"],
         correctAnswerIndex: 0,
         explanation:
@@ -1903,6 +1903,98 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 1,
         explanation:
           "The Prophet, peace and blessings be upon him, said, “No man is given authority over ten people or more but that he will come to Allah on the Day of Resurrection with his hands in shackles up to his neck. His freedom is his righteousness, or his imprisonment is his sin. The first of it is blame, the middle of it is regret, and the last of it is disgrace on the Day of Resurrection.”\n\nSahih li ghayrihi (authentic due to external evidence)",
+      },
+    ],
+  },
+  {
+    id: 41,
+    released: true,
+    timeOfRelease: "2024-12-24T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What is one of the fundamental rights of a wife in Islam?",
+        options: [
+          "To inherit her husband’s entire wealth upon his death",
+          "To be treated with fairness and kindness",
+          "To have the right to spy on her husband",
+          "To demand her husband prays five times a day",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Quran commands husbands to live with their wives in kindness and fairness. Allah says: 'O believers! It is not permissible for you to inherit women against their will or mistreat them to make them return some of the dowry ˹as a ransom for divorce˺—unless they are found guilty of adultery. Treat them fairly. If you happen to dislike them, you may hate something which Allah turns into a great blessing.' (Quran, 4:19)",
+      },
+      {
+        question: "What is the meaning of a wife’s right to Mahr (dowry) in Islam?",
+        options: [
+          "It is a gift that the husband must give before marriage.",
+          "It is a loan that the wife must repay to her husband.",
+          "It is a shared gift from both families to start the marriage.",
+          "It is an optional offering based on the husband’s generosity.",
+        ],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Mahr is a mandatory gift from the husband to the wife, symbolizing respect and commitment. The Quran states: 'Give women ˹you wed˺ their due dowries graciously. But if they waive some of it willingly, then you may enjoy it freely with a clear conscience.' (Quran, 4:4)",
+      },
+      {
+        question: "In Islam, how is a husband required to provide for his wife?",
+        options: [
+          "He must give her only what she earns herself.",
+          "He is obligated to provide according to his financial capability.",
+          "He must match the provisions with that of her parents’ house.",
+          "He is only responsible for food and shelter, not clothing.",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "A husband is required to support his wife within his means. The Quran advises: 'Let the man of wealth provide according to his means. As for the one with limited resources, let him provide according to whatever Allah has given him. Allah does not require of any soul beyond what He has given it. After hardship, Allah will bring about ease.' (Quran, 65:7)",
+      },
+      {
+        question: "What does the Prophet Muhammad (peace be upon him) emphasize as a husband’s responsibility toward his wife in his Farewell Sermon (خطبة الوداع)?",
+        options: [
+          "To consult her in all household decisions.",
+          "To provide her with food and clothing in kindness.",
+          "To allow her to manage the household completely on her own.",
+          "To ensure she obeys him without question.",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "In his Farewell Sermon, the Prophet Muhammad (peace be upon him) emphasized a husband’s duty to provide for his wife. He said: 'And your wives have a right over you that you provide for them with food and clothing in a kind manner.' (Hadith from Sahih Muslim)",
+      },
+      {
+        question: "What is the Islamic ruling regarding a wife's consent in marriage?",
+        options: [
+          "A marriage is valid without her consent if her father agrees.",
+          "A wife’s consent is required, but only if she is older than 21.",
+          "A woman’s consent is mandatory for the marriage to be valid.",
+          "Consent is optional if the husband fulfills the dowry.",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet Muhammad (peace be upon him) explicitly stated: 'Do not marry a widow until you have consulted her, and do not marry a virgin until you have asked her permission.' They said: 'O Messenger of God, how do you give her permission?' He said: 'That she keeps quiet.' Its authenticity is agreed upon.",
+      },
+      {
+        question: "What is one of the rights of a wife regarding her personal property in Islam?",
+        options: [
+          "She must seek her husband’s permission to own property.",
+          "She has full ownership and control over her personal property.",
+          "Her property becomes her husband’s responsibility after marriage.",
+          "She can only own property if her family agrees.",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "In Islam, a wife has the right to independently own, manage, and dispose of her property without interference from her husband. This is established by the Quran, which recognizes individual financial independence: 'And do not crave what Allah has given some of you over others. Men will be rewarded according to their deeds and women ˹equally˺ according to theirs. Rather, ask Allah for His bounties. Surely Allah has ˹perfect˺ knowledge of all things.' (Quran, 4:32)",
+      },
+      {
+        question: "What is the Islamic perspective on resolving major arguments between a husband and wife?",
+        options: [
+          "Divorce is the only solution if disputes arise.",
+          "Disputes must be resolved by involving both families if needed.",
+          "The wife must always concede to the husband’s opinion.",
+          "Disputes are considered a sign of incompatibility and should not be resolved.",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Quran advises that in case of marital disputes, mediators from both families should be appointed to seek reconciliation. Allah says: 'If you anticipate a split between them, appoint a mediator from his family and another from hers. If they desire reconciliation, Allah will restore harmony between them. Surely Allah is All-Knowing, All-Aware.' (Quran, 4:35)",
       },
     ],
   },
