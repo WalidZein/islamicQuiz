@@ -1970,7 +1970,7 @@ const quizzes: Quiz[] = [
         ],
         correctAnswerIndex: 2,
         explanation:
-          "The Prophet Muhammad (peace be upon him) explicitly stated: 'Do not marry a widow until you have consulted her, and do not marry a virgin until you have asked her permission.' They said: 'O Messenger of God, how do you give her permission?' He said: 'That she keeps quiet.' Its authenticity is agreed upon.",
+          "The Prophet Muhammad (peace be upon him) explicitly stated: 'Do not marry a widow until you have consulted her, and do not marry a virgin until you have asked her permission.' They said: 'O Messenger of God, how does she give her permission?' He said: 'That she keeps quiet.' Its authenticity is agreed upon.",
       },
       {
         question: "What is one of the rights of a wife regarding her personal property in Islam?",
