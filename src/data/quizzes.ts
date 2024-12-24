@@ -1998,6 +1998,49 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 42,
+    released: true,
+    timeOfRelease: "2024-12-25T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What is the reward for the one who revives a sunnah?",
+        options: ["House in Paradise", "Reward equivalent to the foam of the sea", "Death will be easy on the person who does it", "Reward equivalent to that of the people who follow him"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, said, “Know that whoever revives a tradition from my Sunnah if it has died out after me, he will have a reward like those who act upon it without diminishing any of their rewards. Whoever innovates a misguided heresy not pleasing to Allah and His messenger, he will have a sin like those who act upon it without diminishing any of the people’s burdens.”\n\nSunan al-Tirmidhī 2677\nHasan (fair) according to Al-Tirmidhi",
+      },
+      {
+        question: "It is disliked to remember death while praying",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet ﷺ said: “Remember death in your prayer, for the man who remembers death during his prayer is bound to pray properly, and pray the prayer of a man who does not think that he will pray any other prayer” (al-Silsilat al-Saheehah by al-Albaani, 1421)",
+      },
+      {
+        question: "It is more rewarding for a man to perform sunnah prayers at ___",
+        options: ["Home", "Masjid", "Outside", "There is no difference"],
+        correctAnswerIndex: 0,
+        explanation:
+          "“O people, pray in your houses, for the best of prayer is a man’s prayer in his house, apart from the prescribed prayers.” [Reported by Al-Bukhaari and Muslim] \n“Man’s voluntary prayer, where people do not see him, is twenty-five times as equal as that which he performs publicly.” [Reported in Musnad Aboo Ya’ala, Hadeeth 3821, Authenticated by Shaykh al-Albaanee in al-Jaami’ as-Sagheer, #3821] \n“When any one of you finishes his prayer in his mosque, let him give his house a share of his prayer, for Allaah will create something good (i.e bless him) in his house from his prayer.” [Muslim]",
+      },
+      {
+        question: "Which of these is from the sunnah of going to sleep?",
+        options: ["Taking a bath", "Sleeping on your stomach", "Reading Surah Kahf", "Dusting the bed"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Prophet (peace and blessings of Allah be upon him) said: “When one of you goes to his bed, let him dust off his bed with the inside of his lower garment, for he does not know what came onto it after he left it. Then let him say: Bismika Rabbi wada`tu janbi wa bika arfa`uhu wa in amsakta nafsi farhamha wa in arsaltaha fahfadh-ha bima tahfadhu bihi `ibadika As-salihin (In Your name, my Lord, I lie down, and in Your name I rise. If You should take my soul then have mercy on it, and if You should return my soul then protect it as You protect Your righteous slaves).”",
+      },
+      {
+        question: "The prophet said he has left us with two things that will never lead us astray, what are they?",
+        options: ["Prayer & Duaa", "Quran & Prayer", "Prayer & Sunnah", "Quran & Sunnah"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, said, “I have left you with two matters which will never lead you astray, as long as you hold to them: the Book of Allah and the Sunnah of his Prophet.”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
