@@ -20,7 +20,7 @@ export function ShareQuiz({ quiz, selections, score, uuid }: ShareQuizProps) {
             selections[index] === question.correctAnswerIndex ? '✅' : '❌'
         ).join('');
 
-        return `Quiz ${quizNumber}  - ${score}/${totalQuestions}\n\n${resultEmojis}`;
+        return `Quiz ${quizNumber}  - ${score}/${totalQuestions}\n${resultEmojis}`;
     };
 
 
@@ -28,7 +28,7 @@ export function ShareQuiz({ quiz, selections, score, uuid }: ShareQuizProps) {
     const handleShare = async () => {
         const shareText = generateShareText();
 
-        const shareSuccess = await shareContent({ text: shareText, url: 'https://themuslimbox.app' });
+        const shareSuccess = await shareContent({ text: shareText });
 
         if (shareSuccess) {
             await trackShare(uuid, "quiz");
