@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { LeaderboardEntry, UserSettings } from '@/types/leaderboard';
 import { getUserSettings, updateUserSettings, setCachedLeaderboardData, getNameFromLeaderboard } from '@/utils/userManager';
 
@@ -11,6 +11,7 @@ export default function Leaderboard() {
     const [newName, setNewName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [name, setName] = useState('');
+    const userEntryRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const initializeUser = async () => {
@@ -27,6 +28,13 @@ export default function Leaderboard() {
 
         initializeUser();
     }, []);
+
+    useEffect(() => {
+        // Scroll to user's entry after leaderboard loads and if user has an entry
+        if (!isLoading && userEntryRef.current && userSettings?.uuid) {
+            userEntryRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }, [isLoading, userSettings?.uuid]);
 
     const fetchLeaderboard = async () => {
         try {
@@ -143,12 +151,16 @@ export default function Leaderboard() {
                     {leaderboardOn && leaderboard.map((entry, index) => (
                         <div
                             key={entry.uuid}
-                            className={`p-3 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
+                            ref={userSettings?.uuid === entry.uuid ? userEntryRef : null}
+                            className={`p-3 px-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
                                 }`}
                         >
                             <div className="flex items-center gap-4 min-w-0 flex-1">
                                 <span className="text-lg font-semibold w-8 flex-shrink-0 text-gray-900 dark:text-gray-100">{index + 1}</span>
-                                <span className="font-medium text-gray-900 dark:text-gray-100 truncate">{entry.name}</span>
+                                <div>
+                                    <span className="font-medium text-gray-900 dark:text-gray-100 truncate">{entry.name ? entry.name : "Anon"}</span>
+                                    {!entry.name ? <span className="text-gray-500 dark:text-gray-400 text-xs">#{entry.uuid.slice(0, 4)}</span> : null}
+                                </div>
                             </div>
                             <div className="flex items-center gap-4 flex-shrink-0">
                                 <span className="font-semibold text-gray-900 dark:text-gray-100">🔥 {entry.currentStreak} </span>

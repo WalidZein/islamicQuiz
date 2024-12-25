@@ -2001,7 +2001,7 @@ const quizzes: Quiz[] = [
   {
     id: 42,
     released: true,
-    timeOfRelease: "2024-12-25T13:00:00Z",
+    timeOfRelease: "2024-12-24T13:00:00Z",
     seasonId: 2,
     questions: [
       {
