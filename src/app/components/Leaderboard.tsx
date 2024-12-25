@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { LeaderboardEntry, UserSettings } from '@/types/leaderboard';
 import { getUserSettings, updateUserSettings, setCachedLeaderboardData, getNameFromLeaderboard } from '@/utils/userManager';
+import { generateThemedName } from '@/utils/nameGenerator';
 
 const leaderboardOn = true;
 export default function Leaderboard() {
@@ -122,6 +123,9 @@ export default function Leaderboard() {
                             Set Name
                         </button>
                     </div>
+                    <div className="text-xs text-gray-500 dark:text-gray-400 pt-1">
+                        {userSettings?.uuid && leaderboard?.find(entry => entry.uuid === userSettings.uuid) ? <p>(showing as {generateThemedName(userSettings.uuid)}#{userSettings.uuid.slice(0, 4)})</p> : null}
+                    </div>
                 </form>
             ) : (
                 <div className="mb-4 flex items-center justify-between">
@@ -158,7 +162,9 @@ export default function Leaderboard() {
                             <div className="flex items-center gap-4 min-w-0 flex-1">
                                 <span className="text-lg font-semibold w-8 flex-shrink-0 text-gray-900 dark:text-gray-100">{index + 1}</span>
                                 <div>
-                                    <span className="font-medium text-gray-900 dark:text-gray-100 truncate">{entry.name ? entry.name : "Anon"}</span>
+                                    <span className="font-medium text-gray-900 dark:text-gray-100 truncate">
+                                        {entry.name ? entry.name : generateThemedName(entry.uuid)}
+                                    </span>
                                     {!entry.name ? <span className="text-gray-500 dark:text-gray-400 text-xs">#{entry.uuid.slice(0, 4)}</span> : null}
                                 </div>
                             </div>
