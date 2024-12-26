@@ -170,9 +170,6 @@ export default function Leaderboard() {
                             </div>
                             <div className="flex items-center gap-4 flex-shrink-0">
                                 <span className="font-semibold text-gray-900 dark:text-gray-100">🔥 {entry.currentStreak} </span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">
-                                    (Best: {entry.highestStreak})
-                                </span>
                             </div>
                         </div>
                     ))}

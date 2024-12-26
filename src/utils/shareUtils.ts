@@ -1,7 +1,7 @@
 interface ShareOptions {
   title?: string;
   text: string;
-  url: string;
+  url?: string;
 }
 
 interface ShareStats {
