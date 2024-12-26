@@ -210,7 +210,7 @@ export async function getLeaderboard() {
   const db = await getDatabase();
 
   // Get all opted-in users
-  const users = await db.all(`SELECT user_id FROM users WHERE opt_in = true`);
+  const users = await db.all(`SELECT user_id FROM users`);
 
   // Update stats for all users
   for (const user of users) {
@@ -219,9 +219,9 @@ export async function getLeaderboard() {
 
   // Return updated leaderboard
   return db.all(
-    `SELECT user_id as uuid, user_name as name, total_score as totalScore, current_streak as currentStreak, highest_streak as highestStreak
-         FROM users 
-         WHERE opt_in = true and current_streak > 0
+    `SELECT user_id as uuid, opt_in as optIn, user_name as name, total_score as totalScore, current_streak as currentStreak, highest_streak as highestStreak
+         FROM users
+         WHERE current_streak > 0
          ORDER BY current_streak DESC, total_score DESC`
   );
 }
