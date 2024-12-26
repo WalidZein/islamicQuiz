@@ -2041,6 +2041,76 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 43,
+    released: true,
+    timeOfRelease: "2024-12-26T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What is one of the key responsibilities of Muslim parents towards their children according to the Quran?",
+        options: [
+          "Teaching them Salah (prayer) and Tawheed (monotheism)",
+          "Providing them with wealth and luxury",
+          "Enforcing strict discipline without explanation",
+          "Allowing them complete freedom without guidance",
+        ],
+        correctAnswerIndex: 0,
+        explanation:
+          'Allah commands parents to guide their children in faith and practice.\n\n"And ˹remember˺ when Luqmân said to his son, while advising him, \'O my dear son! Never associate ˹anything˺ with Allah ˹in worship˺, for associating ˹others with Him˺ is truly the worst of all wrongs.\'" (31:13)\n\n"Bid your family to perform Salāh, and adhere to it yourself. We ask no provision from you. We give provision to you. And the ultimate end is in favour of Taqwā (God-fearing, and piety)." (20:132)',
+      },
+      {
+        question: "At what age does the Prophet Muhammad ﷺ recommend parents begin instructing their children about Salah?",
+        options: ["When they reach puberty", "At seven years old", "When they are ten years old", "As soon as they start walking"],
+        correctAnswerIndex: 1,
+        explanation:
+          'The Messenger of Allah (ﷺ) said: Command your children to pray when they become seven years old, and beat them for it (prayer) when they become ten years old; and arrange their beds (to sleep) separately." (Sunan Abu Dawood, 495).',
+      },
+      {
+        question: "How did the Prophet Muhammad ﷺ emphasize kindness in parenting?",
+        options: [
+          "By permitting parents to show anger whenever their child disobeys",
+          "Encouraging parents to be indifferent to their children's actions",
+          "Allowing parents to prioritize their own needs over their children",
+          "By showing mercy and gentleness towards children",
+        ],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Prophet Muhammad ﷺ demonstrated immense kindness to children. He would greet them warmly and showed patience even when they made mistakes. He said, “He is not one of us who does not have mercy upon our young, respect our elders, and command good and forbid evil.” (Sunan At-Tirmidhi, 1921). \n\nParents are encouraged to model this gentleness as part of raising righteous offspring.",
+      },
+      {
+        question: "What did the Prophet Muhammad ﷺ teach about fairness among children?",
+        options: [
+          "Giving preference to the eldest child in all matters",
+          "Treating all children equally and fairly",
+          "Showing more love to daughters than sons",
+          "Giving the majority of resources to sons",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad ﷺ warned against favoritism, saying, “Fear Allah and treat your children equally.” (Sahih Bukhari, 2587). Favoritism can lead to resentment among siblings and disrupt the harmony in the family.\n\n Equal treatment fosters love and unity among children.",
+      },
+      {
+        question: "What should muslims prioritize when selecting the mother/father of their children?",
+        options: ["Wealth and social status", "Physical appearance and attractiveness", "Deen (religious commitment) and good character", "Popularity and influence"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet Muhammad ﷺ said, “A woman is married for four things: her wealth, her lineage, her beauty, and her religion. So choose the one who is religious, may your hands be rubbed with dust [i.e., may you prosper].” (Sahih Bukhari, 5090; Sahih Muslim, 1466). This applies to both genders and ensures the foundation of a righteous and harmonious family.",
+      },
+      {
+        question: "How can parents best fulfill their role in shaping their children’s character?",
+        options: [
+          "By focusing solely on their academic achievements",
+          "By enforcing strict rules without explanation",
+          "By being role models in practicing Islam themselves",
+          "By delegating all moral education to teachers or scholars",
+        ],
+        correctAnswerIndex: 2,
+        explanation:
+          'Children often learn by observing their parents. Allah says in the Quran, “O you who have believed, protect yourselves and your families from a Fire whose fuel is people and stones, over which are [appointed] angels, harsh and severe; they do not disobey Allah in what He commands them but do what they are commanded." (Surah At-Tahrim, 66:6).\n\n The Prophet Muhammad ﷺ also said, "The best of you are those who are best to their families." (Sunan At-Tirmidhi, 3895).\n\n Parents\' actions and values strongly influence their children\'s moral development.',
+      },
+    ],
+  },
 ];
 
 export default quizzes;
