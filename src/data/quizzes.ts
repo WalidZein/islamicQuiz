@@ -2111,6 +2111,49 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 44,
+    released: true,
+    timeOfRelease: "2024-12-27T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "You can be punished in the grave even if you don’t do any major sins",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          "Prophet ﷺ said: “They are being punished, but they are not being punished for any major sin. One of them used not to clean himself properly after urinating, and the other used to spread malicious gossip.” (al-Bukhaari)",
+      },
+      {
+        question: "Who of these is cursed?",
+        options: ["The person who drinks alcohol", "The person who delivers alcohol", "The person who sells alcohol", "All of the above"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Messenger of Allah (ﷺ) cursed ten with regard to alcohol: the one who squeezes (the grapes etc), the one for whom it is squeezed, the one who drinks it, the one who carries it, the one to whom it is carried, the one who pours it, the one who sells it and consumes its price, the one who buys it and the one for whom it is bought.” (Al-Tirmidhi, 1295)",
+      },
+      {
+        question: "In any interest based loan (riba), who is held accountable?",
+        options: ["The person that takes the loan", "The person that takes the loan and the person who gives it", "Everyone who is involved", "The person who gives the loan"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Messenger of Allaah ﷺ cursed “the one who consumes riba, the one who gives it to others, the one who writes it down and the one who witnesses it.” He said: “They are all the same.” (Reported by Muslim, 3/1219).",
+      },
+      {
+        question: "Who of these are cursed?",
+        options: ["The person who gets a tattoo", "Women who paint their nails", "The person who wears a ring", "Men who dye their hair"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) cursed the women who practice tattooing and those who seek to be tattooed, and the women who remove hair from their faces seeking beautification by changing the creation of Allah. (Al-Bukhari 5587; Muslim 5538)",
+      },
+      {
+        question: "If you accept a gift from someone after helping them for the sake of Allah, it’s as if you committed __",
+        options: ["Riba", "Zina", "Shirk", "None of the above"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: “Whoever intervenes for his brother and he gives him a gift for that and he accepts it, he has engaged in a major form of riba.”\n (Abu Dawud, 3541 & al-Albani). \n\nShaykh Ibn ‘Uthaymin explained:\n “What is referred to in this hadith is intervention that is done for the sake of Allah (SWT), so he should not accept payment for it, because that which is done for the hereafter cannot be a means of worldly gain, and because if the one who intervenes for the sake of Allah is given a gift, his desire for worldly gain may overwhelm him in the future, so he may expect some worldly gain for his intervention. Hence the Prophet (ﷺ) warned against accepting gifts [in return for intervening].”",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
