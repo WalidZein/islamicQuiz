@@ -14,7 +14,7 @@ const THEMED_NAMES = [
   "SheikhAsim", // 5
   "SheikhHoblos", // 6
   "MuslimNinja", // 7
-  "ShawarmaShredder", // 8
+  "ShawarmaShred", // 8
   "KebabKween", // 9
   "SuperHalal", // 10
   "NaanNinja",
@@ -22,6 +22,8 @@ const THEMED_NAMES = [
   "BabaGanoush",
   "BaklavaBlender",
   "LassiLegend",
+  "BiryaniBro",
+  "BiryaniSis",
 ] as const;
 
 // We use this fixed number for hashing to ensure name consistency
