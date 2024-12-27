@@ -1865,7 +1865,7 @@ const quizzes: Quiz[] = [
     seasonId: 2,
     questions: [
       {
-        question: "Who of these will be shaded by on the day of judgement?",
+        question: "Who of these will be shaded on the day of judgement?",
         options: ["A person who fasts every Monday", "A just Ruler", "A person who arrives to Friday prayer early", "A person who doesn’t backbite"],
         correctAnswerIndex: 1,
         explanation:
@@ -2064,7 +2064,7 @@ const quizzes: Quiz[] = [
         options: ["When they reach puberty", "At seven years old", "When they are ten years old", "As soon as they start walking"],
         correctAnswerIndex: 1,
         explanation:
-          'The Messenger of Allah (ﷺ) said: Command your children to pray when they become seven years old, and beat them for it (prayer) when they become ten years old; and arrange their beds (to sleep) separately." (Sunan Abu Dawood, 495).',
+          'The Messenger of Allah (ﷺ) said: Command your children to pray when they become seven years old, and hit them for it (prayer) when they become ten years old; and arrange their beds (to sleep) separately." (Sunan Abu Dawood, 495).',
       },
       {
         question: "How did the Prophet Muhammad ﷺ emphasize kindness in parenting?",
@@ -2122,7 +2122,7 @@ const quizzes: Quiz[] = [
         options: ["True", "False"],
         correctAnswerIndex: 0,
         explanation:
-          "Prophet ﷺ said: “They are being punished, but they are not being punished for any major sin. One of them used not to clean himself properly after urinating, and the other used to spread malicious gossip.” (al-Bukhaari)",
+          "The Prophet ﷺ passed by two graves and said: “They are being punished, but they are not being punished for any major sin. One of them used not to clean himself properly after urinating, and the other used to spread malicious gossip.” (al-Bukhaari)",
       },
       {
         question: "Who of these is cursed?",
@@ -2144,6 +2144,79 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: 0,
         explanation:
           "The Prophet (ﷺ) cursed the women who practice tattooing and those who seek to be tattooed, and the women who remove hair from their faces seeking beautification by changing the creation of Allah. (Al-Bukhari 5587; Muslim 5538)",
+      },
+      {
+        question: "If you accept a gift from someone after helping them for the sake of Allah, it’s as if you committed __",
+        options: ["Riba", "Zina", "Shirk", "None of the above"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Prophet (ﷺ) said: “Whoever intervenes for his brother and he gives him a gift for that and he accepts it, he has engaged in a major form of riba.”\n (Abu Dawud, 3541 & al-Albani). \n\nShaykh Ibn ‘Uthaymin explained:\n “What is referred to in this hadith is intervention that is done for the sake of Allah (SWT), so he should not accept payment for it, because that which is done for the hereafter cannot be a means of worldly gain, and because if the one who intervenes for the sake of Allah is given a gift, his desire for worldly gain may overwhelm him in the future, so he may expect some worldly gain for his intervention. Hence the Prophet (ﷺ) warned against accepting gifts [in return for intervening].”",
+      },
+    ],
+  },
+  {
+    id: 45,
+    released: true,
+    timeOfRelease: "2024-12-28T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What happens to your good deeds when you backbite?",
+        options: ["They get completely removed", "They get halved", "Some get transferred to the person you talked about", "Nothing"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Messenger of Allah (peace and blessings of Allah be upon him) said: “Whoever has wronged his brother with regard to his honor or anything else, let him seek his forgiveness today, before there will be no dinar and no dirham, and if he has any good deeds to his credit they will be taken from him in a manner commensurate with the wrong he did, and if he has no good deeds, then some of his counterpart’s bad deeds will be taken and added to his burden.”\n\n[al-Bukhari]",
+      },
+
+      {
+        question: "What will happen to a person who is given authority over ten or more people on the Day of Resurrection?",
+        options: [
+          "They will be rewarded with a high rank in Paradise automatically",
+          "They will come with their hands shackled to their neck, freed by righteousness or imprisoned by sin",
+          "They will be judged equally to those they governed",
+          "They will be forgiven for any mistakes as long as they held authority",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet, peace and blessings be upon him, said, “No man is given authority over ten people or more but that he will come to Allah on the Day of Resurrection with his hands in shackles up to his neck. His freedom is his righteousness, or his imprisonment is his sin. The first of it is blame, the middle of it is regret, and the last of it is disgrace on the Day of Resurrection.”\n\nSahih li ghayrihi (authentic due to external evidence)",
+      },
+      {
+        question: "What is one of the fundamental rights of a wife in Islam?",
+        options: [
+          "To inherit her husband’s entire wealth upon his death",
+          "To be treated with fairness and kindness",
+          "To have the right to spy on her husband",
+          "To demand her husband prays five times a day",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Quran commands husbands to live with their wives in kindness and fairness. Allah says: 'O believers! It is not permissible for you to inherit women against their will or mistreat them to make them return some of the dowry ˹as a ransom for divorce˺—unless they are found guilty of adultery. Treat them fairly. If you happen to dislike them, you may hate something which Allah turns into a great blessing.' (Quran, 4:19)",
+      },
+      {
+        question: "The prophet said he has left us with two things that will never lead us astray, what are they?",
+        options: ["Prayer & Duaa", "Quran & Prayer", "Prayer & Sunnah", "Quran & Sunnah"],
+        correctAnswerIndex: 3,
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, said, “I have left you with two matters which will never lead you astray, as long as you hold to them: the Book of Allah and the Sunnah of his Prophet.”",
+      },
+      {
+        question: "It is disliked to remember death while praying",
+        options: ["True", "False"],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet ﷺ said: “Remember death in your prayer, for the man who remembers death during his prayer is bound to pray properly, and pray the prayer of a man who does not think that he will pray any other prayer” (al-Silsilat al-Saheehah by al-Albaani, 1421)",
+      },
+      {
+        question: "What did the Prophet Muhammad ﷺ teach about fairness among children?",
+        options: [
+          "Giving preference to the eldest child in all matters",
+          "Treating all children equally and fairly",
+          "Showing more love to daughters than sons",
+          "Giving the majority of resources to sons",
+        ],
+        correctAnswerIndex: 1,
+        explanation:
+          "The Prophet Muhammad ﷺ warned against favoritism, saying, “Fear Allah and treat your children equally.” (Sahih Bukhari, 2587). Favoritism can lead to resentment among siblings and disrupt the harmony in the family.\n\n Equal treatment fosters love and unity among children.",
       },
       {
         question: "If you accept a gift from someone after helping them for the sake of Allah, it’s as if you committed __",
