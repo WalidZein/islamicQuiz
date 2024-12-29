@@ -4,7 +4,7 @@ import { getUserSettings } from '@/utils/userManager';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 
 interface LockOverlayProps {
-    onClose: () => void;
+    onClose: (success: boolean) => void;
     isOpen: boolean;
 }
 
@@ -28,14 +28,14 @@ export default function LockOverlay({ onClose, isOpen }: LockOverlayProps) {
         }
 
         setIsSharing(false);
-        onClose();
+        onClose(success);
     };
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="relative bg-white dark:bg-gray-800 rounded-lg p-6 max-w-sm w-full mx-4">
                 <button
-                    onClick={onClose}
+                    onClick={() => onClose(false)}
                     className="absolute -top-3 -right-3 p-1 bg-white dark:bg-gray-700 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-gray-600"
                 >
                     <XMarkIcon className="w-5 h-5 text-gray-600 dark:text-gray-300" />
@@ -43,7 +43,7 @@ export default function LockOverlay({ onClose, isOpen }: LockOverlayProps) {
 
                 <h3 className="text-xl font-bold mb-4 text-gray-600 dark:text-gray-300">Quiz Locked</h3>
                 <p className="mb-6 text-gray-600 dark:text-gray-300">
-                    Share with friends to unlock more quizzes! Invite a friend to unlock all quizzes.
+                    Share with friends to unlock past quizzes! Invite a friend to unlock all quizzes.
                 </p>
 
                 <button
@@ -56,4 +56,4 @@ export default function LockOverlay({ onClose, isOpen }: LockOverlayProps) {
             </div>
         </div>
     );
-} 
+}

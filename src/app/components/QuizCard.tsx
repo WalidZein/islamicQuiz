@@ -3,7 +3,6 @@ import { Quiz } from '@/types/quiz';
 import { useState } from 'react';
 import LockOverlay from './LockOverlay';
 import { LockClosedIcon } from '@heroicons/react/24/solid';
-
 interface QuizCardProps {
     quiz: Quiz;
     status?: {
@@ -12,11 +11,11 @@ interface QuizCardProps {
     };
     className?: string;
     locked: boolean;
+    setLocked?: (quizId: number, locked: boolean) => void;
 }
 
-export default function QuizCard({ quiz, status, className = '', locked }: QuizCardProps) {
+export default function QuizCard({ quiz, status, className = '', locked, setLocked }: QuizCardProps) {
     const [showLockOverlay, setShowLockOverlay] = useState(false);
-
     const isCompleted = status?.completed;
     const gotAllRight = status?.score === quiz.questions.length;
     const morethan50per = (status?.score || 0) / quiz.questions.length > 0.5;
@@ -71,7 +70,15 @@ export default function QuizCard({ quiz, status, className = '', locked }: QuizC
 
             <LockOverlay
                 isOpen={showLockOverlay}
-                onClose={() => setShowLockOverlay(false)}
+                onClose={(success) => {
+
+                    if (success) {
+                        setTimeout(() => {
+                            setLocked?.(quiz.id, false);
+                        }, 5000);
+                    }
+                    setShowLockOverlay(false);
+                }}
             />
         </>
     );

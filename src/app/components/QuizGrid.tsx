@@ -20,6 +20,7 @@ export default function QuizGrid() {
     const [showAnnouncement, setShowAnnouncement] = useState(false);
     const [userData, setUserData] = useState<User | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [lockStatePerQuiz, setLockStatePerQuiz] = useState<{ [key: number]: boolean }>({});
 
     useEffect(() => {
         const initializePage = async () => {
@@ -70,6 +71,23 @@ export default function QuizGrid() {
             })
             .catch(console.error);
     }, []);
+
+    useEffect(() => {
+        setLockStatePerQuiz(availableQuizzes.reduce((acc, quiz: Quiz) => ({
+            ...acc,
+            [quiz.id]: isQuizLocked(quiz, availableQuizzes, completedQuizzes[quiz.id]?.completed, userData, false)
+        }), {}));
+    }, [availableQuizzes, completedQuizzes, userData]);
+
+    const SetLockedQuizState = (quizId: number, locked: boolean) => {
+        setLockStatePerQuiz(() => {
+            const newState: Record<number, boolean> = {};
+            availableQuizzes.forEach((quiz) => {
+                newState[quiz.id] = locked;
+            });
+            return newState;
+        });
+    };
 
     const handleCloseAnnouncement = () => {
         setShowAnnouncement(false);
@@ -131,13 +149,8 @@ export default function QuizGrid() {
                         key={quiz.id}
                         quiz={quiz}
                         status={completedQuizzes[quiz.id]}
-                        locked={isQuizLocked(
-                            quiz,
-                            availableQuizzes,
-                            completedQuizzes[quiz.id]?.completed,
-                            userData,
-                            false
-                        )}
+                        locked={lockStatePerQuiz[quiz.id]}
+                        setLocked={SetLockedQuizState}
                     />
                 ))}
             </div>
