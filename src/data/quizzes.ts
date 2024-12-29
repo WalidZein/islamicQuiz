@@ -1,4 +1,4 @@
-import { Quiz } from "@/types/quiz";
+import { QuestionType, Quiz } from "@/types/quiz";
 
 export interface Question {
   question: string;
@@ -2274,6 +2274,22 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: [0],
         explanation:
           'The Messenger of Allah ﷺ  said: \'The grave is the first of the stages of the Hereafter; whoever is saved from it, what comes afterwards will be easier for him, but if he is not saved from it, what comes afterwards will be worse for him.\'"\n\n The Messenger of Allah ﷺ said: "I have never seen any scene but the grave is more frightening than it."\n\n [At-Tirmithi]',
+      },
+    ],
+  },
+  {
+    id: 47,
+    released: true,
+    timeOfRelease: "2024-12-309T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which of these traits are used to describe human beings in the Quran?",
+        type: QuestionType.MULTI,
+        options: ["Weak", "Impatient", "Ungrateful", "Selfish", "Calm", "Anxious", "Unintelligent", "Argumentative"],
+        correctAnswerIndex: [0, 1, 2, 3, 5, 7],
+        explanation:
+          "[Quran 4:28] God wishes to lighten your burden, for the human being is created weak.\n\n[Quran 21:37] The human being is impatient by nature. I will inevitably show you My signs; do not be in such a hurry.\n\n [Quran 22:66] And He is the One Who gave you life, then will cause you to die, and then will bring you back to life. ˹But˺ surely humankind is ever ungrateful.\n\n[Quran 4:128] ... Selfishness is a human trait, and if you do good and lead a righteous life, God is fully Cognizant of everything you do.\n\n[Quran 70:19] Indeed, the human being is anxious.\n\n[Quran 18:54] We have surely set forth in this Quran every ˹kind of˺ lesson for people, but humankind is the most argumentative of all beings.",
       },
     ],
   },
