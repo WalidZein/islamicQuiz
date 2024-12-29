@@ -3,6 +3,7 @@ import sqlite3 from "sqlite3";
 import path from "path";
 import fs from "fs/promises";
 import { User } from "@/types/leaderboard";
+import { QuizSubmission } from "@/app/components/QuizPageClient";
 
 let db: Database | null = null;
 
@@ -246,7 +247,7 @@ export async function getOrCreateUser(userId: string, userName: string | null = 
  * @param quizId - Optional quiz ID to filter submissions for a specific quiz
  * @returns Array of quiz submissions with their status
  */
-export async function getQuizSubmissions(userId: string, quizId?: number) {
+export async function getQuizSubmissions(userId: string, quizId?: number): Promise<QuizSubmission[]> {
   const db = await getDatabase();
 
   const query =
@@ -268,7 +269,7 @@ export async function getQuizSubmissions(userId: string, quizId?: number) {
     quizId: submission.quiz_id,
     completed: true,
     score: submission.quiz_score,
-    selections: submission.selected_options ? submission.selected_options.split(",").map(Number) : [],
+    selections: submission.selected_options ? submission.selected_options.split(",").map((str: string) => str.split(";").map(Number)) : [],
     submissionDate: submission.submission_date,
   }));
 }

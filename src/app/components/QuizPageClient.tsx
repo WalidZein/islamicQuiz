@@ -5,7 +5,7 @@
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import JSConfetti from 'js-confetti';
-import { Quiz } from '../../types/quiz';
+import { QuestionType, Quiz } from '../../types/quiz';
 import { useQuizStatus } from '../../hooks/useQuizStatus';
 import { ProgressBar } from './ProgressBar';
 import { QuizOption } from './QuizOption';
@@ -17,10 +17,11 @@ interface QuizPageClientProps {
     quiz: Quiz;
 }
 
-interface QuizSubmission {
+export interface QuizSubmission {
+    quizId: number;
     completed: boolean;
     score: number;
-    selections: number[];
+    selections: number[][];
     submissionDate: string;
 }
 
@@ -31,6 +32,16 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const [visibleExplanations, setVisibleExplanations] = useState<Set<number>>(new Set());
     const [existingSubmission, setExistingSubmission] = useState<QuizSubmission | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+
+    // Calculate max possible score
+    const maxScore = quiz.questions.reduce((total, question) => {
+        if (question.type === QuestionType.MULTI) {
+            // For multi-select, add 1 point for each correct answer
+            return total + (question.correctAnswerIndex as number[]).length;
+        }
+        // For single-select, add 1 point
+        return total + 1;
+    }, 0);
 
     // Check for existing submission
     useEffect(() => {
@@ -65,7 +76,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
     // Trigger confetti when quiz is completed with perfect score
     useEffect(() => {
-        if (state.quizCompleted && state.score === quiz.questions.length && confetti) {
+        if (state.quizCompleted && state.score === maxScore && confetti) {
             confetti.addConfetti({
                 confettiColors: [
                     '#22c55e', // green-500
@@ -77,24 +88,16 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 confettiNumber: 100,
             });
         }
-    }, [state.quizCompleted, state.score, quiz.questions.length, confetti]);
+    }, [state.quizCompleted, state.score, maxScore, confetti]);
 
-    const handleBackClick = () => {
-        router.push('/');
-    };
-
-    const handleOptionClick = (index: number) => {
-        if (state.selectedOptionIndex !== null) return;
-        dispatch({ type: 'SELECT_OPTION', payload: index });
-
-        if (index === quiz.questions[state.currentQuestionIndex].correctAnswerIndex) {
-            dispatch({ type: 'INCREMENT_SCORE' });
+    useEffect(() => {
+        if (quiz.questions.length === 1) {
+            dispatch({ type: 'FINAL_QUESTION' });
         }
-    };
+    }, []);
 
-    const handleNextClick = async () => {
-        if (state.finalQuestion) {
-            dispatch({ type: 'COMPLETE_QUIZ' });
+    useEffect(() => {
+        const submitQuiz = async () => {
             const userSettings = getUserSettings();
 
             try {
@@ -114,16 +117,74 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 }
             } catch (error) {
                 console.error('Error submitting quiz:', error);
-                // You might want to show an error message to the user here
             }
-            return;
+        };
+        if (state.quizCompleted && !state.existingSubmission) { submitQuiz(); }
+    }, [state.quizCompleted]);
+
+    const handleBackClick = () => {
+        router.push('/');
+    };
+
+    const handleOptionClick = (index: number) => {
+        const currentQuestion = quiz.questions[state.currentQuestionIndex];
+
+        if (currentQuestion.type === QuestionType.MULTI) {
+            dispatch({ type: 'TOGGLE_MULTI_OPTION', payload: index });
+        } else {
+
+            dispatch({ type: 'TOGGLE_OPTION', payload: index });
+
+
+            //dispatch({ type: 'SHOW_EXPLANATION' });
         }
-        if (state.currentQuestionIndex == quiz.questions.length - 1
-            || state.currentQuestionIndex == quiz.questions.length - 2) {
-            dispatch({ type: 'FINAL_QUESTION' })
+    };
+
+    const handleQuestionSubmitClick = async () => {
+        const currentQuestion = quiz.questions[state.currentQuestionIndex];
+        const currentSelection = state.selectedOptionIndex;
+        if (currentSelection) {
+            switch (currentQuestion.type) {
+                case QuestionType.MULTI:
+                    // For multiselect questions, validate and score here
+                    if (Array.isArray(currentSelection) && Array.isArray(currentQuestion.correctAnswerIndex)) {
+                        let score = 0;
+                        // Add points for correct selections
+                        currentSelection.forEach(selection => {
+                            if (currentQuestion.correctAnswerIndex.includes(selection)) {
+                                score++;
+                            } else {
+                                score--;
+                            }
+                        });
+                        // Ensure score doesn't go below 0
+                        score = Math.max(0, score);
+
+                        dispatch({ type: 'INCREMENT_SCORE', payload: score });
+
+                    }
+                    dispatch({ type: 'SELECT_OPTION', payload: currentSelection });
+                    break;
+                default:
+                    dispatch({ type: 'SELECT_OPTION', payload: currentSelection });
+                    if (currentSelection.every(i => (currentQuestion.correctAnswerIndex as number[]).includes(i))) {
+                        dispatch({ type: 'INCREMENT_SCORE' });
+                    }
+                    break;
+            }
         }
-        if (state.currentQuestionIndex + 1 < quiz.questions.length) {
+        dispatch({ type: 'QUESTION_SUBMIT' });
+        dispatch({ type: 'SHOW_EXPLANATION' });
+    };
+
+    const handleNextClick = () => {
+        if (state.finalQuestion) {
+            dispatch({ type: 'COMPLETE_QUIZ' });
+        } else {
             dispatch({ type: 'NEXT_QUESTION' });
+            if (state.currentQuestionIndex === quiz.questions.length - 2) {
+                dispatch({ type: 'FINAL_QUESTION' });
+            }
         }
     };
 
@@ -158,7 +219,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     </button>
                 </div>
 
-                <div className="w-full max-w-2xl bg-white dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+                <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
                     <div className="flex items-center justify-between mb-6">
                         <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
                             Quiz Completed!
@@ -172,8 +233,8 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     </div>
                     <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
                         Your score: <span className="font-semibold">{state.score}</span> out of{' '}
-                        <span className="font-semibold">{quiz.questions.length}</span>
-                        {state.score === quiz.questions.length ? (
+                        <span className="font-semibold">{maxScore}</span>
+                        {state.score === maxScore ? (
                             <span className="block mt-2 text-green-500">
                                 🎉 Perfect Score! MashAllah! 🎉
                             </span>
@@ -186,6 +247,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     {quiz.questions.map((q, index) => {
                         const userSelection = state.selections[index];
                         const isExplanationVisible = visibleExplanations.has(index);
+                        const isMultiSelect = q.type === QuestionType.MULTI;
 
                         return (
                             <div key={index} className="mb-6">
@@ -193,17 +255,26 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                                     <strong>Question {index + 1}:</strong> {q.question}
                                 </p>
                                 <ul className="space-y-2">
-                                    {q.options.map((option, optIndex) => (
-                                        <QuizOption
-                                            key={optIndex}
-                                            option={option}
-                                            index={optIndex}
-                                            isSelected={userSelection === optIndex}
-                                            isCorrect={optIndex === q.correctAnswerIndex}
-                                            showResult={true}
-                                            onSelect={() => { }}
-                                        />
-                                    ))}
+                                    {q.options.map((option, optIndex) => {
+                                        const isSelected = isMultiSelect
+                                            ? (userSelection as number[])?.includes(optIndex)
+                                            : userSelection.includes(optIndex);
+                                        const isCorrect = (q.correctAnswerIndex as number[]).includes(optIndex)
+
+
+                                        return (
+                                            <QuizOption
+                                                key={optIndex}
+                                                option={option}
+                                                index={optIndex}
+                                                isSelected={isSelected}
+                                                isCorrect={isCorrect}
+                                                showResult={true}
+                                                isMultiSelect={isMultiSelect}
+                                                onSelect={() => { }}
+                                            />
+                                        );
+                                    })}
                                 </ul>
                                 <button
                                     onClick={() => toggleExplanation(index)}
@@ -234,6 +305,8 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     }
 
     const currentQuestion = quiz.questions[state.currentQuestionIndex];
+    const isMultiSelect = currentQuestion.type === QuestionType.MULTI;
+    const hasSelection = state.selectedOptionIndex.length > 0;
 
     return (
         <div className="flex flex-col items-center py-10">
@@ -246,7 +319,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                 </button>
             </div>
 
-            <div className="w-full max-w-2xl bg-white dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+            <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
                 <div className="flex items-center mb-4">
                     <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
                         Question {state.currentQuestionIndex + 1} of {quiz.questions.length}
@@ -257,23 +330,43 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
                 <p className="text-lg mb-6 text-gray-800 dark:text-gray-100 whitespace-pre-line">
                     {currentQuestion.question}
+                    {isMultiSelect && (
+                        <span className="block text-sm text-blue-500 mt-2">
+                            Select all that apply
+                        </span>
+                    )}
                 </p>
 
                 <ul className="space-y-4">
-                    {currentQuestion.options.map((option, index) => (
-                        <QuizOption
-                            key={index}
-                            option={option}
-                            index={index}
-                            isSelected={state.selectedOptionIndex === index}
-                            isCorrect={index === currentQuestion.correctAnswerIndex}
-                            showResult={state.selectedOptionIndex !== null}
-                            onSelect={handleOptionClick}
-                        />
-                    ))}
-                </ul>
+                    {currentQuestion.options.map((option, index) => {
+                        const isSelected = (isMultiSelect
+                            ? state.selectedOptionIndex.includes(index)
+                            : state.selectedOptionIndex.includes(index)) || false;
 
-                {state.selectedOptionIndex !== null && (
+                        return (
+                            <QuizOption
+                                key={index}
+                                option={option}
+                                index={index}
+                                isSelected={isSelected}
+                                isCorrect={(currentQuestion.correctAnswerIndex as number[]).includes(index)}
+                                showResult={state.questionSubmitted}
+                                isMultiSelect={isMultiSelect}
+                                onSelect={handleOptionClick}
+                            />
+                        );
+                    })}
+                </ul>
+                {hasSelection && !state.questionSubmitted && (
+                    <button
+                        className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+                        onClick={handleQuestionSubmitClick}
+                    >
+                        Submit Question
+                    </button>
+                )}
+
+                {state.questionSubmitted && (
                     <button
                         className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
                         onClick={handleNextClick}

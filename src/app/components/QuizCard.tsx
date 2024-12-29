@@ -33,7 +33,7 @@ export default function QuizCard({ quiz, status, className = '', locked, setLock
         }
     } else {
         cardClasses +=
-            'bg-white text-gray-800 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 cursor-pointer hover:shadow-lg';
+            'bg-gray-50 text-gray-800 dark:bg-gray-800 dark:text-gray-100 border border-gray-300 dark:border-gray-700 cursor-pointer hover:shadow-lg';
     }
 
     const handleClick = (e: React.MouseEvent) => {
