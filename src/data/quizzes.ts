@@ -2227,6 +2227,56 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 46,
+    released: true,
+    timeOfRelease: "2024-12-29T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "How many questions will a person be asked in the grave?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: 2,
+        explanation:
+          'The Prophet  said that a person is asked:\n"‘Who is your Lord?’ He says, ‘Allah.’ They say, ‘What is your religion?’ He says, ‘My religion is Islam.’ They say, ‘Who is this man who was sent among you?’ He says, ‘He is the Messenger of Allah (peace and blessings of Allah be upon him).’ They say, ‘What did you do?’ He says, ‘I read the Book of Allah and I believed in it.’"',
+      },
+      {
+        question: "What does the question 'Who is your Lord?' in the grave test?",
+        options: ["If the person memorized their religion's teachings", "If they worshipped Allah sincerely", "Their knowledge of the Quran", "Their intelligence"],
+        correctAnswerIndex: 1,
+        explanation:
+          "Allah says in the Quran: 'Allah makes the believers steadfast with the firm Word ˹of faith˺ in this worldly life and the Hereafter. And Allah leaves the wrongdoers to stray. For Allah does what He wills.' (Surah Ibrahim, 14:27). \n\nThis shows that sincerity in tawheed (monotheism) is key to answering correctly in the grave.",
+      },
+      {
+        question: "Which Surah provides protection from the punishment of the grave?",
+        options: ["Surah Yasin", "Surah Al-Baqarah", "Surah Al-Mulk", "Surah Al-Kahf"],
+        correctAnswerIndex: 2,
+        explanation:
+          "The Prophet ﷺ said, \"There is a surah in the Qur’an with thirty verses that interceded for a man until he was forgiven, and it is; 'Surah Tabaraka Alladhi bi yadihi’l-mulk (Blessed is He in Whose Hand is the dominion)' [Al-Mulk 67:1].\"",
+      },
+      {
+        question: "What did the Prophet Muhammad ﷺ say about visiting graves?",
+        options: ["It is forbidden for all Muslims", "It reminds one of death and the Hereafter", "You should visit the people you know during Eid", "It is only for scholars and the pious."],
+        correctAnswerIndex: 1,
+        explanation:
+          'The Prophet Muhammad ﷺ said, "Visit the graves, for they remind you of the Hereafter." (Sunan Ibn Majah, 1569). This Hadith emphasizes the spiritual importance of visiting graves as a way to reflect on mortality and prepare for the Hereafter.',
+      },
+      {
+        question: "Believers should seek refuge from the punishment of the grave",
+        options: ["True", "False"],
+        correctAnswerIndex: 0,
+        explanation:
+          'The Prophet ﷺ frequently sought refuge from the punishment of the grave and taught his companions to do the same. He said, "Seek refuge with Allah from the punishment of the grave..."',
+      },
+      {
+        question: "What is the first stage of the hereafter?",
+        options: ["The Grave", "The Day of Judgment", "The Dajjal (false messiah)", "Heaven/Hell"],
+        correctAnswerIndex: 0,
+        explanation:
+          "The Messenger of Allah ﷺ  said: ‘The grave is the first of the stages of the Hereafter; whoever is saved from it, what comes afterwards will be easier for him, but if he is not saved from it, what comes afterwards will be worse for him.’”\n\n The Messenger of Allah ﷺ said: “I have never seen any scene but the grave is more frightening than it.”\n\n [At-Tirmithi]",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
