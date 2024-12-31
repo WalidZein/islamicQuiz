@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS quiz_submissions (
     user_id TEXT NOT NULL,
     quiz_id INTEGER NOT NULL,
     quiz_score INTEGER NOT NULL,
-    selected_options TEXT,
+    selected_options TEXT, -- For single-select: single number, for multi-select: semicolon-separated list of numbers
     submission_date TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );

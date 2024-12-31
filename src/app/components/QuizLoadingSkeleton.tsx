@@ -12,7 +12,7 @@ export default function QuizLoadingSkeleton() {
                 </div>
             </div>
 
-            <div className="w-full max-w-2xl bg-white dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+            <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
                 {/* Question number skeleton */}
                 <div className="flex items-center mb-4">
                     <div className="h-9 bg-gray-200 dark:bg-gray-700 rounded w-48"></div>

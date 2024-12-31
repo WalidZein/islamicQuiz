@@ -9,8 +9,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Missing required fields: uuid, quizId, score" }, { status: 400 });
     }
 
-    // Convert selectedOptions array to comma-separated string if provided
-    const selectedOptionsString = selectedOptions ? selectedOptions.join(",") : "";
+    // Convert selectedOptions array to comma-separated string if provided. MultiSelect options are seperated by ;
+    const selectedOptionsString = selectedOptions ? selectedOptions.map((arr: number[]) => arr.join(";")).join(",") : "";
 
     // Get or create user before submitting quiz
     const user = await getOrCreateUser(uuid);

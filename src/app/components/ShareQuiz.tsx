@@ -1,11 +1,11 @@
 'use client';
 
-import { Quiz } from '@/types/quiz';
+import { QuestionType, Quiz } from '@/types/quiz';
 import { shareContent, trackShare } from '@/utils/shareUtils';
 
 interface ShareQuizProps {
     quiz: Quiz;
-    selections: number[];
+    selections: (number[])[];
     score: number;
     uuid: string;
 }
@@ -16,14 +16,24 @@ export function ShareQuiz({ quiz, selections, score, uuid }: ShareQuizProps) {
         const totalQuestions = quiz.questions.length;
 
         // Create emoji results (✅ for correct, ❌ for incorrect)
-        const resultEmojis = quiz.questions.map((question, index) =>
-            selections[index] === question.correctAnswerIndex ? '✅' : '❌'
-        ).join('');
+        const resultEmojis = quiz.questions.map((question, index) => {
+            const selection = selections[index];
+
+            const selectedAnswers = selection;
+            const correctAnswers = question.correctAnswerIndex;
+            if (selectedAnswers.length === correctAnswers.length &&
+                selectedAnswers.every(i => correctAnswers.includes(i))) {
+                return '✅';
+            } else if (selectedAnswers.some(i => correctAnswers.includes(i))) {
+                return '🟨';
+            } else {
+                return '❌';
+            }
+
+        }).join('');
 
         return `Quiz ${quizNumber}  - ${score}/${totalQuestions}\n${resultEmojis}`;
     };
-
-
 
     const handleShare = async () => {
         const shareText = generateShareText();

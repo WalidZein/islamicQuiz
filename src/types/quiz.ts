@@ -1,8 +1,14 @@
 export interface Question {
   question: string;
   options: string[];
-  correctAnswerIndex: number;
+  type?: QuestionType;
+  correctAnswerIndex: number[];
   explanation: string;
+}
+
+export enum QuestionType {
+  SINGLE = 0,
+  MULTI = 1,
 }
 
 export interface Quiz {
@@ -16,5 +22,5 @@ export interface Quiz {
 export interface QuizStatus {
   completed: boolean;
   score: number;
-  selections: number[];
+  selections: number[][];
 }
