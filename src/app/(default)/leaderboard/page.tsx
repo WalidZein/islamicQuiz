@@ -1,4 +1,4 @@
-import Leaderboard from '../components/Leaderboard';
+import Leaderboard from '../../components/Leaderboard';
 
 // Generate metadata for SEO
 export function generateMetadata() {

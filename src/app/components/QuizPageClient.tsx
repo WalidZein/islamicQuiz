@@ -12,6 +12,7 @@ import { QuizOption } from './QuizOption';
 import { getUserSettings } from '@/utils/userManager';
 import { ShareQuiz } from './ShareQuiz';
 import QuizLoadingSkeleton from './QuizLoadingSkeleton';
+import FriendsLeaderboard from './FriendsLeaderboard';
 
 interface QuizPageClientProps {
     quiz: Quiz;
@@ -32,6 +33,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
     const [visibleExplanations, setVisibleExplanations] = useState<Set<number>>(new Set());
     const [existingSubmission, setExistingSubmission] = useState<QuizSubmission | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [isFriendsOpen, setIsFriendsOpen] = useState(false);
 
     // Calculate max possible score
     const maxScore = quiz.questions.reduce((total, question) => {
@@ -209,96 +211,206 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
     if (state.quizCompleted && state.selections.length === quiz.questions.length) {
         return (
-            <div className="flex flex-col items-center py-10">
-                <div className="w-full max-w-2xl mb-4">
-                    <button
-                        className="flex items-center text-white hover:text-gray-200 font-medium"
-                        onClick={handleBackClick}
-                    >
-                        <span className="mr-1 text-lg">&#8592;</span> Back to Home
-                    </button>
-                </div>
-
-                <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
-                    <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-                            Quiz Completed!
-                        </h2>
-                        <ShareQuiz
-                            quiz={quiz}
-                            selections={state.selections}
-                            score={state.score}
-                            uuid={getUserSettings().uuid}
-                        />
+            <div className="flex flex-col items-center py-10 relative w-full overflow-hidden">
+                <div className="w-full max-w-[90rem] mx-auto">
+                    <div className="w-full mb-4 px-4">
+                        <button
+                            className="flex items-center text-white hover:text-gray-200 font-medium"
+                            onClick={handleBackClick}
+                        >
+                            <span className="mr-1 text-lg">&#8592;</span> Back to Home
+                        </button>
                     </div>
-                    <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
-                        Your score: <span className="font-semibold">{state.score}</span> out of{' '}
-                        <span className="font-semibold">{maxScore}</span>
-                        {state.score === maxScore ? (
-                            <span className="block mt-2 text-green-500">
-                                🎉 Perfect Score! MashAllah! 🎉
-                            </span>
-                        ) : (
-                            <span className="block mt-2 text-lg">
-                                🎉 Alhamdulillah! You learned something new today!
-                            </span>
-                        )}
-                    </p>
-                    {quiz.questions.map((q, index) => {
-                        const userSelection = state.selections[index];
-                        const isExplanationVisible = visibleExplanations.has(index);
-                        const isMultiSelect = q.type === QuestionType.MULTI;
 
-                        return (
-                            <div key={index} className="mb-6">
-                                <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
-                                    <strong>Question {index + 1}:</strong> {q.question}
-                                </p>
-                                <ul className="space-y-2">
-                                    {q.options.map((option, optIndex) => {
-                                        const isSelected = isMultiSelect
-                                            ? (userSelection as number[])?.includes(optIndex)
-                                            : userSelection.includes(optIndex);
-                                        const isCorrect = (q.correctAnswerIndex as number[]).includes(optIndex)
-
-
-                                        return (
-                                            <QuizOption
-                                                key={optIndex}
-                                                option={option}
-                                                index={optIndex}
-                                                isSelected={isSelected}
-                                                isCorrect={isCorrect}
-                                                showResult={true}
-                                                isMultiSelect={isMultiSelect}
-                                                onSelect={() => { }}
-                                            />
-                                        );
-                                    })}
-                                </ul>
-                                <button
-                                    onClick={() => toggleExplanation(index)}
-                                    className="mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
-                                >
-                                    {isExplanationVisible ? 'Hide Explanation' : 'Show Explanation'}
-                                </button>
-                                {isExplanationVisible && (
-                                    <div className="mt-2">
-                                        <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
-                                            Explanation:
-                                        </h3>
-                                        <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
-                                    </div>
-                                )}
+                    {/* Desktop view: Grid layout */}
+                    <div className="hidden md:grid md:grid-cols-2 gap-6 px-4">
+                        {/* Quiz Results Card */}
+                        <div className="bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+                            <div className="flex items-center justify-between mb-6">
+                                <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                                    Quiz Completed!
+                                </h2>
+                                <ShareQuiz
+                                    quiz={quiz}
+                                    selections={state.selections}
+                                    score={state.score}
+                                    uuid={getUserSettings().uuid}
+                                />
                             </div>
-                        );
-                    })}
-                    <button
-                        className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
-                        onClick={handleBackClick}
-                    >
-                        Go back to Home
-                    </button>
+                            <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
+                                Your score: <span className="font-semibold">{state.score}</span> out of{' '}
+                                <span className="font-semibold">{maxScore}</span>
+                                {state.score === maxScore ? (
+                                    <span className="block mt-2 text-green-500">
+                                        🎉 Perfect Score! MashAllah! 🎉
+                                    </span>
+                                ) : (
+                                    <span className="block mt-2 text-lg">
+                                        🎉 Alhamdulillah! You learned something new today!
+                                    </span>
+                                )}
+                            </p>
+                            {quiz.questions.map((q, index) => {
+                                const userSelection = state.selections[index];
+                                const isExplanationVisible = visibleExplanations.has(index);
+                                const isMultiSelect = q.type === QuestionType.MULTI;
+
+                                return (
+                                    <div key={index} className="mb-6">
+                                        <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
+                                            <strong>Question {index + 1}:</strong> {q.question}
+                                        </p>
+                                        <ul className="space-y-2">
+                                            {q.options.map((option, optIndex) => {
+                                                const isSelected = isMultiSelect
+                                                    ? (userSelection as number[])?.includes(optIndex)
+                                                    : userSelection.includes(optIndex);
+                                                const isCorrect = (q.correctAnswerIndex as number[]).includes(optIndex)
+
+                                                return (
+                                                    <QuizOption
+                                                        key={optIndex}
+                                                        option={option}
+                                                        index={optIndex}
+                                                        isSelected={isSelected}
+                                                        isCorrect={isCorrect}
+                                                        showResult={true}
+                                                        isMultiSelect={isMultiSelect}
+                                                        onSelect={() => { }}
+                                                    />
+                                                );
+                                            })}
+                                        </ul>
+                                        <button
+                                            onClick={() => toggleExplanation(index)}
+                                            className="mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                                        >
+                                            {isExplanationVisible ? 'Hide Explanation' : 'Show Explanation'}
+                                        </button>
+                                        {isExplanationVisible && (
+                                            <div className="mt-2">
+                                                <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
+                                                    Explanation:
+                                                </h3>
+                                                <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                );
+                            })}
+                            <button
+                                className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+                                onClick={handleBackClick}
+                            >
+                                Go back to Home
+                            </button>
+                        </div>
+
+                        {/* Friends Leaderboard - Desktop */}
+                        <div className="relative">
+                            <FriendsLeaderboard
+                                isOpen={true}
+                                onClose={() => setIsFriendsOpen(!isFriendsOpen)}
+                                inQuizCompletion={true}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Mobile view: Horizontal scroll */}
+                    <div className="md:hidden flex flex-nowrap overflow-x-auto snap-x snap-mandatory">
+                        {/* Quiz Results Card - Mobile */}
+                        <div className="flex-none w-[85%] snap-center px-4">
+                            <div className="bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+                                <div className="flex items-center justify-between mb-6">
+                                    <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                                        Quiz Completed!
+                                    </h2>
+                                    <ShareQuiz
+                                        quiz={quiz}
+                                        selections={state.selections}
+                                        score={state.score}
+                                        uuid={getUserSettings().uuid}
+                                    />
+                                </div>
+                                <p className="text-xl mb-6 text-gray-800 dark:text-gray-100">
+                                    Your score: <span className="font-semibold">{state.score}</span> out of{' '}
+                                    <span className="font-semibold">{maxScore}</span>
+                                    {state.score === maxScore ? (
+                                        <span className="block mt-2 text-green-500">
+                                            🎉 Perfect Score! MashAllah! 🎉
+                                        </span>
+                                    ) : (
+                                        <span className="block mt-2 text-lg">
+                                            🎉 Alhamdulillah! You learned something new today!
+                                        </span>
+                                    )}
+                                </p>
+                                {quiz.questions.map((q, index) => {
+                                    const userSelection = state.selections[index];
+                                    const isExplanationVisible = visibleExplanations.has(index);
+                                    const isMultiSelect = q.type === QuestionType.MULTI;
+
+                                    return (
+                                        <div key={index} className="mb-6">
+                                            <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
+                                                <strong>Question {index + 1}:</strong> {q.question}
+                                            </p>
+                                            <ul className="space-y-2">
+                                                {q.options.map((option, optIndex) => {
+                                                    const isSelected = isMultiSelect
+                                                        ? (userSelection as number[])?.includes(optIndex)
+                                                        : userSelection.includes(optIndex);
+                                                    const isCorrect = (q.correctAnswerIndex as number[]).includes(optIndex)
+
+                                                    return (
+                                                        <QuizOption
+                                                            key={optIndex}
+                                                            option={option}
+                                                            index={optIndex}
+                                                            isSelected={isSelected}
+                                                            isCorrect={isCorrect}
+                                                            showResult={true}
+                                                            isMultiSelect={isMultiSelect}
+                                                            onSelect={() => { }}
+                                                        />
+                                                    );
+                                                })}
+                                            </ul>
+                                            <button
+                                                onClick={() => toggleExplanation(index)}
+                                                className="mt-2 text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 font-medium"
+                                            >
+                                                {isExplanationVisible ? 'Hide Explanation' : 'Show Explanation'}
+                                            </button>
+                                            {isExplanationVisible && (
+                                                <div className="mt-2">
+                                                    <h3 className="text-md font-semibold mb-1 text-gray-800 dark:text-gray-100">
+                                                        Explanation:
+                                                    </h3>
+                                                    <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">{q.explanation}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    );
+                                })}
+                                <button
+                                    className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+                                    onClick={handleBackClick}
+                                >
+                                    Go back to Home
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Friends Leaderboard - Mobile */}
+                        <div className="flex-none w-[85%] snap-center pl-4 pr-8">
+                            <FriendsLeaderboard
+                                isOpen={true}
+                                onClose={() => setIsFriendsOpen(!isFriendsOpen)}
+                                inQuizCompletion={true}
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
@@ -310,81 +422,83 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
     return (
         <div className="flex flex-col items-center py-10">
-            <div className="w-full max-w-2xl mb-4">
-                <button
-                    className="flex items-center text-white hover:text-gray-200 font-medium"
-                    onClick={handleBackClick}
-                >
-                    <span className="mr-1 text-lg">&#8592;</span> Back to Home
-                </button>
-            </div>
-
-            <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
-                <div className="flex items-center mb-4">
-                    <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-                        Question {state.currentQuestionIndex + 1} of {quiz.questions.length}
-                    </h2>
+            <div className="w-full max-w-2xl px-4 mx-auto">
+                <div className="w-full mb-4">
+                    <button
+                        className="flex items-center text-white hover:text-gray-200 font-medium"
+                        onClick={handleBackClick}
+                    >
+                        <span className="mr-1 text-lg">&#8592;</span> Back to Home
+                    </button>
                 </div>
 
-                <ProgressBar progress={progressPercentage} />
-
-                <p className="text-lg mb-6 text-gray-800 dark:text-gray-100 whitespace-pre-line">
-                    {currentQuestion.question}
-                    {isMultiSelect && (
-                        <span className="block text-sm text-blue-500 mt-2">
-                            Select all that apply
-                        </span>
-                    )}
-                </p>
-
-                <ul className="space-y-4">
-                    {currentQuestion.options.map((option, index) => {
-                        const isSelected = (isMultiSelect
-                            ? state.selectedOptionIndex.includes(index)
-                            : state.selectedOptionIndex.includes(index)) || false;
-
-                        return (
-                            <QuizOption
-                                key={index}
-                                option={option}
-                                index={index}
-                                isSelected={isSelected}
-                                isCorrect={(currentQuestion.correctAnswerIndex as number[]).includes(index)}
-                                showResult={state.questionSubmitted}
-                                isMultiSelect={isMultiSelect}
-                                onSelect={handleOptionClick}
-                            />
-                        );
-                    })}
-                </ul>
-                {hasSelection && !state.questionSubmitted && (
-                    <button
-                        className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
-                        onClick={handleQuestionSubmitClick}
-                    >
-                        Submit Question
-                    </button>
-                )}
-
-                {state.questionSubmitted && (
-                    <button
-                        className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
-                        onClick={handleNextClick}
-                    >
-                        {!state.finalQuestion ? "Next Question" : "Submit Quiz"}
-                    </button>
-                )}
-
-                {state.showExplanation && (
-                    <div className="mt-6 bg-blue-100 dark:bg-blue-900 border-l-4 border-blue-400 dark:border-blue-600 p-4">
-                        <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-                            Explanation:
-                        </h3>
-                        <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">
-                            {currentQuestion.explanation}
-                        </p>
+                <div className="bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
+                    <div className="flex items-center mb-4">
+                        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                            Question {state.currentQuestionIndex + 1} of {quiz.questions.length}
+                        </h2>
                     </div>
-                )}
+
+                    <ProgressBar progress={progressPercentage} />
+
+                    <p className="text-lg mb-6 text-gray-800 dark:text-gray-100 whitespace-pre-line">
+                        {currentQuestion.question}
+                        {isMultiSelect && (
+                            <span className="block text-sm text-blue-500 mt-2">
+                                Select all that apply
+                            </span>
+                        )}
+                    </p>
+
+                    <ul className="space-y-4">
+                        {currentQuestion.options.map((option, index) => {
+                            const isSelected = (isMultiSelect
+                                ? state.selectedOptionIndex.includes(index)
+                                : state.selectedOptionIndex.includes(index)) || false;
+
+                            return (
+                                <QuizOption
+                                    key={index}
+                                    option={option}
+                                    index={index}
+                                    isSelected={isSelected}
+                                    isCorrect={(currentQuestion.correctAnswerIndex as number[]).includes(index)}
+                                    showResult={state.questionSubmitted}
+                                    isMultiSelect={isMultiSelect}
+                                    onSelect={handleOptionClick}
+                                />
+                            );
+                        })}
+                    </ul>
+                    {hasSelection && !state.questionSubmitted && (
+                        <button
+                            className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+                            onClick={handleQuestionSubmitClick}
+                        >
+                            Submit Question
+                        </button>
+                    )}
+
+                    {state.questionSubmitted && (
+                        <button
+                            className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition-colors duration-300"
+                            onClick={handleNextClick}
+                        >
+                            {!state.finalQuestion ? "Next Question" : "Submit Quiz"}
+                        </button>
+                    )}
+
+                    {state.showExplanation && (
+                        <div className="mt-6 bg-blue-100 dark:bg-blue-900 border-l-4 border-blue-400 dark:border-blue-600 p-4">
+                            <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
+                                Explanation:
+                            </h3>
+                            <p className="text-gray-800 dark:text-gray-100 whitespace-pre-line">
+                                {currentQuestion.explanation}
+                            </p>
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );

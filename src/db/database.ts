@@ -20,7 +20,33 @@ export async function initializeDatabase() {
 
   // Execute schema
   const schema = await fs.readFile(schemaPath, "utf-8");
-  await db.exec(schema);
+
+  // Split schema into individual statements and execute them
+  const statements = schema.split(";").filter((stmt) => stmt.trim());
+  for (const statement of statements) {
+    if (statement.trim()) {
+      try {
+        await db.exec(statement);
+      } catch (error) {
+        console.error("Error executing statement:", error);
+        // Continue executing other statements even if one fails
+      }
+    }
+  }
+
+  // Check if we need to add the invite_code column
+  const result = await db.get(
+    "SELECT sql_command FROM (SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM pragma_table_info('users') WHERE name='invite_code') THEN 'ALTER TABLE users ADD COLUMN invite_code TEXT UNIQUE' END AS sql_command) WHERE sql_command IS NOT NULL"
+  );
+
+  if (result?.sql_command) {
+    try {
+      await db.exec(result.sql_command);
+      console.log("Added invite_code column to users table");
+    } catch (error) {
+      console.error("Error adding invite_code column:", error);
+    }
+  }
 
   return db;
 }
@@ -271,5 +297,155 @@ export async function getQuizSubmissions(userId: string, quizId?: number): Promi
     score: submission.quiz_score,
     selections: submission.selected_options ? submission.selected_options.split(",").map((str: string) => str.split(";").map(Number)) : [],
     submissionDate: submission.submission_date,
+  }));
+}
+
+// Friend system operations
+export async function getInviteCode(userId: string): Promise<string | null> {
+  const db = await getDatabase();
+  const result = await db.get("SELECT invite_code FROM users WHERE user_id = ?", userId);
+  return result?.invite_code || null;
+}
+
+export async function generateInviteCode(userId: string): Promise<string> {
+  const db = await getDatabase();
+
+  // First check if user already has an invite code
+  const existingCode = await getInviteCode(userId);
+  if (existingCode) {
+    return existingCode;
+  }
+
+  // Generate new code only if one doesn't exist
+  const inviteCode = Math.random().toString(36).substring(2, 15);
+  await db.run("UPDATE users SET invite_code = ? WHERE user_id = ?", inviteCode, userId);
+
+  return inviteCode;
+}
+
+export async function getUserByInviteCode(inviteCode: string): Promise<User | null> {
+  const db = await getDatabase();
+  const result = await db.get("SELECT * FROM users WHERE invite_code = ?", inviteCode);
+
+  if (!result) return null;
+
+  return {
+    uuid: result.user_id,
+    name: result.user_name,
+    totalScore: result.total_score,
+    currentStreak: result.current_streak,
+    highestStreak: result.highest_streak,
+    optIn: result.opt_in === 1,
+    lastQuizDate: result.last_quiz_date,
+    lastUpdated: result.last_updated,
+    shareClicks: result.share_clicks,
+    inviteCount: result.invite_count,
+  };
+}
+
+export async function areFriends(userId1: string, userId2: string): Promise<boolean> {
+  const db = await getDatabase();
+  const friendship = await db.get(
+    `SELECT 1 FROM friendships 
+     WHERE (user_id_1 = ? AND user_id_2 = ?)
+     OR (user_id_1 = ? AND user_id_2 = ?)`,
+    userId1,
+    userId2,
+    userId2,
+    userId1
+  );
+  return !!friendship;
+}
+
+export async function addFriendship(userId1: string, userId2: string): Promise<boolean> {
+  const db = await getDatabase();
+  const now = new Date().toISOString();
+
+  try {
+    // Check if friendship already exists
+    const alreadyFriends = await areFriends(userId1, userId2);
+    if (alreadyFriends) {
+      return false;
+    }
+
+    await db.run(
+      `INSERT INTO friendships (user_id_1, user_id_2, created_at)
+       VALUES (?, ?, ?)`,
+      userId1,
+      userId2,
+      now
+    );
+    return true;
+  } catch (error) {
+    console.error("Error adding friendship:", error);
+    return false;
+  }
+}
+
+export async function getFriends(userId: string): Promise<User[]> {
+  const db = await getDatabase();
+
+  const friends = await db.all(
+    `SELECT u.* FROM users u
+     INNER JOIN friendships f 
+     ON (f.user_id_1 = ? AND f.user_id_2 = u.user_id)
+     OR (f.user_id_2 = ? AND f.user_id_1 = u.user_id)`,
+    userId,
+    userId
+  );
+
+  return friends.map((friend) => ({
+    uuid: friend.user_id,
+    name: friend.user_name,
+    totalScore: friend.total_score,
+    currentStreak: friend.current_streak,
+    highestStreak: friend.highest_streak,
+    optIn: friend.opt_in === 1,
+    lastQuizDate: friend.last_quiz_date,
+    lastUpdated: friend.last_updated,
+    shareClicks: friend.share_clicks,
+    inviteCount: friend.invite_count,
+  }));
+}
+
+export async function getFriendsLeaderboard(userId: string): Promise<User[]> {
+  const db = await getDatabase();
+
+  // First update stats for friends
+  const friends = await getFriends(userId);
+  for (const friend of friends) {
+    await updateUserStats(friend.uuid);
+  }
+
+  // Get the updated leaderboard including the user and their friends
+  const leaderboard = await db.all(
+    `SELECT u.* FROM users u
+     WHERE u.user_id = ?
+     OR u.user_id IN (
+       SELECT CASE 
+         WHEN f.user_id_1 = ? THEN f.user_id_2
+         ELSE f.user_id_1
+       END
+       FROM friendships f
+       WHERE f.user_id_1 = ? OR f.user_id_2 = ?
+     )
+     ORDER BY u.current_streak DESC, u.total_score DESC`,
+    userId,
+    userId,
+    userId,
+    userId
+  );
+
+  return leaderboard.map((entry) => ({
+    uuid: entry.user_id,
+    name: entry.user_name,
+    totalScore: entry.total_score,
+    currentStreak: entry.current_streak,
+    highestStreak: entry.highest_streak,
+    optIn: entry.opt_in === 1,
+    lastQuizDate: entry.last_quiz_date,
+    lastUpdated: entry.last_updated,
+    shareClicks: entry.share_clicks,
+    inviteCount: entry.invite_count,
   }));
 }

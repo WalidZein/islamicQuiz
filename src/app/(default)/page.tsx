@@ -1,5 +1,5 @@
-import QuizGrid from './components/QuizGrid';
-import HomeHeaderServer from './components/HomeHeaderServer';
+import QuizGrid from '../components/QuizGrid';
+import HomeHeaderServer from '../components/HomeHeaderServer';
 
 interface QuizStatus {
   completed: boolean;
