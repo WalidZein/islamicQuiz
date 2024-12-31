@@ -2308,8 +2308,8 @@ const quizzes: Quiz[] = [
           "The Messenger of Allah, peace and blessings be upon him, was asked, 'What admits most people into Paradise?' The Prophet said, 'Fear of Allah and good character.' It was asked, 'What condemns most people to Hellfire?' The Prophet said, 'The mouth and the genitals.'",
       },
       {
-        question: "What is the main characteristic of Islam?",
-        options: ["Haya' (Humility)", "Gheera (Jealousy)", "Strength", "Kindness"],
+        question: "What is the distinct characteristic of Islam?",
+        options: ["Haya' (Modesty)", "Gheera (Jealousy)", "Strength", "Kindness"],
         correctAnswerIndex: [0],
         explanation:
           "The word haya' is derived from the word 'al-hayah', which means life, as if the person who has no haya' (modesty) is like a dead person.\n\nMessenger of Allah (ﷺ) said: “Every religion has its distinct characteristic, and the distinct characteristic of Islam is modesty.”\n\nThe Prophet ﷺ passed by a man who was admonishing his brother regarding Haya and was saying, “You are very shy, and I am afraid that might harm you.” On that, Allah's messenger ﷺ said, “Leave him, for Haya is (a part) of Faith.” (Bukhari)",
