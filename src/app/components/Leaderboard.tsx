@@ -143,7 +143,7 @@ export default function Leaderboard() {
                     {leaderboardOn && leaderboard.map((entry, index) => (
                         <div
                             key={entry.uuid}
-                            className={`p-3 pl-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
+                            className={`p-3 px-6 flex justify-between items-center ${userSettings?.uuid === entry.uuid ? 'bg-blue-200 dark:bg-blue-600/20' : ''
                                 }`}
                         >
                             <div className="flex items-center gap-4 min-w-0 flex-1">
@@ -152,9 +152,6 @@ export default function Leaderboard() {
                             </div>
                             <div className="flex items-center gap-4 flex-shrink-0">
                                 <span className="font-semibold text-gray-900 dark:text-gray-100">🔥 {entry.currentStreak} </span>
-                                <span className="text-sm text-gray-500 dark:text-gray-400">
-                                    (Best: {entry.highestStreak})
-                                </span>
                             </div>
                         </div>
                     ))}
