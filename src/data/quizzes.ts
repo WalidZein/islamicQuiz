@@ -2293,6 +2293,50 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 48,
+    released: true,
+    timeOfRelease: "2024-12-31T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What are the two reasons that will lead most people to enter Paradise?",
+        type: QuestionType.MULTI,
+        options: ["Charity", "Good Manners", "Taqwa (Fear of Allah)", "Honesty", "Being good to ones parents"],
+        correctAnswerIndex: [1, 2],
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, was asked, 'What admits most people into Paradise?' The Prophet said, 'Fear of Allah and good character.' It was asked, 'What condemns most people to Hellfire?' The Prophet said, 'The mouth and the genitals.'",
+      },
+      {
+        question: "What is the main characteristic of Islam?",
+        options: ["Haya' (Humility)", "Gheera (Jealousy)", "Strength", "Kindness"],
+        correctAnswerIndex: [0],
+        explanation:
+          "The word haya' is derived from the word 'al-hayah', which means life, as if the person who has no haya' (modesty) is like a dead person.\n\nMessenger of Allah (ﷺ) said: “Every religion has its distinct characteristic, and the distinct characteristic of Islam is modesty.”\n\nThe Prophet ﷺ passed by a man who was admonishing his brother regarding Haya and was saying, “You are very shy, and I am afraid that might harm you.” On that, Allah's messenger ﷺ said, “Leave him, for Haya is (a part) of Faith.” (Bukhari)",
+      },
+      {
+        question: "Who of these is stronger?",
+        options: ["One who can lift heavy weights", "One who can control himself when he is sad", "One who can control himself when he is angry", "One who can fight"],
+        correctAnswerIndex: [2],
+        explanation:
+          "A strong muslim is one who can control his/her anger\n\nThe Messenger of Allah, ﷺ, said, “The strong man is not the one who throws people in wrestling. The strong man is the one who has control of himself when he is angry.”",
+      },
+      {
+        question: "Being punctual should be a trait of muslims",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "A muslim should always keep his/her promises.\n\n“Oh you who believe! Why do you say that which you do not do? Most hateful it is in the sight of Allah that you say that which you do not do.” [Quran, 61:2-3].",
+      },
+      {
+        question: "Which of these acts is better than sunnah fasts, sunnah prayers (salah) and giving charity?",
+        options: ["Spending a lot of time in the masjid", "Resolving conflicts between people", "Walking to the masjid", "Saying azkar (prayers) before sunset"],
+        correctAnswerIndex: [1],
+        explanation:
+          "A Muslim should be a person that always seeks reconciling between people.\n\nThe Messenger of Allaah ﷺ said: “Shall I not tell you something that is better than the status of (voluntary) fasting, prayer and charity?” They said: “Yes.” He said: “Reconciling in a case of discord, for the evil of discord is the shaver.” Al-Tirmidhi said: It was narrated that the Prophet (ﷺ) said: “It is the shaver, and I do not say that it shaves hair, but that it shaves (i.e., destroys) religious commitment.”\n\nNarrated by Abu Dawood, 4273; al-Tirmidhi, 2433. classed as hasan by al-Albaani in Saheeh al-Tirmidhi.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
