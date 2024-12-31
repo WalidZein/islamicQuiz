@@ -13,6 +13,7 @@ export const isQuizAvailable = (quizId: number): boolean => {
 };
 
 export function isQuizLocked(quiz: Quiz, quizzes: Quiz[], completed?: boolean, userData?: User | null, forceLock: boolean = false): boolean {
+  return false; // leaving all quizzes unlocked for now
   if (forceLock) return true;
 
   const inviteCount = userData?.inviteCount || 0;
