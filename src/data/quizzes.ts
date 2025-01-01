@@ -2344,35 +2344,35 @@ const quizzes: Quiz[] = [
     seasonId: 2,
     questions: [
       {
-        question: "Which Angel revealed the Quran to Muhammad (S)?",
+        question: "Which Angel revealed the Quran to Muhammad (S) (By Musab)?",
         options: ["Jibril", "Munkar", "Nakir", "Mikaeel"],
         correctAnswerIndex: [0],
         explanation:
           'Allah SWT says,\n\nقُلْ مَن كَانَ عَدُوًّۭا لِّجِبْرِيلَ فَإِنَّهُۥ نَزَّلَهُۥ عَلَىٰ قَلْبِكَ بِإِذْنِ ٱللَّهِ مُصَدِّقًۭا لِّمَا بَيْنَ يَدَيْهِ وَهُدًۭى وَبُشْرَىٰ لِلْمُؤْمِنِينَ\n\nSay, "Whoever is an enemy to Gabriel - it is (none but) he who has brought it (i.e., the Qur’ān) down upon your heart, (O Muḥammad), by permission of Allāh, confirming that which was before it and as guidance and good tidings for the believers.” [Al-Baqarah: 97]',
       },
       {
-        question: "How many angels has Allah SWT set as the guardians of the Fire?",
+        question: "How many angels has Allah SWT set as the guardians of the Fire? (By Musab)",
         options: ["8", "9", "18", "19"],
         correctAnswerIndex: [3],
         explanation:
           "Allah SWT says,\n\nعَلَيْهَا تِسْعَةَ عَشَرَ ٣٠ وَمَا جَعَلْنَآ أَصْحَـٰبَ ٱلنَّارِ إِلَّا مَلَـٰٓئِكَةًۭ ۙ\n\nOver it are nineteen (angels). And We have not made the keepers of the Fire except angels [Al Muddaththir: 30-31]",
       },
       {
-        question: "Which prayer has angels standing at the door of the Masjid writing the names of everyone who enters?",
+        question: "Which prayer has angels standing at the door of the Masjid writing the names of everyone who enters? (By Musab)",
         options: ["Janazah Prayer", "Friday Prayer", "Prayer of Eclipse", "Eid Prayer"],
         correctAnswerIndex: [1],
         explanation:
           'The Prophet (ﷺ) said, "When it is a Friday, the angels stand at the gate of the mosque and keep on writing the names of the persons coming to the mosque in succession according to their arrivals. The example of the one who enters the mosque in the earliest hour is that of one offering a camel (in sacrifice). The one coming next is like one offering a cow and then a ram and then a chicken and then an egg respectively. When the Imam comes out (for Jumua prayer) they (i.e. angels) fold their papers and listen to the Khutba."',
       },
       {
-        question: "Belief in the Angels is a requirement of Iman.",
+        question: "Belief in the Angels is a requirement of Iman. (By Musab)",
         options: ["True", "False"],
         correctAnswerIndex: [0],
         explanation:
           'Allah SWT says, "O you who have believed, believe in Allāh and His Messenger and the Book that He sent down upon His Messenger and the Scripture which He sent down before. And whoever disbelieves in Allāh, His angels, His books, His messengers, and the Last Day has certainly gone far astray." [An-Nisa: 136]',
       },
       {
-        question: "What are the angels described 'Raqqeeb' (Watcher) and 'Ateed' (Ever-Present),responsible for?",
+        question: "What are the angels described 'Raqqeeb' (Watcher) and 'Ateed' (Ever-Present),responsible for? (By Musab)",
         options: ["Communicating with Prophets", "Recording all of our deeds", "Supporting Muslims in battle", "Guarding Jahannam"],
         correctAnswerIndex: [1],
         explanation: 'Allah SWT says, "And indeed, [appointed] over you are keepers, Noble and recording; They know whatever you do." [Al-Infitar: 10-12]',
