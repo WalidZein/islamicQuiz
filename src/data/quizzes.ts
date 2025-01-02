@@ -2379,6 +2379,49 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 50,
+    released: true,
+    timeOfRelease: "2025-01-01T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "How many sacred months are there?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: [3],
+        explanation:
+          "Indeed, the number of months ordained by Allah is twelve—in Allah’s Record since the day He created the heavens and the earth—of which four are sacred. That is the Right Way. So do not wrong one another during these months. And fight the polytheists together as they fight together against you. And know that Allah is with those mindful ˹of Him˺. [9:36]\n\nThe Prophet ﷺ said: “Time has come back to its original state, which it had when Allah created the heavens and the earth. The year is twelve months, of which four are sacred: three are in succession, namely, Dhul-Qi’dah, Dhul-Hijjah and Muharram, and (the fourth one) Rajab (of the tribe of) Mudar, which is between Jumada (Thani) and Sha’ban.” (Al-Bukhari & Muslim)",
+      },
+      {
+        question: "What are the 4 sacred months?",
+        type: QuestionType.MULTI,
+        options: ["Rajab", "Shaban", "Ramadan", "Dhu’l-Qa‘dah", "Dhu’l-Hijjah", "Muharram"],
+        correctAnswerIndex: [0, 3, 4, 5],
+        explanation:
+          "The prophet ﷺ said: “Time has come back to its original state, which it had when Allah created the heavens and the earth. The year is twelve months, of which four are sacred: three are in succession, namely, Dhul-Qi’dah, Dhul-Hijjah and Muharram, and (the fourth one) Rajab (of the tribe of) Mudar, which is between Jumada (Thani) and Sha’ban.” (Al-Bukhari & Muslim)",
+      },
+      {
+        question: "Sins are multiplied during the sacred months",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "“Indeed, the number of months with Allah is twelve... of these, four are sacred. That is the correct religion, so do not wrong yourselves during them.” Scholars explain that “do not wrong yourselves” emphasizes the seriousness of sins during these sacred months, as wrongdoing in these times carries greater weight. \n\nAl-Qurtubi: When Allah glorifies something (time or place), its sanctity multiplies. He stated, “Punishment for evil deeds is intensified, just as the reward for good deeds is multiplied.”",
+      },
+      {
+        question: "Good deeds are multiplied during the sacred months",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "“Indeed, the number of months with Allah is twelve... of these, four are sacred. That is the correct religion, so do not wrong yourselves during them.” Scholars explain that *“do not wrong yourselves”* emphasizes the seriousness of sins during these sacred months, as wrongdoing in these times carries greater weight.\n Al-Qurtubi: When Allah glorifies something (time or place), its sanctity multiplies. He stated, *“Punishment for evil deeds is intensified, just as the reward for good deeds is multiplied.”*",
+      },
+      {
+        question: "Which of these worships is sunnah in the sacred months?",
+        options: ["Fasting the first day of Rajab", "Visiting the graves in the sacred months", "Extra nightly prayers on the 27th of Muharam", "None of the above"],
+        correctAnswerIndex: [3],
+        explanation: "There are no authentic narrations of specific worships in the sacred months. One should take the multiplication of reward and sins as motivation to generally improve.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
