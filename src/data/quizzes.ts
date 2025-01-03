@@ -2412,13 +2412,68 @@ const quizzes: Quiz[] = [
         options: ["True", "False"],
         correctAnswerIndex: [0],
         explanation:
-          "“Indeed, the number of months with Allah is twelve... of these, four are sacred. That is the correct religion, so do not wrong yourselves during them.” Scholars explain that *“do not wrong yourselves”* emphasizes the seriousness of sins during these sacred months, as wrongdoing in these times carries greater weight.\n Al-Qurtubi: When Allah glorifies something (time or place), its sanctity multiplies. He stated, *“Punishment for evil deeds is intensified, just as the reward for good deeds is multiplied.”*",
+          "“Indeed, the number of months with Allah is twelve... of these, four are sacred. That is the correct religion, so do not wrong yourselves during them.” Scholars explain that “do not wrong yourselves” emphasizes the seriousness of sins during these sacred months, as wrongdoing in these times carries greater weight.\n Al-Qurtubi: When Allah glorifies something (time or place), its sanctity multiplies. He stated, “Punishment for evil deeds is intensified, just as the reward for good deeds is multiplied.”",
       },
       {
         question: "Which of these worships is sunnah in the sacred months?",
         options: ["Fasting the first day of Rajab", "Visiting the graves in the sacred months", "Extra nightly prayers on the 27th of Muharam", "None of the above"],
         correctAnswerIndex: [3],
         explanation: "There are no authentic narrations of specific worships in the sacred months. One should take the multiplication of reward and sins as motivation to generally improve.",
+      },
+    ],
+  },
+  {
+    id: 51,
+    released: true,
+    timeOfRelease: "2025-01-03T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What are the 3 levels of faith?",
+        options: ["Tawheed, Islam, Ikhlas", "Islam, Iman, Ihsan", "Taqwah, Tazkiyah, Istiqaamah", "Dhikr, 'Ilm, Tawbah"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Narrated Abu Huraira:\nOne day when we were with the Messenger of Allah (ﷺ), there appeared before us a man whose clothes were exceedingly white and his hair was exceedingly black, and there were no signs of travel on him. No one among us recognized him. He came and sat down by the Prophet (ﷺ) and rested his knees against his and placed the palms of his hands on his thighs.\n\n He said: “O Muhammad, tell me about Islam.” \n\nThe Messenger of Allah (ﷺ) said: “Islam is to testify that there is none worthy of worship except Allah and that Muhammad is the Messenger of Allah, to establish regular prayer, to pay zakah, to fast Ramadan and to go on pilgrimage to the House if you are able to.”\n\n He said: “You have spoken the truth.” And we were amazed at his asking that and saying that he had spoken the truth. \n\nThen he said: “Tell me about iman (faith, belief),” He said: “It means believing in Allah, His angels, His Books, His Messengers, and the Last Day, and believing in al-qadar (the divine will and decree), both good and bad.”\n\n He said: “You have spoken the truth.” \n\nHe said: “Tell me about ihsan.”\n\n He said: “It means worshipping Allah as if you can see Him, and although you cannot see Him, He can see you.”\n\n He said: “Tell me about the Hour.” \n\nHe said: “The one who is being asked does not know more about it than the one who is asking.”\n\n He said: “Then tell me about its signs.”\n\n He said: “The slave-girl will give birth to her mistress, and you will see the barefoot, naked, destitute herdsmen competing in constructing lofty buildings.”\n\n Then he departed and I stayed for a while. Then he said to me: “O ‘Umar, do you know who the questioner was?” I said: “Allah and His Messenger know best.” He said: “That was Jibreel, who came to teach you your religion.”\n\n[Muslim]",
+      },
+      {
+        question: "Select all of the pillars of Islam:",
+        type: QuestionType.MULTI,
+        options: ["Shahadatain (Declaration of faith)", "Salah (Prayer)", "Du’a", "Reciting Quran", "Sadaqah (Charity)", "Zakah", "Umrah", "Hajj", "Sawm (Fasting)"],
+        correctAnswerIndex: [0, 1, 5, 7, 8],
+        explanation:
+          "The Messenger of Allah (ﷺ) said: '(The superstructure of) al-Islam is raised on five (pillars), testifying (the fact) that there is no god but Allah, that Muhammad is His bondsman and messenger, and the establishment of prayer, payment of Zakat, Pilgrimage to the House (Ka'ba) and the fast of Ramadan.'\n\n [Muslim]",
+      },
+      {
+        question: "Select all of the pillars of Iman:",
+        type: QuestionType.MULTI,
+        options: [
+          "Belief in the Shari’ah",
+          "Belief in Allah",
+          "Belief in His Angels",
+          "Belief in His Books",
+          "Belief in His Messengers",
+          "Belief in the Sahabah",
+          "Belief in the Qadar (divine decree) of Allah",
+          "Belief in the Day of Judgement",
+          "Belief in Jannah and Jahannam",
+        ],
+        correctAnswerIndex: [1, 2, 3, 4, 6, 7],
+        explanation:
+          "'O you who have believed, believe in Allāh and His Messenger and the Book that He sent down upon His Messenger and the Scripture which He sent down before. And whoever disbelieves in Allāh, His angels, His books, His messengers, and the Last Day has certainly gone far astray.' [An-Nisa: 136].\n\n Iman is defined in the Hadith of Jibreel, where the Prophet Muhammad ﷺ said '....It (Iman) means believing in Allah, His angels, His Books, His Messengers, and the Last Day, and believing in al-qadar (the divine will and decree), both good and bad.....'\n\n[Muslim] ",
+      },
+      {
+        question: "What is Ihsan?",
+        options: ["To worship Allah alone", "To believe in Allah", "To worship Allah as if you see him", "To ask Allah for forgiveness"],
+        correctAnswerIndex: [2],
+        explanation:
+          "Ihsan is defined in the Hadith of Jibreel, where the Prophet Muhammad ﷺ said: '..It means worshipping Allah as if you see Him, and although you cannot see Him, He can see you...'\n [Muslim] ",
+      },
+      {
+        question: "The Prophet Muhammad (ﷺ) knew when the Day of Judgement will be.",
+        options: ["True", "False"],
+        correctAnswerIndex: [1],
+        explanation:
+          "In the Hadith of Jibreel, the Prophet Muhammad ﷺ was asked about the Hour (Day of Judgement) and replied, '...The one who is being asked does not know more about it than the one who is asking....'\n\n[Muslim]",
       },
     ],
   },
