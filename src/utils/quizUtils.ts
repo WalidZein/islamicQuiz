@@ -1,4 +1,4 @@
-import { Quiz } from "@/types/quiz";
+import { QuestionType, Quiz, QuizStatus } from "@/types/quiz";
 import { getUserSettings } from "./userManager";
 import quizzes from "@/data/quizzes";
 import { User } from "@/types/leaderboard";
@@ -23,4 +23,41 @@ export function isQuizLocked(quiz: Quiz, quizzes: Quiz[], completed?: boolean, u
   // 2. It's already completed
   // 3. User has invited 3+ friends
   return !(quiz.id === quizzes[quizzes.length - 1].id || completed || inviteCount >= 1);
+}
+
+export function calculateQuizPercentage(quiz: Quiz, status: QuizStatus): number {
+  let totalPoints = 0;
+  let earnedPoints = 0;
+
+  quiz.questions.forEach((question, index) => {
+    const isMultiSelect = question.type === QuestionType.MULTI;
+    const userSelection = status.selections[index] || [];
+
+    if (isMultiSelect) {
+      // For multi-select: +1 for each correct, -1 for each incorrect, minimum 0
+      let questionPoints = 0;
+
+      // Add points for correct selections
+      userSelection.forEach((selected) => {
+        if (question.correctAnswerIndex.includes(selected)) {
+          questionPoints++;
+        } else {
+          questionPoints--;
+        }
+      });
+
+      // Cap at minimum of 0
+      earnedPoints += Math.max(0, questionPoints);
+      // Total possible points is the number of correct answers
+      totalPoints += question.correctAnswerIndex.length;
+    } else {
+      // For single-select: 1 point if correct
+      const isCorrect = userSelection.length === 1 && question.correctAnswerIndex.includes(userSelection[0]);
+      earnedPoints += isCorrect ? 1 : 0;
+      totalPoints += 1;
+    }
+  });
+
+  // Calculate percentage, handle division by zero
+  return totalPoints === 0 ? 0 : (earnedPoints / totalPoints) * 100;
 }

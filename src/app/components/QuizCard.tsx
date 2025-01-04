@@ -1,14 +1,12 @@
 import Link from 'next/link';
-import { Quiz } from '@/types/quiz';
+import { Quiz, QuizStatus } from '@/types/quiz';
 import { useState } from 'react';
 import LockOverlay from './LockOverlay';
 import { LockClosedIcon } from '@heroicons/react/24/solid';
+import { calculateQuizPercentage } from '@/utils/quizUtils';
 interface QuizCardProps {
     quiz: Quiz;
-    status?: {
-        completed: boolean;
-        score: number;
-    };
+    status?: QuizStatus;
     className?: string;
     locked: boolean;
     setLocked?: (quizId: number, locked: boolean) => void;
@@ -17,8 +15,9 @@ interface QuizCardProps {
 export default function QuizCard({ quiz, status, className = '', locked, setLocked }: QuizCardProps) {
     const [showLockOverlay, setShowLockOverlay] = useState(false);
     const isCompleted = status?.completed;
-    const gotAllRight = status?.score === quiz.questions.length;
-    const morethan50per = (status?.score || 0) / quiz.questions.length > 0.5;
+    const percentage = status ? calculateQuizPercentage(quiz, status) : 0;
+    const gotAllRight = percentage === 100;
+    const morethan50per = percentage > 50;
 
     let cardClasses =
         'relative w-24 h-24 md:w-32 md:h-32 flex flex-col items-center justify-center rounded-lg transition-shadow duration-300 ';
