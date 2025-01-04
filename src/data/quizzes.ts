@@ -2477,6 +2477,65 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 52,
+    released: true,
+    timeOfRelease: "2025-01-04T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which Surah provides protection from the punishment of the grave?",
+        options: ["Surah Yasin", "Surah Al-Baqarah", "Surah Al-Mulk", "Surah Al-Kahf"],
+        correctAnswerIndex: [2],
+        explanation:
+          "The Prophet ﷺ said, \"There is a surah in the Qur'an with thirty verses that interceded for a man until he was forgiven, and it is; 'Surah Tabaraka Alladhi bi yadihi'l-mulk (Blessed is He in Whose Hand is the dominion)' [Al-Mulk 67:1].\"",
+      },
+      {
+        question: "Which of these traits are used to describe human beings in the Quran?",
+        type: QuestionType.MULTI,
+        options: ["Weak", "Impatient", "Ungrateful", "Selfish", "Calm", "Anxious", "Unintelligent", "Argumentative"],
+        correctAnswerIndex: [0, 1, 2, 3, 5, 7],
+        explanation:
+          "[Quran 4:28] God wishes to lighten your burden, for the human being is created weak.\n\n[Quran 21:37] The human being is impatient by nature. I will inevitably show you My signs; do not be in such a hurry.\n\n [Quran 22:66] And He is the One Who gave you life, then will cause you to die, and then will bring you back to life. ˹But˺ surely humankind is ever ungrateful.\n\n[Quran 4:128] ... Selfishness is a human trait, and if you do good and lead a righteous life, God is fully Cognizant of everything you do.\n\n[Quran 70:19] Indeed, the human being is anxious.\n\n[Quran 18:54] We have surely set forth in this Quran every ˹kind of˺ lesson for people, but humankind is the most argumentative of all beings.",
+      },
+      {
+        question: "What are the two reasons that will lead most people to enter Paradise?",
+        type: QuestionType.MULTI,
+        options: ["Charity", "Good Manners", "Taqwa (Fear of Allah)", "Honesty", "Being good to ones parents"],
+        correctAnswerIndex: [1, 2],
+        explanation:
+          "The Messenger of Allah, peace and blessings be upon him, was asked, 'What admits most people into Paradise?' The Prophet said, 'Fear of Allah and good character.' It was asked, 'What condemns most people to Hellfire?' The Prophet said, 'The mouth and the genitals.'",
+      },
+      {
+        question: "Sins are multiplied during the sacred months",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "“Indeed, the number of months with Allah is twelve... of these, four are sacred. That is the correct religion, so do not wrong yourselves during them.” Scholars explain that “do not wrong yourselves” emphasizes the seriousness of sins during these sacred months, as wrongdoing in these times carries greater weight. \n\nAl-Qurtubi: When Allah glorifies something (time or place), its sanctity multiplies. He stated, “Punishment for evil deeds is intensified, just as the reward for good deeds is multiplied.”",
+      },
+      {
+        question: "Belief in the Angels is a requirement of Iman. (By Musab)",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          'Allah SWT says, "O you who have believed, believe in Allāh and His Messenger and the Book that He sent down upon His Messenger and the Scripture which He sent down before. And whoever disbelieves in Allāh, His angels, His books, His messengers, and the Last Day has certainly gone far astray." [An-Nisa: 136]',
+      },
+      {
+        question: "What are the 3 levels of faith?",
+        options: ["Tawheed, Islam, Ikhlas", "Islam, Iman, Ihsan", "Taqwah, Tazkiyah, Istiqaamah", "Dhikr, 'Ilm, Tawbah"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Narrated Abu Huraira:\nOne day when we were with the Messenger of Allah (ﷺ), there appeared before us a man whose clothes were exceedingly white and his hair was exceedingly black, and there were no signs of travel on him. No one among us recognized him. He came and sat down by the Prophet (ﷺ) and rested his knees against his and placed the palms of his hands on his thighs.\n\n He said: “O Muhammad, tell me about Islam.” \n\nThe Messenger of Allah (ﷺ) said: “Islam is to testify that there is none worthy of worship except Allah and that Muhammad is the Messenger of Allah, to establish regular prayer, to pay zakah, to fast Ramadan and to go on pilgrimage to the House if you are able to.”\n\n He said: “You have spoken the truth.” And we were amazed at his asking that and saying that he had spoken the truth. \n\nThen he said: “Tell me about iman (faith, belief),” He said: “It means believing in Allah, His angels, His Books, His Messengers, and the Last Day, and believing in al-qadar (the divine will and decree), both good and bad.”\n\n He said: “You have spoken the truth.” \n\nHe said: “Tell me about ihsan.”\n\n He said: “It means worshipping Allah as if you can see Him, and although you cannot see Him, He can see you.”\n\n He said: “Tell me about the Hour.” \n\nHe said: “The one who is being asked does not know more about it than the one who is asking.”\n\n He said: “Then tell me about its signs.”\n\n He said: “The slave-girl will give birth to her mistress, and you will see the barefoot, naked, destitute herdsmen competing in constructing lofty buildings.”\n\n Then he departed and I stayed for a while. Then he said to me: “O ‘Umar, do you know who the questioner was?” I said: “Allah and His Messenger know best.” He said: “That was Jibreel, who came to teach you your religion.”\n\n[Muslim]",
+      },
+      {
+        question: "Which of these acts is better than sunnah fasts, sunnah prayers (salah) and giving charity?",
+        options: ["Spending a lot of time in the masjid", "Resolving conflicts between people", "Walking to the masjid", "Saying azkar (prayers) before sunset"],
+        correctAnswerIndex: [1],
+        explanation:
+          "A Muslim should be a person that always seeks reconciling between people.\n\nThe Messenger of Allaah ﷺ said: “Shall I not tell you something that is better than the status of (voluntary) fasting, prayer and charity?” They said: “Yes.” He said: “Reconciling in a case of discord, for the evil of discord is the shaver.” Al-Tirmidhi said: It was narrated that the Prophet (ﷺ) said: “It is the shaver, and I do not say that it shaves hair, but that it shaves (i.e., destroys) religious commitment.”\n\nNarrated by Abu Dawood, 4273; al-Tirmidhi, 2433. classed as hasan by al-Albaani in Saheeh al-Tirmidhi.",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
