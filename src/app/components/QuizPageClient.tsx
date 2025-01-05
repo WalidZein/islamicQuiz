@@ -221,8 +221,8 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
 
                 <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
                     <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
-                            Quiz Completed!
+                        <h2 className=" text-3xl md:text-3xl font-semibold text-gray-800 dark:text-gray-100">
+                            Quiz {quiz.id}
                         </h2>
                         <ShareQuiz
                             quiz={quiz}
@@ -252,7 +252,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         return (
                             <div key={index} className="mb-6">
                                 <p className="text-lg mb-2 text-gray-800 dark:text-gray-100 whitespace-pre-line">
-                                    <strong>Question {index + 1}:</strong> {q.question}
+                                    <strong>Question {index + 1}:</strong> <br /> {q.question}
                                 </p>
                                 <ul className="space-y-2">
                                     {q.options.map((option, optIndex) => {
