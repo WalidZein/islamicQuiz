@@ -2536,6 +2536,63 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 53,
+    released: true,
+    timeOfRelease: "2025-01-05T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which companion was known as 'As-Siddiq'?",
+        options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Abdullah ibn Abi Quhaf (aka Abu Bakr) was given the title 'As-Siddiq' (The Truthful) due to his unwavering belief in the Prophet Muhammad ﷺ, especially during the incident of Isra and Mi'raj, where he affirmed the Prophet's journey without hesitation.",
+      },
+      {
+        question: "Which companion was known as 'Al-Farooq' (the distinguisher of truth from falsehood)?",
+        options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Umar, the second Caliph, was given the title 'Al-Farooq', which means 'the one who distinguishes between right and wrong'. This was due to his strong sense of justice and his role in spreading Islam.",
+      },
+      {
+        question: "Which companion was known as 'Dhun-Noorayn' (The Possessor of Two Lights)?",
+        options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
+        correctAnswerIndex: [2],
+        explanation:
+          "Uthman, the third Caliph, was given the title 'Dhun-Noorayn' because he married two of the Prophet's daughters, Ruqayyah and Umm Kulthum, at different times. Thus, he was enlightened by two lights.",
+      },
+      {
+        question: "Which companion was known as 'Abu Turab' (Father of Dust)?",
+        options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
+        correctAnswerIndex: [3],
+        explanation:
+          "Ali, the fourth Caliph, was given the nickname 'Abu Turab' (Father of Dust) by the Prophet صلى الله عليه وسلم himself. Once when Ali was sleeping on the ground, the Prophet woke him and brushed the dust off his back, affectionately calling him Abu Turab.",
+      },
+      {
+        question: "Which companion was known as 'Sayf-ullah Al-Maslool' (The Drawn Sword of Allah)?",
+        options: ["Khalid ibn Al-Walid", "Zubayr ibn Al-Awwam", "Hamza ibn Abdul-Muttalib", "Sa'd ibn Abi Waqqas"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Khalid ibn Al-Walid was a great military commander who led the Muslim armies to many victories. The Prophet صلى الله عليه وسلم gave him the title 'Sayf-ullah Al-Maslool', recognizing his bravery and military prowess in the path of Allah.",
+      },
+      {
+        question: "Who was known as 'Asad-ullah' (The Lion of Allah) and 'Sayyid Ash-Shuhadaa' (The Master of Martyrs)?",
+        options: ["Hamza ibn Abdul-Muttalib", "Mus'ab ibn Umair", "Abdullah ibn Jahsh", "Zayd ibn Harithah"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Hamza ibn Abdul-Muttalib, the uncle of the Prophet صلى الله عليه وسلم, was known as 'Asad-ullah' (The Lion of Allah) for his bravery and strength in defending Islam. He was martyred in the Battle of Uhud and honored as 'Sayyid Ash-Shuhadaa' (The Master of Martyrs).",
+      },
+      {
+        question: "Which companion was known as 'Luqman al-Hakeem' (Luqman the wise) and 'Al-Baahith an Al-Haqeeqah' (The Seeker of Truth)?",
+        options: ["Abu Dharr al-Ghifari", "Abdullah ibn Mas'ud", "Bilal ibn Rabah", "Salman al-Farisi"],
+        correctAnswerIndex: [3],
+        explanation:
+          'The companion known as "Luqman al-Hakeem" (Luqman the Wise) and "Al-Baahith an Al-Haqeeqah" (The Seeker of Truth) was Salman Al-Farisi (RA). Salman Al-Farisi was renowned for his wisdom and relentless pursuit of the truth, which led him on a long journey through various lands and religions until he embraced Islam. His story exemplifies patience, perseverance, and sincerity in seeking guidance.',
+      },
+    ],
+  },
 ];
 
 export default quizzes;
