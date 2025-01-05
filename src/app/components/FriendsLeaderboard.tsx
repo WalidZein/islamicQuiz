@@ -9,9 +9,10 @@ interface FriendsLeaderboardProps {
     isOpen: boolean;
     onClose: () => void;
     inQuizCompletion?: boolean;
+    currentQuizId?: number;
 }
 
-export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion = false }: FriendsLeaderboardProps) {
+export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion = false, currentQuizId }: FriendsLeaderboardProps) {
     const [leaderboard, setLeaderboard] = useState<User[]>([]);
     const [inviteCode, setInviteCode] = useState<string>('');
     const [showInviteModal, setShowInviteModal] = useState(false);
@@ -22,7 +23,7 @@ export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion =
         const fetchLeaderboard = async () => {
             try {
                 const userSettings = getUserSettings();
-                const response = await fetch(`/api/friends/leaderboard?uuid=${userSettings.uuid}`);
+                const response = await fetch(`/api/friends/leaderboard?uuid=${userSettings.uuid}${currentQuizId !== undefined ? `&quizId=${currentQuizId}` : ''}`);
                 const data = await response.json();
 
                 if (response.ok) {
@@ -41,7 +42,7 @@ export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion =
         if (isOpen) {
             fetchLeaderboard();
         }
-    }, [isOpen]);
+    }, [isOpen, currentQuizId]);
 
     const handleAddFriend = async () => {
         try {
@@ -65,8 +66,8 @@ export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion =
         const inviteUrl = `${window.location.origin}/invite/${inviteCode}`;
         try {
             await navigator.share({
-                title: 'Join me on Islamic Quiz!',
-                text: 'Let\'s compete together on Islamic Quiz!',
+                title: 'Join me on The Muslim Box!',
+                text: 'Let\'s compete together!',
                 url: inviteUrl
             });
         } catch (error) {
@@ -132,7 +133,11 @@ export default function FriendsLeaderboard({ isOpen, onClose, inQuizCompletion =
                                     </div>
                                     <div className="flex items-center gap-4 flex-shrink-0">
                                         <span className="font-semibold text-gray-900 dark:text-gray-100">
-                                            🔥 {entry.currentStreak}
+                                            {currentQuizId !== undefined && currentQuizId !== -1 ? (
+                                                `✨ ${entry.quizScore}`
+                                            ) : (
+                                                `🔥 ${entry.currentStreak}`
+                                            )}
                                         </span>
                                     </div>
                                 </div>

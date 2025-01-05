@@ -312,6 +312,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                                 isOpen={true}
                                 onClose={() => setIsFriendsOpen(!isFriendsOpen)}
                                 inQuizCompletion={true}
+                                currentQuizId={quiz.id}
                             />
                         </div>
                     </div>
@@ -319,7 +320,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                     {/* Mobile view: Horizontal scroll */}
                     <div className="md:hidden flex flex-nowrap overflow-x-auto snap-x snap-mandatory">
                         {/* Quiz Results Card - Mobile */}
-                        <div className="flex-none w-[85%] snap-center px-4">
+                        <div className="flex-none w-[95%] snap-center px-4">
                             <div className="bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-6">
                                 <div className="flex items-center justify-between mb-6">
                                     <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-100">
@@ -403,7 +404,7 @@ export default function QuizPageClient({ quiz }: QuizPageClientProps) {
                         </div>
 
                         {/* Friends Leaderboard - Mobile */}
-                        <div className="flex-none w-[85%] snap-center pl-4 pr-8">
+                        <div className="flex-none w-[93%] snap-center pr-8">
                             <FriendsLeaderboard
                                 isOpen={true}
                                 onClose={() => setIsFriendsOpen(!isFriendsOpen)}

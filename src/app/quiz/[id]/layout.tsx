@@ -37,7 +37,7 @@ export default function QuizLayout({
                     {/* <GoogleAnalytics /> */}
                 </Suspense>
                 <Header />
-                <main className="container mx-auto">{children}</main>
+                <main className="container mx-auto overflow-visible">{children}</main>
                 <footer className="container mx-auto px-4 py-6 text-center mt-8 text-xs">
                     © {new Date().getFullYear()} Islamic Quiz. All rights reserved.
                 </footer>

@@ -21,6 +21,7 @@ export interface User {
   lastUpdated: string;
   shareClicks: number;
   inviteCount: number;
+  quizScore?: number;
   hasSyncedCachedScores?: boolean;
 }
 

@@ -4,6 +4,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 import Header from '../components/Header';
+import InviteHandler from '../components/InviteHandler';
 
 export const metadata: Metadata = {
   title: 'Islamic Quiz',
@@ -43,7 +44,9 @@ export default function RootLayout({
           {/* <GoogleAnalytics /> */}
         </Suspense>
         <Header />
-        <main className="container mx-auto px-4">{children}</main>
+        <InviteHandler>
+          <main className="container mx-auto px-4">{children}</main>
+        </InviteHandler>
         <footer className="container mx-auto px-4 py-6 text-center mt-8 text-xs">
           © {new Date().getFullYear()} Islamic Quiz. All rights reserved.
         </footer>

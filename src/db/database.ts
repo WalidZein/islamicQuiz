@@ -408,44 +408,56 @@ export async function getFriends(userId: string): Promise<User[]> {
   }));
 }
 
-export async function getFriendsLeaderboard(userId: string): Promise<User[]> {
+export async function getFriendsLeaderboard(userId: string, quizId?: number): Promise<User[]> {
   const db = await getDatabase();
 
-  // First update stats for friends
+  // First get the user and their friends
   const friends = await getFriends(userId);
+  const currentUser = await getUser(userId);
+
+  if (!currentUser) {
+    throw new Error("User not found");
+  }
+
+  // Update stats for all users
+  await updateUserStats(userId);
   for (const friend of friends) {
     await updateUserStats(friend.uuid);
   }
 
-  // Get the updated leaderboard including the user and their friends
-  const leaderboard = await db.all(
-    `SELECT u.* FROM users u
-     WHERE u.user_id = ?
-     OR u.user_id IN (
-       SELECT CASE 
-         WHEN f.user_id_1 = ? THEN f.user_id_2
-         ELSE f.user_id_1
-       END
-       FROM friendships f
-       WHERE f.user_id_1 = ? OR f.user_id_2 = ?
-     )
-     ORDER BY u.current_streak DESC, u.total_score DESC`,
-    userId,
-    userId,
-    userId,
-    userId
-  );
+  let allUsers = [currentUser, ...friends];
 
-  return leaderboard.map((entry) => ({
-    uuid: entry.user_id,
-    name: entry.user_name,
-    totalScore: entry.total_score,
-    currentStreak: entry.current_streak,
-    highestStreak: entry.highest_streak,
-    optIn: entry.opt_in === 1,
-    lastQuizDate: entry.last_quiz_date,
-    lastUpdated: entry.last_updated,
-    shareClicks: entry.share_clicks,
-    inviteCount: entry.invite_count,
-  }));
+  // If we're looking for quiz-specific scores
+  if (quizId !== undefined && quizId !== -1) {
+    // Get the earliest submission for each user for this quiz
+    const userIds = allUsers.map((user) => user.uuid);
+    const submissions = await db.all(
+      `SELECT 
+        user_id,
+        quiz_score,
+        MIN(submission_date) as first_submission_date
+      FROM quiz_submissions
+      WHERE user_id IN (${userIds.map(() => "?").join(",")})
+        AND quiz_id = ?
+      GROUP BY user_id`,
+      ...userIds,
+      quizId
+    );
+
+    // Create a map of user_id to quiz_score
+    const scoreMap = new Map(submissions.map((sub) => [sub.user_id, sub.quiz_score]));
+
+    // Add quiz scores to users
+    allUsers = allUsers.map((user) => ({
+      ...user,
+      quizScore: scoreMap.get(user.uuid) || 0,
+    }));
+
+    // Sort by quiz score, then total score
+    allUsers.sort((a, b) => {
+      return (b.quizScore || 0) - (a.quizScore || 0);
+    });
+  }
+
+  return allUsers;
 }
