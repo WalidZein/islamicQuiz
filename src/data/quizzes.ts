@@ -2547,7 +2547,7 @@ const quizzes: Quiz[] = [
         options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
         correctAnswerIndex: [1],
         explanation:
-          "Abdullah ibn Abi Quhaf (aka Abu Bakr) was given the title 'As-Siddiq' (The Truthful) due to his unwavering belief in the Prophet Muhammad ﷺ, especially during the incident of Isra and Mi'raj, where he affirmed the Prophet's journey without hesitation.",
+          "Abdullah ibn Abi Quhafa (aka Abu Bakr) was given the title 'As-Siddiq' (The Truthful) due to his unwavering belief in the Prophet Muhammad ﷺ, especially during the incident of Isra and Mi'raj, where he affirmed the Prophet's journey without hesitation.",
       },
       {
         question: "Which companion was known as 'Al-Farooq' (the distinguisher of truth from falsehood)?",
