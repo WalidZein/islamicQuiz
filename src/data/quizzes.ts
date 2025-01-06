@@ -2593,6 +2593,57 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 54,
+    released: true,
+    timeOfRelease: "2025-01-06T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "When does Allah descend to the lowest heaven to accept duaa and grant requests?",
+        options: ["After performing the obligatory prayers", "During the last third of the night", "At the time of breaking the fast", "During the first third of the night"],
+        correctAnswerIndex: [1],
+        explanation:
+          "The Prophet ﷺ said: “Our Lord descends to the lowest heaven during the last third of the night, inquiring: ‘Who will call upon Me, so that I may answer him? Who will ask of Me, so that I may grant him?’” (Sahih Bukhari, Sahih Muslim). \nThis time is a unique and blessed opportunity to connect with Allah through sincere duaa.",
+      },
+      {
+        question: "When making duaa, what is the proper way to begin?",
+        options: ["By reciting surah Fatiha", "By reciting a random verse from the Quran", "By praising Allah and sending prayers upon the Prophet ﷺ", "By keeping silent for a moment"],
+        correctAnswerIndex: [2],
+        explanation:
+          "The Prophet ﷺ taught: “When anyone of you prays, let him start by glorifying his Lord and praising Him, then let him send blessings upon the Prophet, then let him supplicate for whatever he wishes.” (Sunan Abu Dawood, 1481).",
+      },
+      {
+        question: "How can you get an angle to make a duaa for you?",
+        options: [
+          "By making duaa for your fellow muslim in his absence",
+          "By making duaa for your fellow muslim in his presence",
+          "By reading surah Fatiha",
+          "By praying two raka'at (units of prayer)",
+        ],
+        correctAnswerIndex: [0],
+        explanation: "The Prophet ﷺ said: \"No believer supplicates for his brother in his absence except that the appointed angel says: 'Ameen, and for you the same.'\"(Sahih Muslim, 2732)",
+      },
+      {
+        question: "When is a servant closest to Allah, making it the most appropriate position for supplication?",
+        options: ["Standing upright with hands raised", "Prostrating with forehead on the ground", "Sitting cross-legged with hands on knees", "Lying down facing the Qiblah"],
+        correctAnswerIndex: [1],
+        explanation: "The Prophet ﷺ said: “The closest a servant is to his Lord is when he is prostrating, so increase your supplications at that time” (Sahih Muslim, 482).",
+      },
+      {
+        question: "What is the significance of saying “Ameen” after the Imam after the recitation of Surah Al-Fatiha in prayer?",
+        options: [
+          "If you do it in every salah (prayer) you will be guarnteed Jannah (paradise)",
+          "Your prayer will not be valid without saying it",
+          "If It aligns with the angel's “Ameen,” your past sins will be forgiven",
+          "All of the above",
+        ],
+        correctAnswerIndex: [2],
+        explanation:
+          "The Prophet ﷺ said: “When the Imam says ameen, then say ameen as the angels say ameen. Whoever says ameen when the angels do, his previous sins will be forgiven.” (Sahih Bukhari, 780).",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
