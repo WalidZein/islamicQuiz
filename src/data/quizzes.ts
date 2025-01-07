@@ -2614,7 +2614,7 @@ const quizzes: Quiz[] = [
           "The Prophet ﷺ taught: “When anyone of you prays, let him start by glorifying his Lord and praising Him, then let him send blessings upon the Prophet, then let him supplicate for whatever he wishes.” (Sunan Abu Dawood, 1481).",
       },
       {
-        question: "How can you get an angle to make a duaa for you?",
+        question: "How can you get an angel to make a duaa for you?",
         options: [
           "By making duaa for your fellow muslim in his absence",
           "By making duaa for your fellow muslim in his presence",
