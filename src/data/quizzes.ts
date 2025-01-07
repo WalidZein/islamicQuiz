@@ -1327,14 +1327,14 @@ const quizzes: Quiz[] = [
         options: ["They found Yusuf injured in the desert", "A wolf ate him", "Yusuf ran away", "Yusuf was captured by travelers"],
         correctAnswerIndex: [1],
         explanation:
-          "The brothers of Yusuf aimed to take him away from their father and get rid of him. They knew Prophet Yaqub (PBUH) wouldn't let him leave easily. They claimed they wanted to take him for a trip in the desert where they would take care of him. However, they threw him into a deep well and left him behind, claiming to their father that a wolf ate him.\n[12:17] They cried, 'Our father! We went racing and left Joseph with our belongings, and a wolf devoured him! But you will not believe us, no matter how truthful we are.'",
+          "The brothers of Yusuf aimed to take him away from their father and get rid of him. They knew Prophet Yaqub (ﷺ) wouldn't let him leave easily. They claimed they wanted to take him for a trip in the desert where they would take care of him. However, they threw him into a deep well and left him behind, claiming to their father that a wolf ate him.\n[12:17] They cried, 'Our father! We went racing and left Joseph with our belongings, and a wolf devoured him! But you will not believe us, no matter how truthful we are.'",
       },
       {
         question: "Why was Prophet Yusuf (AS) imprisoned?",
         options: ["For stealing", "For disobeying the governor", "Due to a false accusation by the chief minister's wife", "For refusing to interpret dreams"],
         correctAnswerIndex: [2],
         explanation:
-          "After being sold as a slave to Egypt's chief minister, Yusuf (PBUH) grew up in his household. When Yusuf matured, the chief minister's wife attempted to seduce him, but Yusuf refused and tried to escape. When her husband appeared at the door, she falsely accused Yusuf of wrongdoing. A family member suggested examining Yusuf's clothes, and it was found that his shirt was torn from the back, proving his innocence. Despite this, Yusuf was imprisoned unjustly due to the false accusation and societal pressure.\n\nThis story highlights Yusuf's righteousness and patience in the face of false accusations and injustice.",
+          "After being sold as a slave to Egypt's chief minister, Yusuf (ﷺ) grew up in his household. When Yusuf matured, the chief minister's wife attempted to seduce him, but Yusuf refused and tried to escape. When her husband appeared at the door, she falsely accused Yusuf of wrongdoing. A family member suggested examining Yusuf's clothes, and it was found that his shirt was torn from the back, proving his innocence. Despite this, Yusuf was imprisoned unjustly due to the false accusation and societal pressure.\n\nThis story highlights Yusuf's righteousness and patience in the face of false accusations and injustice.",
       },
       {
         question: "When news of the chief minister's wife's actions spread, how did she attempt to justify her actions regarding Prophet Yusuf (AS)?",
@@ -1346,7 +1346,7 @@ const quizzes: Quiz[] = [
         ],
         correctAnswerIndex: [1],
         explanation:
-          "When the story of the chief minister's wife's pursuit of Yusuf (PBUH) spread, other women began ridiculing her character. To defend herself, she invited these women to a banquet at her residence and gave them fruit along with knives. As they were slicing fruits, she summoned Yusuf (PBUH). When the women saw him, they were so astonished by his extraordinary beauty that they cut their hands without realizing it. She seized this moment to announce that this was the man for whom she was being criticized.\n\n[12:30] Some women of the city gossiped, 'The Chief Minister's wife is trying to seduce her slave-boy. Love for him has plagued her heart. Indeed, we see that she is clearly mistaken.'\n[12:31] When she heard about their gossip, she invited them and set a banquet for them. She gave each one a knife, then said ˹to Joseph˺, 'Come out before them.' When they saw him, they were so stunned ˹by his beauty˺ that they cut their hands, and exclaimed, 'Good God! This cannot be human; this must be a noble angel!'\n [12:32] She said, 'This is the one for whose love you criticized me! I did try to seduce him but he ˹firmly˺ refused. And if he does not do what I order him to, he will certainly be imprisoned and ˹fully˺ disgraced.'",
+          "When the story of the chief minister's wife's pursuit of Yusuf (ﷺ) spread, other women began ridiculing her character. To defend herself, she invited these women to a banquet at her residence and gave them fruit along with knives. As they were slicing fruits, she summoned Yusuf (ﷺ). When the women saw him, they were so astonished by his extraordinary beauty that they cut their hands without realizing it. She seized this moment to announce that this was the man for whom she was being criticized.\n\n[12:30] Some women of the city gossiped, 'The Chief Minister's wife is trying to seduce her slave-boy. Love for him has plagued her heart. Indeed, we see that she is clearly mistaken.'\n[12:31] When she heard about their gossip, she invited them and set a banquet for them. She gave each one a knife, then said ˹to Joseph˺, 'Come out before them.' When they saw him, they were so stunned ˹by his beauty˺ that they cut their hands, and exclaimed, 'Good God! This cannot be human; this must be a noble angel!'\n [12:32] She said, 'This is the one for whose love you criticized me! I did try to seduce him but he ˹firmly˺ refused. And if he does not do what I order him to, he will certainly be imprisoned and ˹fully˺ disgraced.'",
       },
       {
         question:
@@ -1354,7 +1354,7 @@ const quizzes: Quiz[] = [
         options: ["A plague would spread in Egypt", "There would be years of abundance followed by years of famine", "The kingdom would be destroyed", "The king would lose his throne"],
         correctAnswerIndex: [1],
         explanation:
-          "The king of Egypt had a strange dream: seven skinny cows eating seven fat cows, and seven dry stalks of wheat and seven green ones. None of his advisors could interpret it. Yusuf (PBUH) was brought from prison, and he explained the dream.\n\nYusuf said there would be seven years of plenty, where crops would grow abundantly, and advised saving most of the harvest during these years. This would be followed by seven years of famine, during which the stored grain would be used. Finally, there would be a year of relief with abundant rain and prosperity.\n\n[12:47] Joseph replied, 'You will plant ˹grain˺ for seven consecutive years, leaving in the ear whatever you will harvest, except for the little you will eat.'\n[12:48] 'Then after that will come seven years of great hardship which will consume whatever you have saved, except the little you will store ˹for seed˺.'\n\n[12:49]'Then after that will come a year in which people will receive abundant rain and they will press ˹oil and wine˺.'",
+          "The king of Egypt had a strange dream: seven skinny cows eating seven fat cows, and seven dry stalks of wheat and seven green ones. None of his advisors could interpret it. Yusuf (ﷺ) was brought from prison, and he explained the dream.\n\nYusuf said there would be seven years of plenty, where crops would grow abundantly, and advised saving most of the harvest during these years. This would be followed by seven years of famine, during which the stored grain would be used. Finally, there would be a year of relief with abundant rain and prosperity.\n\n[12:47] Joseph replied, 'You will plant ˹grain˺ for seven consecutive years, leaving in the ear whatever you will harvest, except for the little you will eat.'\n[12:48] 'Then after that will come seven years of great hardship which will consume whatever you have saved, except the little you will store ˹for seed˺.'\n\n[12:49]'Then after that will come a year in which people will receive abundant rain and they will press ˹oil and wine˺.'",
       },
     ],
   },
@@ -2641,6 +2641,49 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: [2],
         explanation:
           "The Prophet ﷺ said: “When the Imam says ameen, then say ameen as the angels say ameen. Whoever says ameen when the angels do, his previous sins will be forgiven.” (Sahih Bukhari, 780).",
+      },
+    ],
+  },
+  {
+    id: 55,
+    released: true,
+    timeOfRelease: "2025-01-07T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Who was the first woman to accept Islam?",
+        options: ["Aisha bint Abu Bakr", "Khadijah bint Khuwaylid", "Fatimah bint Muhammad", "Umm Salamah"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Khadijah, the first wife of the Prophet ﷺ, was the first person to accept Islam. She supported the Prophet صلى الله عليه وسلم financially and emotionally, and was a source of comfort to him during the early difficult years of his prophethood.",
+      },
+      {
+        question: "Who was amongst the most knowledgeable companions in Islamic law?",
+        options: ["Aisha bint Abi Bakr", "Maryam bint Imran", "Arwa bint Abdul-Muttalib", "Um Ali"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Aisha bint Abi Bakr had gained knowledge in three aspects: Theology (kalam), Medicine, and Poetry. She was married to the Prophet ﷺ for 10 years and lived 50 years after his death, gathering extensive knowledge. Her thirst for knowledge and her scholarly family background led her to become a renowned scholar. Scholars who had disagreements often sought clarification from her. She contributed significantly to debates arising from Quranic verses.\n\n'“She was also a brilliant orator,' al-Ahnaf said. 'I have heard speeches of Abu Bakr, Omar, Uthman, and Ali and the Khalifa up to this day, but I have not heard speech more persuasive and more beautiful from the mouth of any person than from the mouth of Aisha.'\n\nShe had a sound knowledge of Mathematics and the science of inheritance. Masrooq Ibn Al Ajda said, 'I saw the elders among the Companions of the Prophet ﷺ asking her about the law of inheritance.'\n\nAisha (RA) also used her incredible knowledge to declare fatwas. Al Hakim said in his book Al Mustadrak, 'One fourth of the rule of Sharia was narrated on the authority of Aisha (RA).' (This was also written in Fathul Bari, an explanation of Sahih Bukhari written by Ibn Hajar al Asqalani).\n\nAdh Dhahabi said, 'Aisha (RA) was the most knowledgeable woman in Islamic jurisprudence in the whole Muslim nation.'\n\nAta bin Rabah said, 'Aisha (RA) was the best of all people in Islamic Jurisprudence, the most knowledgeable of all people, and the best of them in giving opinions in general.'\n\nAl Miqdad bin Al Aswad said, 'I did not know anyone among the Companions of the Messenger of Allah ﷺ who had more knowledge of poetry or religious obligations than Aisha.'",
+      },
+      {
+        question: "Which of these companions were among the companions who protected the Prophet (ﷺ) in the battle of Uhud?",
+        options: ["Khadija bint Khuwaylid", "Aisha bint Abi Bakr", "Nusaybah bint Ka’b", "Umm Salama"],
+        correctAnswerIndex: [2],
+        explanation:
+          "Nusaybah Bint Ka'ab, also known as Umm Marah, was one of the most extraordinary women in early Islam, known for her unmatched bravery and dedication. A member of the Banu Najjar tribe from Medina, she embraced Islam with unyielding strength and became one of the two women present at the Second Pledge of Aqabah, where she vowed allegiance to the Prophet Muhammad (ﷺ). She dedicated herself to spreading Islam, particularly among the women of Medina.\n\nRole in the battle of Uhud:\nAt the beginning of the battle, she was bringing water to the thirsty fighters and tending the wounded, as the other women were doing. When the battle was going in favor of the Muslims, the archers disobeyed the command of the Prophet (ﷺ), and this turned the victory into defeat, as the Qur'an described it.\n\nAt this point, Nusaybah went forward, with her sword unsheathed and her bow in her hand, to join the small group who were standing firm with the Prophet, acting as a human shield to protect him from the arrows of the non-believers. Every time danger approached the Prophet she hastened to protect him. Mohammed (ﷺ) noticed this, and later said, \"Wherever I turned, to the left or the right, I saw her fighting for me.\"\n\nHer son 'Umarah also described what happened on that tremendous day: \"On that day, I was wounded in my left hand. A man, who seemed to be as tall as a palm tree struck me, then went away without pursuing me to finish me off. The blood began to flow copiously, so the Messenger of Allah told me, 'Bind up your wound.' My mother came to me, and she was wearing a waist-wrapper, which she had brought, for the purpose of bandaging wounds. She dressed my wound, whilst the Prophet was looking on. Then she told me, 'Get up, my son, and fight.' The Prophet said, 'Who could bear what you are putting up with, Umm 'Umarah?' The man who had struck me came by, and Mohammed said, 'This is the one who struck your son.' I intercepted him and hit him in the thigh, and he collapsed. I saw the Messenger of Allah smiling so broadly that I could see his back teeth. He said, 'You have taken your revenge, O Umm 'Umarah!' Then we struck him with our weapons until we killed him, and the Prophet said: 'Praise be to Allah, who granted you victory over him, gave you the satisfaction of taking revenge on your enemy, and let you see the vengeance for yourself.'\n\nOn that day, Nusaybah herself received many wounds whilst she was fighting the non-believers and striking at them. The Prophet saw her, and called to her son, \"Your mother! Your mother! See to her wounds, may Allah bless you and your household! Your mother has fought better than so-and-so.\" When Nusaybah heard what the Prophet said, she said, \"Pray to Allah that we may accompany you in Paradise.\" He said, \"O Allah (SWT), make them my companions in Paradise.\" She said, \"I do not care what befalls me in this world.\"",
+      },
+      {
+        question: "Which female companion was given the nickname 'The One with the Two Belts'?",
+        options: ["Asmaa bint Abi Bakr", "Khadija bint Khuwaylid", "Aisha bint Abi Bakr", "Umm Salama"],
+        correctAnswerIndex: [0],
+        explanation:
+          "She was Asma bint Abi Bakr As-Siddiq, the mother of Abdullah bin Az-Zubair. She was the mother of Al-Khalifah Abdullah bin Az-Zubayr, a sister to the Mother of Believers A’ishah, and the last of the emigrants to die. She was older than Aishah by about ten years. She made the hijrah while pregnant with Abdullah. She witnessed the campaign of Yarmuk along with her husband Az-Zubair. Along with her father, her grandfather, her son Ibn Az-Zubair—all four—were Companions of the Prophet.\n\nThe Day of the Hijrah\nAmong the days that she witnessed in her life was the 'Day of the Hijrah.' She narrates to us regarding that herself: 'I prepared the food for the journey of the Prophet in Abu Bakr’s house when he intended to emigrate (to Madinah). I did not find anything with which to tie the food container and the water skin. So, I said to my father: ‘I cannot find anything to tie (these things) with except my waist belt.’ He said, ‘Cut it into two pieces and tie the water-skin with one piece and the food-container with the other.' It is for that reason she was named Dhatun-Nitaqain (i.e., The woman with the two belts).\n\nShe also said: 'When the Prophet went out of Makkah, Abu Bakr took along his entire wealth worth five or seven thousand. Then my grandfather Abu Quhafah came to me, and at that time he had gone blind. He said: 'This one (i.e., Abu Bakr) has deprived you of his wealth and of himself.' So I said to him: 'Rather, he has left for us a good sum (of money).' Then I proceeded to gather stones in a port hole in the house and covered it with a cloth. Then I held his hand and placed it on the cloth. I said: 'Here is what he left for us.' He said: 'If he has left this for you, then he has done well.'",
+      },
+      {
+        question: "Who was the aunt of the Prophet ﷺ who stood by him when he was being persecuted in Mecca?",
+        options: ["Safiyyah bint Abdul-Muttalib", "Aisha bint Abi Bakr", "Um Salama", "Umm Hakim bint Abdul-Muttalib"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Safiyyah bint Abdul-Muttalib was the aunt of the Prophet ﷺ and the sister of his father Abdullah. She stood by the Prophet صلى الله عليه وسلم when he was being persecuted in Mecca, and was known for her wisdom and her support of Islam.",
       },
     ],
   },
