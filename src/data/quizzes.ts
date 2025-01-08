@@ -2687,6 +2687,50 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 56,
+    released: true,
+    timeOfRelease: "2025-01-08T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "How many Takbeers (Allahu Akbar) are in Salat al-Janazah (Prayer for the dead)?",
+        options: ["1", "2", "3", "4"],
+        correctAnswerIndex: [3],
+        explanation:
+          "- You say the first Takbir ('Allahu Akbar'), then you seek [refuge with Allah from the accursed Shaytan]. Then you say Bismillah ir-Rahman ir-Rahim and [recite Al-Fatihah].\n- Then you say the second Takbir and send blessings upon the Prophet (ﷺ) as one does at the end of the prayer.\n- Then you say the third Takbir and make du'a for the deceased.\n- Then you say the fourth Takbirand make duaa for all muslims,\n - Then say one Taslim to the right, saying 'Assalamu 'alaykum wa rahmatullah.' (or two taslims depending on the mazhab)",
+      },
+      {
+        question: "It is mustahab (recommended) to separate between the obligatory and naafil (Sunnah) prayers by speaking or moving to another spot.",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "The best way of doing so is by moving to offer the naafil prayer at home, because the best prayer a man can offer is a prayer that he offers at home, apart from the obligatory prayers, as was narrated in a saheeh report from the Prophet ﷺ. The evidence for the separation mentioned is the report narrated by Muslim in his Saheeh (1463) from Mu‘aawiyah (RA) who said:\n When you have prayed Jumu'ah, do not follow it immediately with another prayer until you speak or leave (the mosque), because the Messenger of Allah ﷺ instructed us to do that, not to follow one prayer immediately with another until we spoke or left (the mosque).",
+      },
+      {
+        question: "How many sunnah rak’ah (unit of prayer) if you prayed in a day will give you a house in paradise?",
+        options: ["6", "10", "12", "20"],
+        correctAnswerIndex: [2],
+        explanation:
+          "The Messenger of Allah (ﷺ) said: ‘Whoever persists in performing twelve Rak’ah from the Sunnah, a house will be built for him in Paradise: four before the Zuhr, two Rak’ah after Zuhr, two Rak’ah after Maghrib, two Rak’ah after the ‘Isha’ and two Rak’ah before Fajr.’”",
+      },
+      {
+        question: "What are the twelve sunnah rak’ah (unit of prayer) that if prayed in a day will grant you a house in paradise?",
+        type: QuestionType.MULTI,
+        options: ["Two before Fajr", "Two before Duhr", "Four before Duhr", "Two after Duhr", "Two after Maghrib", "Two before Isha", "Two after Isha"],
+        correctAnswerIndex: [0, 2, 3, 4, 6],
+        explanation:
+          "The Messenger of Allah (ﷺ) said: ‘Whoever persists in performing twelve Rak’ah from the Sunnah, a house will be built for him in Paradise: four before the Zuhr, two Rak’ah after Zuhr, two Rak’ah after Maghrib, two Rak’ah after the ‘Isha’ and two Rak’ah before Fajr.’”",
+      },
+      {
+        question: "Salat Al-Istisqa’ (Prayer for rain) is prayed like which of these prayers?",
+        options: ["Eid Prayer", "Eclipse Prayer", "Janazah Prayer (Prayer for the dead)", "None of the above"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Salat Al-Istisqa’ (Prayer for rain) is preformed by:\n - Pray two rak‘ahs similar to that of Eid prayer (7 takbeerat in the first Rak’a & 5 in the second).\n- It should be prayed as a two-raka’at Salat with neither the Adhan nor Iqamah. Recitations of Quran in both raka’ats are said aloud.\n- After the Salat, the imam delivers a single sermon in which he seeks a great deal of forgiveness and recites Quran over and over. Thereafter he supplicates (the authentic supplications of the Prophet ﷺ) with insistence, showing humility, helplessness and demonstrating how powerless people are in front of Allah.\n\nAl-Waleed ibn ‘Uqbah, who was the governor of Madinah, sent me to ask Ibn ‘Abbaas about the prayer of the Messenger of Allah (ﷺ) for rain (istisqa’).\n\nHe said: The Messenger of Allah (ﷺ) went out wearing modest clothes, walking humbly and beseeching Allah, until he reached the prayer place, where he ascended the minbar, but he did not give a khutbah like this khutbah of yours; rather he continued to offer supplication (du‘aa’), beseech Allah and recite takbeer, then he prayed two rak‘ahs as he used to pray at Eid.\n\n[Abu Dawood (1165), at-Tirmidhi (558), an-Nasaa’i (1506) and Ibn Maajah (1266)]",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
