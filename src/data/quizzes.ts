@@ -2734,7 +2734,7 @@ const quizzes: Quiz[] = [
   {
     id: 57,
     released: true,
-    timeOfRelease: "2025-01-09T13:00:00Z",
+    timeOfRelease: "2025-01-08T13:00:00Z",
     seasonId: 2,
     questions: [
       {
@@ -2742,14 +2742,14 @@ const quizzes: Quiz[] = [
         options: ["Salat Al Eid (Prayer of Eid)", "Salat Al Istishara (Prayer of Advice)", "Salat Al Istikharah (Prayer of Seeking Guidance from Allah)", "Salat Al Witr (Witr Prayer)"],
         correctAnswerIndex: [2],
         explanation:
-          "On the authority of Jabir ibn Abdullah (RA), he said:\n\nThe Messenger of Allah (ﷺ) used to teach us Istikhara (prayer of seeking guidance from Allah) in all matters, just as he would teach us a surah (chapter) from the Qur’an. He would say:\n\n**“When one of you is considering a matter, let him pray two rak’ahs (units of prayer) that are not obligatory, and then say:**\n\n‘O Allah, I seek Your guidance through Your knowledge, and I seek ability through Your power, and I ask You from Your great bounty. For You are capable, and I am not. You know, and I do not, and You are the Knower of the unseen. O Allah, if You know that this matter is good for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then decree it for me, make it easy for me, and bless it for me. And if You know that this matter is bad for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then turn it away from me, and turn me away from it, and decree for me what is good wherever it may be, and make me content with it.’\n\nThe Prophet (peace and blessings be upon him) added, ‘And let him mention his need.’”\n\n*(Reported in Sahih al-Bukhari, Hadith 1166)*\n\n**Transliteration of Duaa Al Istikharah:**\n\nAllāhumma innī astakheeruka bi ‘ilmika wa astaqdiruka bi qudratika wa as’aluka min faḍlika al-‘aẓīm, fa’innaka taqdiru wa lā aqdir, wa ta‘lamu wa lā a‘lam, wa anta ‘allām al-ghuyūb. Allāhumma in kunta ta‘lamu anna hādhā al-amr khayrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faqdurhu lī wa yassirhu lī thumma bārik lī fīhi. Wa in kunta ta‘lamu anna hādhā al-amr sharrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faṣrifhu ‘annī waṣrifnī ‘anhu waqdur lī al-khayr ḥaythu kāna thumma arḍinī bih.\n\nWayusammī ḥājatahu\n\n(Then mention your specific need).",
+          "On the authority of Jabir ibn Abdullah (RA), he said:\n\nThe Messenger of Allah (ﷺ) used to teach us Istikhara (prayer of seeking guidance from Allah) in all matters, just as he would teach us a surah (chapter) from the Qur’an. He would say:\n\n“When one of you is considering a matter, let him pray two rak’ahs (units of prayer) that are not obligatory, and then say:\n\n‘O Allah, I seek Your guidance through Your knowledge, and I seek ability through Your power, and I ask You from Your great bounty. For You are capable, and I am not. You know, and I do not, and You are the Knower of the unseen. O Allah, if You know that this matter is good for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then decree it for me, make it easy for me, and bless it for me. And if You know that this matter is bad for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then turn it away from me, and turn me away from it, and decree for me what is good wherever it may be, and make me content with it.’\n\nThe Prophet (peace and blessings be upon him) added, ‘And let him mention his need.’”\n\n[Sahih al-Bukhari, 1166]\n\nTransliteration of Duaa Al Istikharah:\n\nAllāhumma innī astakheeruka bi ‘ilmika wa astaqdiruka bi qudratika wa as’aluka min faḍlika al-‘aẓīm, fa’innaka taqdiru wa lā aqdir, wa ta‘lamu wa lā a‘lam, wa anta ‘allām al-ghuyūb. Allāhumma in kunta ta‘lamu anna hādhā al-amr khayrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faqdurhu lī wa yassirhu lī thumma bārik lī fīhi. Wa in kunta ta‘lamu anna hādhā al-amr sharrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faṣrifhu ‘annī waṣrifnī ‘anhu waqdur lī al-khayr ḥaythu kāna thumma arḍinī bih.\n\nWayusammī ḥājatahu\n\n(Then mention your specific need).",
       },
       {
         question: "How many Rak’aas (units of prayer) are sunnah for Salat Al Istikharah (prayer of guidance from Allah)?",
         options: ["1", "2", "4", "6"],
         correctAnswerIndex: [1],
         explanation:
-          "The Messenger of Allah (ﷺ): ‘If any one of you is deliberating about a decision he has to make, then let him pray two rak`ahs of non-obligatory prayer…’ *(Reported in Sahih al-Bukhari, Hadith 1166)*",
+          "The Messenger of Allah (ﷺ): ‘If any one of you is deliberating about a decision he has to make, then let him pray two rak`ahs of non-obligatory prayer…’ \n\n [Sahih al-Bukhari, 1166]",
       },
       {
         question: "If you are deciding on whether to stop doing a sin, you should pray Istikharah (Prayer of guidance from Allah) first.",
@@ -2762,14 +2762,14 @@ const quizzes: Quiz[] = [
         options: ["True", "False"],
         correctAnswerIndex: [1],
         explanation:
-          "Al-Nawawi said: “It is mustahab, before praying Istikharah, to consult someone whom you know is sincere, caring and has experience, and who is trustworthy with regard to his religious commitment and knowledge. Allah says (interpretation of the meaning): 'and consult them in the affairs' [Al ‘Imran 3:159].”",
+          "Al-Nawawi said:\n “It is mustahab, before praying Istikharah, to consult someone whom you know is sincere, caring and has experience, and who is trustworthy with regard to his religious commitment and knowledge. Allah says (interpretation of the meaning): 'and consult them in the affairs' [Al ‘Imran 3:159].”",
       },
       {
-        question: "It is not mustahab (recommended) to consult people before praying Istikharah (Prayer of Seeking Counsel).",
+        question: "Zaynab bint Jahsh (RA) prayed Istikharah before marrying the Prophet (ﷺ) himself.",
         options: ["True", "False"],
-        correctAnswerIndex: [1],
+        correctAnswerIndex: [0],
         explanation:
-          "Al-Nawawi said: “It is mustahab, before praying Istikharah, to consult someone whom you know is sincere, caring and has experience, and who is trustworthy with regard to his religious commitment and knowledge. Allah says (interpretation of the meaning): 'and consult them in the affairs' [Al ‘Imran 3:159].”",
+          "Al-Nawawi commented on that in his commentary on Sahih Muslim (9/224):\n\n \"In it lies the recommendation of performing the prayer of Istikhara for anyone who is concerned about a matter, whether it appears to be good or not. This is in line with the hadith narrated by Jabir in Sahih al-Bukhari where he said: 'The Messenger of Allah, peace be upon him, taught us Istikhara for all matters.' Perhaps Zaynab sought Istikhara out of fear of falling short in fulfilling the rights of the Prophet, peace be upon him.\"",
       },
     ],
   },
