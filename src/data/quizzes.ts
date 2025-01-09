@@ -28,8 +28,8 @@ const quizzes: Quiz[] = [
           "Khadijah (may Allah be pleased with her) was the first woman to believe in the Prophet (peace be upon him). She was also the first person to hear revealed verses from the mouth of the Messenger of Allah.",
       },
       {
-        question: "Which surah will intercede for it's companion on the day of judgement?(Correction: Surah Baqarah is one of them. What is the other one?)",
-        options: ["Surah Yasin", "Surah Mulk", "Surah Baqarah", "Surah Fajr"],
+        question: "Which surah will intercede for it's companion on the day of judgement?",
+        options: ["Surah Yasin", "Surah Mulk", "Surah Kawthar", "Surah Fajr"],
         correctAnswerIndex: [1],
         explanation:
           'Jābir ibn Abdullāh reports that the Messenger of Allah ﷺ would not sleep until He had recited Sūrah as-Sajdah (32) and Sūrah al-Mulk (67).\n\n It was narrated from Abu Hurairah that the Prophet (ﷺ) said:\n "There is a surah in the Qur\'an, with thirty verses, which will intercede for its companion (the one who recites it) until he is forgiven: Tabarakal-ladhi bi yadihil mulk (Blessed is He in Whose Hand is the Dominion)."',
@@ -2728,6 +2728,48 @@ const quizzes: Quiz[] = [
         correctAnswerIndex: [0],
         explanation:
           "Salat Al-Istisqa’ (Prayer for rain) is preformed by:\n - Pray two rak‘ahs similar to that of Eid prayer (7 takbeerat in the first Rak’a & 5 in the second).\n- It should be prayed as a two-raka’at Salat with neither the Adhan nor Iqamah. Recitations of Quran in both raka’ats are said aloud.\n- After the Salat, the imam delivers a single sermon in which he seeks a great deal of forgiveness and recites Quran over and over. Thereafter he supplicates (the authentic supplications of the Prophet ﷺ) with insistence, showing humility, helplessness and demonstrating how powerless people are in front of Allah.\n\nAl-Waleed ibn ‘Uqbah, who was the governor of Madinah, sent me to ask Ibn ‘Abbaas about the prayer of the Messenger of Allah (ﷺ) for rain (istisqa’).\n\nHe said: The Messenger of Allah (ﷺ) went out wearing modest clothes, walking humbly and beseeching Allah, until he reached the prayer place, where he ascended the minbar, but he did not give a khutbah like this khutbah of yours; rather he continued to offer supplication (du‘aa’), beseech Allah and recite takbeer, then he prayed two rak‘ahs as he used to pray at Eid.\n\n[Abu Dawood (1165), at-Tirmidhi (558), an-Nasaa’i (1506) and Ibn Maajah (1266)]",
+      },
+    ],
+  },
+  {
+    id: 57,
+    released: true,
+    timeOfRelease: "2025-01-09T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which Prayer should one perform when they are uncertain of a decision?",
+        options: ["Salat Al Eid (Prayer of Eid)", "Salat Al Istishara (Prayer of Advice)", "Salat Al Istikharah (Prayer of Seeking Guidance from Allah)", "Salat Al Witr (Witr Prayer)"],
+        correctAnswerIndex: [2],
+        explanation:
+          "On the authority of Jabir ibn Abdullah (RA), he said:\n\nThe Messenger of Allah (ﷺ) used to teach us Istikhara (prayer of seeking guidance from Allah) in all matters, just as he would teach us a surah (chapter) from the Qur’an. He would say:\n\n**“When one of you is considering a matter, let him pray two rak’ahs (units of prayer) that are not obligatory, and then say:**\n\n‘O Allah, I seek Your guidance through Your knowledge, and I seek ability through Your power, and I ask You from Your great bounty. For You are capable, and I am not. You know, and I do not, and You are the Knower of the unseen. O Allah, if You know that this matter is good for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then decree it for me, make it easy for me, and bless it for me. And if You know that this matter is bad for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then turn it away from me, and turn me away from it, and decree for me what is good wherever it may be, and make me content with it.’\n\nThe Prophet (peace and blessings be upon him) added, ‘And let him mention his need.’”\n\n*(Reported in Sahih al-Bukhari, Hadith 1166)*\n\n**Transliteration of Duaa Al Istikharah:**\n\nAllāhumma innī astakheeruka bi ‘ilmika wa astaqdiruka bi qudratika wa as’aluka min faḍlika al-‘aẓīm, fa’innaka taqdiru wa lā aqdir, wa ta‘lamu wa lā a‘lam, wa anta ‘allām al-ghuyūb. Allāhumma in kunta ta‘lamu anna hādhā al-amr khayrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faqdurhu lī wa yassirhu lī thumma bārik lī fīhi. Wa in kunta ta‘lamu anna hādhā al-amr sharrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faṣrifhu ‘annī waṣrifnī ‘anhu waqdur lī al-khayr ḥaythu kāna thumma arḍinī bih.\n\nWayusammī ḥājatahu\n\n(Then mention your specific need).",
+      },
+      {
+        question: "How many Rak’aas (units of prayer) are sunnah for Salat Al Istikharah (prayer of guidance from Allah)?",
+        options: ["1", "2", "4", "6"],
+        correctAnswerIndex: [1],
+        explanation:
+          "The Messenger of Allah (ﷺ): ‘If any one of you is deliberating about a decision he has to make, then let him pray two rak`ahs of non-obligatory prayer…’ *(Reported in Sahih al-Bukhari, Hadith 1166)*",
+      },
+      {
+        question: "If you are deciding on whether to stop doing a sin, you should pray Istikharah (Prayer of guidance from Allah) first.",
+        options: ["True", "False"],
+        correctAnswerIndex: [1],
+        explanation: "The question of whether to quit a sin or not has a clear answer. There is no need to pray Istikharah, you know what to do.",
+      },
+      {
+        question: "It is not mustahab (recommended) to consult people before praying Istikharah (Prayer of Seeking Counsel).",
+        options: ["True", "False"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Al-Nawawi said: “It is mustahab, before praying Istikharah, to consult someone whom you know is sincere, caring and has experience, and who is trustworthy with regard to his religious commitment and knowledge. Allah says (interpretation of the meaning): 'and consult them in the affairs' [Al ‘Imran 3:159].”",
+      },
+      {
+        question: "It is not mustahab (recommended) to consult people before praying Istikharah (Prayer of Seeking Counsel).",
+        options: ["True", "False"],
+        correctAnswerIndex: [1],
+        explanation:
+          "Al-Nawawi said: “It is mustahab, before praying Istikharah, to consult someone whom you know is sincere, caring and has experience, and who is trustworthy with regard to his religious commitment and knowledge. Allah says (interpretation of the meaning): 'and consult them in the affairs' [Al ‘Imran 3:159].”",
       },
     ],
   },
