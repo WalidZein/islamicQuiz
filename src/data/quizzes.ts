@@ -2773,6 +2773,60 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 58,
+    released: true,
+    timeOfRelease: "2025-01-10T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What happens if you don’t mention Allah’s name when you enter your house?",
+        options: ["You will be instantly harmed", "Shaytan (devil) will enter with you", "Shaytan will stay in the house for 3 days", "Nothing"],
+        correctAnswerIndex: [1],
+        explanation:
+          "The Prophet (ﷺ) said: 'When a man enters his house, and mentions Allah when he enters and when he eats, the Shaytan says: ‘You have no place to stay and no dinner.’ But if he enters and does not mention Allah when he enters, the Shaytan says, ‘You have found a place to stay.’ And if he does not mention Allah when he eats, he says: ‘You have found a place to stay and dinner.’'\n\n [Muslim, 2018]",
+      },
+
+      {
+        question: "When you go to bed, reciting which surah/aya will appoint you a guard from any shaytaan (Devil)?",
+        options: ["Surah Fatiha", "Surah Mulk", "Ayat Al Kursi", "Last two verses of Surah Baqarah", "Surah Ikhlas"],
+        correctAnswerIndex: [2],
+        explanation:
+          "Prophet Muhammad (ﷺ) said: 'When you go to your bed, recite Ayat Al-Kursi, for there will remain with you a guardian from Allah, and no devil will approach you, until morning comes.'\n\n [Al-Bukhari, 2311]",
+      },
+      {
+        question: "what should one say when undressing to cover their private parts from the Jinn?",
+        options: [
+          "بِسْمِ اللَّهِ \n(In the name of Allah)",
+          "أَسْتَغْفِرُ اللَّهَ \n(I seek forgiveness from Allah)",
+          "أَعُوذُ بِاللَّهِ \n(I seek refuge with Allah)",
+          "أَعُوذُ بِاللَّهِ مِنَ الْخُبْثِ وَالْخَبَائِثِ \n(I seek refuge with Allah from the male and female devils)",
+        ],
+        correctAnswerIndex: [0],
+        explanation:
+          "The Messenger of Allah ﷺ said: 'A screen will be placed between the eyes of the jinn and the ‘awrah (private parts) of the sons of Adam when one of them enters the toilet, if he says ‘Bismillaah (in the name of Allah).’\n (Classed as Sahih by Al-Albaani in Saheeh al-Tirmidhi, 496).\n\n It is recommended to say Bismillah not only when entering the bathroom but also whenever undressing, even in private spaces, to ensure protection from the Jinn.",
+      },
+      {
+        question: "What is the (mustahaab) recommended Du'a to say before entering the bathroom?",
+        options: [
+          " أعوذ بالله من الشيطان الرجيم \n(I seek refuge with Allah from the accursed devil.)",
+          " أعوذ بالله من الخبث والخبائث \n(I seek refuge with Allah from the male and female devils.)",
+          " بسم الله الرحمن الرحيم \n(In the name of Allah, the Most Gracious, the Most Merciful.)",
+          " اللهم إني أسألك الجنة وأعوذ بك من النار \n(O Allah, I ask You for Paradise and seek refuge in You from the Fire.)",
+        ],
+        correctAnswerIndex: [1],
+        explanation:
+          'The Prophet Muhammad (ﷺ) instructed Muslims to say this Du\'a before entering the bathroom to seek protection from harm in such places.\n\n- Arabic: أعوذ بالله من الخبث والخبائث\n- Transliteration: A’oodhu Billahi min al-khubthi wa’l-khabaith\n- Translation: "I seek refuge with Allah from the male and female devils."\n\nThe Messenger of Allah (peace and blessings of Allah be upon him) said: “These toilets are haunted (inhabited by devils), so when anyone of you goes to the toilet let him say, ‘A’udhu Billahi min al-khubthi wa’l-khabaith (I seek refuge with Allah from the male and female devils).”\n\n (Narrated by Abu Dawud, 6; classed as sahih by al-Albani in Sahih Abi Dawud)',
+      },
+      {
+        question: "At what time during the night is it recommended to keep children indoors due to the emergence of devils?",
+        options: ["The first hour", "The last hour", "The whole night", "None of the above"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Allah's Messenger (ﷺ) said: 'When night falls (or it is evening), keep your children close to you for the devils spread out at that time. But when an hour of the night elapses, you can let them free. Close the doors and mention the Name of Allah, for Satan does not open a closed door.'\n\nA Night starts at sunset",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
