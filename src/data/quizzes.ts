@@ -2827,6 +2827,69 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 59,
+    released: true,
+    timeOfRelease: "2025-01-11T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "Which companion was known as 'Al-Farooq' (the distinguisher of truth from falsehood)?",
+        options: ["Umar ibn Al-Khattab", "Abu Bakr", "Uthman ibn Affan", "Ali ibn Abi Talib"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Umar, the second Caliph, was given the title 'Al-Farooq', which means 'the one who distinguishes between right and wrong'. This was due to his strong sense of justice and his role in spreading Islam.",
+      },
+      {
+        question: "When making duaa, what is the proper way to begin?",
+        options: ["By reciting surah Fatiha", "By reciting a random verse from the Quran", "By praising Allah and sending prayers upon the Prophet ﷺ", "By keeping silent for a moment"],
+        correctAnswerIndex: [2],
+        explanation:
+          "The Prophet ﷺ taught: “When anyone of you prays, let him start by glorifying his Lord and praising Him, then let him send blessings upon the Prophet, then let him supplicate for whatever he wishes.” (Sunan Abu Dawood, 1481).",
+      },
+      {
+        question: "Which of these companions were among the companions who protected the Prophet (ﷺ) in the battle of Uhud?",
+        options: ["Khadija bint Khuwaylid", "Aisha bint Abi Bakr", "Nusaybah bint Ka’b", "Umm Salama"],
+        correctAnswerIndex: [2],
+        explanation:
+          "Nusaybah Bint Ka'ab, also known as Umm Marah, was one of the most extraordinary women in early Islam, known for her unmatched bravery and dedication. A member of the Banu Najjar tribe from Medina, she embraced Islam with unyielding strength and became one of the two women present at the Second Pledge of Aqabah, where she vowed allegiance to the Prophet Muhammad (ﷺ). She dedicated herself to spreading Islam, particularly among the women of Medina.\n\nRole in the battle of Uhud:\nAt the beginning of the battle, she was bringing water to the thirsty fighters and tending the wounded, as the other women were doing. When the battle was going in favor of the Muslims, the archers disobeyed the command of the Prophet (ﷺ), and this turned the victory into defeat, as the Qur'an described it.\n\nAt this point, Nusaybah went forward, with her sword unsheathed and her bow in her hand, to join the small group who were standing firm with the Prophet, acting as a human shield to protect him from the arrows of the non-believers. Every time danger approached the Prophet she hastened to protect him. Mohammed (ﷺ) noticed this, and later said, \"Wherever I turned, to the left or the right, I saw her fighting for me.\"\n\nHer son 'Umarah also described what happened on that tremendous day: \"On that day, I was wounded in my left hand. A man, who seemed to be as tall as a palm tree struck me, then went away without pursuing me to finish me off. The blood began to flow copiously, so the Messenger of Allah told me, 'Bind up your wound.' My mother came to me, and she was wearing a waist-wrapper, which she had brought, for the purpose of bandaging wounds. She dressed my wound, whilst the Prophet was looking on. Then she told me, 'Get up, my son, and fight.' The Prophet said, 'Who could bear what you are putting up with, Umm 'Umarah?' The man who had struck me came by, and Mohammed said, 'This is the one who struck your son.' I intercepted him and hit him in the thigh, and he collapsed. I saw the Messenger of Allah smiling so broadly that I could see his back teeth. He said, 'You have taken your revenge, O Umm 'Umarah!' Then we struck him with our weapons until we killed him, and the Prophet said: 'Praise be to Allah, who granted you victory over him, gave you the satisfaction of taking revenge on your enemy, and let you see the vengeance for yourself.'\n\nOn that day, Nusaybah herself received many wounds whilst she was fighting the non-believers and striking at them. The Prophet saw her, and called to her son, \"Your mother! Your mother! See to her wounds, may Allah bless you and your household! Your mother has fought better than so-and-so.\" When Nusaybah heard what the Prophet said, she said, \"Pray to Allah that we may accompany you in Paradise.\" He said, \"O Allah (SWT), make them my companions in Paradise.\" She said, \"I do not care what befalls me in this world.\"",
+      },
+      {
+        question: "What are the twelve sunnah rak’ah (unit of prayer) that if prayed in a day will grant you a house in paradise?",
+        type: QuestionType.MULTI,
+        options: ["Two before Fajr", "Two before Duhr", "Four before Duhr", "Two after Duhr", "Two after Maghrib", "Two before Isha", "Two after Isha"],
+        correctAnswerIndex: [0, 2, 3, 4, 6],
+        explanation:
+          "The Messenger of Allah (ﷺ) said: ‘Whoever persists in performing twelve Rak’ah from the Sunnah, a house will be built for him in Paradise: four before the Zuhr, two Rak’ah after Zuhr, two Rak’ah after Maghrib, two Rak’ah after the ‘Isha’ and two Rak’ah before Fajr.’”",
+      },
+      {
+        question: "Which Prayer should one perform when they are uncertain of a decision?",
+        options: ["Salat Al Eid (Prayer of Eid)", "Salat Al Istishara (Prayer of Advice)", "Salat Al Istikharah (Prayer of Seeking Guidance from Allah)", "Salat Al Witr (Witr Prayer)"],
+        correctAnswerIndex: [2],
+        explanation:
+          "On the authority of Jabir ibn Abdullah (RA), he said:\n\nThe Messenger of Allah (ﷺ) used to teach us Istikhara (prayer of seeking guidance from Allah) in all matters, just as he would teach us a surah (chapter) from the Qur’an. He would say:\n\n“When one of you is considering a matter, let him pray two rak’ahs (units of prayer) that are not obligatory, and then say:\n\n‘O Allah, I seek Your guidance through Your knowledge, and I seek ability through Your power, and I ask You from Your great bounty. For You are capable, and I am not. You know, and I do not, and You are the Knower of the unseen. O Allah, if You know that this matter is good for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then decree it for me, make it easy for me, and bless it for me. And if You know that this matter is bad for me in my religion, my livelihood, and the outcome of my affairs (or he said: for my present and future affairs), then turn it away from me, and turn me away from it, and decree for me what is good wherever it may be, and make me content with it.’\n\nThe Prophet (peace and blessings be upon him) added, ‘And let him mention his need.’”\n\n[Sahih al-Bukhari, 1166]\n\nTransliteration of Duaa Al Istikharah:\n\nAllāhumma innī astakheeruka bi ‘ilmika wa astaqdiruka bi qudratika wa as’aluka min faḍlika al-‘aẓīm, fa’innaka taqdiru wa lā aqdir, wa ta‘lamu wa lā a‘lam, wa anta ‘allām al-ghuyūb. Allāhumma in kunta ta‘lamu anna hādhā al-amr khayrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faqdurhu lī wa yassirhu lī thumma bārik lī fīhi. Wa in kunta ta‘lamu anna hādhā al-amr sharrun lī fī dīnī wa ma‘āshī wa ‘āqibat amrī (aw qāla: ‘ājil amrī wa ājilihi) faṣrifhu ‘annī waṣrifnī ‘anhu waqdur lī al-khayr ḥaythu kāna thumma arḍinī bih.\n\nWayusammī ḥājatahu\n\n(Then mention your specific need).",
+      },
+      {
+        question: "What is the (mustahaab) recommended Du'a to say before entering the bathroom?",
+        options: [
+          " أعوذ بالله من الشيطان الرجيم \n(I seek refuge with Allah from the accursed devil.)",
+          " أعوذ بالله من الخبث والخبائث \n(I seek refuge with Allah from the male and female devils.)",
+          " بسم الله الرحمن الرحيم \n(In the name of Allah, the Most Gracious, the Most Merciful.)",
+          " اللهم إني أسألك الجنة وأعوذ بك من النار \n(O Allah, I ask You for Paradise and seek refuge in You from the Fire.)",
+        ],
+        correctAnswerIndex: [1],
+        explanation:
+          'The Prophet Muhammad (ﷺ) instructed Muslims to say this Du\'a before entering the bathroom to seek protection from harm in such places.\n\n- Arabic: أعوذ بالله من الخبث والخبائث\n- Transliteration: A’oodhu Billahi min al-khubthi wa’l-khabaith\n- Translation: "I seek refuge with Allah from the male and female devils."\n\nThe Messenger of Allah (peace and blessings of Allah be upon him) said: “These toilets are haunted (inhabited by devils), so when anyone of you goes to the toilet let him say, ‘A’udhu Billahi min al-khubthi wa’l-khabaith (I seek refuge with Allah from the male and female devils).”\n\n (Narrated by Abu Dawud, 6; classed as sahih by al-Albani in Sahih Abi Dawud)',
+      },
+      {
+        question: "It is mustahab (recommended) to separate between the obligatory and naafil (Sunnah) prayers by speaking or moving to another spot.",
+        options: ["True", "False"],
+        correctAnswerIndex: [0],
+        explanation:
+          "The best way of doing so is by moving to offer the naafil prayer at home, because the best prayer a man can offer is a prayer that he offers at home, apart from the obligatory prayers, as was narrated in a saheeh report from the Prophet ﷺ. The evidence for the separation mentioned is the report narrated by Muslim in his Saheeh (1463) from Mu‘aawiyah (RA) who said:\n When you have prayed Jumu'ah, do not follow it immediately with another prayer until you speak or leave (the mosque), because the Messenger of Allah ﷺ instructed us to do that, not to follow one prayer immediately with another until we spoke or left (the mosque).",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
