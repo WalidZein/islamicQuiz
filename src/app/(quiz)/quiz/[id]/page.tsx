@@ -1,8 +1,8 @@
 // app/quiz/[id]/page.tsx
 
 import { Metadata } from 'next';
-import quizzes from '../../../data/quizzes';
-import QuizPageClient from '../../components/QuizPageClient';
+import quizzes from '../../../../data/quizzes';
+import QuizPageClient from '../../../components/QuizPageClient';
 import { isQuizAvailable } from '@/utils/quizUtils';
 import { notFound } from 'next/navigation';
 
