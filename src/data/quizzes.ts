@@ -2890,6 +2890,57 @@ const quizzes: Quiz[] = [
       },
     ],
   },
+  {
+    id: 60,
+    released: true,
+    timeOfRelease: "2025-01-12T13:00:00Z",
+    seasonId: 2,
+    questions: [
+      {
+        question: "What are the criteria that your actions are judged by?",
+        type: QuestionType.MULTI,
+        options: [
+          "Your intention (Niyyah)",
+          "Your judgment of others' actions",
+          "How they make you feel",
+          "Whether they align with the authentic Sunnah (Mutāba'ah)",
+          "The reward or punishment you expect to receive from others",
+        ],
+        correctAnswerIndex: [0, 3],
+        explanation:
+          "The two key criteria for judging actions in Islam are intention (niyyah) and alignment with the Sunnah (mutāba'ah):\n\n1. Intention (Niyyah):\n   The Prophet Muhammad (ﷺ) said: 'Actions are judged by intentions....' [Bukhari & Muslim]\n\n This emphasizes that actions are only accepted when done sincerely for the sake of Allah.\n\n2. Alignment with Sunnah (Mutāba'ah):\n   The Prophet (ﷺ) also said: 'Whoever introduces into this matter of ours (the religion) something that does not belong to it, will have it rejected.' [Bukhari & Muslim] This highlights the importance of ensuring actions conform to the authentic teachings and practices of Islam.",
+      },
+      {
+        question: "What is your intention supposed to be when performing any action in Islam?",
+        type: QuestionType.MULTI,
+        options: [
+          "To be for the sake of Allah (SWT)",
+          "To impress others or gain their praise",
+          "To help other people",
+          "To achieve worldly success or fame",
+          "To show off your good deeds",
+          "To make the world a better place",
+        ],
+        correctAnswerIndex: [0],
+        explanation:
+          "In Islam, the intention (niyyah) must be purely for the sake of Allah (SWT) and align with the Qur'an and Sunnah. Actions performed for worldly recognition, fame, or praise are not accepted by Allah.\n\n The Prophet Muhammad (ﷺ) said: 'Actions are according to intentions, and everyone will get what was intended. Whoever migrates with an intention for Allah and His messenger, the migration will be for the sake of Allah and his Messenger. And whoever migrates for worldly gain or to marry a woman, then his migration will be for the sake of whatever he migrated for.'' [Bukhari & Muslim] ",
+      },
+      {
+        question: "Who are the first three to enter hellfire?",
+        options: ["A Martyr (Shaheed), A Scholar, A wealthy man", "A Liar, A Thief, A Tyrant", "A Liar, An Adulterer (Zany), A Killer", "A Gambler, A Slanderer, An Unjust Judge"],
+        correctAnswerIndex: [0],
+        explanation:
+          "Messenger of Allah (ﷺ) said:\n\n\"The first to be judged on the Day of Resurrection will be a man who had died as a martyr. He will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nThen He will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I fought for Your Cause till I was martyred.'\n\nAllah will say: 'You have lied. You fought so that people might call you courageous; and they have done so.'\n\nCommand will then be issued about him and he will be dragged on his face and thrown into Hell.\n\nNext a man who had acquired and imparted knowledge and read the Qur'an will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nThen He will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I acquired knowledge and taught it, and read the Qur'an for Your sake.'\n\nAllah will say to him: 'You have lied. You acquired knowledge so that people might call you a learned (man), and you read the Qur'an so that they might call you a reciter, and they have done so.'\n\nCommand will then be issued about him, and he will be dragged on his face and thrown into Hell.\n\nNext a man whom Allah had made affluent and to whom Allah had given plenty of wealth will be brought forward. Allah will remind him of the favours He had bestowed upon him and the man will acknowledge them.\n\nHe will ask him: 'What did you do to express gratitude for it?'\n\nThe man will reply: 'I did not neglect any of the ways You liked wealth to be spent liberally for Your sake.'\n\nAllah will say to him: 'You have lied. You did it so that people might call you generous, and they have done so.'\n\nCommand will then be issued about him and he will be dragged on his face and thrown into Hell.\"\n\n(Source: Sahih Muslim)",
+      },
+      {
+        question: "To maintain good intentions (niyyah) and sincerity (ikhlas), you should always try to do your actions privately.",
+        options: ["True", "False"],
+        correctAnswerIndex: [1],
+        explanation:
+          "The most important factor in maintaining ikhlas (sincerity) is your intention (niyyah). Whether an action is done privately or publicly is secondary to ensuring that the action is performed for the sake of Allah alone.\n\n Allah says in the Quran: 'Those who spend their wealth in charity day and night, secretly and openly—their reward is with their Lord, and there will be no fear for them, nor will they grieve.' \n[2:274]",
+      },
+    ],
+  },
 ];
 
 export default quizzes;
