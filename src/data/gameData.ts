@@ -7,7 +7,7 @@ import { ConnectionsGameConfig, ConnectionsGameData } from "@/types/connections"
 export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   {
     id: "1",
-    releaseTime: "2025-01-09T13:00:00Z",
+    releaseTime: "2025-01-13T13:00:00Z",
     groups: [
       {
         category: "Prophets mentioned in Quran",
@@ -20,13 +20,13 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Medium" as const,
       },
       {
-        category: "Pillars of Islam",
-        words: ["Shahada", "Salah", "Zakat", "Sawm"],
+        category: "Angels",
+        words: ["Israfil", "Azrael", "Jibril", "Malik Al-Mawt"],
         difficulty: "Hard" as const,
       },
       {
-        category: "Books of Allah",
-        words: ["Quran", "Injeel", "Tawrat", "Zabur"],
+        category: "Rivers in Paradise",
+        words: ["Kawthar", "Kafur", "Tasnim", "Salsabil"],
         difficulty: "Very Hard" as const,
       },
     ],
