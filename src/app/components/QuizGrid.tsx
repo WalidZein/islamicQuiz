@@ -91,7 +91,7 @@ export default function QuizGrid({ seasonId, mostRecentQuizAtTop = true }: QuizG
 
     const handleCloseAnnouncement = () => {
         setShowAnnouncement(false);
-        localStorage.setItem('season2AnnouncementDismissed', 'true');
+        localStorage.setItem('season3AnnouncementDismissed', 'true');
     };
 
     const handleCtaClick = () => {
