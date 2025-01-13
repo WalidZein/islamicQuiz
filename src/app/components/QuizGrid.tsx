@@ -5,7 +5,6 @@ import { QuizStatus } from "@/types/quiz";
 import { seasons } from '@/data/seasons';
 import { getQuizzesBySeason } from "@/utils/seasonUtils";
 import { Quiz } from "@/types/quiz";
-import { getCurrentSeason } from "@/utils/seasonUtils";
 import { getUserSettings } from "@/utils/userManager";
 
 import { useEffect, useState } from "react";
@@ -13,7 +12,12 @@ import AnnouncementPopup from "./AnnouncementPopup";
 import QuizCard from "./QuizCard";
 import { isQuizLocked } from "@/utils/quizUtils";
 
-export default function QuizGrid() {
+interface QuizGridProps {
+    seasonId: number;
+    mostRecentQuizAtTop?: boolean;
+}
+
+export default function QuizGrid({ seasonId, mostRecentQuizAtTop = true }: QuizGridProps) {
     const [completedQuizzes, setCompletedQuizzes] = useState<{ [key: number]: QuizStatus }>({});
     const [serverTime, setServerTime] = useState<string | null>(null);
     const [availableQuizzes, setAvailableQuizzes] = useState<Quiz[]>([]);
@@ -24,8 +28,6 @@ export default function QuizGrid() {
 
     useEffect(() => {
         const initializePage = async () => {
-
-
             // Get server time
             const timeResponse = await fetch('/api/time');
             const { currentTime } = await timeResponse.json();
@@ -37,8 +39,7 @@ export default function QuizGrid() {
             const quizStatuses = await quizStatusResponse.json();
             setCompletedQuizzes(quizStatuses);
 
-
-            const seasonQuizzes = getQuizzesBySeason(quizzes, getCurrentSeason(seasons, currentTime || "")?.id || -1);
+            const seasonQuizzes = getQuizzesBySeason(quizzes, seasonId);
             // Filter available quizzes based on server time
             const serverDate = new Date(currentTime);
             const filtered = seasonQuizzes.filter((quiz: Quiz) => {
@@ -57,8 +58,7 @@ export default function QuizGrid() {
         };
 
         initializePage();
-
-    }, []);
+    }, [seasonId]); // Re-run when seasonId changes
 
     useEffect(() => {
         const userSettings = getUserSettings();
@@ -70,12 +70,12 @@ export default function QuizGrid() {
                 }
             })
             .catch(console.error);
-    }, []);
+    }, [availableQuizzes]);
 
     useEffect(() => {
         setLockStatePerQuiz(availableQuizzes.reduce((acc, quiz: Quiz) => ({
             ...acc,
-            [quiz.id]: isQuizLocked(quiz, availableQuizzes, completedQuizzes[quiz.id]?.completed, userData, false)
+            [quiz.id]: isQuizLocked(quiz, quizzes, completedQuizzes[quiz.id]?.completed, userData, false)
         }), {}));
     }, [availableQuizzes, completedQuizzes, userData]);
 
@@ -129,7 +129,7 @@ export default function QuizGrid() {
                 </div>
             )}
             {/* Latest Quiz - only show if not completed */}
-            {availableQuizzes.length > 0 && !isLoading && (
+            {(availableQuizzes.length > 0 && mostRecentQuizAtTop) && !isLoading && (
                 <>
                     {!completedQuizzes[availableQuizzes[availableQuizzes.length - 1].id]?.completed && (
                         <div className="mb-8">
@@ -157,7 +157,5 @@ export default function QuizGrid() {
                 ))}
             </div>
         </>
-    )
-
-
+    );
 }
