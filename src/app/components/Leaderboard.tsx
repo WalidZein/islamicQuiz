@@ -5,7 +5,7 @@ import { LeaderboardEntry, UserSettings } from '@/types/leaderboard';
 import { getUserSettings, updateUserSettings, setCachedLeaderboardData, getNameFromLeaderboard } from '@/utils/userManager';
 import { generateThemedName } from '@/utils/nameGenerator';
 
-const leaderboardOn = true;
+const leaderboardOn = false;
 export default function Leaderboard() {
     const [leaderboard, setLeaderboard] = useState<LeaderboardEntry[]>([]);
     const [userSettings, setUserSettings] = useState<UserSettings | null>(null);

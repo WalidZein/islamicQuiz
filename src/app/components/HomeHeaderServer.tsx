@@ -33,14 +33,6 @@ export default function HomeHeaderServer() {
                     </a>
                 </Card>
             </div>
-            <div className=' pt-8'>
-                <SeasonBanner
-                    seasons={seasons}
-                    currentQuizNumber={31}
-                    totalQuizzes={60}
-                    time={new Date().toISOString()}
-                />
-            </div>
         </div>
 
     </div>)

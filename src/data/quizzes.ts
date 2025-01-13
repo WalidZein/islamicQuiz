@@ -28,8 +28,8 @@ const quizzes: Quiz[] = [
           "Khadijah (may Allah be pleased with her) was the first woman to believe in the Prophet (peace be upon him). She was also the first person to hear revealed verses from the mouth of the Messenger of Allah.",
       },
       {
-        question: "Which surah will intercede for it's companion on the day of judgement?",
-        options: ["Surah Yasin", "Surah Mulk", "Surah Kawthar", "Surah Fajr"],
+        question: "Which surah will intercede for it's companion on the day of judgement?(Correction: Surah Baqarah is one of them. What is the other one?)",
+        options: ["Surah Yasin", "Surah Mulk", "Surah Insan", "Surah Fajr"],
         correctAnswerIndex: [1],
         explanation:
           'Jābir ibn Abdullāh reports that the Messenger of Allah ﷺ would not sleep until He had recited Sūrah as-Sajdah (32) and Sūrah al-Mulk (67).\n\n It was narrated from Abu Hurairah that the Prophet (ﷺ) said:\n "There is a surah in the Qur\'an, with thirty verses, which will intercede for its companion (the one who recites it) until he is forgiven: Tabarakal-ladhi bi yadihil mulk (Blessed is He in Whose Hand is the Dominion)."',
