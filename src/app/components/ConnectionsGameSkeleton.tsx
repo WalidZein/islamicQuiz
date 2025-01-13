@@ -8,11 +8,7 @@ export default function ConnectionsGameSkeleton() {
                 <div className="w-32 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
             </div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-5"
-            >
+            <div className="w-full max-w-2xl bg-gray-50 dark:bg-gray-800 dark:bg-opacity-90 rounded-lg shadow-md p-5">
                 {/* Header skeleton */}
                 <div className="flex justify-between items-center mb-3">
                     <div className="w-48 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
@@ -49,7 +45,7 @@ export default function ConnectionsGameSkeleton() {
                     <div className="w-24 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
                     <div className="flex-1 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 } 
