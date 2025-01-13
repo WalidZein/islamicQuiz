@@ -19,6 +19,6 @@ export const seasons: Season[] = [
     name: "Season 2",
     startDate: "2024-12-14T13:00:00Z",
     endDate: "2025-08-31T23:59:59Z",
-    isActive: true,
+    isActive: false,
   },
 ];

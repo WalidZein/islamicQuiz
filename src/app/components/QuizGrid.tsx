@@ -49,7 +49,7 @@ export default function QuizGrid() {
             setAvailableQuizzes(filtered);
 
             // Check if announcement has been dismissed
-            const announcementDismissed = localStorage.getItem('season2AnnouncementDismissed');
+            const announcementDismissed = localStorage.getItem('season3AnnouncementDismissed');
             if (!announcementDismissed) {
                 setShowAnnouncement(true);
             }
@@ -100,25 +100,27 @@ export default function QuizGrid() {
 
     return (
         <>
-            {/* {showAnnouncement && (
+            {showAnnouncement && (
                 <AnnouncementPopup
-                    title="Season 2 in Development"
+                    title="Season 3 in Development"
                     onClose={handleCloseAnnouncement}
                     ctaText="Join WhatsApp Community"
                     onCtaClick={handleCtaClick}
                 >
                     <div className="space-y-4">
                         <p>
-                            We're excited to announce that Season 2 of Islamic Quiz is currently in development!
-                            Get ready for new questions, improved features, and an even better learning experience. Quizzes will resume in a week!
+                            We're excited to announce that Season 3 of Islamic Quiz is currently in development!
+                            Get ready for new experience. Quizzes will resume soon!
+
                         </p>
+                        <p>For now, you can play our daily Islamic Connections game <a href="/connections" className="underline text-blue-500 hover:text-blue-200">here</a></p>
                         <p>
                             Join our WhatsApp community to stay updated on the latest developments, provide feedback,
                             and connect with fellow learners.
                         </p>
                     </div>
                 </AnnouncementPopup>
-            )} */}
+            )}
             {isLoading && (
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[1, 2, 3, 4].map((placeholder) => (
