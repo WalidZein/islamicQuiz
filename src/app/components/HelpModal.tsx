@@ -43,7 +43,7 @@ export default function HelpModal({ isOpen, onClose }: HelpModalProps) {
                             <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Category Examples:</h3>
                             <div className="space-y-2">
                                 <p className="text-sm md:text-base"><span className="font-semibold">PROPHETS:</span> Musa, Ibrahim, Isa, Nuh</p>
-                                <p className="text-sm md:text-base"><span className="font-semibold">PILLARS OF ISLAM:</span> Shahada, Salah, Zakat, Sawm</p>
+                                <p className="text-sm md:text-base"><span className="font-semibold">PILLARS OF ISLAM:</span> Faith, Prayer, Zakat, Fasting</p>
                             </div>
                         </div>
 
