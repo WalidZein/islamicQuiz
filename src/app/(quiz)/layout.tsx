@@ -1,9 +1,9 @@
-import './globals.css';
+import '../globals.css';
 import Script from 'next/script';
-import GoogleAnalytics from './components/GoogleAnalytics';
+import GoogleAnalytics from '../components/GoogleAnalytics';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
-import Header from './components/Header';
+import Header from '../components/Header';
 
 export const metadata: Metadata = {
   title: 'Islamic Quiz',
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-S3WE9N5R25"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -32,7 +32,7 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
   
-            gtag('config', 'G-S3WE9N5R25');
+            gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
           `}
         </Script>
       </head>

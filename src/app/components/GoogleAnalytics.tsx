@@ -12,6 +12,7 @@ export default function GoogleAnalytics() {
         //@ts-expect-error
         window.gtag('event', 'page_view', {
             page_path: url,
+            measurement_id: process.env.GOOGLE_ANALYTICS_ID
         });
     }, [pathname, searchParams]);
     return null;

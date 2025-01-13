@@ -273,3 +273,69 @@ export async function getQuizSubmissions(userId: string, quizId?: number): Promi
     submissionDate: submission.submission_date,
   }));
 }
+
+/**
+ * Retrieves a user's submission for a specific connections game
+ * @param userId - The user's unique identifier
+ * @param gameId - The game's unique identifier
+ * @returns The user's submission data or null if not found
+ */
+export async function getConnectionsGameSubmission(userId: string, gameId: string) {
+  const db = await getDatabase();
+  const submission = await db.get(
+    `SELECT user_selections, submission_time, game_completed, strikes
+         FROM connection_game_submissions
+         WHERE user_id = ? AND game_id = ?`,
+    [userId, gameId]
+  );
+
+  if (!submission) return null;
+
+  return {
+    attempts: JSON.parse(submission.user_selections),
+    submissionTime: submission.submission_time,
+    completed: submission.game_completed === 1,
+    strikes: submission.strikes,
+  };
+}
+
+/**
+ * Creates or updates a user's submission for a connections game
+ * @param data - The submission data
+ * @returns True if the operation was successful
+ */
+export async function saveConnectionsGameSubmission(data: { userId: string; gameId: string; attempts: string[][]; completed: boolean; strikes: number }) {
+  const db = await getDatabase();
+  const submissionTime = new Date().toISOString();
+
+  try {
+    // Check if submission exists
+    const existing = await getConnectionsGameSubmission(data.userId, data.gameId);
+
+    if (existing) {
+      // Update existing submission
+      await db.run(
+        `UPDATE connection_game_submissions
+                 SET user_selections = ?,
+                     submission_time = ?,
+                     game_completed = ?,
+                     strikes = ?
+                 WHERE user_id = ? AND game_id = ?`,
+        [JSON.stringify(data.attempts), submissionTime, data.completed ? 1 : 0, data.strikes, data.userId, data.gameId]
+      );
+    } else {
+      // Create new submission
+      await db.run(
+        `INSERT INTO connection_game_submissions
+                 (user_id, game_id, user_selections, submission_time, game_completed, strikes)
+                 VALUES (?, ?, ?, ?, ?, ?)`,
+        [data.userId, data.gameId, JSON.stringify(data.attempts), submissionTime, data.completed ? 1 : 0, data.strikes]
+      );
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error saving connections game submission:", error);
+    return false;
+  }
+}
