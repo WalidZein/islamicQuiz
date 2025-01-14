@@ -31,6 +31,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "2",
+    releaseTime: "2025-01-14T13:00:00Z",
+    groups: [
+      {
+        category: "Islamic Practices",
+        words: ["Salah", "Zakat", "Hajj", "Sadaqah"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Islamic Months",
+        words: ["Ramadan", "Shawwal", "Jumada", "Dhul-Hijjah"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Things you do in Ramadan",
+        words: ["Sawm", "Suhoor", "Iftar", "Taraweeh"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Significant Islamic Days",
+        words: ["Eid al-Fitr", "Eid al-Adha", "Laylat al-Qadr", "Ashura"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
