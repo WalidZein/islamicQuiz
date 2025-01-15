@@ -57,6 +57,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "3",
+    releaseTime: "2025-01-15T13:00:00Z",
+    groups: [
+      {
+        category: "Foods Mentioned in the Quran",
+        words: ["Dates", "Olives", "Honey", "Grapes"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Names of the Prophet Muhammad",
+        words: ["Muhammad", "Ahmad", "Mahmoud", "Mustafa"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Battles in Islam",
+        words: ["Badr", "Uhud", "Khandaq", "Hunayn"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Islamic Scholars",
+        words: ["Bukhari", "Abu Hanifa", "Al-Ghazali", "Ibn Taymiyyah"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
