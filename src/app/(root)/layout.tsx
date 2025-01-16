@@ -7,9 +7,9 @@ import Header from '../components/Header';
 import { FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: 'Islamic Quiz',
-  description: 'Daily quizzes on Islam',
-  keywords: ["Islam", "Quiz", "Islamic", "Muslims"],
+  title: 'The Muslim Box',
+  description: 'Daily Islamic Games',
+  keywords: ["Islam", "Quiz", "Islamic", "Muslims", "Games", "Connections"],
   openGraph: {
     images: process.env.WEB_URL + "/ogImage.png",
   }
