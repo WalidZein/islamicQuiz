@@ -83,6 +83,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "4",
+    releaseTime: "2025-01-16T13:00:00Z",
+    groups: [
+      {
+        category: "Forms of Charity",
+        words: ["Zakat", "Kindness", "Smile", "Volunteer"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Prayers in the day",
+        words: ["Jummah", "Asr", "Fajr", "Duhur"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Prayers in the Night",
+        words: ["Taraweeh", "Qiam", "Tahjud", "Witr"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Surahs started with الحمد لله",
+        words: ["Al Kahf", "Al fatiha", "Saba'", "Fatir"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
