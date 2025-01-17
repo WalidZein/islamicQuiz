@@ -109,6 +109,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "5",
+    releaseTime: "2025-01-17T13:00:00Z",
+    groups: [
+      {
+        category: "Colors Mentioned in the Quran",
+        words: ["Yellow", "White", "Green", "Black"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Things Prophet Solomon Ruled Over",
+        words: ["Wind", "Jinn", "Humans", "Animals"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "The Best Women of Paradise",
+        words: ["Khadija", "Asiyah", "Fatima", "Maryam"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Wives of the Prophet Muhammad",
+        words: ["Umm Habibah", "Aisha", "Zaynab", "Umm Salamah"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 

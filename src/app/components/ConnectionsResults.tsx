@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ConnectionsGameConfig, ConnectionsGameSubmissionData } from '@/types/connections';
 import { shareContent, trackShare } from '@/utils/shareUtils';
 import { getUserSettings } from '@/utils/userManager';
+import JSConfetti from 'js-confetti';
 
 interface ConnectionsResultsProps {
     game: ConnectionsGameConfig;
@@ -23,7 +24,7 @@ const DIFFICULTY_EMOJIS = {
 export default function ConnectionsResults({ game, submission, isOpen, onClose }: ConnectionsResultsProps) {
     const [timeLeft, setTimeLeft] = useState('');
     const [resultText, setResultText] = useState('');
-
+    const [confetti, setConfetti] = useState<JSConfetti | null>(null);
     useEffect(() => {
         const puzzleNumber = game.id;
         const emojiRows = submission.attempts.map(attempt => {
@@ -64,6 +65,29 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
         const interval = setInterval(updateTimer, 1000);
         return () => clearInterval(interval);
     }, [game.releaseTime]);
+
+    // Initialize confetti on client side
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            setConfetti(new JSConfetti());
+        }
+    }, []);
+
+    // Trigger confetti when quiz is completed with perfect score
+    useEffect(() => {
+        if (submission.completed && submission.strikes < 4 && confetti) {
+            confetti.addConfetti({
+                confettiColors: [
+                    '#22c55e', // green-500
+                    '#3b82f6', // blue-500
+                    '#f59e0b', // amber-500
+                    '#ef4444', // red-500
+                    '#8b5cf6', // violet-500
+                ],
+                confettiNumber: 100,
+            });
+        }
+    }, [submission.completed, submission.strikes, confetti]);
 
     const handleCopyResults = () => {
         navigator.clipboard.writeText(resultText);
