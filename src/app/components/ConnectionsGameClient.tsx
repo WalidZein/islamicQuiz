@@ -11,6 +11,7 @@ import ConnectionsResults from './ConnectionsResults';
 import { Textfit } from 'react-textfit';
 import HelpModal from './HelpModal';
 import ConnectionsGameSkeleton from './ConnectionsGameSkeleton';
+import { Shuffle } from 'lucide-react';
 
 export const DIFFICULTY_COLORS = {
     'Easy': 'bg-yellow-400 dark:bg-yellow-700 ',
@@ -317,6 +318,11 @@ export default function ConnectionsGameClient() {
                         <div className="flex gap-2">
                             <button
                                 onClick={shuffleWords}
+                                className="py-2 px-4 flex flex-row items-center gap-1 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                            >
+                               <span className='text-sm'> <Shuffle size={16}/></span> Shuffle
+                            </button>
+
                                 className="py-2 px-4 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                             >
                                 🔄 Shuffle
