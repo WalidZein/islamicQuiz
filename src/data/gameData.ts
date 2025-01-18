@@ -135,6 +135,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "6",
+    releaseTime: "2025-01-18T13:00:00Z",
+    groups: [
+      {
+        category: "Elements from the Life of Prophet Yusuf",
+        words: ["Dream", "Well", "Prison", "Brothers"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Elements from the Life of Prophet Musa",
+        words: ["Sea", "Staff", "Egypt", "Pharaoh"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Elements from the Life of Prophet Muhammad",
+        words: ["Isra", "Quran", "Madinah", "Mecca"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Elements from the life of Prophet Isa",
+        words: ["Blindness", "Ascension", "Birds", "Return"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
