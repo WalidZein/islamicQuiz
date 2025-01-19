@@ -320,14 +320,15 @@ export default function ConnectionsGameClient() {
                                 onClick={shuffleWords}
                                 className="py-2 px-4 flex flex-row items-center gap-1 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                             >
-                               <span className='text-sm'> <Shuffle size={16}/></span> Shuffle
+                                <span className='text-sm'> <Shuffle size={16} /></span> Shuffle
                             </button>
 
                             <button
                                 onClick={unselectAllWords}
-                                className="py-2 px-4 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                                disabled={gameState.selectedWords.length === 0}
+                                className="py-2 px-4 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50"
                             >
-                                Unselect all
+                                Deselect All
                             </button>
 
                             <button
