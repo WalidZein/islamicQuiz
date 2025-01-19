@@ -43,6 +43,7 @@ export default function ConnectionsGameSkeleton() {
                 {/* Buttons skeleton */}
                 <div className="flex gap-2">
                     <div className="w-24 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
+                    <div className="w-24 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
                     <div className="flex-1 h-10 bg-gray-200 dark:bg-gray-700 rounded-lg animate-pulse" />
                 </div>
             </div>

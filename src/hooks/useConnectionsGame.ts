@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
-import { ConnectionsGameConfig, ConnectionsGameState, ConnectionsGameSubmissionData, ConnectionsGroupData } from "@/types/connections";
+import {
+  ConnectionsGameConfig,
+  ConnectionsGameState,
+  ConnectionsGameSubmissionData,
+  ConnectionsGroupData,
+} from "@/types/connections";
 import { saveUserSelections } from "@/utils/userManager";
 
 const MAX_STRIKES = 4;
@@ -16,7 +21,12 @@ function reconstructGameState(
 
   attempts.forEach((attempt) => {
     // Check if this attempt matches any unsolved group
-    const matchedGroup = groups.find((group) => !solvedGroups.includes(group) && attempt.length === group.words.length && attempt.every((word) => group.words.includes(word)));
+    const matchedGroup = groups.find(
+      (group) =>
+        !solvedGroups.includes(group) &&
+        attempt.length === group.words.length &&
+        attempt.every((word) => group.words.includes(word))
+    );
 
     if (matchedGroup) {
       solvedGroups.push(matchedGroup);
@@ -45,10 +55,18 @@ export function useConnectionsGame(game: ConnectionsGameConfig | null) {
   const updateGameStateFromAttempts = (attempts: string[][]) => {
     if (!game) return;
 
-    const { solvedGroups, strikes } = reconstructGameState(attempts, game.groups);
-    const remainingWords = game.groups.flatMap((group) => group.words).filter((word) => !solvedGroups.some((group) => group.words.includes(word)));
+    const { solvedGroups, strikes } = reconstructGameState(
+      attempts,
+      game.groups
+    );
+    const remainingWords = game.groups
+      .flatMap((group) => group.words)
+      .filter(
+        (word) => !solvedGroups.some((group) => group.words.includes(word))
+      );
 
-    const isGameComplete = solvedGroups.length === game.groups.length || strikes === MAX_STRIKES;
+    const isGameComplete =
+      solvedGroups.length === game.groups.length || strikes === MAX_STRIKES;
 
     setGameState({
       selectedWords: [],
@@ -94,21 +112,50 @@ export function useConnectionsGame(game: ConnectionsGameConfig | null) {
     });
   };
 
-  const isDuplicateAttempt = (selectedWords: string[], attempts: string[][]): boolean => {
-    return attempts.some((attempt) => attempt.length === selectedWords.length && attempt.every((word) => selectedWords.includes(word)) && selectedWords.every((word) => attempt.includes(word)));
+  const unselectAllWords = () => {
+    setGameState((prev) => {
+      return {
+        ...prev,
+        selectedWords: [],
+      };
+    });
+  };
+
+  const isDuplicateAttempt = (
+    selectedWords: string[],
+    attempts: string[][]
+  ): boolean => {
+    return attempts.some(
+      (attempt) =>
+        attempt.length === selectedWords.length &&
+        attempt.every((word) => selectedWords.includes(word)) &&
+        selectedWords.every((word) => attempt.includes(word))
+    );
   };
 
   const isOneAway = (selectedWords: string[], groups: string[][]): boolean => {
     return groups.some((group) => {
-      const matchingWords = selectedWords.filter((word) => group.includes(word));
-      return matchingWords.length === 3 && selectedWords.length === 4 && group.length === 4;
+      const matchingWords = selectedWords.filter((word) =>
+        group.includes(word)
+      );
+      return (
+        matchingWords.length === 3 &&
+        selectedWords.length === 4 &&
+        group.length === 4
+      );
     });
   };
 
   const submitGuess = () => {
     if (!game || gameState.selectedWords.length !== 4) return null;
 
-    const returnValue = { success: false, isDuplicate: false, isOneAway: false, isGameWon: false, isGameLost: false };
+    const returnValue = {
+      success: false,
+      isDuplicate: false,
+      isOneAway: false,
+      isGameWon: false,
+      isGameLost: false,
+    };
 
     if (isDuplicateAttempt(gameState.selectedWords, gameState.attempts)) {
       returnValue.isDuplicate = true;
@@ -128,12 +175,18 @@ export function useConnectionsGame(game: ConnectionsGameConfig | null) {
     saveUserSelections(game.id, newAttempts);
 
     // Check if selected words form a valid category
-    const foundGroup = game.groups.find((group) => !gameState.solvedGroups.includes(group) && group.words.every((word) => gameState.selectedWords.includes(word)));
+    const foundGroup = game.groups.find(
+      (group) =>
+        !gameState.solvedGroups.includes(group) &&
+        group.words.every((word) => gameState.selectedWords.includes(word))
+    );
 
     setGameState((prev) => {
       if (foundGroup) {
         const newSolvedGroups = [...prev.solvedGroups, foundGroup];
-        const newRemainingWords = prev.remainingWords.filter((word) => !prev.selectedWords.includes(word));
+        const newRemainingWords = prev.remainingWords.filter(
+          (word) => !prev.selectedWords.includes(word)
+        );
         const isGameWon = newSolvedGroups.length === game.groups.length;
 
         return {
@@ -160,7 +213,8 @@ export function useConnectionsGame(game: ConnectionsGameConfig | null) {
     });
 
     if (foundGroup) {
-      const isGameWon = gameState.solvedGroups.length + 1 === game.groups.length;
+      const isGameWon =
+        gameState.solvedGroups.length + 1 === game.groups.length;
       returnValue.success = true;
       returnValue.isGameWon = isGameWon;
     } else {
@@ -186,6 +240,7 @@ export function useConnectionsGame(game: ConnectionsGameConfig | null) {
     selectWord,
     submitGuess,
     shuffleWords,
+    unselectAllWords,
     updateGameStateFromAttempts,
   };
 }

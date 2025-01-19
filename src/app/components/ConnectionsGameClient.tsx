@@ -11,6 +11,7 @@ import ConnectionsResults from './ConnectionsResults';
 import { Textfit } from 'react-textfit';
 import HelpModal from './HelpModal';
 import ConnectionsGameSkeleton from './ConnectionsGameSkeleton';
+import { Shuffle } from 'lucide-react';
 
 export const DIFFICULTY_COLORS = {
     'Easy': 'bg-yellow-400 dark:bg-yellow-700 ',
@@ -32,7 +33,7 @@ export default function ConnectionsGameClient() {
     const [submitResult, setSubmitResult] = useState<any>(null);
     const [showToolTip, setShowToolTip] = useState(false);
 
-    const { gameState, selectWord, submitGuess, shuffleWords, updateGameStateFromAttempts } = useConnectionsGame(game);
+    const { gameState, selectWord, submitGuess, shuffleWords, unselectAllWords, updateGameStateFromAttempts } = useConnectionsGame(game);
 
     // Load game data and check for existing submission
     useEffect(() => {
@@ -317,10 +318,18 @@ export default function ConnectionsGameClient() {
                         <div className="flex gap-2">
                             <button
                                 onClick={shuffleWords}
+                                className="py-2 px-4 flex flex-row items-center gap-1 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
+                            >
+                               <span className='text-sm'> <Shuffle size={16}/></span> Shuffle
+                            </button>
+
+                            <button
+                                onClick={unselectAllWords}
                                 className="py-2 px-4 bg-gray-500 text-white rounded-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                             >
-                                🔄 Shuffle
+                                Unselect all
                             </button>
+
                             <button
                                 onClick={handleSubmit}
                                 disabled={gameState.selectedWords.length !== 4}
