@@ -161,6 +161,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "7",
+    releaseTime: "2025-01-19T13:00:00Z",
+    groups: [
+      {
+        category: "The Rashidun Caliphs",
+        words: ["Abu Bakr", "Umar", "Uthman", "Ali"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Pillars of Faith",
+        words: ["Allah", "Angels", "Fate", "Prophets"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Uncles of the Prophet Muhammad",
+        words: ["Abu Talib", "Hamza", "Al 'abas", "Abu Lahab"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Surahs Beginning With Disconnected Letters",
+        words: ["Qalam", "Qaf", "Yasin", "Taha"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
