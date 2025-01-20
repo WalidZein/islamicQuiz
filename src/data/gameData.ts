@@ -187,6 +187,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "8",
+    releaseTime: "2025-01-20T13:00:00Z",
+    groups: [
+      {
+        category: "Pillars of Wudu",
+        words: ["Face", "Head", "Feet", "Hands"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Letter of Qalqalah (echoing)",
+        words: ["Qaf", "Daal", "Baa", "Jeem"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Animals with Surahs Named After Them ",
+        words: ["Cow", "Bee", "Spider", "Elephant"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Shapes Jinn Can Take",
+        words: ["Snakes", "Scorpions", "Camel", "Horses"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
