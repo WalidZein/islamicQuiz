@@ -244,14 +244,40 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-01-22T13:00:00Z",
     groups: [
       {
-        category: "Names of Allah Related to Forgiveness",
-        words: ["Rahman", "Rahim", "Ghafoor", "Tawab"],
+        category: "Salah Elements",
+        words: ["Fatiha", "Ruko'", "Sujood", "Tashahud"],
         difficulty: "Easy" as const,
       },
       {
+        category: "Grades of Hadith",
+        words: ["Sahih", "Hasan", "Da'eef", "Mawdu'"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Days that are Sunnah to Fast",
+        words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "It's forbidden to fast on the day of __",
+        words: ["Eid Adha", "Eid Al-Fitr", "Doubt", "Tashreeq"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "11",
+    releaseTime: "2025-01-23T13:00:00Z",
+    groups: [
+      {
         category: "Major Sins",
         words: ["Intreset", "Alcohol", "Gambling", "Shirk"],
-        difficulty: "Medium" as const,
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Days that are Sunnah to fast",
+        words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
+        difficulty: "Easy" as const,
       },
       {
         category: "Prophets Sent With Books",
