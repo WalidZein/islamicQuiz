@@ -213,6 +213,58 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "9",
+    releaseTime: "2025-01-21T13:00:00Z",
+    groups: [
+      {
+        category: "Names of Allah Related to Forgiveness",
+        words: ["Rahman", "Rahim", "Ghafoor", "Tawab"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Masjids With Bonus Praying Rewards",
+        words: ["Al Nabawi", "Al Haram", "Qiba'", "Aqsa"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Elements from Isra and Miraj",
+        words: ["Mecca", "Jerusalem", "Buraq", "Ascension"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Umayyad Caliphate",
+        words: ["Damascus", "Andalus", "Muawiyah", "Umayyad"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "10",
+    releaseTime: "2025-01-22T13:00:00Z",
+    groups: [
+      {
+        category: "Names of Allah Related to Forgiveness",
+        words: ["Rahman", "Rahim", "Ghafoor", "Tawab"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Major Sins",
+        words: ["Intreset", "Alcohol", "Gambling", "Shirk"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Prophets Sent With Books",
+        words: ["Muhammad", "Isa", "Musa", "Dawud"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Fathers of Prophets",
+        words: ["Zakariya", "Yaqub", "Ibrahim", "Isaac"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
