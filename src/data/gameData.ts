@@ -275,9 +275,9 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Easy" as const,
       },
       {
-        category: "Days that are Sunnah to fast",
-        words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
-        difficulty: "Easy" as const,
+        category: "Books of Revelation",
+        words: ["Quran", "Torah", "Psalms", "Gospel"],
+        difficulty: "Medium" as const,
       },
       {
         category: "Prophets Sent With Books",
