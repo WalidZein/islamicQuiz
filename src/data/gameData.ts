@@ -291,6 +291,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "12",
+    releaseTime: "2025-01-24T13:00:00Z",
+    groups: [
+      {
+        category: "Food & Drink in Hell",
+        words: ["Fire", "Thorns", "Flesh", "Pus"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Gates of Paradise. The gate of __",
+        words: ["Salah", "Jihad", "Hajj", "Dhikr"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Names of Hell",
+        words: ["Laza", "Saqar", "Sa'eer", "Hawiyah"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Names of Paradise",
+        words: ["Husna", "Adn", "Na'eem", "Khuld"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
