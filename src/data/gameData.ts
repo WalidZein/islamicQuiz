@@ -317,6 +317,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "13",
+    releaseTime: "2025-01-25T13:00:00Z",
+    groups: [
+      {
+        category: "Fruits in Jannah",
+        words: ["Banana", "Pomegranate", "Grapes", "Dates"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Miracles of Prophet Musa",
+        words: ["Springs", "Snake", "Hand", "Sea"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Elements from the Story of the sons of Adam",
+        words: ["Cain", "Abil", "Raven", "Sheep"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Muslim Scientists",
+        words: ["Al Jabr", "Khawarzmi", "Ibn Khaldun", "Ibn al-Haytham"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
