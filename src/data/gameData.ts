@@ -343,6 +343,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "14",
+    releaseTime: "2025-01-26T13:00:00Z",
+    groups: [
+      {
+        category: "Rivers in Jannah",
+        words: ["Wine", "Milk", "Honey", "Water"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Gradings of Actions",
+        words: ["Haram", "Halal", "Sunnah", "Mubah"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Mountains with Islamic Significance",
+        words: ["Nur", "Judi", "Uhud", "Arafat"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Prophetic Medicines",
+        words: ["Fatiha", "Cupping", "ZamZam", "Black Seed"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
