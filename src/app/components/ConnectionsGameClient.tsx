@@ -32,8 +32,39 @@ export default function ConnectionsGameClient() {
     const [showResults, setShowResults] = useState(false);
     const [submitResult, setSubmitResult] = useState<any>(null);
     const [showToolTip, setShowToolTip] = useState(false);
-
+    const [elapsedTime, setElapsedTime] = useState<number>(0);
+    const [updateSubmission, setUpdateSubmission] = useState(false);
     const { gameState, selectWord, submitGuess, shuffleWords, unselectAllWords, updateGameStateFromAttempts } = useConnectionsGame(game);
+    const [formattedTime, setFormattedTime] = useState('0:00');
+    const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
+
+    // Load elapsed time from local storage or start new timer
+    useEffect(() => {
+        if (game && (!existingSubmission || !existingSubmission.completed)) {
+            const storageKey = `connections_elapsed_time_${game.id}`;
+            const storedTime = localStorage.getItem(storageKey);
+            const startTime = storedTime ? parseInt(storedTime, 10) : 0;
+            setElapsedTime(startTime);
+
+            // Start timer
+            const timer = setInterval(() => {
+                setElapsedTime(prev => {
+                    const newTime = prev + 1;
+                    localStorage.setItem(storageKey, newTime.toString());
+                    return newTime;
+                });
+            }, 1000);
+            setTimerId(timer);
+
+            return () => {
+                clearInterval(timer);
+            };
+        }
+
+        if (existingSubmission && existingSubmission.completed && timerId) {
+            clearInterval(timerId);
+        }
+    }, [game, existingSubmission]);
 
     // Load game data and check for existing submission
     useEffect(() => {
@@ -52,7 +83,16 @@ export default function ConnectionsGameClient() {
                     );
                     if (submissionResponse.ok) {
                         const submission = await submissionResponse.json();
-                        setExistingSubmission(submission);
+                        if (submission.completed) {
+                            setExistingSubmission(submission);
+                        }
+                        if (submission.elapsedTime) {
+                            setElapsedTime(submission.elapsedTime);
+                            // Clear stored time if game was completed
+                            if (submission.completed) {
+                                localStorage.removeItem(`connections_elapsed_time_${game.id}`);
+                            }
+                        }
                     }
                 }
             } catch (error) {
@@ -92,6 +132,34 @@ export default function ConnectionsGameClient() {
         }
     }, [gameState.gameCompleted, existingSubmission])
 
+    useEffect(() => {
+        const SetSubmission = async () => {
+            if (updateSubmission && !gameState.gameCompleted) {
+                const userSettings = getUserSettings();
+                await fetch('/api/connections/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        userId: userSettings.uuid,
+                        gameId: game?.id,
+                        completed: false,
+                        strikes: MAX_STRIKES - gameState.strikes,
+                        attempts: gameState.attempts,
+                    })
+                });
+                setUpdateSubmission(false);
+            }
+        }
+        SetSubmission();
+    }, [updateSubmission]);
+
+    // Update formatted time whenever elapsed time changes
+    useEffect(() => {
+        const minutes = Math.floor(elapsedTime / 60);
+        const seconds = elapsedTime % 60;
+        setFormattedTime(`${minutes}:${seconds.toString().padStart(2, '0')}`);
+    }, [elapsedTime]);
+
     const handleWordClick = (word: string) => {
         selectWord(word);
     };
@@ -111,6 +179,7 @@ export default function ConnectionsGameClient() {
             setShake(true);
             setTimeout(() => setShake(false), 500);
         }
+        setUpdateSubmission(true);
     };
 
     const handleGameComplete = async (isWon: boolean) => {
@@ -129,12 +198,13 @@ export default function ConnectionsGameClient() {
                     completed: true,
                     strikes: MAX_STRIKES - gameState.strikes,
                     attempts: gameState.attempts,
-                    isWon
+                    elapsedTime: elapsedTime
                 })
             });
 
-            // Clear cached selections after successful submission
+            // Clear cached selections and elapsed time after successful submission
             clearUserSelections(game.id);
+            localStorage.removeItem(`connections_elapsed_time_${game.id}`);
 
             // Reload the submission to show correct answers
             const submissionResponse = await fetch(
@@ -186,12 +256,21 @@ export default function ConnectionsGameClient() {
                     <h1 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">
                         Islamic Connections
                     </h1>
-                    <button
-                        onClick={() => setShowHelp(!showHelp)}
-                        className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200 text-lgmd:text-xl font-semibold"
-                    >
-                        ?
-                    </button>
+                    <div className="flex items-center gap-4">
+                        <div className="flex-1 flex justify-center">
+                            <div className="bg-gray-200 dark:bg-gray-700 px-4 md:py-0.5 rounded-full">
+                                <span className="font-mono text-sm md:text-base text-gray-700 dark:text-gray-300">
+                                    {formattedTime}
+                                </span>
+                            </div>
+                        </div>
+                        <button
+                            onClick={() => setShowHelp(!showHelp)}
+                            className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200 text-lgmd:text-xl font-semibold"
+                        >
+                            ?
+                        </button>
+                    </div>
                 </div>
 
                 <HelpModal

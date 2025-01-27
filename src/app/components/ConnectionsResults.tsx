@@ -6,6 +6,7 @@ import { ConnectionsGameConfig, ConnectionsGameSubmissionData } from '@/types/co
 import { shareContent, trackShare } from '@/utils/shareUtils';
 import { getUserSettings } from '@/utils/userManager';
 import JSConfetti from 'js-confetti';
+import Link from 'next/link';
 
 interface ConnectionsResultsProps {
     game: ConnectionsGameConfig;
@@ -24,7 +25,9 @@ const DIFFICULTY_EMOJIS = {
 export default function ConnectionsResults({ game, submission, isOpen, onClose }: ConnectionsResultsProps) {
     const [timeLeft, setTimeLeft] = useState('');
     const [resultText, setResultText] = useState('');
+    const [formattedElapsedTime, setFormattedElapsedTime] = useState('');
     const [confetti, setConfetti] = useState<JSConfetti | null>(null);
+
     useEffect(() => {
         const puzzleNumber = game.id;
         const emojiRows = submission.attempts.map(attempt => {
@@ -36,6 +39,13 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
         });
         const text = emojiRows.join('\n');
         setResultText(text);
+
+        // Format elapsed time if available
+        if (submission.elapsedTime) {
+            const minutes = Math.floor(submission.elapsedTime / 60);
+            const seconds = submission.elapsedTime % 60;
+            setFormattedElapsedTime(`${minutes}:${seconds.toString().padStart(2, '0')}`);
+        }
     }, [game, submission]);
 
     useEffect(() => {
@@ -95,7 +105,8 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
 
     const handleShare = async () => {
         const userSettings = getUserSettings();
-        const shareText = `Islamic Connections #${game.id}\n\n${resultText}`;
+        const timeText = formattedElapsedTime ? `Time taken: ${formattedElapsedTime}` : '';
+        const shareText = `Islamic Connections #${game.id}\n${timeText}\n${resultText}`;
 
         try {
             const shareSuccess = await shareContent({
@@ -148,7 +159,7 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
                         </div>
 
                         {/* Content */}
-                        <div className="p-4 space-y-6">
+                        <div className="p-4 space-y-3">
                             {/* Game Status */}
                             <div className="text-center">
                                 <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -159,10 +170,16 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
                                         ? 'You found all the connections!'
                                         : 'Next Time!'}
                                 </h3>
+
                             </div>
 
                             {/* Results Grid */}
-                            <div className=" p-2 rounded-lg">
+                            <div className=" p-2 rounded-lg text-center">
+                                {formattedElapsedTime && submission.completed && submission.strikes < 4 && (
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 pb-2">
+                                        Time taken: {formattedElapsedTime}
+                                    </p>
+                                )}
                                 <p className="font-mono text-lg md:text-xl text-center leading-none whitespace-pre-line">
                                     {resultText}
                                 </p>
@@ -187,6 +204,12 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
                             >
                                 Share Results
                             </button>
+                            <Link
+                                href={`/connections/results`}
+                                className="block text-center mt-4 text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 underline"
+                            >
+                                View Detailed Statistics
+                            </Link>
                         </div>
                     </motion.div>
                 </div>

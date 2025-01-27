@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS connection_game_submissions (
     game_id TEXT NOT NULL,
     user_selections TEXT NOT NULL, -- JSON array of arrays
     submission_time TEXT NOT NULL,
+    elapsed_time INTEGER, -- Time in seconds
     game_completed BOOLEAN NOT NULL,
     strikes INTEGER NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
@@ -39,4 +40,4 @@ CREATE TABLE IF NOT EXISTS connection_game_submissions (
 CREATE INDEX IF NOT EXISTS idx_quiz_submissions_user_id ON quiz_submissions(user_id);
 CREATE INDEX IF NOT EXISTS idx_quiz_submissions_date ON quiz_submissions(submission_date);
 CREATE INDEX IF NOT EXISTS idx_connection_submissions_user_id ON connection_game_submissions(user_id);
-CREATE INDEX IF NOT EXISTS idx_connection_submissions_game_id ON connection_game_submissions(game_id); 
+CREATE INDEX IF NOT EXISTS idx_connection_submissions_game_id ON connection_game_submissions(game_id);

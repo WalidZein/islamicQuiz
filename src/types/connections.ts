@@ -53,4 +53,5 @@ export interface ConnectionsGameSubmissionData {
   submissionTime: Date;
   completed: boolean;
   strikes: number;
+  elapsedTime: number;
 }

@@ -22,7 +22,38 @@ export async function initializeDatabase() {
   const schema = await fs.readFile(schemaPath, "utf-8");
   await db.exec(schema);
 
+  // Ensure the 'elapsed_time' column exists in the 'connection_game_submissions' table
+  const columnAdded = await ensureColumnExists(
+    "connection_game_submissions", // Table name
+    "elapsed_time", // Column name
+    "INTEGER" // Column type
+  );
+
+  console.log(`Column 'elapsed_time' added to 'connection_game_submissions' table: ${columnAdded}`);
+
   return db;
+}
+
+/**
+ * Checks if a column exists in a table, creates it if it doesn't
+ * @param tableName - Name of the table to check
+ * @param columnName - Name of the column to check/create
+ * @param columnType - SQLite type for the new column (e.g. 'TEXT', 'INTEGER')
+ * @returns Promise resolving to true if column was created, false if it already existed
+ */
+export async function ensureColumnExists(tableName: string, columnName: string, columnType: string): Promise<boolean> {
+  const db = await getDatabase();
+
+  // Check if column exists
+  const result = await db.get(`SELECT COUNT(*) as count FROM pragma_table_info(?) WHERE name = ?`, [tableName, columnName]);
+
+  if (result.count === 0) {
+    // Column doesn't exist, create it
+    await db.run(`ALTER TABLE ${tableName} ADD COLUMN ${columnName} ${columnType}`);
+    return true;
+  }
+
+  return false;
 }
 
 export async function getDatabase() {
@@ -283,7 +314,7 @@ export async function getQuizSubmissions(userId: string, quizId?: number): Promi
 export async function getConnectionsGameSubmission(userId: string, gameId: string) {
   const db = await getDatabase();
   const submission = await db.get(
-    `SELECT user_selections, submission_time, game_completed, strikes
+    `SELECT user_selections, submission_time, elapsed_time, game_completed, strikes
          FROM connection_game_submissions
          WHERE user_id = ? AND game_id = ?`,
     [userId, gameId]
@@ -294,6 +325,7 @@ export async function getConnectionsGameSubmission(userId: string, gameId: strin
   return {
     attempts: JSON.parse(submission.user_selections),
     submissionTime: submission.submission_time,
+    elapsedTime: submission.elapsed_time,
     completed: submission.game_completed === 1,
     strikes: submission.strikes,
   };
@@ -304,7 +336,7 @@ export async function getConnectionsGameSubmission(userId: string, gameId: strin
  * @param data - The submission data
  * @returns True if the operation was successful
  */
-export async function saveConnectionsGameSubmission(data: { userId: string; gameId: string; attempts: string[][]; completed: boolean; strikes: number }) {
+export async function saveConnectionsGameSubmission(data: { userId: string; gameId: string; attempts: string[][]; completed: boolean; strikes: number; elapsedTime?: number }) {
   const db = await getDatabase();
   const submissionTime = new Date().toISOString();
 
@@ -319,17 +351,18 @@ export async function saveConnectionsGameSubmission(data: { userId: string; game
                  SET user_selections = ?,
                      submission_time = ?,
                      game_completed = ?,
-                     strikes = ?
+                     strikes = ?,
+                     elapsed_time = ?
                  WHERE user_id = ? AND game_id = ?`,
-        [JSON.stringify(data.attempts), submissionTime, data.completed ? 1 : 0, data.strikes, data.userId, data.gameId]
+        [JSON.stringify(data.attempts), submissionTime, data.completed ? 1 : 0, data.strikes, data.elapsedTime, data.userId, data.gameId]
       );
     } else {
       // Create new submission
       await db.run(
         `INSERT INTO connection_game_submissions
-                 (user_id, game_id, user_selections, submission_time, game_completed, strikes)
-                 VALUES (?, ?, ?, ?, ?, ?)`,
-        [data.userId, data.gameId, JSON.stringify(data.attempts), submissionTime, data.completed ? 1 : 0, data.strikes]
+                 (user_id, game_id, user_selections, submission_time, elapsed_time, game_completed, strikes)
+                 VALUES (?, ?, ?, ?, ?, ?, ?)`,
+        [data.userId, data.gameId, JSON.stringify(data.attempts), submissionTime, data.elapsedTime, data.completed ? 1 : 0, data.strikes]
       );
     }
 
@@ -338,4 +371,41 @@ export async function saveConnectionsGameSubmission(data: { userId: string; game
     console.error("Error saving connections game submission:", error);
     return false;
   }
+}
+
+/**
+ * Gets statistics for a specific connections game
+ * @param gameId - The game's unique identifier
+ * @returns Statistics about the game including strike distribution
+ */
+export async function getConnectionsGameStats(gameId: string) {
+  const db = await getDatabase();
+
+  // Get total submissions and completed games
+  const totals = await db.get(
+    `SELECT 
+      COUNT(*) as total_submissions,
+      SUM(CASE WHEN game_completed = 1 THEN 1 ELSE 0 END) as completed_games
+     FROM connection_game_submissions
+     WHERE game_id = ?`,
+    [gameId]
+  );
+
+  // Get strike distribution
+  const strikeDistribution = await db.all(
+    `SELECT 
+      strikes,
+      COUNT(*) as count
+     FROM connection_game_submissions
+     WHERE game_id = ? AND game_completed = 1
+     GROUP BY strikes
+     ORDER BY strikes ASC`,
+    [gameId]
+  );
+
+  return {
+    totalSubmissions: totals.total_submissions,
+    completedGames: totals.completed_games,
+    strikeDistribution: strikeDistribution,
+  };
 }

@@ -14,7 +14,7 @@ import { getOrCreateUser, saveConnectionsGameSubmission } from "@/db/database";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { userId, gameId, completed, strikes, attempts } = body;
+    const { userId, gameId, completed, strikes, attempts, elapsedTime } = body;
 
     if (!userId || !gameId || completed === undefined || strikes === undefined || !attempts) {
       return NextResponse.json({ error: "Missing required parameters" }, { status: 400 });
@@ -27,6 +27,7 @@ export async function POST(request: Request) {
       attempts,
       completed,
       strikes,
+      elapsedTime,
     });
 
     if (!success) {
