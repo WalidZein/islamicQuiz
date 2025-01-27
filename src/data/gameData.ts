@@ -369,6 +369,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "15",
+    releaseTime: "2025-01-27T13:00:00Z",
+    groups: [
+      {
+        category: "Tools of Punishment in Hell",
+        words: ["Fire", "Whips", "Knives", "Coals"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Zakat is given to the  __",
+        words: ["Traveler", "Poor", "Debt-Ridden", "Needy"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Traits of Humans mentioned in the Quran",
+        words: ["Weak", "Selfish", "Arguementative", "Impatient"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things that are not in Jannah",
+        words: ["Grudges", "Sins", "Sadness", "Fear"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
