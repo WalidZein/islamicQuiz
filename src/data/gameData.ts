@@ -395,6 +395,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "16",
+    releaseTime: "2025-01-28T13:00:00Z",
+    groups: [
+      {
+        category: "Conditions of Prayer",
+        words: ["Intention", "Qibla", "Purity", "Muslim"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Names of the Quran",
+        words: ["Al-Furqan", "Al-Tanzeel", "Al-Ketab", "Al-Dhikr"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Conditions of Marriage",
+        words: ["Consent", "Guardian", "Witness", "Mahr"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Lessons from Luqman to His Son",
+        words: ["Prayer", "Humility", "Gratitude", "Patience"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
