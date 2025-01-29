@@ -421,6 +421,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "17",
+    releaseTime: "2025-01-29T13:00:00Z",
+    groups: [
+      {
+        category: "Children of Prophet Muhammed",
+        words: ["Ruqayyah", "Zaynab", "Ibrahim", "Fatimah"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Forbidden Food",
+        words: ["Blood", "Pig", "Road-Kill", "Intoxicants"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Traits of Prophet Ibrahim mentioned in the Quran",
+        words: ["Empathetic", "Leader", "Patient", "Truthful"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Evil Animals that can be killed in the Haram",
+        words: ["Rats", "Kites", "Scorpion", "Crows"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
