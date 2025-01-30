@@ -448,6 +448,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "18",
+    releaseTime: "2025-01-30T13:00:00Z",
+    groups: [
+      {
+        category: "Pillars of Hajj",
+        words: ["Tawaf", "Sa'i", "Muzdalifah", "Arafat"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Prophetic Cuisine 🍯",
+        words: ["Dates", "Honey", "Talbina", "Vinegar"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Islamic Inventions",
+        words: ["Algebra", "Coffee", "Toothbrush", "Camera"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Scientific Miracles in the Quran",
+        words: ["Iron", "Orbit", "Embryology", "Big Bang"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
