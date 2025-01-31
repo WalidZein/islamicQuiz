@@ -475,6 +475,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "19",
+    releaseTime: "2025-01-31T13:00:00Z",
+    groups: [
+      {
+        category: "Cosmic Signs in the Quran",
+        words: ["Planets", "Stars", "Constellations", "Moon"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "The Four Major Madhabs",
+        words: ["Hanafi", "Maliki", "Shafi'i", "Hanbali"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Surahs that begin with the letters Ḥā and Mīm (حم)",
+        words: ["Ghafir", "Fussilat", "Ash-Shura", "Az-Zukhruf"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Elements From the Story of the Ifk",
+        words: ["Hypocrites", "An-Nur", "Aisha", "Safwan"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
