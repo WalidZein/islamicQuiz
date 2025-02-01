@@ -502,6 +502,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "20",
+    releaseTime: "2025-02-01T13:00:00Z",
+    groups: [
+      {
+        category: "Diseases of the Heart",
+        words: ["Envy", "Arrogance", "Greed", "Anger"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Elements From The Story of The Cave",
+        words: ["Youth", "Cave", "Sleep", "Dog"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Stages of the Hereafter",
+        words: ["Grave", "Gathering", "Scale", "Resurrection"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Mosque Architecture 🕌",
+        words: ["Mihrab", "Minbar", "Minaret", "Dome"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
