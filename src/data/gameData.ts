@@ -533,7 +533,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-02-02T13:00:00Z",
     groups: [
       {
-        category: "Cosmic Signs in the Quran",
+        category: "Body Parts That touch the floor during Sujood",
         words: ["Forehead", "Toes", "Hands", "Knees"],
         difficulty: "Easy" as const,
       },
