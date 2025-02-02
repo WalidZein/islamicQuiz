@@ -528,6 +528,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "21",
+    releaseTime: "2025-02-02T13:00:00Z",
+    groups: [
+      {
+        category: "Cosmic Signs in the Quran",
+        words: ["Forehead", "Toes", "Hands", "Knees"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Places the Prophet Has Been",
+        words: ["Mecca", "Madinah", "Jerusalem", "Heaven"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Description Of Spouses In The Quran",
+        words: ["Love", "Mercy", "Tranquility", "Clothes"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Things Allah Sweared By In The Quran",
+        words: ["Olive", "Quran", "Moon", "Sun"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
