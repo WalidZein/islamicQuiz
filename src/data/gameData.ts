@@ -555,6 +555,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "22",
+    releaseTime: "2025-02-03T13:00:00Z",
+    groups: [
+      {
+        category: "Torment of Allah on Previous Nations",
+        words: ["Flood", "Drought", "Tornado", "Earthquake"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Dress of the Prophet",
+        words: ["Thobe", "Ring", "Turbin", "Khuff"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Nations Punished By Allah. The People of __",
+        words: ["'ad", "Thamud", "Pharaoh", "Lut"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Sources of Hasanat for the Dead",
+        words: ["Duaa", "Charity", "Children", "Janazah"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // Add more games here...
 ];
 
