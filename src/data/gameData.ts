@@ -582,6 +582,34 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "23",
+    releaseTime: "2025-02-04T13:00:00Z",
+    groups: [
+      {
+        category: "Prophets' Professions",
+        words: ["Shepherd", "Carpenter", "Tailor", "King"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Animals mentioned in Hadith",
+        words: ["Ant", "Camel", "Dog", "Fly"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Duties of Angles",
+        words: ["Recording", "Guarding", "Praising", "Delivering"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Types Of Hearts Mentioned in the Quran",
+        words: ["Pure", "Sealed", "Repenting", "Diseased"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+
   // Add more games here...
 ];
 
