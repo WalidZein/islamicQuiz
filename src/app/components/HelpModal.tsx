@@ -30,30 +30,58 @@ export default function HelpModal({ isOpen, onClose }: HelpModalProps) {
                     </div>
 
                     <div className="space-y-6 text-gray-600 dark:text-gray-300">
-                        <p>
-                            Find groups of four Islamic-themed items that share something in common.
-                        </p>
-
-                        <p>
-                            Select four items and tap 'Submit' to check if your guess is correct.
-                            Find all groups without making 4 mistakes!
-                        </p>
-
                         <div>
-                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Category Examples:</h3>
-                            <div className="space-y-2">
-                                <p className="text-sm md:text-base"><span className="font-semibold">PROPHETS:</span> Musa, Ibrahim, Isa, Nuh</p>
-                                <p className="text-sm md:text-base"><span className="font-semibold">PILLARS OF ISLAM:</span> Faith, Prayer, Zakat, Fasting</p>
-                            </div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Objective:</h3>
+                            <p>
+                                Group the given Islamic-themed words into four sets. Each set must contain exactly four words that share a common, specific Islamic theme.
+                            </p>
                         </div>
 
-                        <p className="italic text-sm md:text-base">
-                            Categories will always be specific and Islamic-themed. They won't be general categories like "NAMES" or "ARABIC WORDS."
-                        </p>
+                        <div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Gameplay Overview:</h3>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>You will see a board filled with words.</li>
+                                <li>Your goal is to find the four correct groups (each with four words) that form a complete solution.</li>
+                            </ul>
+                        </div>
 
-                        <p>
-                            Each puzzle has exactly one solution. Watch out for words that might seem to belong to multiple categories!
-                        </p>
+                        <div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Making a Guess:</h3>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>Select Four Words: Tap on four words that you believe belong together based on a common theme.</li>
+                                <li>Submit Your Guess: Tap the "Submit" button to check if your selection is correct.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Feedback and Mistakes:</h3>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>If your guess is correct, that group is removed from the board and revealed to you.</li>
+                                <li>If your guess is incorrect, you incur a mistake.</li>
+                                <li>You are allowed four mistakes. On your fourth mistake, the game is over.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Categories Explained:</h3>
+                            <p className="mb-2">Specific Islamic Themes: Each correct group is based on a clearly defined Islamic theme.</p>
+                            <div className="bg-gray-100 dark:bg-gray-700 p-3 rounded-lg">
+                                <p className="font-semibold mb-1">Examples:</p>
+                                <p>PROPHETS: Musa, Ibrahim, Isa, Nuh</p>
+                                <p>PILLARS OF ISLAM: Faith, Prayer, Zakat, Fasting</p>
+                            </div>
+                            <p className="mt-2 italic">
+                                Note: The categories will never be vague or general (like "NAMES" or "ARABIC WORDS"). They are always precise Islamic concepts.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Important Tips:</h3>
+                            <ul className="list-disc pl-5 space-y-2">
+                                <li>Each puzzle has exactly one solution, so think carefully about which words belong together.</li>
+                                <li>Some words might seem like they could fit into more than one category. Use the specific themes and your knowledge of Islamic history and concepts to decide the best match.</li>
+                            </ul>
+                        </div>
 
                         <div>
                             <h3 className="font-bold mb-2 text-gray-800 dark:text-gray-100">Difficulty Levels:</h3>
