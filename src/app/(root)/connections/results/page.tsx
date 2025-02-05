@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import ResultsPageSkeleton from '@/app/components/ResultsPageSkeleton';
@@ -25,6 +25,8 @@ export default function ConnectionsResultsPage() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
     const [currentGameId, setCurrentGameId] = useState<string | null>(null);
+    const [easterEggClickCounter, setEasterEggClickCounter] = useState<number>(0)
+    const [showMoreDetailedAndCoolData, setShowMoreDetailedAndCoolData] = useState<boolean>(false)
 
     useEffect(() => {
         async function fetchCurrentGame() {
@@ -63,6 +65,19 @@ export default function ConnectionsResultsPage() {
         fetchStats();
     }, [currentGameId]);
 
+    const easterEggClickListener = useCallback(() => {
+        if (showMoreDetailedAndCoolData) { return; } // Already enabled
+
+        if (easterEggClickCounter >= 6) { 
+            setShowMoreDetailedAndCoolData(!showMoreDetailedAndCoolData)
+            setEasterEggClickCounter(0)
+            return
+        }
+
+        setEasterEggClickCounter(easterEggClickCounter + 1)
+
+    }, [easterEggClickCounter, setEasterEggClickCounter, showMoreDetailedAndCoolData, setShowMoreDetailedAndCoolData])
+
     const handleBackClick = () => {
         router.push('/connections');
     };
@@ -83,14 +98,18 @@ export default function ConnectionsResultsPage() {
     const strikeMap = new Map(
         stats.strikeDistribution.map(({ strikes, count }) => [
             strikes,
-            Number(((count / stats.completedGames) * 100).toFixed(1))
+            {
+                percentage: Number(((count / stats.completedGames) * 100).toFixed(1)), 
+                playerCount: count
+            }
         ])
     );
 
     // Generate complete chart data for all strikes 0-4
     const chartData = Array.from({ length: 5 }, (_, i) => ({
         strikes: i,
-        percentage: strikeMap.get(i) || 0
+        percentage: strikeMap.get(i)?.percentage ?? 0,
+        playerCount: strikeMap.get(i)?.playerCount ?? 0
     }));
 
     return (
@@ -115,7 +134,7 @@ export default function ConnectionsResultsPage() {
                         {/* Vertical "Mistakes" label */}
                         <div className="flex items-center justify-center mr-2 w-7">
                             <div className="transform -rotate-90 origin-center whitespace-nowrap">
-                                <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
+                                <span className="text-sm font-medium text-gray-600 dark:text-gray-400" onClick={easterEggClickListener}>
                                     Mistakes
                                 </span>
                             </div>
@@ -123,7 +142,7 @@ export default function ConnectionsResultsPage() {
 
                         {/* Chart content */}
                         <div className="flex flex-col space-y-4 w-full flex-1">
-                            {chartData.map(({ strikes, percentage }, index) => (
+                            {chartData.map(({ strikes, percentage, playerCount }, index) => (
                                 <div key={strikes} className="flex items-center gap-4">
                                     <div className="w-fit text-right">
                                         <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
@@ -142,13 +161,21 @@ export default function ConnectionsResultsPage() {
                                             className={`h-full ${DIFFICULTY_COLORS[strikes as keyof typeof DIFFICULTY_COLORS]}`}
                                         />
                                     </div>
-                                    <div className="w-10">
+                                    <div className="w-14">
                                         <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                                            {percentage}%
+                                            {percentage}% 
+                                            {showMoreDetailedAndCoolData ? ` (${playerCount})` : null}
                                         </span>
                                     </div>
                                 </div>
                             ))}
+
+                            {showMoreDetailedAndCoolData ? 
+                                <span className="text-sm font-medium mx-auto text-center text-gray-600 dark:text-gray-400">
+                                    Games played today: {stats.completedGames}
+                                </span> 
+                                : null
+                            }
                         </div>
                     </div>
                 </div>
