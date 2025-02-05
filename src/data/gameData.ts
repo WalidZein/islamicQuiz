@@ -609,6 +609,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "24",
+    releaseTime: "2025-02-05T13:00:00Z",
+    groups: [
+      {
+        category: "The Seven Companions Promised Paradise",
+        words: ["Al-Zubayr", "Abu `Ubaydah", "Talhah", "Umar"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Types of Sinful Speech",
+        words: ["Slander", "Lying", "Gossip", "Backbiting"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Prophets' Trials",
+        words: ["Whale", "Illness", "Prison", "Sacrifice"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Prophetic Night Journeys",
+        words: ["Isra'", "Miraj", "Hijra", "Ta'if"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
