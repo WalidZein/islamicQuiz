@@ -636,6 +636,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "25",
+    releaseTime: "2025-02-06T13:00:00Z",
+    groups: [
+      {
+        category: "Arabic Tashkeel",
+        words: ["Fat-hah", "Dammah", "Kasrah", "Sukoon"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Parts of the Ka'bah",
+        words: ["Hijr", "Kiswa", "Mizab", "Black Stone"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Major Signs of the Hour",
+        words: ["Smoke", "Beast", "dajjal", "'Isa"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Minor Signs of the Hour",
+        words: ["Zina", "Riba", "Skyscrapers", "Music"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
