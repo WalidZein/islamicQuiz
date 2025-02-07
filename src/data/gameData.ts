@@ -689,6 +689,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "27",
+    releaseTime: "2025-02-08T13:00:00Z",
+    groups: [
+      {
+        category: "Fruits Mentioned in the Quran",
+        words: ["Banana", "Figs", "Olives", "Pomegranates"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "The Ten Promised Paradise",
+        words: ["Abu Bakr", "Umar", "'Uthman", "Ali"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Sources of Creation",
+        words: ["Water", "Light", "Fire", "Clay"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Names of the Day of Judgement. The Day of __",
+        words: ["Judgment", "Meeting", "Regret", "Rising"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
