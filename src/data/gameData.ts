@@ -663,6 +663,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "26",
+    releaseTime: "2025-02-07T13:00:00Z",
+    groups: [
+      {
+        category: "Locations Mentioned in the Quran",
+        words: ["Mecca", "Madina", "Babylon", "Egypt"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Actions of Hypocrites",
+        words: ["Lying", "Betraying", "Deceiving", "Insulting"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Things that Break a Person's Fast",
+        words: ["Cupping", "Eating", "Drinking", "Menstruation"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things That Had a Change of Rulings",
+        words: ["Alcohol", "Prayer", "Qibla", "Fasting"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
