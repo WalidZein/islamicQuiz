@@ -715,6 +715,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "28",
+    releaseTime: "2025-02-09T13:00:00Z",
+    groups: [
+      {
+        category: "Types of people Allah Dislikes",
+        words: ["Show off", "Oppressors", "Prideful", "Wasteful"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Types of people Allah loves",
+        words: ["Repenters", "Patient", "Just", "Purifiers"],
+        difficulty: "Medium" as const,
+      },
+
+      {
+        category: "Rights of a Neighbor",
+        words: ["Kindness", "Respect", "Security", "Greeting"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Spending that Doesn't Decrease Wealth",
+        words: ["No-Interest Loan", "Hajj", "Ummrah", "Charity"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
