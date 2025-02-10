@@ -742,6 +742,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "29",
+    releaseTime: "2025-02-10T13:00:00Z",
+    groups: [
+      {
+        category: "Transmitters of the Qiraat",
+        words: ["Warsh", "Hafs", "Al-Duri", "Khalaf"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Descriptions of the state of non-believers",
+        words: ["Dumb", "Blind", "Deaf", "Misguided"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Trees Mentioned in the Quran",
+        words: ["Olive", "Palm", "Zaqoom", "Cedar"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Concepts Describing Relationships Between Believers",
+        words: ["Mirror", "Brothers", "Body", "Building"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
