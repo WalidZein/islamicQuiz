@@ -786,7 +786,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       {
         category: "7 Sins That Doom a Person In Hell",
         words: ["Killing", "Riba", "Shirk", "Witchcraft"],
-        difficulty: "Medium" as const,
+        difficulty: "Hard" as const,
       },
       {
         category: "Four Things Allah Created By His Hand",
