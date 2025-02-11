@@ -769,6 +769,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "30",
+    releaseTime: "2025-02-11T13:00:00Z",
+    groups: [
+      {
+        category: "Types Of People Mentioned In The Quran",
+        words: ["Muslim", "Jew", "Idolator", "Disbeliever"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Traits of Humans mentioned in the Quran",
+        words: ["Weak", "Selfish", "Arguementative", "Impatient"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "7 Sins That Doom a Person In Hell",
+        words: ["Killing", "Riba", "Shirk", "Witchcraft"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Four Things Allah Created By His Hand",
+        words: ["'aden", "Pen", "Throne", "Adam"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
