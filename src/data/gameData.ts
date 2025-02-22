@@ -795,6 +795,53 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "31",
+    releaseTime: "2025-02-21T13:00:00Z",
+    groups: [
+      {
+        category: "Battles of the Prophet",
+        words: ["Tabuk", "Hunayn", "Uhud", "Badr"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Things Allah Removed from Heaven",
+        words: ["Bordem", "Hardship", "Death", "Fatigue"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Sins that decrease the reward of Fastings",
+        words: ["Backbiting", "Fighting", "Cursing", "Gossip"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things that Break a Person's Fast",
+        words: ["Cupping", "Eating", "Drinking", "Menstruation"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  // {
+  //   id: "32",
+  //   releaseTime: "2025-02-11T13:00:00Z",
+  //   groups: [
+  //     {
+  //       category: "Prayers in the Day",
+  //       words: ["Duha", "Asr", "Duhr", "Fajr"],
+  //       difficulty: "Easy" as const,
+  //     },
+  //     {
+  //       category: "Prayers in the Night",
+  //       words: ["Maghrib", "Isha", "Tahajjud", "Witr"],
+  //       difficulty: "Medium" as const,
+  //     },
+  //     {
+  //       category: "Things that Increase Rizk",
+  //       words: ["Marriage", "Hajj", "Umrah", "Kindship"],
+  //       difficulty: "Hard" as const,
+  //     },
+  //   ],
+  // },
 
   // Add more games here...
 ];
