@@ -797,7 +797,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   },
   {
     id: "31",
-    releaseTime: "2025-02-21T13:00:00Z",
+    releaseTime: "2025-02-22T13:00:00Z",
     groups: [
       {
         category: "Battles of the Prophet",
@@ -821,8 +821,34 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "32",
+    releaseTime: "2025-02-23T13:00:00Z",
+    groups: [
+      {
+        category: "Beautiful Names of Allah. The __",
+        words: ["All-Forgiving", "One", "Ever-Living", "Self-Sustaining"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Divine Books",
+        words: ["Quran", "Tawrat", "Zabur", "Injeel"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Virtues of the Heart",
+        words: ["Patience", "Gratitude", "God-consciousness", "Ihsan"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Hajj Locations",
+        words: ["Arafat", "Mina", "Muzdalifah", "Ka'bah"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
-  //   id: "32",
+  //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
   //   groups: [
   //     {
@@ -839,6 +865,11 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   //       category: "Things that Increase Rizk",
   //       words: ["Marriage", "Hajj", "Umrah", "Kindship"],
   //       difficulty: "Hard" as const,
+  //     },
+  //     {
+  //       category: "Days that are Sunnah to Fast",
+  //       words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
+  //       difficulty: "Very Hard" as const,
   //     },
   //   ],
   // },
