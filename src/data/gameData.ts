@@ -847,6 +847,58 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "33",
+    releaseTime: "2025-02-24T13:00:00Z",
+    groups: [
+      {
+        category: "Islamic Inventions",
+        words: ["Algebra", "Optics", "Hospitals", "Astronomy"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Seerah Events",
+        words: ["Isra", "Miraj", "Hijra", "Hudaybiyyah"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Acts That Erase Sins",
+        words: ["Tawbah", "Sadaqah", "Prayer", "Fasting"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Judgment Signs",
+        words: ["Dajjal", "Yajuj", "Majuj", " Beast"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "34",
+    releaseTime: "2025-02-25T13:00:00Z",
+    groups: [
+      {
+        category: "Obligatory Acts in Salah",
+        words: ["Takbir", "Fatihah", "Ruku'", "Sujood"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Things Found in Jannah",
+        words: ["Silk", "Fruits", "Rivers", "Palaces"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Blessed Times For Dua",
+        words: ["Night", "Adhan", "Fasting", "Rain"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Trials Mentioned in the Quran For Muslims",
+        words: ["Wealth", "Children", "Fear", "Poverty"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
