@@ -35,6 +35,7 @@ export default function RootLayout({
             gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}');
           `}
         </Script>
+        <meta name="facebook-domain-verification" content="gso5i3ovhnzfb8cf0zg37xusbrs949" />
       </head>
       <body
         className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 text-white"
