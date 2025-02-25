@@ -899,6 +899,110 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "35",
+    releaseTime: "2025-02-26T13:00:00Z",
+    groups: [
+      {
+        category: "Days that are Sunnah to Fast",
+        words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Descriptions of Hell in the Quran",
+        words: ["Blaze", "Pit", "Abyss", "Hot"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Forbidden Acts in Hajj",
+        words: ["Hunting", "Marriage", "Perfume", "Haircut"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Events on the Day of Judgement",
+        words: ["Scales", "Intercession", "Sirat", "Trumpet"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "36",
+    releaseTime: "2025-02-27T13:00:00Z",
+    groups: [
+      {
+        category: "The Ten Promised Paradise",
+        words: ["Abu Bakr", "Talhah", "Uthman", "al-Zubayr"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Punishments in Hell",
+        words: ["Chains", "Boiling", "Darkness", "Fire"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Blessings in Jannah",
+        words: ["Springs", "Silk", "Palaces", "Companions"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Types of Charity",
+        words: ["Sadaqah", "Zakat", "Kaffarah", "Fidyah"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "37",
+    releaseTime: "2025-02-28T13:00:00Z",
+    groups: [
+      {
+        category: "Famous Islamic Cities",
+        words: ["Makkah", "Madinah", "Al-Quds", "Damascus"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts that Invalidate Wudu",
+        words: ["Sleep", "Blood", "Vomit", "Intoxication"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Punishments in the Grave",
+        words: ["Squeeze", "Snake", "Darkness", "Fire"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "People Mentioned in Surah Kahf",
+        words: ["Majuj", "Khidr", "Musa", "Dhu al-Qarnayn"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "38",
+    releaseTime: "2025-03-01T13:00:00Z",
+    groups: [
+      {
+        category: "Sacred Months in Islam",
+        words: ["Rajab", "Dhul-Hijjah", "Dhul-Qadah", "Muharram"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Name & Characteristics of the Devil",
+        words: ["Iblis", "Shaytan", "Khannas", "Waswas"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Acts That Erase Sins",
+        words: ["Wudu", "Patience", "Charity", "Tawbah"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things in the Quran Described as Light",
+        words: ["Quran", "Faith", "Guidance", "Prophet"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
