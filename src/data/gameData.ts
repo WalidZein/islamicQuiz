@@ -1003,6 +1003,164 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "39",
+    releaseTime: "2025-03-02T13:00:00Z",
+    groups: [
+      {
+        category: "Weapons Used in Early Islamic Battles",
+        words: ["Sword", "Spear", "Bow", "Shield"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Names of the Prophet's Family",
+        words: ["Fatima", "Ali", "Hassan", "Hussein"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Dwellings Mentioned in the Quran",
+        words: ["Cave", "Palace", "Tent", "Tower"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Different Forms of Rain in the Quran",
+        words: ["Blessing", "Punishment", "Stones", "Flood"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "40",
+    releaseTime: "2025-03-03T13:00:00Z",
+    groups: [
+      {
+        category: "Animals Mentioned in the Quran",
+        words: ["Cow", "Sheep", "Camel", "Chicken"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Punishments of Previous Nations",
+        words: ["Flood", "Earthquake", "Storm", "Stones"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Types of People Mentioned in the Quran",
+        words: ["Polytheism", "Hypocrisy", "Disbelief", "Riya'"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "People Who Built the Ka'bah",
+        words: ["Ibrahim", "Ismail", "Quraysh", "Muhammad"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "41",
+    releaseTime: "2025-03-04T13:00:00Z",
+    groups: [
+      {
+        category: "Animals Mentioned in the Quran",
+        words: ["Cow", "Sheep", "Camel", "Chicken"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Punishments of Previous Nations",
+        words: ["Flood", "Earthquake", "Storm", "Stones"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Types of People Mentioned in the Quran",
+        words: ["Polytheism", "Hypocrisy", "Disbelief", "Riya'"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "People Who Built the Ka'bah",
+        words: ["Ibrahim", "Ismail", "Quraysh", "Muhammad"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "42",
+    releaseTime: "2025-03-05T13:00:00Z",
+    groups: [
+      {
+        category: "Sahaba Known for Knowledge",
+        words: ["Aisha", "Ibn Abbas", "Abu Huraira", "Ibn Masud"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Surahs Named After Natural Elements",
+        words: ["Iron", "Thunder", "Smoke", "Star"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Afterlife places",
+        words: ["Sijjin", "Illiyin", "Barzakh", "Sirat"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Farewell Sermon Themes",
+        words: ["Tawheed", "Justice", "Equality", "Brotherhood"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "43",
+    releaseTime: "2025-03-06T13:00:00Z",
+    groups: [
+      {
+        category: "Sunnah Prayers",
+        words: ["Duha", "Tahajjud", "Tarawih", "Witr"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Surahs Named After Creatures",
+        words: ["Cow", "Ant", "Bee", "Spider"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Modes of Divine Test",
+        words: ["Wealth", "Sickness", "Loss", "Strife"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Animals Mentioned in the Quran",
+        words: ["Elephant", "Dog", "Camel", "Wolf"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "44",
+    releaseTime: "2025-03-07T13:00:00Z",
+    groups: [
+      {
+        category: "Sunnah Foods Eaten by the Prophet",
+        words: ["Dates", "Honey", "Milk", "Barley"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts That Invalidate Fasting",
+        words: ["Eating", "Drinking", "Intimacy", "Vomiting"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Types of Permissible Expiation (Kaffarah)",
+        words: ["Fasting", "Feeding", "Freeing", "Charity"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "People Exempted from Fasting",
+        words: ["Sick", "Traveler", "Pregnant", "Elderly"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
