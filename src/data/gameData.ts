@@ -1048,7 +1048,6 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         words: ["Polytheism", "Hypocrisy", "Disbelief", "Riya'"],
         difficulty: "Hard" as const,
       },
-
       {
         category: "People Who Built the Ka'bah",
         words: ["Ibrahim", "Ismail", "Quraysh", "Muhammad"],
@@ -1061,24 +1060,23 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-04T13:00:00Z",
     groups: [
       {
-        category: "Animals Mentioned in the Quran",
-        words: ["Cow", "Sheep", "Camel", "Chicken"],
+        category: "Sunnah Prayers",
+        words: ["Duha", "Tahajjud", "Tarawih", "Witr"],
         difficulty: "Easy" as const,
       },
       {
-        category: "Punishments of Previous Nations",
-        words: ["Flood", "Earthquake", "Storm", "Stones"],
+        category: "Surahs Named After Creatures",
+        words: ["Cow", "Ant", "Bee", "Spider"],
         difficulty: "Medium" as const,
       },
       {
-        category: "Types of People Mentioned in the Quran",
-        words: ["Polytheism", "Hypocrisy", "Disbelief", "Riya'"],
+        category: "Modes of Divine Test",
+        words: ["Wealth", "Sickness", "Loss", "Strife"],
         difficulty: "Hard" as const,
       },
-
       {
-        category: "People Who Built the Ka'bah",
-        words: ["Ibrahim", "Ismail", "Quraysh", "Muhammad"],
+        category: "Animals Mentioned in the Quran",
+        words: ["Elephant", "Dog", "Camel", "Wolf"],
         difficulty: "Very Hard" as const,
       },
     ],
@@ -1114,32 +1112,6 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-06T13:00:00Z",
     groups: [
       {
-        category: "Sunnah Prayers",
-        words: ["Duha", "Tahajjud", "Tarawih", "Witr"],
-        difficulty: "Easy" as const,
-      },
-      {
-        category: "Surahs Named After Creatures",
-        words: ["Cow", "Ant", "Bee", "Spider"],
-        difficulty: "Medium" as const,
-      },
-      {
-        category: "Modes of Divine Test",
-        words: ["Wealth", "Sickness", "Loss", "Strife"],
-        difficulty: "Hard" as const,
-      },
-      {
-        category: "Animals Mentioned in the Quran",
-        words: ["Elephant", "Dog", "Camel", "Wolf"],
-        difficulty: "Very Hard" as const,
-      },
-    ],
-  },
-  {
-    id: "44",
-    releaseTime: "2025-03-07T13:00:00Z",
-    groups: [
-      {
         category: "Sunnah Foods Eaten by the Prophet",
         words: ["Dates", "Honey", "Milk", "Barley"],
         difficulty: "Easy" as const,
@@ -1151,7 +1123,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Types of Permissible Expiation (Kaffarah)",
-        words: ["Fasting", "Feeding", "Freeing", "Charity"],
+        words: ["Fasting", "Feeding", "Manumission", "Charity"],
         difficulty: "Hard" as const,
       },
       {
@@ -1160,6 +1132,11 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Very Hard" as const,
       },
     ],
+  },
+  {
+    id: "44",
+    releaseTime: "2025-03-07T13:00:00Z",
+    groups: [],
   },
   // {
   //   id: "33",
