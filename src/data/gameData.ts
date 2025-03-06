@@ -1112,6 +1112,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-06T13:00:00Z",
     groups: [
       {
+        category: "Sunnah Acts",
+        words: ["Miswak", "Smile", "Beard", "Kuhl"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Islamic Rights of Women",
+        words: ["Inheritance", "Education", "Ownership", "Self-Determination"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Terms Related to Hajj",
+        words: ["Ihram", "Talbiyah", "Jamarat", "Nafrah"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Sacred Places",
+        words: ["Tuwa", "Arafat", "Mina", "Al-Aqsa"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "44",
+    releaseTime: "2025-03-07T13:00:00Z",
+    groups: [
+      {
         category: "Sunnah Foods Eaten by the Prophet",
         words: ["Dates", "Honey", "Milk", "Barley"],
         difficulty: "Easy" as const,
@@ -1132,11 +1158,6 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Very Hard" as const,
       },
     ],
-  },
-  {
-    id: "44",
-    releaseTime: "2025-03-07T13:00:00Z",
-    groups: [],
   },
   // {
   //   id: "33",
