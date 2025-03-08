@@ -1159,6 +1159,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "45",
+    releaseTime: "2025-03-08T13:00:00Z",
+    groups: [
+      {
+        category: "States of Prayer",
+        words: ["Standing", "Bowing", "Sitting", "Prostrating"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Rights of Parents in Islam",
+        words: ["Respect", "Obedience", "Love", "Kindness"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Types of Jihad Mentioned in Islam",
+        words: ["Self", "Wealth", "Knowledge", "Defense"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Monotheism is the oneness of God in __",
+        words: ["Lordship", "Worship", "Names", "Attributes"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
