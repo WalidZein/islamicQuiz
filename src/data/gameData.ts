@@ -1185,6 +1185,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "46",
+    releaseTime: "2025-03-09T13:00:00Z",
+    groups: [
+      {
+        category: "Rights of Neighbors in Islam",
+        words: ["Kindness", "Protection", "Assistance", "Hospitality"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Influential Muslim Empires",
+        words: ["Abbasids", "Fatimids", "Ayyubids", "Ottomans"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Sources of Islamic Law",
+        words: ["Quran", "Sunnah", "Qiyas", "Ijma'"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Important Islamic Treaties",
+        words: ["Hudaybiyyah", "Madinah", "Najran", "Fadak"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
