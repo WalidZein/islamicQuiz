@@ -1211,6 +1211,110 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "47",
+    releaseTime: "2025-03-10T13:00:00Z",
+    groups: [
+      {
+        category: "Islamic Art Techniques",
+        words: ["Calligraphy", "Illumination", "Arabesque", "Tessellation"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Creations Described as Signs in the Quran",
+        words: ["Sun", "Moon", "Stars", "Mountains"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Miracles of Prophet Musa",
+        words: ["Staff", "Hand", "Sea", "Snake"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Oaths Taken by Allah in the Quran",
+        words: ["Dawn", "Sun", "Fig", "Pen"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "48",
+    releaseTime: "2025-03-11T13:00:00Z",
+    groups: [
+      {
+        category: "Things That Will Testify on the Day of Judgment",
+        words: ["Hands", "Feet", "Eyes", "Ears"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Pillars of Iman",
+        words: ["Angels", "Books", "Messengers", "Decree"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Surahs Named After Events",
+        words: ["Al-Isra", "Al-Ahzab", "Al-Fath", "Al-Qiyamah"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Surahs Named After Time Periods",
+        words: ["Al-Fajr", "Ad-Duhaa", "Al-Layl", "Al-Asr"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "49",
+    releaseTime: "2025-03-12T13:00:00Z",
+    groups: [
+      {
+        category: "Things That Will Testify on the Day of Judgment",
+        words: ["Hands", "Feet", "Eyes", "Ears"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Pillars of Iman",
+        words: ["Angels", "Books", "Messengers", "Decree"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Surahs Named After Events",
+        words: ["Al-Isra", "Al-Ahzab", "Al-Fath", "Al-Qiyamah"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Companions Who Narrated Most Hadith",
+        words: ["Abu Hurairah", "Aisha", "Abdullah ibn Umar", "Anas"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "50",
+    releaseTime: "2025-03-13T13:00:00Z",
+    groups: [
+      {
+        category: "Things That Will Testify on the Day of Judgment",
+        words: ["Hands", "Feet", "Eyes", "Ears"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Pillars of Iman",
+        words: ["Angels", "Books", "Messengers", "Decree"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Ethical Responsibilities in Speech",
+        words: ["Truthfulness", "Respect", "Humility", "Patience"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Companions Who Narrated Most Hadith",
+        words: ["Abu Hurairah", "Aisha", "Abdullah Ibn Umar", "Anas"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
