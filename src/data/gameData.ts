@@ -1232,7 +1232,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Oaths Taken by Allah in the Quran",
-        words: ["Dawn", "Sun", "Fig", "Pen"],
+        words: ["Dawn", "Time", "Fig", "Pen"],
         difficulty: "Very Hard" as const,
       },
     ],
