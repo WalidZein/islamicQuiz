@@ -1239,26 +1239,26 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   },
   {
     id: "48",
-    releaseTime: "2025-03-11T13:00:00Z",
+    releaseTime: "2025-03-11T12:00:00Z",
     groups: [
       {
-        category: "Things That Will Testify on the Day of Judgment",
-        words: ["Hands", "Feet", "Eyes", "Ears"],
+        category: "Surahs with Special Virtues",
+        words: ["Ikhlas", "Fatiha", "Mulk", "Baqarah"],
         difficulty: "Easy" as const,
       },
       {
-        category: "Pillars of Iman",
-        words: ["Angels", "Books", "Messengers", "Decree"],
+        category: "Islamic Scholarly Positions",
+        words: ["Mufti", "Qadi", "Muhaddith", "Mufassir"],
         difficulty: "Medium" as const,
       },
       {
-        category: "Surahs Named After Events",
-        words: ["Al-Isra", "Al-Ahzab", "Al-Fath", "Al-Qiyamah"],
+        category: "Ethical Responsibilities in Speech",
+        words: ["Truthfulness", "Respect", "Humility", "Patience"],
         difficulty: "Hard" as const,
       },
       {
-        category: "Surahs Named After Time Periods",
-        words: ["Al-Fajr", "Ad-Duhaa", "Al-Layl", "Al-Asr"],
+        category: "Sunnah Acts For Newborns",
+        words: ["Tahnik", "Name", "‘Aqiqah", "Charity"],
         difficulty: "Very Hard" as const,
       },
     ],
@@ -1283,8 +1283,8 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Hard" as const,
       },
       {
-        category: "Companions Who Narrated Most Hadith",
-        words: ["Abu Hurairah", "Aisha", "Abdullah ibn Umar", "Anas"],
+        category: "Surahs Named After Time Periods",
+        words: ["Al-Fajr", "Ad-Duhaa", "Al-Layl", "Al-Asr"],
         difficulty: "Very Hard" as const,
       },
     ],
