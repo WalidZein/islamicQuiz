@@ -1265,7 +1265,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   },
   {
     id: "49",
-    releaseTime: "2025-03-12T13:00:00Z",
+    releaseTime: "2025-03-12T12:00:00Z",
     groups: [
       {
         category: "Things That Will Testify on the Day of Judgment",
@@ -1299,13 +1299,13 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Easy" as const,
       },
       {
-        category: "Pillars of Iman",
-        words: ["Angels", "Books", "Messengers", "Decree"],
+        category: "First Muslims",
+        words: ["Khadijah", "Ali", "Abu Bakr", "Zayd"],
         difficulty: "Medium" as const,
       },
       {
-        category: "Ethical Responsibilities in Speech",
-        words: ["Truthfulness", "Respect", "Humility", "Patience"],
+        category: "Signs of Allah's Love ",
+        words: ["Guidance", "Peace", "Tests", "Humility"],
         difficulty: "Hard" as const,
       },
       {
