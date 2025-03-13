@@ -1291,11 +1291,11 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   },
   {
     id: "50",
-    releaseTime: "2025-03-13T13:00:00Z",
+    releaseTime: "2025-03-13T12:00:00Z",
     groups: [
       {
-        category: "Things That Will Testify on the Day of Judgment",
-        words: ["Hands", "Feet", "Eyes", "Ears"],
+        category: "Prophetic Healing Methods",
+        words: ["Honey", "Cupping", "Dates", "Ruqya"],
         difficulty: "Easy" as const,
       },
       {
