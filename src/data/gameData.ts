@@ -1315,6 +1315,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "51",
+    releaseTime: "2025-03-14T12:00:00Z",
+    groups: [
+      {
+        category: "Responsibilities of Spouses in Islam",
+        words: ["Love", "Respect", "Support", "Loyalty"],
+        difficulty: "Easy" as const,
+      },
+
+      {
+        category: "Acts that Erase Sins",
+        words: ["Prayer", "Wudu", "Istighfar", "Charity"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Titles of the Prophet in the Quran",
+        words: ["Witness", "Guide", "Reminder", "Mercy"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Creations Made Without Parents",
+        words: ["Adam, Hawwa, Isaa, She-Camel"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
