@@ -1337,7 +1337,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Creations Made Without Parents",
-        words: ["Adam, Hawwa, Isaa, She-Camel"],
+        words: ["Adam", "Hawwa", "Isaa", "She-Camel"],
         difficulty: "Very Hard" as const,
       },
     ],
