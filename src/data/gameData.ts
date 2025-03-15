@@ -614,7 +614,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-02-05T13:00:00Z",
     groups: [
       {
-        category: "The Seven Companions Promised Paradise",
+        category: "The Ten Companions Promised Paradise",
         words: ["Al-Zubayr", "Abu `Ubaydah", "Talhah", "Umar"],
         difficulty: "Easy" as const,
       },
@@ -1365,6 +1365,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       {
         category: "Things Allah Swore By In The Quran",
         words: ["Olive", "Quran", "Moon", "Sun"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "53",
+    releaseTime: "2025-03-16T12:00:00Z",
+    groups: [
+      {
+        category: "Muslim Women Scholars",
+        words: ["Sutayta", "Fatima", "Aisha", "Karima"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "people Who Debated with Prophets",
+        words: ["Nimrod", "Pharaoh", "Karun", "Abu Jahl"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Prophets Given a Unique Title in the Quran",
+        words: ["Adam", "Ibrahim", "Musa", "Ayoub"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things Allah Swore By In The Quran",
+        words: ["Ibn Battuta", "Piri", "Ibn Khaldun", "Ibn Fadlan"],
         difficulty: "Very Hard" as const,
       },
     ],
