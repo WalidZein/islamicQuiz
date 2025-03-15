@@ -202,7 +202,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Medium" as const,
       },
       {
-        category: "Animals with Surahs Named After Them ",
+        category: "Animals with Surahs Named After Them",
         words: ["Cow", "Bee", "Spider", "Elephant"],
         difficulty: "Hard" as const,
       },
@@ -1338,6 +1338,33 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       {
         category: "Creations Made Without Parents",
         words: ["Adam", "Hawwa", "Isaa", "She-Camel"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "52",
+    releaseTime: "2025-03-16T12:00:00Z",
+    groups: [
+      {
+        category: "Body parts that touch the floor during Sujood",
+        words: ["Forehead", "Toes", "Hands", "Knees"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Places the Prophet Has Been",
+        words: ["Mecca", "Madinah", "Jerusalem", "Heaven"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Description Of Spouses In The Quran",
+        words: ["Love", "Mercy", "Tranquility", "Clothes"],
+        difficulty: "Hard" as const,
+      },
+
+      {
+        category: "Things Allah Swore By In The Quran",
+        words: ["Olive", "Quran", "Moon", "Sun"],
         difficulty: "Very Hard" as const,
       },
     ],
