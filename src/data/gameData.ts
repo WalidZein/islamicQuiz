@@ -1344,7 +1344,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
   },
   {
     id: "52",
-    releaseTime: "2025-03-16T12:00:00Z",
+    releaseTime: "2025-03-15T12:00:00Z",
     groups: [
       {
         category: "Body parts that touch the floor during Sujood",
