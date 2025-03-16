@@ -237,7 +237,7 @@ export default function ConnectionsGameClient() {
     }
 
     return (
-        <div className="flex flex-col items-center py-10">
+        <div className="flex flex-col items-center py-5 w-full">
             <div className="w-full max-w-2xl mb-4">
                 <button
                     className="flex items-center text-white hover:text-gray-200 font-medium"
@@ -266,7 +266,7 @@ export default function ConnectionsGameClient() {
                         </div>
                         <button
                             onClick={() => setShowHelp(!showHelp)}
-                            className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200 text-lgmd:text-xl font-semibold"
+                            className="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-blue-500 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white transition-colors duration-200 text-lg md:text-xl font-semibold"
                         >
                             ?
                         </button>

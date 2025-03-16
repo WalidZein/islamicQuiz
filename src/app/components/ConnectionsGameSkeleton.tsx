@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function ConnectionsGameSkeleton() {
     return (
-        <div className="flex flex-col items-center py-10">
+        <div className="flex flex-col items-center py-10 w-full">
             <div className="w-full max-w-2xl mb-4">
                 {/* Back button skeleton */}
                 <div className="w-32 h-8 bg-gray-200 dark:bg-gray-700 rounded animate-pulse" />
