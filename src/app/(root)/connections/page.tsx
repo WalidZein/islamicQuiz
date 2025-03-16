@@ -33,7 +33,7 @@ export default function ConnectionsPage() {
             <div className="w-full flex justify-center">
                 <ConnectionsGameClient />
             </div>
-            <div className="w-full flex justify-center mt-3 mb-3">
+            <div className="w-full flex justify-center mt-1 mb-3">
                 <SponsorshipCard
                     businessName="Gyro Guyz"
                     businessUrl="https://www.thegyroguyz.com/"
