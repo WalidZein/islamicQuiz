@@ -1374,12 +1374,12 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-16T12:00:00Z",
     groups: [
       {
-        category: "Muslim Women Scholars",
-        words: ["Sutayta", "Fatima", "Aisha", "Karima"],
+        category: "Responsibilities of Leaders in Islam",
+        words: ["Justice", "Consultation", "Honesty", "Protection"],
         difficulty: "Easy" as const,
       },
       {
-        category: "people Who Debated with Prophets",
+        category: "People Who Debated with Prophets",
         words: ["Nimrod", "Pharaoh", "Karun", "Abu Jahl"],
         difficulty: "Medium" as const,
       },
@@ -1389,7 +1389,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Hard" as const,
       },
       {
-        category: "Things Allah Swore By In The Quran",
+        category: "Muslim Explorers",
         words: ["Ibn Battuta", "Piri", "Ibn Khaldun", "Ibn Fadlan"],
         difficulty: "Very Hard" as const,
       },
