@@ -1395,6 +1395,136 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "54",
+    releaseTime: "2025-03-17T12:00:00Z",
+    groups: [
+      {
+        category: "Islamic Inventions",
+        words: ["Chemistry", "Surgery", "Coffee", "Windmill"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Fruits Mentioned in the Quran",
+        words: ["Dates", "Olives", "Figs", "Pomegranates"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Significant Islamic Battles",
+        words: ["Yarmuk", "Qadisiyyah", "Ain-Jalut", "Hattin"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Muslim Explorers",
+        words: ["Bayt", "Cordoba", "Al-Azhar", "Alexandria"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "55",
+    releaseTime: "2025-03-18T12:00:00Z",
+    groups: [
+      {
+        category: "The Ten Companions Promised Paradise",
+        words: ["Umar", "Ali", "Sa’d", "Abdurrahman"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Allah's SWT Attributes",
+        words: ["Immortal", "All-Knowing", "All-Powerful", "Self-Sufficient"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Significant Islamic Battles",
+        words: ["Sujood", "Fajr", "Arafah", "Laylat al Qadr"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Lessons Taught by Luqman in the Quran",
+        words: ["Tawheed", "Gratitude", "Patience", "Humility"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "56",
+    releaseTime: "2025-03-19T12:00:00Z",
+    groups: [
+      {
+        category: "People Described as Best in the Quran",
+        words: ["Believers", "Worshippers", "Patient", "Truthful"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Places of Punishment in the Hereafter",
+        words: ["Saqar", "Hutamah", "Sa'ir", "Jahannam"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Significant Islamic Battles",
+        words: ["Rivers", "Palaces", "Youth", "Delight"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Events on the Day of Judgment",
+        words: ["Resurrection", "Gathering", "Shade", "Hellfire"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "57",
+    releaseTime: "2025-03-20T12:00:00Z",
+    groups: [
+      {
+        category: "People Described as Best in the Quran",
+        words: ["Care", "Sponsorship", "Justice", "Love"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts that Erase Sins",
+        words: ["Prayer", "Wudu", "Istighfar", "Charity"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "It's forbidden to fast on the day of __",
+        words: ["Eid Fitr", "Eid Adha", "Tashreeq", "Doubt"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Days that are Sunnah to Fast",
+        words: ["Monday", "Thursday", "Arafah", "Ashura"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "58",
+    releaseTime: "2025-03-21T12:00:00Z",
+    groups: [
+      {
+        category: "Muslim Women Scholars",
+        words: ["Sutayta", "Fatima", "Aisha", "Karima"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Islamic Scientific Instruments",
+        words: ["Astrolabe", "Quadrant", "Compass", "Sextant"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Trials for the Believers",
+        words: ["Illness", "Hunger", "Loss", "Enemies"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Things That Break Ihram",
+        words: ["Trimming", "Garment", "Veiling", "Intercourse"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
   // {
   //   id: "33",
   //   releaseTime: "2025-02-11T13:00:00Z",
