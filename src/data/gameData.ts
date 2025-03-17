@@ -1415,7 +1415,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Hard" as const,
       },
       {
-        category: "Muslim Explorers",
+        category: "Historic Muslim Libraries",
         words: ["Bayt", "Cordoba", "Al-Azhar", "Alexandria"],
         difficulty: "Very Hard" as const,
       },
