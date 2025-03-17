@@ -1427,7 +1427,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     groups: [
       {
         category: "The Ten Companions Promised Paradise",
-        words: ["Umar", "Ali", "Sa’d", "Abdurrahman"],
+        words: ["Umar", "Ali", "Sa'd", "Abdurrahman"],
         difficulty: "Easy" as const,
       },
       {
@@ -1436,7 +1436,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Medium" as const,
       },
       {
-        category: "Significant Islamic Battles",
+        category: "Blessed Times for Dua",
         words: ["Sujood", "Fajr", "Arafah", "Laylat al Qadr"],
         difficulty: "Hard" as const,
       },
