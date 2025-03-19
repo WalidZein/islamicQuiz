@@ -1462,7 +1462,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Medium" as const,
       },
       {
-        category: "Significant Islamic Battles",
+        category: "Things in Jannah",
         words: ["Rivers", "Palaces", "Youth", "Delight"],
         difficulty: "Hard" as const,
       },
