@@ -2,6 +2,7 @@ export interface ConnectionsGroupData {
   category: string;
   words: string[];
   difficulty: "Easy" | "Medium" | "Hard" | "Very Hard";
+  explanation?: string;
 }
 
 export interface ConnectionsGameData {
