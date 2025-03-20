@@ -25,7 +25,7 @@ export default function CategoryExplanationModal({
                 exit: { opacity: 0, scale: 0.95 }
             }}
         >
-            <p className="text-gray-700 dark:text-gray-300 text-left">
+            <p className="text-gray-700 dark:text-gray-300 text-left whitespace-pre-line">
                 {explanation}
             </p>
         </Popup>
