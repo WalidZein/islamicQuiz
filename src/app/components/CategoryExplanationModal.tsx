@@ -25,7 +25,11 @@ export default function CategoryExplanationModal({
                 exit: { opacity: 0, scale: 0.95 }
             }}
         >
+<<<<<<< HEAD
             <p className="text-gray-700 dark:text-gray-300 text-left whitespace-pre-line">
+=======
+            <p className="text-gray-700 dark:text-gray-300 text-left">
+>>>>>>> 164a4543dc3930b174d60525136608c972368ee6
                 {explanation}
             </p>
         </Popup>
