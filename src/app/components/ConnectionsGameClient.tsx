@@ -11,7 +11,8 @@ import ConnectionsResults from './ConnectionsResults';
 import { Textfit } from 'react-textfit';
 import HelpModal from './HelpModal';
 import ConnectionsGameSkeleton from './ConnectionsGameSkeleton';
-import { Shuffle } from 'lucide-react';
+import { Shuffle, Info } from 'lucide-react';
+import CategoryExplanationModal from './CategoryExplanationModal';
 
 export const DIFFICULTY_COLORS = {
     'Easy': 'bg-yellow-400 dark:bg-yellow-700 ',
@@ -37,6 +38,7 @@ export default function ConnectionsGameClient() {
     const { gameState, selectWord, submitGuess, shuffleWords, unselectAllWords, updateGameStateFromAttempts } = useConnectionsGame(game);
     const [formattedTime, setFormattedTime] = useState('0:00');
     const [timerId, setTimerId] = useState<NodeJS.Timeout | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<{ category: string, explanation: string } | null>(null);
 
     // Load elapsed time from local storage or start new timer
     useEffect(() => {
@@ -316,20 +318,48 @@ export default function ConnectionsGameClient() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: index * 0.1 }}
-                                        className={`mb-4 p-4 rounded-lg text-black dark:text-white ${DIFFICULTY_COLORS[group.difficulty]}`}
+                                        className={`mb-4 p-4 rounded-lg text-black dark:text-white ${DIFFICULTY_COLORS[group.difficulty]} relative cursor-pointer`}
+                                        onClick={() => group.explanation && setSelectedCategory({
+                                            category: group.category,
+                                            explanation: group.explanation
+                                        })}
                                     >
-                                        <p className="font-semibold">{group.category}</p>
-                                        <p>{group.words.join(', ')}</p>
+                                        <div className="text-center relative">
+                                            {group.explanation && (
+                                                <button
+                                                    className="absolute -top-3 -right-2 hover:bg-black/10 rounded-full transition-colors"
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setSelectedCategory({
+                                                            category: group.category,
+                                                            explanation: group.explanation!
+                                                        });
+                                                    }}
+                                                >
+                                                    <Info size={16} />
+                                                </button>
+                                            )}
+                                            <p className="font-semibold">{group.category}</p>
+                                            <p>{group.words.join(', ')}</p>
+                                        </div>
                                     </motion.div>
                                 ))
                             }
                         </motion.div>
                         <button
                             onClick={() => setShowResults(true)}
-                            className=" text-black dark:text-white mt-6 py-2 px-6 bg-blue-500 rounded-lg transition-all duration-200 active:scale-95 hover:-translate-y-0.5"
+                            className="text-black dark:text-white mt-6 py-2 px-6 bg-blue-500 rounded-lg transition-all duration-200 active:scale-95 hover:-translate-y-0.5"
                         >
                             View Results
                         </button>
+
+                        {/* Category Explanation Modal */}
+                        <CategoryExplanationModal
+                            isOpen={!!selectedCategory}
+                            onClose={() => setSelectedCategory(null)}
+                            category={selectedCategory?.category || ''}
+                            explanation={selectedCategory?.explanation || ''}
+                        />
                     </motion.div>
                 ) : (
                     <>
