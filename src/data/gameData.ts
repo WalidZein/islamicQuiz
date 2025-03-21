@@ -1514,16 +1514,16 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
         difficulty: "Medium" as const,
       },
       {
-        category: "It's forbidden to fast on the day of __",
-        words: ["Eid Fitr", "Eid Adha", "Tashreeq", "Doubt"],
-        difficulty: "Hard" as const,
-        explanation:
-          "The Prophet (ﷺ) forbade fasting on the day of Al-Fitr and An-Nahr (Eid al-Adha).\n\n He also said: 'The days of al-Tashreeq are days of eating, drinking and remembering Allah.' \n\nThe days of al-Tashreeq are the three days after Eid al-Adha, during which fasting is prohibited.\n\n However, fasting is not prohibited on the day after Eid al-Fitr.\n\n The day of doubt is the day when we are not sure if Ramadan has started or not. \n\n'Ammar ibn Yasir said: 'Whoever fasts on the day concerning which there is doubt has disobeyed Abu'l-Qasim (ﷺ)' [Al-Tirmidhi]",
-      },
-      {
         category: "Days that are Sunnah to Fast",
         words: ["Monday", "Thursday", "Arafah", "Ashura"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "It's forbidden to fast on the day of __",
+        words: ["Eid Fitr", "Eid Adha", "Tashreeq", "Doubt"],
         difficulty: "Very Hard" as const,
+        explanation:
+          "The Prophet (ﷺ) forbade fasting on the day of Al-Fitr and An-Nahr (Eid al-Adha).\n\n He also said: 'The days of al-Tashreeq are days of eating, drinking and remembering Allah' [Muslim 1141a] \n\nThe days of al-Tashreeq are the three days after Eid al-Adha, during which fasting is prohibited.\n\n However, fasting is not prohibited on the day after Eid al-Fitr.\n\n The day of doubt is the day when we are not sure if Ramadan has started or not. \n\n'Ammar ibn Yasir said: 'Whoever fasts on the day concerning which there is doubt has disobeyed Abu'l-Qasim (ﷺ)' [Al-Tirmidhi]",
       },
     ],
   },
