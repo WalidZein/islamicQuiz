@@ -35,11 +35,11 @@ export default function ConnectionsPage() {
             </div>
             <div className="w-full flex justify-center mt-1 mb-3">
                 <SponsorshipCard
-                    businessName="Gyro Guyz"
-                    businessUrl="https://www.thegyroguyz.com/"
-                    businessDescription="Gyroz Done Right. Serving fresh, flavorful, halal Gyro, Chicken and Falafel"
+                    businessName="Remote Accounting Hub"
+                    businessUrl="https://remoteaccountantshub.com/"
+                    businessDescription="Empowering Your Business with Expert Remote Accounting Solution"
                     formUrl="https://forms.gle/JKBApc56YnaKyfyK6"
-                    logoUrl="/images/sponsors/gyro-guyz-logo.jpg"
+                    logoUrl="/images/sponsors/remote_accounting_hub_logo.png"
                 />
             </div>
         </div>
