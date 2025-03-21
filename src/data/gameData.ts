@@ -1504,7 +1504,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-21T12:00:00Z",
     groups: [
       {
-        category: "People Described as Best in the Quran",
+        category: "Duties of Mulisms Towards Orphans",
         words: ["Care", "Sponsorship", "Justice", "Love"],
         difficulty: "Easy" as const,
       },
@@ -1527,32 +1527,34 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
-  // {
-  //   id: "33",
-  //   releaseTime: "2025-02-11T13:00:00Z",
-  //   groups: [
-  //     {
-  //       category: "Prayers in the Day",
-  //       words: ["Duha", "Asr", "Duhr", "Fajr"],
-  //       difficulty: "Easy" as const,
-  //     },
-  //     {
-  //       category: "Prayers in the Night",
-  //       words: ["Maghrib", "Isha", "Tahajjud", "Witr"],
-  //       difficulty: "Medium" as const,
-  //     },
-  //     {
-  //       category: "Things that Increase Rizk",
-  //       words: ["Marriage", "Hajj", "Umrah", "Kindship"],
-  //       difficulty: "Hard" as const,
-  //     },
-  //     {
-  //       category: "Days that are Sunnah to Fast",
-  //       words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
-  //       difficulty: "Very Hard" as const,
-  //     },
-  //   ],
-  // },
+  {
+    id: "59",
+    releaseTime: "2025-03-22T12:00:00Z",
+    groups: [
+      {
+        category: "Prayers in the Day",
+        words: ["Duha", "Asr", "Duhr", "Fajr"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Prayers in the Night",
+        words: ["Maghrib", "Isha", "Tahajjud", "Witr"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Things that Increase Rizk",
+        words: ["Marriage", "Hajj", "Umrah", "Kindship"],
+        difficulty: "Hard" as const,
+        explanation:
+          "The Messenger of Allah (ﷺ) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship'[Muslim 2557]\n\nThe Prophet of Allah ﷺ said: 'Continuously perform Hajj and 'Umrah, as they both eradicate poverty and sins, just as a furnace removes impurities from iron, gold, and silver. And a Hajj that is accepted has a reward no less than Paradise.' [At-Tirmidhi 810]\n\n'And marry the unmarried among you and the righteous among your male slaves and female slaves. If they should be poor, Allah will enrich them from His bounty, and Allah is all-Encompassing and Knowing.'[Qur'an 24:32]",
+      },
+      {
+        category: "Ancient Islamic Learning Centers",
+        words: ["Al-Quaraouiyine", "Al-Azhar", "Nizamiyya", "Mustansiriya"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
