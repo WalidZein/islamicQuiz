@@ -1543,7 +1543,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Things that Increase Rizk",
-        words: ["Marriage", "Hajj", "Umrah", "Kindship"],
+        words: ["Marriage", "Hajj", "Umrah", "Kinship"],
         difficulty: "Hard" as const,
         explanation:
           "The Messenger of Allah (ﷺ) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship'[Muslim 2557]\n\nThe Prophet of Allah ﷺ said: 'Continuously perform Hajj and 'Umrah, as they both eradicate poverty and sins, just as a furnace removes impurities from iron, gold, and silver. And a Hajj that is accepted has a reward no less than Paradise.' [At-Tirmidhi 810]\n\n'And marry the unmarried among you and the righteous among your male slaves and female slaves. If they should be poor, Allah will enrich them from His bounty, and Allah is all-Encompassing and Knowing.'[Qur'an 24:32]",
