@@ -1258,7 +1258,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Sunnah Acts For Newborns",
-        words: ["Tahnik", "Name", "‘Aqiqah", "Charity"],
+        words: ["Tahnik", "Name", "'Aqiqah", "Charity"],
         difficulty: "Very Hard" as const,
       },
     ],
@@ -1478,32 +1478,6 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     releaseTime: "2025-03-20T12:00:00Z",
     groups: [
       {
-        category: "People Described as Best in the Quran",
-        words: ["Care", "Sponsorship", "Justice", "Love"],
-        difficulty: "Easy" as const,
-      },
-      {
-        category: "Acts that Erase Sins",
-        words: ["Prayer", "Wudu", "Istighfar", "Charity"],
-        difficulty: "Medium" as const,
-      },
-      {
-        category: "It's forbidden to fast on the day of __",
-        words: ["Eid Fitr", "Eid Adha", "Tashreeq", "Doubt"],
-        difficulty: "Hard" as const,
-      },
-      {
-        category: "Days that are Sunnah to Fast",
-        words: ["Monday", "Thursday", "Arafah", "Ashura"],
-        difficulty: "Very Hard" as const,
-      },
-    ],
-  },
-  {
-    id: "58",
-    releaseTime: "2025-03-21T12:00:00Z",
-    groups: [
-      {
         category: "Muslim Women Scholars",
         words: ["Sutayta", "Fatima", "Aisha", "Karima"],
         difficulty: "Easy" as const,
@@ -1520,37 +1494,93 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Things That Break Ihram",
-        words: ["Trimming", "Garment", "Veiling", "Intercourse"],
+        words: ["Trimming", "Garment", "Perfume", "Intercourse"],
         difficulty: "Very Hard" as const,
       },
     ],
   },
-  // {
-  //   id: "33",
-  //   releaseTime: "2025-02-11T13:00:00Z",
-  //   groups: [
-  //     {
-  //       category: "Prayers in the Day",
-  //       words: ["Duha", "Asr", "Duhr", "Fajr"],
-  //       difficulty: "Easy" as const,
-  //     },
-  //     {
-  //       category: "Prayers in the Night",
-  //       words: ["Maghrib", "Isha", "Tahajjud", "Witr"],
-  //       difficulty: "Medium" as const,
-  //     },
-  //     {
-  //       category: "Things that Increase Rizk",
-  //       words: ["Marriage", "Hajj", "Umrah", "Kindship"],
-  //       difficulty: "Hard" as const,
-  //     },
-  //     {
-  //       category: "Days that are Sunnah to Fast",
-  //       words: ["Mondays", "Thursdays", "Arafah", "Ashura"],
-  //       difficulty: "Very Hard" as const,
-  //     },
-  //   ],
-  // },
+  {
+    id: "58",
+    releaseTime: "2025-03-21T12:00:00Z",
+    groups: [
+      {
+        category: "Duties of Mulisms Towards Orphans",
+        words: ["Care", "Sponsorship", "Justice", "Love"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts that Erase Sins",
+        words: ["Prayer", "Wudu", "Istighfar", "Charity"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Days that are Sunnah to Fast",
+        words: ["Monday", "Thursday", "Arafah", "Ashura"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "It's forbidden to fast on the day of __",
+        words: ["Eid Fitr", "Eid Adha", "Tashreeq", "Doubt"],
+        difficulty: "Very Hard" as const,
+        explanation:
+          "The Prophet (ﷺ) forbade fasting on the day of Al-Fitr and An-Nahr (Eid al-Adha).\n\n He also said: 'The days of al-Tashreeq are days of eating, drinking and remembering Allah' [Muslim 1141a] \n\nThe days of al-Tashreeq are the three days after Eid al-Adha, during which fasting is prohibited.\n\n However, fasting is not prohibited on the day after Eid al-Fitr.\n\n The day of doubt is the day when we are not sure if Ramadan has started or not. \n\n'Ammar ibn Yasir said: 'Whoever fasts on the day concerning which there is doubt has disobeyed Abu'l-Qasim (ﷺ)' [Al-Tirmidhi]",
+      },
+    ],
+  },
+  {
+    id: "59",
+    releaseTime: "2025-03-22T12:00:00Z",
+    groups: [
+      {
+        category: "Prayers in the Day",
+        words: ["Duha", "Asr", "Duhr", "Fajr"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Prayers in the Night",
+        words: ["Maghrib", "Isha", "Tahajjud", "Witr"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Things that Increase Rizk",
+        words: ["Marriage", "Hajj", "Umrah", "Kinship"],
+        difficulty: "Hard" as const,
+        explanation:
+          "The Messenger of Allah (ﷺ) said: 'Whoever would like his provision to be increased and [his life to be extended], should uphold the ties of kinship'[Muslim 2557]\n\nThe Prophet of Allah ﷺ said: 'Continuously perform Hajj and 'Umrah, as they both eradicate poverty and sins, just as a furnace removes impurities from iron, gold, and silver. And a Hajj that is accepted has a reward no less than Paradise.' [At-Tirmidhi 810]\n\n'And marry the unmarried among you and the righteous among your male slaves and female slaves. If they should be poor, Allah will enrich them from His bounty, and Allah is all-Encompassing and Knowing.'[Qur'an 24:32]",
+      },
+      {
+        category: "Ancient Islamic Learning Centers",
+        words: ["Al-Quaraouiyine", "Al-Azhar", "Nizamiyya", "Mustansiriya"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
+  {
+    id: "60",
+    releaseTime: "2025-03-23T12:00:00Z",
+    groups: [
+      {
+        category: "Family Members of the Prophet ﷺ",
+        words: ["Khadijah", "Zainab", "Umm Kulthum", "Ruqayyah"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts That Erase Sins",
+        words: ["Hajj", "Zakat", "Dhikr", "Forgiveness"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Foods Eaten by the Prophet ﷺ",
+        words: ["Olives", "Pomegranate", "Vinegar", "Melon"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Surahs Named After Creations of Allah",
+        words: ["Elephant", "Star", "Iron", "Sun"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
@@ -1568,4 +1598,12 @@ export function getCurrentGame(): ConnectionsGameConfig | null {
  */
 export function getGameById(id: string): ConnectionsGameConfig | null {
   return CONNECTIONS_GAMES.find((game) => game.id === id) || null;
+}
+
+/**
+ * Returns all released connections games, sorted by release time (newest first)
+ */
+export function getAllReleasedGames(): ConnectionsGameConfig[] {
+  const now = new Date();
+  return CONNECTIONS_GAMES.filter((game) => new Date(game.releaseTime) <= now).sort((a, b) => new Date(b.releaseTime).getTime() - new Date(a.releaseTime).getTime());
 }
