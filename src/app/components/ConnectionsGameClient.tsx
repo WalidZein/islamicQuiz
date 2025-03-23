@@ -23,7 +23,11 @@ export const DIFFICULTY_COLORS = {
 
 const MAX_STRIKES = 4;
 
-export default function ConnectionsGameClient() {
+interface ConnectionsGameClientProps {
+    gameId?: string; // Optional - if not provided, will load the current game
+}
+
+export default function ConnectionsGameClient({ gameId }: ConnectionsGameClientProps) {
     const router = useRouter();
     const [showHelp, setShowHelp] = useState(false);
     const [shake, setShake] = useState(false);
@@ -72,8 +76,12 @@ export default function ConnectionsGameClient() {
     useEffect(() => {
         async function loadGame() {
             try {
-                // Try to get current game from API
-                const response = await fetch('/api/connections/getCurrentGame');
+                // Try to get game from API
+                const url = gameId
+                    ? `/api/connections/getGame?id=${gameId}`
+                    : '/api/connections/getCurrentGame';
+
+                const response = await fetch(url);
                 if (response.ok) {
                     const game = await response.json();
                     setGame(game);
@@ -105,7 +113,7 @@ export default function ConnectionsGameClient() {
         }
 
         loadGame();
-    }, []);
+    }, [gameId]);
 
     //update game state from existing submission
     useEffect(() => {

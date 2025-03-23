@@ -409,3 +409,147 @@ export async function getConnectionsGameStats(gameId: string) {
     strikeDistribution: strikeDistribution,
   };
 }
+
+/**
+ * Gets all connections game submissions for a specific user
+ * @param userId - The user's unique identifier
+ * @returns Array of all the user's submissions for connections games
+ */
+export async function getAllConnectionsGameSubmissions(userId: string) {
+  const db = await getDatabase();
+  const submissions = await db.all(
+    `SELECT 
+      game_id as gameId,
+      user_selections as userSelections,
+      submission_time as submissionTime,
+      elapsed_time as elapsedTime,
+      game_completed as gameCompleted,
+      strikes
+     FROM connection_game_submissions
+     WHERE user_id = ?`,
+    [userId]
+  );
+
+  return submissions.map((sub) => ({
+    gameId: sub.gameId,
+    attempts: JSON.parse(sub.userSelections),
+    submissionTime: sub.submissionTime,
+    elapsedTime: sub.elapsedTime,
+    completed: sub.gameCompleted === 1,
+    strikes: sub.strikes,
+  }));
+}
+
+/**
+ * Subscribes a user's email to the mailing list
+ * @param userId - The user's unique identifier
+ * @param email - The email address to subscribe
+ * @returns True if the operation was successful, false otherwise
+ */
+export async function subscribeEmail(userId: string, email: string): Promise<boolean> {
+  const db = await getDatabase();
+  const now = new Date().toISOString();
+
+  try {
+    // Check if email already exists
+    const existingEmail = await db.get(`SELECT email_id, user_id, subscribed FROM emails WHERE email = ?`, [email]);
+
+    if (existingEmail) {
+      // Update existing email if it belongs to this user or is unsubscribed
+      if (existingEmail.user_id === userId || !existingEmail.subscribed) {
+        await db.run(
+          `UPDATE emails 
+           SET user_id = ?, subscribed = true, updated_at = ? 
+           WHERE email_id = ?`,
+          [userId, now, existingEmail.email_id]
+        );
+      } else {
+        // Email belongs to another user and is subscribed
+        return false;
+      }
+    } else {
+      // Create new email subscription
+      await db.run(
+        `INSERT INTO emails (user_id, email, created_at) 
+         VALUES (?, ?, ?)`,
+        [userId, email, now]
+      );
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error subscribing email:", error);
+    return false;
+  }
+}
+
+/**
+ * Unsubscribes an email from the mailing list
+ * @param email - The email address to unsubscribe
+ * @returns True if the operation was successful, false otherwise
+ */
+export async function unsubscribeEmail(email: string): Promise<boolean> {
+  const db = await getDatabase();
+  const now = new Date().toISOString();
+
+  try {
+    const result = await db.run(
+      `UPDATE emails 
+       SET subscribed = false, updated_at = ? 
+       WHERE email = ?`,
+      [now, email]
+    );
+
+    return result && result.changes ? result.changes > 0 : false;
+  } catch (error) {
+    console.error("Error unsubscribing email:", error);
+    return false;
+  }
+}
+
+/**
+ * Checks if a user is subscribed to the mailing list
+ * @param userId - The user's unique identifier
+ * @returns True if the user has a subscribed email, false otherwise
+ */
+export async function isUserSubscribed(userId: string): Promise<boolean> {
+  const db = await getDatabase();
+
+  try {
+    const result = await db.get(
+      `SELECT COUNT(*) as count 
+       FROM emails 
+       WHERE user_id = ? AND subscribed = true`,
+      [userId]
+    );
+
+    return result.count > 0;
+  } catch (error) {
+    console.error("Error checking user subscription:", error);
+    return false;
+  }
+}
+
+/**
+ * Gets a user's subscribed email
+ * @param userId - The user's unique identifier
+ * @returns The user's subscribed email address or null if not found
+ */
+export async function getUserEmail(userId: string): Promise<string | null> {
+  const db = await getDatabase();
+
+  try {
+    const result = await db.get(
+      `SELECT email 
+       FROM emails 
+       WHERE user_id = ? AND subscribed = true 
+       ORDER BY created_at DESC LIMIT 1`,
+      [userId]
+    );
+
+    return result ? result.email : null;
+  } catch (error) {
+    console.error("Error getting user email:", error);
+    return null;
+  }
+}

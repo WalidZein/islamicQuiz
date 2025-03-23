@@ -1258,7 +1258,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
       {
         category: "Sunnah Acts For Newborns",
-        words: ["Tahnik", "Name", "‘Aqiqah", "Charity"],
+        words: ["Tahnik", "Name", "'Aqiqah", "Charity"],
         difficulty: "Very Hard" as const,
       },
     ],
@@ -1598,4 +1598,12 @@ export function getCurrentGame(): ConnectionsGameConfig | null {
  */
 export function getGameById(id: string): ConnectionsGameConfig | null {
   return CONNECTIONS_GAMES.find((game) => game.id === id) || null;
+}
+
+/**
+ * Returns all released connections games, sorted by release time (newest first)
+ */
+export function getAllReleasedGames(): ConnectionsGameConfig[] {
+  const now = new Date();
+  return CONNECTIONS_GAMES.filter((game) => new Date(game.releaseTime) <= now).sort((a, b) => new Date(b.releaseTime).getTime() - new Date(a.releaseTime).getTime());
 }
