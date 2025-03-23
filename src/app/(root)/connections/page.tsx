@@ -1,5 +1,6 @@
 import ConnectionsGrid from '../../components/ConnectionsGrid';
 import ConnectionsHeaderServer from '../../components/ConnectionsHeaderServer';
+import ConnectionsPopupWrapper from '../../components/ConnectionsPopupWrapper';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function ConnectionsPage() {
             <div className="w-full max-w-2xl">
                 <ConnectionsGrid mostRecentAtTop={true} />
             </div>
+            <ConnectionsPopupWrapper />
         </div>
     );
 } 

@@ -12,6 +12,17 @@ CREATE TABLE IF NOT EXISTS users (
     invite_count INTEGER DEFAULT 0
 );
 
+-- Emails table
+CREATE TABLE IF NOT EXISTS emails (
+    email_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    subscribed BOOLEAN DEFAULT true,
+    created_at TEXT NOT NULL,
+    updated_at TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
 -- Quiz submissions table
 CREATE TABLE IF NOT EXISTS quiz_submissions (
     submission_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,3 +52,5 @@ CREATE INDEX IF NOT EXISTS idx_quiz_submissions_user_id ON quiz_submissions(user
 CREATE INDEX IF NOT EXISTS idx_quiz_submissions_date ON quiz_submissions(submission_date);
 CREATE INDEX IF NOT EXISTS idx_connection_submissions_user_id ON connection_game_submissions(user_id);
 CREATE INDEX IF NOT EXISTS idx_connection_submissions_game_id ON connection_game_submissions(game_id);
+CREATE INDEX IF NOT EXISTS idx_emails_user_id ON emails(user_id);
+CREATE INDEX IF NOT EXISTS idx_emails_email ON emails(email);
