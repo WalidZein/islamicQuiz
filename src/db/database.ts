@@ -409,3 +409,33 @@ export async function getConnectionsGameStats(gameId: string) {
     strikeDistribution: strikeDistribution,
   };
 }
+
+/**
+ * Gets all connections game submissions for a specific user
+ * @param userId - The user's unique identifier
+ * @returns Array of all the user's submissions for connections games
+ */
+export async function getAllConnectionsGameSubmissions(userId: string) {
+  const db = await getDatabase();
+  const submissions = await db.all(
+    `SELECT 
+      game_id as gameId,
+      user_selections as userSelections,
+      submission_time as submissionTime,
+      elapsed_time as elapsedTime,
+      game_completed as gameCompleted,
+      strikes
+     FROM connection_game_submissions
+     WHERE user_id = ?`,
+    [userId]
+  );
+
+  return submissions.map((sub) => ({
+    gameId: sub.gameId,
+    attempts: JSON.parse(sub.userSelections),
+    submissionTime: sub.submissionTime,
+    elapsedTime: sub.elapsedTime,
+    completed: sub.gameCompleted === 1,
+    strikes: sub.strikes,
+  }));
+}
