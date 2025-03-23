@@ -1555,6 +1555,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "60",
+    releaseTime: "2025-03-23T12:00:00Z",
+    groups: [
+      {
+        category: "Family Members of the Prophet ﷺ",
+        words: ["Khadijah", "Zainab", "Umm Kulthum", "Ruqayyah"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "Acts That Erase Sins",
+        words: ["Hajj", "Zakat", "Dhikr", "Forgiveness"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "Foods Eaten by the Prophet ﷺ",
+        words: ["Olives", "Pomegranate", "Vinegar", "Melon"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "Surahs Named After Creations of Allah",
+        words: ["Elephant", "Star", "Iron", "Sun"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];
