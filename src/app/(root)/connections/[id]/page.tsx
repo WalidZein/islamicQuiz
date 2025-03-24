@@ -46,7 +46,7 @@ export default async function ConnectionsGamePage({ params }: ConnectionsPagePro
             <div className="w-full flex justify-center">
                 <ConnectionsGameClient gameId={id} />
             </div>
-            <div className="w-full flex justify-center mt-1 mb-3">
+            {/* <div className="w-full flex justify-center mt-1 mb-3">
                 <SponsorshipCard
                     businessName="Remote Accounting Hub"
                     businessUrl="https://remoteaccountantshub.com/"
@@ -54,7 +54,7 @@ export default async function ConnectionsGamePage({ params }: ConnectionsPagePro
                     formUrl="https://forms.gle/JKBApc56YnaKyfyK6"
                     logoUrl="/images/sponsors/remote_accounting_hub_logo.png"
                 />
-            </div>
+            </div> */}
         </div>
     );
 } 
