@@ -130,7 +130,7 @@ export default function ConnectionsResults({ game, submission, isOpen, onClose }
                 Share Results
             </button>
             <Link
-                href={`/connections/results`}
+                href={`/connections/results/${game.id}`}
                 className="block text-center mt-4 text-sm text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 underline"
             >
                 View Detailed Statistics

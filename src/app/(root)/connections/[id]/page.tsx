@@ -4,9 +4,9 @@ import { Metadata } from 'next';
 import { getGameById } from '@/data/gameData';
 
 type ConnectionsPageProps = {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>
 };
 
 export async function generateMetadata({ params }: ConnectionsPageProps): Promise<Metadata> {

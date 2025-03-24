@@ -18,8 +18,12 @@ const DIFFICULTY_COLORS = {
     4: 'bg-red-500/80 dark:bg-red-700/80'         // Failed
 };
 
-export default function ConnectionsResultsPage() {
-    const params = useParams();
+type ResultsPageProps = {
+    params: Promise<{
+        id: string;
+    }>
+};
+export default function ConnectionsResultsPage({ params }: ResultsPageProps) {
     const router = useRouter();
     const [stats, setStats] = useState<GameStats | null>(null);
     const [loading, setLoading] = useState(true);
@@ -29,10 +33,11 @@ export default function ConnectionsResultsPage() {
     useEffect(() => {
         async function fetchCurrentGame() {
             try {
-                const response = await fetch('/api/connections/getCurrentGame');
-                if (!response.ok) throw new Error('Failed to fetch current game');
-                const data = await response.json();
-                setCurrentGameId(data.id);
+                // const response = await fetch('/api/connections/getCurrentGame');
+                // if (!response.ok) throw new Error('Failed to fetch current game');
+                // const data = await response.json();
+                const gameId = (await params).id;
+                setCurrentGameId(gameId);
             } catch (err) {
                 setError('Failed to load current game');
                 console.error(err);
