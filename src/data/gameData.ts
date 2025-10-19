@@ -1581,6 +1581,32 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
       },
     ],
   },
+  {
+    id: "61",
+    releaseTime: "2025-03-24T12:00:00Z",
+    groups: [
+      {
+        category: "كيف يختلف المنهج الإسلامي عن الفلسفة ؟",
+        words: ["قوة التأثير", "الأسلوب", "طريقة الاستدلال", "الثمرة"],
+        difficulty: "Easy" as const,
+      },
+      {
+        category: "الأربعة الذي نص حديث سيدنا رسول الله صلي الله عليه وسلم ان الله عز وجل لا يعذبهم يوم القيامة حتي يختبرهم ؟",
+        words: ["الأصم", "الأحمق", "الهرم", "أهل الفترة"],
+        difficulty: "Medium" as const,
+      },
+      {
+        category: "من الأصول الستة لعلم العقيدة هو الإيمان؟",
+        words: ["الله", "الملائكة", "الكتب", "الآخرة"],
+        difficulty: "Hard" as const,
+      },
+      {
+        category: "من العلماء الذين حذروا من الاشتغال بعلم الكلام ؟",
+        words: ["الجوني", "الرازي", "الغزالي", "الأشعري"],
+        difficulty: "Very Hard" as const,
+      },
+    ],
+  },
 
   // Add more games here...
 ];

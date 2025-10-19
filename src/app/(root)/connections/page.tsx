@@ -35,7 +35,7 @@ export default function ConnectionsPage() {
             <div className="w-full max-w-2xl">
                 <ConnectionsGrid mostRecentAtTop={true} />
             </div>
-            <ConnectionsPopupWrapper />
+            {/* <ConnectionsPopupWrapper /> */}
         </div>
     );
 } 

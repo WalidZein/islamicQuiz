@@ -53,7 +53,7 @@ export default function Header({ showStats = true, showName = true, showLogo = t
                     )}
                 </Link>
 
-                {showStats && (
+                {false && (
                     <div className="flex items-center space-x-4">
                         <div className="relative">
                             <button
