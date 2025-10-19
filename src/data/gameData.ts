@@ -1582,7 +1582,7 @@ export const CONNECTIONS_GAMES: ConnectionsGameConfig[] = [
     ],
   },
   {
-    id: "61",
+    id: "62",
     releaseTime: "2025-03-24T12:00:00Z",
     groups: [
       {
